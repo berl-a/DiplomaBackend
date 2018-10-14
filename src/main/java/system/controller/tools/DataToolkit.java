@@ -60,18 +60,18 @@ public class DataToolkit {
 //    public static Quiz fromString(String quizAsString) {
 //        JSONObject quizAsJson = new JSONObject(quizAsString);
 //        JSONArray questionsAsJson = quizAsJson.getJSONArray("questions");
-//        LinkedList<Question> questions = new LinkedList<>();
+//        LinkedList<IQuestion> questions = new LinkedList<>();
 //        for(int i = 0; i < questionsAsJson.length(); i ++) {
 //            JSONArray answersAsJson = questionsAsJson.getJSONObject(i).getJSONArray("answers");
-//            LinkedList<Answer> answers = new LinkedList<>();
+//            LinkedList<IAnswer> answers = new LinkedList<>();
 //            for(int a = 0; a < answersAsJson.length(); a ++) {
-//                answers.add(new Answer(
+//                answers.add(new IAnswer(
 //                        (long)answersAsJson.getJSONObject(a).getInt("id"),
 //                        answersAsJson.getJSONObject(a).getString("text"),
 //                        answersAsJson.getJSONObject(a).getBoolean("correct")
 //                ));
 //            }
-//            questions.add(new Question(
+//            questions.add(new IQuestion(
 //                    (long)questionsAsJson.getJSONObject(i).getInt("id"),
 //                    questionsAsJson.getJSONObject(i).getString("text"),
 //                    answers
