@@ -20,4 +20,9 @@ public class FreeTextQuestion implements IQuestion {
                         ?
                         maxPoints : 0;
     }
+
+    @Override
+    public QuestionType getQuestionType() {
+        return QuestionType.FREE_TEXT;
+    }
 }

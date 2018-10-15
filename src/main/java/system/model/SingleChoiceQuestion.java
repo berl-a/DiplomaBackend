@@ -1,5 +1,7 @@
 package system.model;
 
+import org.json.JSONObject;
+
 import java.util.LinkedList;
 
 public class SingleChoiceQuestion implements IQuestion {
@@ -28,6 +30,11 @@ public class SingleChoiceQuestion implements IQuestion {
         if(correctAnswer.getAnswer().getText() != null && !correctAnswer.getAnswer().getText().equals(answer.getAnswers().getFirst().getText())) answerCorrect = false;
         if(correctAnswer.getAnswer().getImage() != null && !correctAnswer.getAnswer().getImage().equals(answer.getAnswers().getFirst().getImage())) answerCorrect = false;
         return answerCorrect ? maxPoints : 0;
+    }
+
+    @Override
+    public QuestionType getQuestionType() {
+        return QuestionType.SINGLE_CHOICE;
     }
 
     public String getText() {

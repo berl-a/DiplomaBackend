@@ -1,6 +1,8 @@
 package system.model;
 
-public class OneAnswer {
+import java.io.Serializable;
+
+public class OneAnswer implements Serializable {
 
     public OneAnswer(String text, String image) {
         this.text = text;

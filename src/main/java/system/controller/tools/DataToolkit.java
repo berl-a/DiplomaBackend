@@ -7,7 +7,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -48,15 +48,36 @@ public class DataToolkit {
         }
     }
 
-//    public static LinkedList<Quiz> listFromString(String listAsString) {
-//        JSONArray array = new JSONArray(listAsString);
-//        LinkedList<Quiz> quizzes = new LinkedList<>();
-//        for(int i = 0; i < array.length(); i ++) {
-//            quizzes.add(fromString((String)array.getJSONObject(i).toString()));
-//        }
-//        return quizzes;
-//    }
-//
+    public static byte[] objectToByteArray(Object o) {
+        ByteArrayOutputStream baos;
+        ObjectOutputStream out;
+        baos = new ByteArrayOutputStream();
+        try {
+            out = new ObjectOutputStream(baos);
+            out.writeObject(o);
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       return baos.toByteArray();
+    }
+
+    public static Object byteArrayToObject(byte[] b) {
+        Object result = null;
+        ByteArrayInputStream bais;
+        ObjectInputStream in;
+        try {
+            bais = new ByteArrayInputStream(b);
+            in = new ObjectInputStream(bais);
+            result = in.readObject();
+            in.close();
+        } catch (IOException | ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        return result;
+    }
+
+
 //    public static Quiz fromString(String quizAsString) {
 //        JSONObject quizAsJson = new JSONObject(quizAsString);
 //        JSONArray questionsAsJson = quizAsJson.getJSONArray("questions");

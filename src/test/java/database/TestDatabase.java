@@ -29,7 +29,7 @@ public class TestDatabase {
         fields.add("Profile");
         fields.add("Tytul");
 
-//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getDataFromDatabase("Nauczyciel", fields);
+//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getStringDataFromDatabase("Nauczyciel", fields);
 //        for(StringDatabaseEntry e : result) {
 //            System.out.println("Entry is " + e.toString());
 //        }
@@ -48,7 +48,7 @@ public class TestDatabase {
         fields.add("Pelna");
         fields.add("FormaZajec");
 
-//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getDataFromDatabase("Hospitacja", fields);
+//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getStringDataFromDatabase("Hospitacja", fields);
 //        for(StringDatabaseEntry e : result) {
 //            System.out.println("Entry is " + e.toString());
 //        }

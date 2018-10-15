@@ -29,7 +29,7 @@ public class HospitationDao {
         fields.add("Pelna");
         fields.add("FormaZajęć");
 
-        LinkedList<StringDatabaseEntry> databaseResult = DatabaseToolkit.getDataFromDatabase("Hospitacja", fields);
+        LinkedList<StringDatabaseEntry> databaseResult = DatabaseToolkit.getStringDataFromDatabase("Hospitacja", fields);
         for(StringDatabaseEntry entry : databaseResult) {
             resultList.add(
                     new Hospitation(entry)
@@ -50,7 +50,7 @@ public class HospitationDao {
 
         StringDatabaseEntry goodHospPlan =
                 DatabaseToolkit
-                        .getDataFromDatabase("`Plan hospitacji`", fields)
+                        .getStringDataFromDatabase("`Plan hospitacji`", fields)
                         .stream()
                         .filter(entry ->
                                 entry.getField("Wydzial").equals("W8") &&
@@ -76,7 +76,7 @@ public class HospitationDao {
 
         Set<String> neededFields = new HashSet<>();
         neededFields.add("HospID");
-        LinkedList<StringDatabaseEntry> allHospitationsAfterAddingNew = DatabaseToolkit.getDataFromDatabase("Hospitacja", neededFields);
+        LinkedList<StringDatabaseEntry> allHospitationsAfterAddingNew = DatabaseToolkit.getStringDataFromDatabase("Hospitacja", neededFields);
         int newlyAddedHospId = Integer.valueOf(allHospitationsAfterAddingNew.getLast().getField("HospID"));
 
         System.out.println("Newly added hosp id is " + newlyAddedHospId);

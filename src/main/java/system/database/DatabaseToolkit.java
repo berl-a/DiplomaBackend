@@ -2,15 +2,13 @@
 package system.database;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import system.controller.tools.DataToolkit;
 import system.model.Hospitation;
 import system.model.HospitationPlan;
 import system.service.HospitationPlanService;
-import system.service.HospitationService;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.ByteArrayInputStream;
+import java.sql.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -60,14 +58,14 @@ public class DatabaseToolkit {
 	 * @param fieldNames names of fields of the table
 	 * @return list of app.app.database entries from the table
 	 */
-	public static LinkedList<StringDatabaseEntry> getDataFromDatabase(String tableName, Set<String> fieldNames) {
+	public static LinkedList<StringDatabaseEntry> getStringDataFromDatabase(String tableName, Set<String> fieldNames) {
 		if(!hasConnected && !failedConnection) {
 			DatabaseToolkit.connect();
 			while(!hasConnected && !failedConnection)
 				try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-			return getDataFromDatabaseInternal(tableName, fieldNames);
+			return getStringDataFromDatabaseInternal(tableName, fieldNames);
 		} else {
-			return getDataFromDatabaseInternal(tableName, fieldNames);
+			return getStringDataFromDatabaseInternal(tableName, fieldNames);
 		}
 	}
 
@@ -77,7 +75,7 @@ public class DatabaseToolkit {
 	 * @param fieldNames names of fields of the table
 	 * @return list of app.app.database entries from the table
 	 */
-	private static LinkedList<StringDatabaseEntry> getDataFromDatabaseInternal(String tableName, Set<String> fieldNames) {
+	private static LinkedList<StringDatabaseEntry> getStringDataFromDatabaseInternal(String tableName, Set<String> fieldNames) {
 
 		LinkedList<StringDatabaseEntry> resultList = new LinkedList<>();
 
@@ -101,18 +99,18 @@ public class DatabaseToolkit {
 		}
 	}
 
-	public static boolean addDataToDatabase(String tableName, LinkedList<StringDatabaseEntry> databaseEntries) {
+	public static boolean addStringDataToDatabase(String tableName, LinkedList<StringDatabaseEntry> databaseEntries) {
 		if(!hasConnected && !failedConnection) {
 			DatabaseToolkit.connect();
 			while(!hasConnected && !failedConnection)
 				try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-			return addDataToDatabaseInternal(tableName, databaseEntries);
+			return addStringDataToDatabaseInternal(tableName, databaseEntries);
 		} else {
-			return addDataToDatabaseInternal(tableName, databaseEntries);
+			return addStringDataToDatabaseInternal(tableName, databaseEntries);
 		}
 	}
 
-	private static boolean addDataToDatabaseInternal(String tableName, LinkedList<StringDatabaseEntry> databaseEntries) {
+	private static boolean addStringDataToDatabaseInternal(String tableName, LinkedList<StringDatabaseEntry> databaseEntries) {
 		try {
 			Statement stmt = connection.createStatement();
 
@@ -120,9 +118,9 @@ public class DatabaseToolkit {
 			LinkedList<String> fieldNamesList = new LinkedList<>(fieldNamesSet);
 			String fieldNamesInDBFormat = getFieldNamesInDBFormat(fieldNamesList);
 
-			String valuesInDbFormat = getFieldValuesInDbFormat(databaseEntries, fieldNamesList);
+			String valuesInDbFormat = getStringFieldValuesInDbFormat(databaseEntries, fieldNamesList);
 
-			stmt.executeUpdate("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+            stmt.executeUpdate("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
 
 			return true;
 		} catch (SQLException e) {
@@ -130,6 +128,131 @@ public class DatabaseToolkit {
 			return false;
 		}
 	}
+    //////////////////adding blob
+
+    /**
+     * Get data from app.app.database with connection to the app.app.database inside
+     * @param tableName name of the SQL table you want to get data from
+     * @param fieldNames names of fields of the table
+     * @return list of app.app.database entries from the table
+     */
+    public static LinkedList<DatabaseEntry> getDataFromDatabase(String tableName, Set<String> fieldNames) {
+        if(!hasConnected && !failedConnection) {
+            DatabaseToolkit.connect();
+            while(!hasConnected && !failedConnection)
+                try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
+        }
+        return getDataFromDatabaseInternal(tableName, fieldNames);
+    }
+
+    /**
+     * Get data from app.app.database without app.app.database connection
+     * @param tableName name of the SQL table you want to get data from
+     * @param fieldNames names of fields of the table
+     * @return list of app.app.database entries from the table
+     */
+    private static LinkedList<IntStringBlobDatabaseEntry> getDataFromDatabaseInternal(String tableName, Set<String> fieldNames) {
+
+        LinkedList<IntStringBlobDatabaseEntry> resultList = new LinkedList<>();
+
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet resultSet = stmt.executeQuery("SELECT * FROM " + tableName);
+
+            while (resultSet.next()) {
+                HashMap<String, Object> tempMap = new HashMap<>();
+                for(String fieldName : fieldNames) {
+                    if(fieldName.contains("_INT")) {
+                        tempMap.put(fieldName, resultSet.getInt(fieldName));
+                    } else if(fieldName.contains("_BLOB")) {
+                        tempMap.put(fieldName, resultSet.getBlob(fieldName));
+                    } else if(fieldName.contains("_STRING")) {
+                        tempMap.put(fieldName, resultSet.getString(fieldName));
+                    }
+                }
+                resultList.add(new IntStringBlobDatabaseEntry(tempMap));
+            }
+
+            return resultList;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static boolean addDataToDatabase(String tableName, LinkedList<IntStringBlobDatabaseEntry> databaseEntries) {
+        if(!hasConnected && !failedConnection) {
+            DatabaseToolkit.connect();
+            while(!hasConnected && !failedConnection)
+                try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
+        }
+        return addDataToDatabaseInternal(tableName, databaseEntries);
+    }
+
+    private static boolean addDataToDatabaseInternal(String tableName, LinkedList<IntStringBlobDatabaseEntry> databaseEntries) {
+        try {
+            Statement stmt = connection.createStatement();
+
+            Set<String> fieldNamesSet = databaseEntries.getFirst().getFieldNames();
+            LinkedList<String> fieldNamesList = new LinkedList<>(fieldNamesSet);
+            String fieldNamesInDBFormat = getFieldNamesInDBFormat(fieldNamesList);
+
+            String valuesInDbFormat = getFieldValuesInDbFormat(databaseEntries, fieldNamesList);
+
+//            stmt.executeUpdate("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+
+            LinkedList<Integer> indexesOfFieldValues = new LinkedList<>();
+            for(int i = 0; i < fieldNamesList.size(); i ++) {
+                if(fieldNamesList.contains("_BLOB"))
+                    indexesOfFieldValues.add(i);
+            }
+
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+            for(int i = 0; i < indexesOfFieldValues.size(); i ++) {
+                statement.setBlob(i + 1, new ByteArrayInputStream(DataToolkit.objectToByteArray(databaseEntries.get(indexesOfFieldValues.get(i)))));
+            }
+            statement.executeUpdate();
+
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static String getFieldValuesInDbFormat(LinkedList<IntStringBlobDatabaseEntry> databaseEntries, LinkedList<String> fieldNamesList) {
+
+        StringBuilder allFields = new StringBuilder();
+        String tempSingleEntryString;
+        for(DatabaseEntry entry : databaseEntries) {
+            tempSingleEntryString = fieldNamesList.stream().reduce(
+                    "",
+                    (acc, key) -> {
+                        String newPart = "";
+                        if(key.contains("_STRING")) {
+                            newPart = "'" + entry.getField(key) + "'";
+                        } else if(key.contains("_INT")) {
+                            newPart = "" + entry.getField(key);
+                        } else if(key.contains("_BLOB")) {
+                            newPart = "?";
+                        }
+                        return acc + newPart + ", ";
+                    });
+            tempSingleEntryString = "(" + tempSingleEntryString.substring(0, tempSingleEntryString.length() - 2) + "), ";
+            allFields.append(tempSingleEntryString);
+        }
+        return allFields.substring(0, allFields.length() - 2);
+    }
+
+    /////////////////not adding blob
+
+
+
+
+
+
+
 
 
 	public static LinkedList<Hospitation> getUnaprovedHospitationsRaw() {
@@ -318,7 +441,7 @@ public class DatabaseToolkit {
 		return result;
 	}
 
-	public static String getFieldValuesInDbFormat(LinkedList<StringDatabaseEntry> databaseEntries, LinkedList<String> fieldNamesList) {
+	public static String getStringFieldValuesInDbFormat(LinkedList<StringDatabaseEntry> databaseEntries, LinkedList<String> fieldNamesList) {
 
 		StringBuilder allFields = new StringBuilder();
 		String tempSingleEntryString;

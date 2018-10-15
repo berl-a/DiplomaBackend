@@ -33,6 +33,11 @@ public class MultipleChoiceQuestion implements IQuestion {
             return NUMBER_OF_POINTS_IF_ANY_ANSWER_WAS_WRONG;
     }
 
+    @Override
+    public QuestionType getQuestionType() {
+        return QuestionType.MULTIPLE_CHOICE;
+    }
+
     public String getText() {
         return text;
     }
