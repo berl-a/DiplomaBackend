@@ -1,4 +1,4 @@
-package system.model;
+package system.model.questions;
 
 public enum QuestionType {
     SINGLE_CHOICE,

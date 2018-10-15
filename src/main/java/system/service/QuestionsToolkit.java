@@ -1,6 +1,6 @@
 package system.service;
 
-import system.model.OneAnswer;
+import system.model.questions.OneAnswer;
 
 import java.util.LinkedList;
 

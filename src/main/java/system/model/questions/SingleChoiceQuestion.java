@@ -1,6 +1,4 @@
-package system.model;
-
-import org.json.JSONObject;
+package system.model.questions;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package system.model;
+package system.model.questions;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import system.controller.HospitationController;

@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import system.controller.tools.DataToolkit;
-import system.model.Hospitation;
 import system.service.HospitationPlanService;
 
 @Controller

@@ -1,4 +1,4 @@
-package system.model;
+package system.model.questions;
 
 import java.util.Collections;
 import java.util.LinkedList;

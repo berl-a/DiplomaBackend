@@ -1,4 +1,4 @@
-package system.model;
+package system.model.questions;
 
 public class FreeTextQuestion implements IQuestion {
 

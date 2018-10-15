@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 import system.controller.HospitationController;
 import system.database.DatabaseToolkit;
 import system.database.StringDatabaseEntry;
-import system.model.Hospitation;
+import system.model.questions.Hospitation;
 import system.model.Teacher;
 import system.service.TeacherService;
 

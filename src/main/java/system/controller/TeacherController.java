@@ -10,7 +10,7 @@ import system.controller.tools.DataToolkit;
 import system.service.TeacherService;
 
 @Controller
-@RequestMapping("/teachers")
+@RequestMapping("/users")
 public class TeacherController {
 
     @Autowired

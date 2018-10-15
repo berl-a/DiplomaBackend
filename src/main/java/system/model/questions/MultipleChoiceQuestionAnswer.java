@@ -1,7 +1,6 @@
-package system.model;
+package system.model.questions;
 
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public class MultipleChoiceQuestionAnswer implements IAnswer{
 
