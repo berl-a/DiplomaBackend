@@ -6,11 +6,10 @@ import system.controller.tools.DataToolkit;
 import system.model.questions.Hospitation;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class DatabaseToolkit {
@@ -22,14 +21,30 @@ public class DatabaseToolkit {
 	private static boolean hasConnected = false;
 	private static boolean failedConnection = false;
 
-	public static boolean connect() {
-		MysqlDataSource dataSource = new MysqlDataSource();
+    static int dbPort = 3306;
+    static String dbName = "innodb";
+    static String dbUser = "admin";
+    static String dbPassword = "roma1997";
+    static String dbServerName = "poprojectdb.cuuzxm0txhgg.us-east-1.rds.amazonaws.com";
 
-		int dbPort = 3306;
-		String dbName = "innodb";
-		String dbUser = "admin";
-		String dbPassword = "roma1997";
-		String dbServerName = "poprojectdb.cuuzxm0txhgg.us-east-1.rds.amazonaws.com";
+    public static void getSettingsFromFile() {
+        try {
+            Scanner sc = new Scanner(new File("C:/settings.txt"));
+            dbPort = sc.nextInt();
+            dbName = sc.nextLine();
+            dbUser = sc.nextLine();
+            dbPassword = sc.nextLine();
+            dbServerName = sc.nextLine();
+            sc.close();
+            System.out.println("Settings read from file");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.err.println("Settings file not found, settings read from app");
+        }
+    }
+
+    public static boolean connect() {
+		MysqlDataSource dataSource = new MysqlDataSource();
 
 		dataSource.setPort(dbPort);
 		dataSource.setDatabaseName(dbName);
