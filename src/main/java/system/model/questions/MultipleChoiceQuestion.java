@@ -14,6 +14,7 @@ public class MultipleChoiceQuestion implements IQuestion {
         this.image = image;
     }
 
+    private String id;
     private double maxPoints;
     private String text, image;
 
@@ -68,5 +69,18 @@ public class MultipleChoiceQuestion implements IQuestion {
 
     public void setCorrectAnswer(MultipleChoiceQuestionAnswer correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public double getMaxPoints() {
+        return maxPoints;
     }
 }

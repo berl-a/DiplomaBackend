@@ -1,32 +1,30 @@
 package system.model.quizzes;
 
-import system.model.questions.QuestionCategory;
-
 import java.io.Serializable;
 
 public class QuizPart implements Serializable{
 
-    public QuizPart(QuestionCategory category, int numberOfQuestionsFromCategory) {
+    public QuizPart(String category, int numberOfQuestions) {
         this.category = category;
-        this.numberOfQuestionsFromCategory = numberOfQuestionsFromCategory;
+        this.numberOfQuestions = numberOfQuestions;
     }
 
-    private QuestionCategory category;
-    private int numberOfQuestionsFromCategory;
+    private String category;
+    private int numberOfQuestions;
 
-    public QuestionCategory getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(QuestionCategory category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
-    public int getNumberOfQuestionsFromCategory() {
-        return numberOfQuestionsFromCategory;
+    public int getNumberOfQuestions() {
+        return numberOfQuestions;
     }
 
-    public void setNumberOfQuestionsFromCategory(int numberOfQuestionsFromCategory) {
-        this.numberOfQuestionsFromCategory = numberOfQuestionsFromCategory;
+    public void setNumberOfQuestions(int numberOfQuestions) {
+        this.numberOfQuestions = numberOfQuestions;
     }
 }

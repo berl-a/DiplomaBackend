@@ -10,6 +10,7 @@ public class SingleChoiceQuestion implements IQuestion {
         this.image = image;
     }
 
+    private String id;
     private double maxPoints;
     private String text;
     private String image;
@@ -65,5 +66,18 @@ public class SingleChoiceQuestion implements IQuestion {
 
     public void setCorrectAnswer(SingleChoiceQuestionAnswer correctAnswer) {
         this.correctAnswer = correctAnswer;
+    }
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public double getMaxPoints() {
+        return maxPoints;
     }
 }
