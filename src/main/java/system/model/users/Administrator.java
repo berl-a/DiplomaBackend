@@ -4,6 +4,11 @@ public class Administrator implements IUser {
 
     private String login, passwordHash;
 
+    public Administrator(String login, String passwordHash) {
+        this.login = login;
+        this.passwordHash = passwordHash;
+    }
+
     public String getLogin() {
         return login;
     }
@@ -12,7 +17,7 @@ public class Administrator implements IUser {
         this.login = login;
     }
 
-    public String getPasswordHash() {
+    public String getHash() {
         return passwordHash;
     }
 
@@ -23,5 +28,9 @@ public class Administrator implements IUser {
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
     }
 }

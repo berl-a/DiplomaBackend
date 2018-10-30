@@ -405,18 +405,18 @@ public class DatabaseToolkit {
 	}
 
 
-	public static boolean removeItemWhereFieldEqualsValue(String tableName, String fieldName, String fieldValue) {
+	public static boolean removeItemWhereStringFieldEqualsValue(String tableName, String fieldName, String fieldValue) {
 		if(!hasConnected && !failedConnection) {
 			DatabaseToolkit.connect();
 			while(!hasConnected && !failedConnection)
 				try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-			return removeItemWhereFieldEqualsValue(tableName, fieldName, fieldValue);
+			return removeItemWhereStringFieldEqualsValueInternal(tableName, fieldName, fieldValue);
 		} else {
-			return removeItemWhereFieldEqualsValue(tableName, fieldName, fieldValue);
+			return removeItemWhereStringFieldEqualsValueInternal(tableName, fieldName, fieldValue);
 		}
 	}
 
-	private static boolean removeItemWhereFieldEqualsValueInternal(String tableName, String fieldName, String fieldValue) {
+	private static boolean removeItemWhereStringFieldEqualsValueInternal(String tableName, String fieldName, String fieldValue) {
 		try {
 			Statement stmt = connection.createStatement();
 

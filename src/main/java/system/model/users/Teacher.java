@@ -3,7 +3,12 @@ package system.model.users;
 
 public class Teacher implements IUser {
 
-    private String login, passwordHash;
+    private String login, hash;
+
+    public Teacher(String login, String hash) {
+        this.login = login;
+        this.hash = hash;
+    }
 
     public String getLogin() {
         return login;
@@ -13,8 +18,8 @@ public class Teacher implements IUser {
         this.login = login;
     }
 
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getHash() {
+        return hash;
     }
 
     @Override
@@ -22,7 +27,7 @@ public class Teacher implements IUser {
         return UserType.TEACHER;
     }
 
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setHash(String hash) {
+        this.hash = hash;
     }
 }

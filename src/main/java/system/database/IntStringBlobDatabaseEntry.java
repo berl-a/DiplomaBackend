@@ -9,12 +9,12 @@ public class IntStringBlobDatabaseEntry implements DatabaseEntry<Object> {
 
     private HashMap<String, Object> content;
 
-    IntStringBlobDatabaseEntry(HashSet<String> fieldNames) {
+    public IntStringBlobDatabaseEntry(HashSet<String> fieldNames) {
         for(String s : fieldNames)
             content.put(s, null);
     }
 
-    IntStringBlobDatabaseEntry(HashMap<String, Object> content) {
+    public IntStringBlobDatabaseEntry(HashMap<String, Object> content) {
         this.content = content;
     }
 

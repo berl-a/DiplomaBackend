@@ -6,6 +6,6 @@ import java.io.Serializable;
 public interface IUser extends Serializable{
 
     String getLogin();
-    String getPasswordHash();
+    String getHash();
     UserType getType();
 }
