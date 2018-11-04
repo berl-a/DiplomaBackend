@@ -9,10 +9,16 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.util.LinkedList;
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DataToolkit {
+
+    public static String getUniqueId() {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
+    }
 
     public static LinkedList<String> getAllStringsInsideIdPTags(String text) {
         LinkedList<String> res = new LinkedList<>();

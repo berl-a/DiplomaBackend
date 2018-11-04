@@ -1,6 +1,7 @@
 package system.dao;
 
 import org.springframework.stereotype.Repository;
+import system.controller.tools.DataToolkit;
 import system.database.DatabaseToolkit;
 import system.database.IntStringBlobDatabaseEntry;
 import system.model.users.Administrator;
@@ -20,14 +21,16 @@ public class UserDao {
         LinkedList<IUser> resultList = new LinkedList<>();
 
         Set<String> fields = new TreeSet<>();
-        fields.add("Id_INT");
         fields.add("Id_STRING");
+        fields.add("Type_STRING");
         fields.add("Content_BLOB");
 
         LinkedList<IntStringBlobDatabaseEntry> databaseResult = DatabaseToolkit.getDataFromDatabase("Users", fields);
         for(IntStringBlobDatabaseEntry entry : databaseResult) {
-            UserType type = UserType.valueOf((String)entry.getField("UserType_STRING"));
-            Object userContent = entry.getField("UserContent_BLOB");
+//            String id = (String) entry.getField("Id_STRING");
+            UserType type = UserType.valueOf((String)entry.getField("Type_STRING"));
+            byte[] userContentAsByteArray = (byte[]) entry.getField("Content_BLOB");
+            Object userContent = DataToolkit.byteArrayToObject(userContentAsByteArray);
             IUser convertedIUser = null;
             if(type == UserType.TEACHER)
                 convertedIUser = (Teacher) userContent;
@@ -42,8 +45,8 @@ public class UserDao {
     public void addUser(IUser newUser) {
         String tableName = "Users";
         HashMap<String, Object> newObjectInfo = new HashMap<>();
-        newObjectInfo.put("Id_INT", "" + new Random().nextInt());
-        newObjectInfo.put("Id_STRING", newUser.getType().toString());
+        newObjectInfo.put("Id_STRING", newUser.getId());
+        newObjectInfo.put("Type_STRING", newUser.getType().toString());
         newObjectInfo.put("Content_BLOB", newUser);
         IntStringBlobDatabaseEntry newEntry = new IntStringBlobDatabaseEntry(newObjectInfo);
         DatabaseToolkit.addDataToDatabase(tableName, new LinkedList<>(Collections.singletonList(newEntry)));

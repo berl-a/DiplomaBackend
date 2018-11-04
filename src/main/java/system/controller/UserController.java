@@ -2,6 +2,7 @@ package system.controller;
 
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.FUser;
@@ -23,7 +24,7 @@ public class UserController {
 
     @RequestMapping(value="/verify", method = RequestMethod.GET)
     public @ResponseBody
-    boolean verify(@RequestBody FUser user) {
+    boolean verify(FUser user) {
         return userService.isPasswordCorrect(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
     }
 

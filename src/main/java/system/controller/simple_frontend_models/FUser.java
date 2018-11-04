@@ -1,15 +1,11 @@
 package system.controller.simple_frontend_models;
 
+import java.io.Serializable;
+
 public class FUser {
 
     String login, hash;
     boolean isTeacher;
-
-    public FUser(String login, String hash, boolean isTeacher) {
-        this.login = login;
-        this.hash = hash;
-        this.isTeacher = isTeacher;
-    }
 
     public String getLogin() {
         return login;

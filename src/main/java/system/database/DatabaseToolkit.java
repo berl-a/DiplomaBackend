@@ -1,7 +1,6 @@
 
 package system.database;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import system.controller.tools.DataToolkit;
 import system.model.questions.Hospitation;
 
@@ -21,20 +20,12 @@ public class DatabaseToolkit {
 	private static boolean hasConnected = false;
 	private static boolean failedConnection = false;
 
-    static int dbPort = 3306;
-    static String dbName = "innodb";
-    static String dbUser = "admin";
-    static String dbPassword = "roma1997";
-    static String dbServerName = "poprojectdb.cuuzxm0txhgg.us-east-1.rds.amazonaws.com";
+    static String databaseAddress = "D:\\Data\\Diploma\\Project\\Database\\test.db";
 
     public static void getSettingsFromFile() {
         try {
             Scanner sc = new Scanner(new File("C:/settings.txt"));
-            dbPort = sc.nextInt();
-            dbName = sc.nextLine();
-            dbUser = sc.nextLine();
-            dbPassword = sc.nextLine();
-            dbServerName = sc.nextLine();
+            databaseAddress = sc.nextLine();
             sc.close();
             System.out.println("Settings read from file");
         } catch (FileNotFoundException e) {
@@ -44,25 +35,15 @@ public class DatabaseToolkit {
     }
 
     public static boolean connect() {
-		MysqlDataSource dataSource = new MysqlDataSource();
-
-		dataSource.setPort(dbPort);
-		dataSource.setDatabaseName(dbName);
-		dataSource.setUser(dbUser);
-		dataSource.setPassword(dbPassword);
-		dataSource.setServerName(dbServerName);
-
-
-		try {
-			connection = dataSource.getConnection();
-			hasConnected = true;
+        try {
+            connection = DriverManager.getConnection("jdbc:sqlite:" + databaseAddress);
+            hasConnected = true;
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			failedConnection = true;
 			return false;
 		}
-
 	}
 
 	/**
@@ -182,7 +163,7 @@ public class DatabaseToolkit {
                     if(fieldName.contains("_INT")) {
                         tempMap.put(fieldName, resultSet.getInt(fieldName));
                     } else if(fieldName.contains("_BLOB")) {
-                        tempMap.put(fieldName, resultSet.getBlob(fieldName));
+                        tempMap.put(fieldName, resultSet.getBytes(fieldName));
                     } else if(fieldName.contains("_STRING")) {
                         tempMap.put(fieldName, resultSet.getString(fieldName));
                     }
@@ -217,13 +198,20 @@ public class DatabaseToolkit {
 
             LinkedList<Integer> indexesOfFieldValues = new LinkedList<>();
             for(int i = 0; i < fieldNamesList.size(); i ++) {
-                if(fieldNamesList.contains("_BLOB"))
+                if(fieldNamesList.get(i).contains("_BLOB"))
                     indexesOfFieldValues.add(i);
             }
 
+            System.out.println("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+
             PreparedStatement statement = connection.prepareStatement("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+            System.out.println(statement.toString());
+            System.out.println("indexes of field values");
+            indexesOfFieldValues.forEach(System.out::println);
+
             for(int i = 0; i < indexesOfFieldValues.size(); i ++) {
-                statement.setBlob(i + 1, new ByteArrayInputStream(DataToolkit.objectToByteArray(databaseEntries.get(indexesOfFieldValues.get(i)))));
+                statement.setBytes(1, DataToolkit.objectToByteArray(databaseEntries.get(0).getField("Content_BLOB")));
+                System.out.println("Plus one");
             }
             statement.executeUpdate();
 
@@ -262,30 +250,30 @@ public class DatabaseToolkit {
 
 
 
-	public static LinkedList<Hospitation> getUnaprovedHospitationsRaw() {
-		LinkedList<StringDatabaseEntry> resultList = new LinkedList<>();
-
-		try {
-			Statement stmt = connection.createStatement();
-			ResultSet resultSet = stmt.executeQuery("SELECT * FROM " + "Hospitacje");
-
-			LinkedList<String> fieldNames = new LinkedList<>(Arrays.asList("ID", "Plan hospitacjiID", "Komisja hospitacyjnaID", "Wykonana", "Pelna", "FormaZajec"));
-
-			while (resultSet.next()) {
-				HashMap<String, String> tempMap = new HashMap<>();
-				for(String fieldName : fieldNames) {
-					tempMap.put(fieldName, resultSet.getString(fieldName));
-				}
-				resultList.add(new StringDatabaseEntry(tempMap));
-			}
-
-			return new LinkedList<>(resultList.stream().map(Hospitation::new).collect(Collectors.toList()));
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return null;
-		}
-	}
+//	public static LinkedList<Hospitation> getUnaprovedHospitationsRaw() {
+//		LinkedList<StringDatabaseEntry> resultList = new LinkedList<>();
+//
+//		try {
+//			Statement stmt = connection.createStatement();
+//			ResultSet resultSet = stmt.executeQuery("SELECT * FROM " + "Hospitacje");
+//
+//			LinkedList<String> fieldNames = new LinkedList<>(Arrays.asList("ID", "Plan hospitacjiID", "Komisja hospitacyjnaID", "Wykonana", "Pelna", "FormaZajec"));
+//
+//			while (resultSet.next()) {
+//				HashMap<String, String> tempMap = new HashMap<>();
+//				for(String fieldName : fieldNames) {
+//					tempMap.put(fieldName, resultSet.getString(fieldName));
+//				}
+//				resultList.add(new StringDatabaseEntry(tempMap));
+//			}
+//
+//			return new LinkedList<>(resultList.stream().map(Hospitation::new).collect(Collectors.toList()));
+//
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//	}
 
 
 //	public static LinkedList<HospitationPlan> getUnaprovedHospitationPlans() {

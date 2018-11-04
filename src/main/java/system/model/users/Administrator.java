@@ -2,11 +2,22 @@ package system.model.users;
 
 public class Administrator implements IUser {
 
-    private String login, passwordHash;
+    private String id, login, passwordHash;
+
+    public Administrator(String id, String login, String passwordHash) {
+        this.id = id;
+        this.login = login;
+        this.passwordHash = passwordHash;
+    }
 
     public Administrator(String login, String passwordHash) {
         this.login = login;
         this.passwordHash = passwordHash;
+    }
+
+    @Override
+    public String getId() {
+        return id;
     }
 
     public String getLogin() {

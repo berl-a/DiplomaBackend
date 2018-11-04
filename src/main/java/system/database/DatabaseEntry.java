@@ -1,9 +1,10 @@
 package system.database;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Set;
 
-public interface DatabaseEntry<V> {
+public interface DatabaseEntry<V> extends Serializable {
     /**
      * @return List of names of fields
      */

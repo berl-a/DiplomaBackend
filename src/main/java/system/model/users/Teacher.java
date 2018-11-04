@@ -1,13 +1,27 @@
 package system.model.users;
 
 
+import system.controller.tools.DataToolkit;
+
 public class Teacher implements IUser {
 
-    private String login, hash;
+    private String id, login, hash;
+
+    public Teacher(String id, String login, String hash) {
+        this.id = id;
+        this.login = login;
+        this.hash = hash;
+    }
 
     public Teacher(String login, String hash) {
         this.login = login;
         this.hash = hash;
+        id = DataToolkit.getUniqueId();
+    }
+
+    @Override
+    public String getId() {
+        return id;
     }
 
     public String getLogin() {
@@ -29,5 +43,9 @@ public class Teacher implements IUser {
 
     public void setHash(String hash) {
         this.hash = hash;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

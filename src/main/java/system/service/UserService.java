@@ -60,7 +60,6 @@ public class UserService {
                 newUser = new Administrator(login, hash);
             }
             userDao.addUser(newUser);
-            //maybe should add updateCachedUsers() here
             result = OK_RESULT;
         }
         return result;

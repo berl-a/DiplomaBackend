@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import system.database.DatabaseToolkit;
 import system.database.StringDatabaseEntry;
-import system.model.FormaZajec;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
@@ -54,11 +53,11 @@ public class TestDatabase {
 //        }
 
     }
-
-    @Test
-    @PostConstruct
-    public void testUnapprovedHospitationsGottenFromDatabaseOkay() {
-        DatabaseToolkit.getUnaprovedHospitationPlans();
-    }
+//
+//    @Test
+//    @PostConstruct
+//    public void testUnapprovedHospitationsGottenFromDatabaseOkay() {
+//        DatabaseToolkit.getUnaprovedHospitationPlans();
+//    }
 
 }
