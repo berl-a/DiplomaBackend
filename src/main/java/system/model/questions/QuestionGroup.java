@@ -1,8 +1,10 @@
 package system.model.questions;
 
+import system.dao.Idable;
+
 import java.util.LinkedList;
 
-public class QuestionGroup{
+public class QuestionGroup implements Idable {
 
     private String id;
     private LinkedList<String> questions = new LinkedList<>();
