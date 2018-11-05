@@ -3,9 +3,7 @@ package system.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.dao.GameDao;
-import system.dao.QuestionDao;
 import system.model.games.Game;
-import system.model.questions.IQuestion;
 
 import java.util.LinkedList;
 

@@ -2,9 +2,7 @@ package system.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import system.dao.QuestionDao;
 import system.dao.QuestionGroupDao;
-import system.model.questions.IQuestion;
 import system.model.questions.QuestionGroup;
 
 import java.util.LinkedList;

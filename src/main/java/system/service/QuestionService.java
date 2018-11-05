@@ -2,8 +2,8 @@ package system.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import system.dao.QuestionDao;
-import system.model.questions.IQuestion;
+import system.dao.QuestionDaoCompact;
+import system.model.questions.Question;
 
 import java.util.LinkedList;
 
@@ -11,15 +11,15 @@ import java.util.LinkedList;
 public class QuestionService {
 
     @Autowired
-    QuestionDao questionDao;
+    QuestionDaoCompact questionDao;
 
-    private LinkedList<IQuestion> cachedQuestions = new LinkedList<>();
+    private LinkedList<Question> cachedQuestions = new LinkedList<>();
 
     public void updateCachedQuestions() {
-        cachedQuestions = questionDao.getQuestions();
+        cachedQuestions = questionDao.getAll();
     }
 
-    public LinkedList<IQuestion> getQuestions() {
+    public LinkedList<Question> getQuestions() {
         updateCachedQuestions();
         return cachedQuestions;
     }

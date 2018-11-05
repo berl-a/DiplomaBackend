@@ -1,7 +1,6 @@
 package system.model.quizzes;
 
 import system.dao.Idable;
-import system.model.questions.IQuestion;
 
 import java.util.LinkedList;
 

@@ -2,7 +2,6 @@
 package system.database;
 
 import system.controller.tools.DataToolkit;
-import system.model.questions.Hospitation;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
