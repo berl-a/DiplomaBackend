@@ -1,10 +1,11 @@
 package system.model.quizzes;
 
+import system.dao.Idable;
 import system.model.questions.IQuestion;
 
 import java.util.LinkedList;
 
-public class Quiz {
+public class Quiz implements Idable {
 
     private String id;
     private String name;

@@ -2,10 +2,10 @@ package system.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import system.dao.UserDao;
-import system.model.users.Administrator;
+import system.controller.Const;
+import system.dao.UserDaoCompact;
 import system.model.users.IUser;
-import system.model.users.Teacher;
+import system.model.users.User;
 import system.model.users.UserType;
 
 import java.util.LinkedList;
@@ -15,25 +15,27 @@ import java.util.Optional;
 public class UserService {
 
     public static final String USER_EXISTS_ERROR = "user_exists";
-    public static final String OK_RESULT = "ok";
 
+//    @Autowired
+//    UserDao userDao;
     @Autowired
-    UserDao userDao;
+    UserDaoCompact userDao;
 
-    private LinkedList<IUser> cachedIUsers = new LinkedList<>();
+
+    private LinkedList<User> cached = new LinkedList<>();
 
     public void updateCachedUsers() {
-        cachedIUsers = userDao.getUsers();
+        cached = userDao.getAll();
     }
 
-    public LinkedList<IUser> getUsers() {
+    public LinkedList<User> getAll() {
         updateCachedUsers();
-        return cachedIUsers;
+        return cached;
     }
 
-    public IUser getUser(String username, UserType type) {
-        LinkedList<IUser> users = getUsers();
-        Optional<IUser> foundUser;
+    public User get(String username, UserType type) {
+        LinkedList<User> users = getAll();
+        Optional<User> foundUser;
         if(type != null)
            foundUser = users.stream().filter(u -> u.getType() == type && username.equals(u.getLogin())).findAny();
         else
@@ -42,38 +44,38 @@ public class UserService {
     }
 
     public boolean isPasswordCorrect(String username, String passwordHash, UserType userType) {
-        IUser foundUser = getUser(username, userType);
+        IUser foundUser = get(username, userType);
         return foundUser != null && foundUser.getHash().equals(passwordHash);
     }
 
-    public String addUser(String login, String hash, UserType userType) {
+    public String add(String login, String hash, UserType userType) {
         updateCachedUsers();
         String result;
 
         if(doesUserWithUsernameExist(login)) {
             result = USER_EXISTS_ERROR;
         } else {
-            IUser newUser;
+            User newUser;
             if (userType == UserType.TEACHER) {
-                newUser = new Teacher(login, hash);
+                newUser = new User(login, hash, UserType.TEACHER);
             } else {
-                newUser = new Administrator(login, hash);
+                newUser = new User(login, hash, UserType.ADMINISTRATOR);
             }
-            userDao.addUser(newUser);
-            result = OK_RESULT;
+            userDao.add(newUser);
+            result = Const.OK_RESULT;
         }
         return result;
     }
 
     private boolean doesUserWithUsernameExist(String login) {
         updateCachedUsers();
-        return getUser(login, null) != null;
+        return get(login, null) != null;
     }
 
-    public String editUser(String login, String hash, UserType userType) {
+    public String edit(String id, String hash, UserType userType) {
         updateCachedUsers();
-        userDao.removeUser(login);
-        addUser(login, hash, userType);
-        return null;
+        userDao.remove(id);
+        add(id, hash, userType);
+        return Const.OK_RESULT;
     }
 }

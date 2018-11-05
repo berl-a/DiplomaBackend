@@ -189,29 +189,32 @@ public class DatabaseToolkit {
             Statement stmt = connection.createStatement();
 
             Set<String> fieldNamesSet = databaseEntries.getFirst().getFieldNames();
-            LinkedList<String> fieldNamesList = new LinkedList<>(fieldNamesSet);
-            String fieldNamesInDBFormat = getFieldNamesInDBFormat(fieldNamesList);
+            LinkedList<String> fieldNames = new LinkedList<>(fieldNamesSet);
+            String fieldNamesInDBFormat = getFieldNamesInDBFormat(fieldNames);
 
-            String valuesInDbFormat = getFieldValuesInDbFormat(databaseEntries, fieldNamesList);
+            String valuesInDbFormat = getFieldValuesInDbFormat(databaseEntries, fieldNames);
 
-//            stmt.executeUpdate("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
-
-            LinkedList<Integer> indexesOfFieldValues = new LinkedList<>();
-            for(int i = 0; i < fieldNamesList.size(); i ++) {
-                if(fieldNamesList.get(i).contains("_BLOB"))
-                    indexesOfFieldValues.add(i);
+            LinkedList<String> blobFieldNames = new LinkedList<>();
+            for (String fieldName : fieldNames) {
+                if (fieldName.contains("_BLOB")) {
+                    blobFieldNames.add(fieldName);
+                }
             }
 
-            System.out.println("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+            PreparedStatement statement = connection.prepareStatement(
+                    "INSERT INTO " + tableName +
+                            " " + fieldNamesInDBFormat +
+                            " VALUES " + valuesInDbFormat + ";"
+            );
 
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
-            System.out.println(statement.toString());
-            System.out.println("indexes of field values");
-            indexesOfFieldValues.forEach(System.out::println);
-
-            for(int i = 0; i < indexesOfFieldValues.size(); i ++) {
-                statement.setBytes(1, DataToolkit.objectToByteArray(databaseEntries.get(0).getField("Content_BLOB")));
-                System.out.println("Plus one");
+            for(int itemIndex = 0; itemIndex < databaseEntries.size(); itemIndex ++) {
+                for(int blobIndexInItem = 0; blobIndexInItem < blobFieldNames.size(); blobIndexInItem ++) {
+                    IntStringBlobDatabaseEntry item = databaseEntries.get(itemIndex);
+                    statement.setBytes(
+                            itemIndex * blobFieldNames.size() + blobIndexInItem + 1,
+                            DataToolkit.objectToByteArray(item.getField(blobFieldNames.get(blobIndexInItem)))
+                    );
+                }
             }
             statement.executeUpdate();
 

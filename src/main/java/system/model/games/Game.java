@@ -1,8 +1,10 @@
 package system.model.games;
 
+import system.dao.Idable;
+
 import java.util.LinkedList;
 
-public class Game {
+public class Game implements Idable {
 
     private String quiz;
     private LinkedList<Integer> players = new LinkedList<>();

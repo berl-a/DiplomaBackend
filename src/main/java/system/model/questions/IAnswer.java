@@ -1,5 +1,7 @@
 package system.model.questions;
 
+import system.dao.Idable;
+
 import java.io.Serializable;
 import java.util.LinkedList;
 

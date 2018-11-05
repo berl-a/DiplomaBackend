@@ -1,14 +1,11 @@
 package system.model.games;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import system.model.questions.IQuestion;
 import system.model.quizzes.Quiz;
 import system.model.quizzes.QuizPart;
 import system.service.QuestionGroupService;
 import system.service.QuestionService;
-import system.service.QuestionsToolkit;
 import system.service.QuizService;
 
 import java.util.Collections;
@@ -28,7 +25,7 @@ public class GameToolkit {
         Game game = new Game();
         game.setQuiz(quizId);
 
-        Quiz quiz = quizService.getQuiz(quizId);
+        Quiz quiz = quizService.get(quizId);
         game.setNumberOfQuestions(generateListOfQuestions(quiz).getQuestionIds().size());
         game.setFullTime(quiz.getTime());
         return game;

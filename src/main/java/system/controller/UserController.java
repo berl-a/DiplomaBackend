@@ -1,13 +1,10 @@
 package system.controller;
 
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.FUser;
-import system.controller.tools.DataToolkit;
-import system.model.users.IUser;
+import system.controller.simple_frontend_models.Response;
 import system.model.users.Teacher;
 import system.model.users.UserType;
 import system.service.UserService;
@@ -16,54 +13,61 @@ import system.service.UserService;
 @RequestMapping("/users")
 public class UserController {
 
-    public static final String RESULT_KEY = "result";
-    private static final String ERROR_KEY = "error";
+    public static final String PAIR_CORRECT = "pair correct";
+    public static final String PAIR_INCORRECT = "pair incorrect";
 
     @Autowired
     UserService userService;
 
     @RequestMapping(value="/verify", method = RequestMethod.GET)
     public @ResponseBody
-    boolean verify(FUser user) {
-        return userService.isPasswordCorrect(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
+    Response verify(FUser user) {
+        return new Response(
+                Const.RESULT_KEY,
+                userService.isPasswordCorrect(
+                        user.getLogin(),
+                        user.getHash(),
+                        user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR
+                ) ? PAIR_CORRECT : PAIR_INCORRECT
+        );
     }
 
     @RequestMapping(value="/add", method = RequestMethod.POST)
     public @ResponseBody
-    String add(@RequestBody FUser user) {
-        JSONObject result = new JSONObject();
-        String addResult = userService.addUser(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
-        if(addResult.equals(UserService.OK_RESULT)) {
-            result.put(RESULT_KEY, UserService.OK_RESULT);
+    Response add(@RequestBody FUser user) {
+        Response resp;
+        String addResult = userService.add(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
+        if(addResult.equals(Const.OK_RESULT)) {
+            resp = new Response(Const.RESULT_KEY, Const.OK_RESULT);
         } else {
-            result.put(ERROR_KEY, addResult);
+            resp = new Response(Const.ERROR_KEY, addResult);
         }
-        return result.toString();
+        return resp;
     }
 
     @RequestMapping(value="/remove", method = RequestMethod.POST)
     public @ResponseBody
-    String remove(@RequestBody FUser user) {
-        JSONObject result = new JSONObject();
-        String addResult = userService.addUser(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
-        if(addResult.equals(UserService.OK_RESULT)) {
-            result.put(RESULT_KEY, UserService.OK_RESULT);
+    Response remove(@RequestBody FUser user) {
+        Response resp = new Response();
+        String addResult = userService.add(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
+        if(addResult.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
         } else {
-            result.put(ERROR_KEY, addResult);
+            resp.put(Const.ERROR_KEY, addResult);
         }
-        return result.toString();
+        return resp;
     }
 
     @RequestMapping(value="/edit", method = RequestMethod.POST)
     public @ResponseBody
-    String edit(@RequestBody FUser user) {
-        JSONObject result = new JSONObject();
-        String editResult = userService.editUser(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
-        if(editResult.equals(UserService.OK_RESULT)) {
-            result.put(RESULT_KEY, UserService.OK_RESULT);
+    Response edit(@RequestBody FUser user) {
+        Response resp = new Response();
+        String editResult = userService.edit(user.getLogin(), user.getHash(), user.isTeacher() ? UserType.TEACHER : UserType.ADMINISTRATOR);
+        if(editResult.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
         } else {
-            result.put(ERROR_KEY, editResult);
+            resp.put(Const.ERROR_KEY, editResult);
         }
-        return result.toString();
+        return resp;
     }
 }

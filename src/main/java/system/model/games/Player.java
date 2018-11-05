@@ -1,6 +1,8 @@
 package system.model.games;
 
-public class Player {
+import system.dao.Idable;
+
+public class Player implements Idable {
 
     private String id;
 

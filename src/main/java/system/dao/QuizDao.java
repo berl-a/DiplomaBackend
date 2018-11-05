@@ -18,12 +18,12 @@ public class QuizDao {
         LinkedList<Quiz> resultList = new LinkedList<>();
 
         Set<String> fields = new TreeSet<>();
-        fields.add("QuizId_INT");
-        fields.add("QuizContent_BLOB");
+        fields.add("Id_STRING");
+        fields.add("Content_BLOB");
 
         LinkedList<IntStringBlobDatabaseEntry> databaseResult = DatabaseToolkit.getDataFromDatabase("Quizzes", fields);
         for(IntStringBlobDatabaseEntry entry : databaseResult) {
-            Object content = entry.getField("QuizContent_BLOB");
+            Object content = entry.getField("Content_BLOB");
             Quiz convertedObject = (Quiz) content;
             resultList.add(convertedObject);
         }
