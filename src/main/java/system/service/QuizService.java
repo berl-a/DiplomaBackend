@@ -3,10 +3,8 @@ package system.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
-import system.dao.QuizDaoCompact;
+import system.dao.QuizDao;
 import system.model.quizzes.Quiz;
-import system.model.users.User;
-import system.model.users.UserType;
 
 import java.util.LinkedList;
 import java.util.Optional;
@@ -15,7 +13,7 @@ import java.util.Optional;
 public class QuizService {
 
     @Autowired
-    QuizDaoCompact dao;
+    QuizDao dao;
 
     private LinkedList<Quiz> cachedQuizzes = new LinkedList<>();
 

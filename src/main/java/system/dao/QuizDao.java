@@ -1,34 +1,12 @@
 package system.dao;
 
 import org.springframework.stereotype.Repository;
-import system.database.DatabaseToolkit;
-import system.database.IntStringBlobDatabaseEntry;
-import system.model.games.Game;
 import system.model.quizzes.Quiz;
 
-import java.util.LinkedList;
-import java.util.Set;
-import java.util.TreeSet;
-
 @Repository
-public class QuizDao {
+public class QuizDao extends Dao<Quiz> {
 
-    public LinkedList<Quiz> getQuizzes() {
-
-        LinkedList<Quiz> resultList = new LinkedList<>();
-
-        Set<String> fields = new TreeSet<>();
-        fields.add("Id_STRING");
-        fields.add("Content_BLOB");
-
-        LinkedList<IntStringBlobDatabaseEntry> databaseResult = DatabaseToolkit.getDataFromDatabase("Quizzes", fields);
-        for(IntStringBlobDatabaseEntry entry : databaseResult) {
-            Object content = entry.getField("Content_BLOB");
-            Quiz convertedObject = (Quiz) content;
-            resultList.add(convertedObject);
-        }
-        return resultList;
+    public QuizDao() {
+        super("Quizzes");
     }
-
-
 }

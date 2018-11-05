@@ -17,10 +17,6 @@ public class Dao<Type extends Idable> {
     }
 
 
-
-
-
-
     public LinkedList<Type> getAll() {
         LinkedList<Type> resultList = new LinkedList<>();
 

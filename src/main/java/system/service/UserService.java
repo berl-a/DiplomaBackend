@@ -3,7 +3,7 @@ package system.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
-import system.dao.UserDaoCompact;
+import system.dao.UserDao;
 import system.model.users.IUser;
 import system.model.users.User;
 import system.model.users.UserType;
@@ -19,7 +19,7 @@ public class UserService {
 //    @Autowired
 //    UserDao userDao;
     @Autowired
-    UserDaoCompact userDao;
+UserDao userDao;
 
 
     private LinkedList<User> cached = new LinkedList<>();
