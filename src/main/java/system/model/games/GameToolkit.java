@@ -15,35 +15,35 @@ import java.util.LinkedList;
 public class GameToolkit {
 
     @Autowired
-    private static QuizService quizService;
+    private QuizService quizService;
     @Autowired
-    private static QuestionService questionService;
+    private QuestionService questionService;
     @Autowired
-    private static QuestionGroupService questionGroupService;
+    private QuestionGroupService questionGroupService;
 
-    public static Game createGame(String quizId) {
-        Game game = new Game();
-        game.setQuiz(quizId);
+//    public Game createGame(String quizId) {
+//        Game game = new Game();
+//        game.setQuiz(quizId);
+//
+//        Quiz quiz = quizService.get(quizId);
+//        game.setNumberOfQuestions(generateListOfQuestions(quiz).getQuestionIds().size());
+//        game.setFullTime(quiz.getTime());
+//        return game;
+//    }
 
-        Quiz quiz = quizService.get(quizId);
-        game.setNumberOfQuestions(generateListOfQuestions(quiz).getQuestionIds().size());
-        game.setFullTime(quiz.getTime());
-        return game;
-    }
-
-    public static ListOfQuestions generateListOfQuestions(Quiz quiz) {
-        LinkedList<String> questions = new LinkedList<>();
-        LinkedList<QuizPart> quizParts =  quiz.getParts();
-        for(QuizPart part : quizParts) {
-            LinkedList<String> questionsInGroup = questionGroupService.getQuestionsInGroup(part.getCategory());
-            if(part.getNumberOfQuestions() <= questionsInGroup.size()) {
-                questions.addAll(questionsInGroup);
-            } else {
-                LinkedList<String> questionsInGroupCopy = (LinkedList<String>) questionsInGroup.clone();
-                Collections.shuffle(questionsInGroupCopy);
-                questions.addAll(questionsInGroupCopy.subList(0, part.getNumberOfQuestions()));
-            }
-        }
-        return new ListOfQuestions(questions);
-    }
+//    public ListOfQuestions generateListOfQuestions(Quiz quiz) {
+//        LinkedList<String> questions = new LinkedList<>();
+//        LinkedList<QuizPart> quizParts =  quiz.getParts();
+//        for(QuizPart part : quizParts) {
+//            LinkedList<String> questionsInGroup = questionGroupService.getQuestionsInGroup(part.getCategory());
+//            if(part.getNumberOfQuestions() <= questionsInGroup.size()) {
+//                questions.addAll(questionsInGroup);
+//            } else {
+//                LinkedList<String> questionsInGroupCopy = (LinkedList<String>) questionsInGroup.clone();
+//                Collections.shuffle(questionsInGroupCopy);
+//                questions.addAll(questionsInGroupCopy.subList(0, part.getNumberOfQuestions()));
+//            }
+//        }
+//        return new ListOfQuestions(questions);
+//    }
 }

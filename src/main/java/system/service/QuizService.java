@@ -21,13 +21,13 @@ public class QuizService {
         cachedQuizzes = dao.getAll();
     }
 
-    public LinkedList<Quiz> getQuizzes() {
+    public LinkedList<Quiz> getAll() {
         updateCached();
         return cachedQuizzes;
     }
 
     public Quiz get(String quizId) {
-        Optional<Quiz> foundQuiz = getQuizzes().stream().filter(q -> quizId.equals(q.getId())).findAny();
+        Optional<Quiz> foundQuiz = getAll().stream().filter(q -> quizId.equals(q.getId())).findAny();
         return foundQuiz.orElse(null);
     }
 

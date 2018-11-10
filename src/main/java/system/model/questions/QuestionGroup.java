@@ -2,21 +2,21 @@ package system.model.questions;
 
 import system.dao.Idable;
 
-import java.util.LinkedList;
-
 public class QuestionGroup implements Idable {
 
     private String id;
-    private LinkedList<String> questions = new LinkedList<>();
+//    private LinkedList<String> questions = new LinkedList<>();
     private String teacher;
 
+    private QuestionGroupType type;
     private String father;
     private String grandfather;
     private String name;
 
-    public QuestionGroup(String id, String teacher, String father, String grandfather, String name) {
+    public QuestionGroup(String id, String teacher, QuestionGroupType type, String father, String grandfather, String name) {
         this.id = id;
         this.teacher = teacher;
+        this.type = type;
         this.father = father;
         this.grandfather = grandfather;
         this.name = name;
@@ -38,12 +38,21 @@ public class QuestionGroup implements Idable {
         this.teacher = teacher;
     }
 
-    public LinkedList<String> getQuestions() {
-        return questions;
+//    public LinkedList<String> getQuestions() {
+//        return questions;
+//    }
+//
+//    public void setQuestions(LinkedList<String> questions) {
+//        this.questions = questions;
+//    }
+
+
+    public QuestionGroupType getType() {
+        return type;
     }
 
-    public void setQuestions(LinkedList<String> questions) {
-        this.questions = questions;
+    public void setType(QuestionGroupType type) {
+        this.type = type;
     }
 
     public String getFather() {

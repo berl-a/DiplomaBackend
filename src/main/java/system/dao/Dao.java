@@ -16,7 +16,6 @@ public class Dao<Type extends Idable> {
         this.tableName = tableName;
     }
 
-
     public LinkedList<Type> getAll() {
         LinkedList<Type> resultList = new LinkedList<>();
 

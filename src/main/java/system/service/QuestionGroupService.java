@@ -17,18 +17,18 @@ public class QuestionGroupService {
     private LinkedList<QuestionGroup> cachedQuestionGroups = new LinkedList<>();
 
     public void updateCachedQuestionGroup() {
-        cachedQuestionGroups = questionGroupDao.getQuestionGroups();
+        cachedQuestionGroups = questionGroupDao.getAll();
     }
 
-    public LinkedList<QuestionGroup> getGroups() {
+    public LinkedList<QuestionGroup> getAll() {
         updateCachedQuestionGroup();
         return cachedQuestionGroups;
     }
 
-    public LinkedList<String> getQuestionsInGroup(String groupId) {
-        updateCachedQuestionGroup();
-        Optional<QuestionGroup> foundGroup = cachedQuestionGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();
-        return foundGroup.isPresent() ? foundGroup.get().getQuestions() : new LinkedList<>();
-    }
+//    public LinkedList<String> getQuestionsInGroup(String groupId) {
+//        updateCachedQuestionGroup();
+//        Optional<QuestionGroup> foundGroup = cachedQuestionGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();
+//        return foundGroup.isPresent() ? foundGroup.get().getQuestions() : new LinkedList<>();
+//    }
 
 }

@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import system.controller.simple_frontend_models.FUser;
 import system.controller.simple_frontend_models.Response;
+import system.model.questions.Question;
 import system.model.quizzes.Quiz;
 import system.model.users.UserType;
 import system.service.QuizService;
 import system.service.UserService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/quizzes")
@@ -20,6 +23,15 @@ public class QuizController {
 
     @Autowired
     QuizService service;
+
+    @RequestMapping(value="/getAll", method = RequestMethod.GET)
+    public @ResponseBody
+    Response getAll() {
+        Response resp;
+        List<Quiz> allObjects = service.getAll();
+        resp = new Response(Const.OBJECTS_KEY, allObjects);
+        return resp;
+    }
 
     @RequestMapping(value="/add", method = RequestMethod.POST)
     public @ResponseBody
