@@ -17,6 +17,7 @@ public class Question implements Serializable, Idable {
     private LinkedList<String> answerImages;
     private LinkedList<Boolean> correctAnswers;
     private String category, subcategory, subsubcategory;
+    private String teacher;
 
     Question() {
         this.id = DataToolkit.getUniqueId();
@@ -80,6 +81,34 @@ public class Question implements Serializable, Idable {
         this.category = category;
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
+    }
+
+    public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
+        this.id = id;
+        this.questionType = questionType;
+        this.questionText = questionText;
+        this.questionImage = questionImage;
+        this.answerTexts = answerTexts;
+        this.answerImages = answerImages;
+        this.correctAnswers = correctAnswers;
+        this.category = category;
+        this.subcategory = subcategory;
+        this.subsubcategory = subsubcategory;
+        this.teacher = teacher;
+    }
+
+    public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
+        this.id = DataToolkit.getUniqueId();
+        this.questionType = questionType;
+        this.questionText = questionText;
+        this.questionImage = questionImage;
+        this.answerTexts = answerTexts;
+        this.answerImages = answerImages;
+        this.correctAnswers = correctAnswers;
+        this.category = category;
+        this.subcategory = subcategory;
+        this.subsubcategory = subsubcategory;
+        this.teacher = teacher;
     }
 
     @Override
@@ -161,5 +190,13 @@ public class Question implements Serializable, Idable {
 
     public void setSubsubcategory(String subsubcategory) {
         this.subsubcategory = subsubcategory;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
     }
 }

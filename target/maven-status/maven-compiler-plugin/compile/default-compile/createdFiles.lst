@@ -9,6 +9,7 @@ system\controller\Const.class
 system\dao\QuestionGroupDao.class
 system\controller\tools\DataToolkit.class
 system\model\games\GameToolkit.class
+system\service\QuizGroupService.class
 system\dao\QuestionDao.class
 system\model\quizzes\QuizSettings.class
 system\model\questions\Question.class
@@ -16,6 +17,7 @@ system\database\FilterBehaviour.class
 system\database\StringDatabaseEntry.class
 system\model\quizzes\Quiz.class
 system\database\IntStringBlobDatabaseEntry.class
+system\dao\QuizGroupDao.class
 system\controller\QuestionController.class
 system\model\questions\QuestionType.class
 system\model\quizzes\QuizSetting.class
@@ -30,14 +32,17 @@ system\dao\Dao.class
 system\database\DatabaseToolkit.class
 system\dao\Idable.class
 system\controller\simple_frontend_models\FUser.class
+system\model\QuizGroupType.class
 system\service\UserService.class
 system\model\games\Game.class
 system\controller\simple_frontend_models\QuestionWithCategoryNames.class
 system\model\users\User.class
 system\model\quizzes\QuizGroup.class
 system\service\GameService.class
+system\controller\simple_frontend_models\QuizWithCategoryNames.class
 system\service\QuestionService.class
 system\service\QuizService.class
+system\controller\QuizGroupController.class
 system\dao\UserDao.class
 system\model\games\ListOfQuestions.class
 system\model\quizzes\QuizPart.class

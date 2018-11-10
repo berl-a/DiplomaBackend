@@ -43,9 +43,9 @@ public class QuestionController {
 
     @RequestMapping(value="/getAllWithCatNames", method = RequestMethod.GET)
     public @ResponseBody
-    Response getAllWithCanNames() {
+    Response getAllWithCanNames(@RequestParam("teacher") String teacherId) {
         Response resp;
-        List<QuestionWithCategoryNames> allObjects = service.getAllWithCatNames();
+        List<QuestionWithCategoryNames> allObjects = service.getAllWithCatNamesByTeacher(teacherId);
         resp = new Response(Const.OBJECTS_KEY, allObjects);
         return resp;
     }

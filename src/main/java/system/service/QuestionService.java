@@ -12,6 +12,7 @@ import system.model.questions.QuestionGroupType;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -62,6 +63,16 @@ public class QuestionService {
     public List<QuestionWithCategoryNames> getAllWithCatNames() {
         updateCached();
         return appendCatNamesToQuestions(cachedQuestions);
+    }
+
+    public List<QuestionWithCategoryNames> getAllWithCatNamesByTeacher(String teacherId) {
+        updateCached();
+        LinkedList<Question> questionsByTeacher =
+                cachedQuestions
+                        .stream()
+                        .filter(q -> teacherId.equals(q.getTeacher()))
+                        .collect(Collectors.toCollection(LinkedList::new));
+        return appendCatNamesToQuestions(questionsByTeacher);
     }
 
     private List<QuestionWithCategoryNames> appendCatNamesToQuestions(List<Question> questions) {

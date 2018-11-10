@@ -1,20 +1,49 @@
 package system.model.quizzes;
 
+import system.controller.tools.DataToolkit;
+import system.dao.Idable;
+import system.model.QuizGroupType;
+
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class QuizGroup {
+public class QuizGroup implements Serializable, Idable {
 
     private String id;
-    private LinkedList<String> quizzes = new LinkedList<>();
     private String teacher;
+
+    private QuizGroupType type;
 
     private String father;
     private String grandfather;
     private String name;
 
-    public QuizGroup(String id, String teacher, String father, String grandfather, String name) {
+    public QuizGroup() {
+        this.id = DataToolkit.getUniqueId();
+    }
+
+    public QuizGroup(String id, String teacher, String father, String grandfather, String name, QuizGroupType type) {
         this.id = id;
         this.teacher = teacher;
+        this.father = father;
+        this.grandfather = grandfather;
+        this.name = name;
+        this.type = type;
+    }
+
+    public QuizGroup(String id, String teacher, QuizGroupType type, String father, String grandfather, String name) {
+        this.id = id;
+        this.teacher = teacher;
+        this.type = type;
+        this.father = father;
+        this.grandfather = grandfather;
+        this.name = name;
+    }
+
+    public QuizGroup(String teacher, QuizGroupType type, String father, String grandfather, String name) {
+        this.id = DataToolkit.getUniqueId();
+        this.teacher = teacher;
+        this.type = type;
         this.father = father;
         this.grandfather = grandfather;
         this.name = name;
@@ -34,14 +63,6 @@ public class QuizGroup {
 
     public void setTeacher(String teacher) {
         this.teacher = teacher;
-    }
-
-    public LinkedList<String> getQuizzes() {
-        return quizzes;
-    }
-
-    public void setQuizzes(LinkedList<String> quizzes) {
-        this.quizzes = quizzes;
     }
 
     public String getFather() {
@@ -66,5 +87,13 @@ public class QuizGroup {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public QuizGroupType getType() {
+        return type;
+    }
+
+    public void setType(QuizGroupType type) {
+        this.type = type;
     }
 }
