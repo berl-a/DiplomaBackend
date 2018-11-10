@@ -1,5 +1,6 @@
 system\service\QuestionGroupService.class
 system\controller\UserController.class
+system\controller\QuestionGroupController.class
 system\database\DatabaseEntry.class
 system\dao\QuizDao.class
 system\model\questions\QuestionGroup.class

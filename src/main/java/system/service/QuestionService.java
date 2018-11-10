@@ -73,11 +73,11 @@ public class QuestionService {
                 subcats = new LinkedList<>(),
                 subsubcats = new LinkedList<>();
         allGroups.forEach(g -> {
-            if(g.getType() == QuestionGroupType.CATEGORY) {
+            if(g.getType() == QuestionGroupType.CAT) {
                 cats.add(g);
-            } else if(g.getType() == QuestionGroupType.SUBCATEGORY) {
+            } else if(g.getType() == QuestionGroupType.SUBCAT) {
                 subcats.add(g);
-            } else if(g.getType() == QuestionGroupType.SUBSUBCATEGORY) {
+            } else if(g.getType() == QuestionGroupType.SUBSUBCAT) {
                 subsubcats.add(g);
             }
         });

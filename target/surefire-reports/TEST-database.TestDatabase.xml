@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="database.TestDatabase" time="0.003" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="database.TestDatabase" time="0.015" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2017.3.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -22,7 +22,7 @@
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_161\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="visualvm.id" value="249950526398756"/>
+    <property name="visualvm.id" value="253856404267753"/>
     <property name="java.io.tmpdir" value="C:\Users\admin\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -63,6 +63,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="database.TestDatabase" name="database.TestDatabase.testGettingHospitationsFromDatabase" time="0.003"/>
-  <testcase classname="database.TestDatabase" name="database.TestDatabase.testGettingTeachersFromDatabase" time="0"/>
+  <testcase classname="database.TestDatabase" name="database.TestDatabase.testGettingHospitationsFromDatabase" time="0.008"/>
+  <testcase classname="database.TestDatabase" name="database.TestDatabase.testGettingTeachersFromDatabase" time="0.007"/>
 </testsuite>

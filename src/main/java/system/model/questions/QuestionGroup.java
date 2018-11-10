@@ -1,9 +1,13 @@
 package system.model.questions;
 
+import system.controller.tools.DataToolkit;
 import system.dao.Idable;
 
-public class QuestionGroup implements Idable {
+import java.io.Serializable;
 
+public class QuestionGroup implements Serializable, Idable {
+
+    //todo add order
     private String id;
 //    private LinkedList<String> questions = new LinkedList<>();
     private String teacher;
@@ -12,6 +16,23 @@ public class QuestionGroup implements Idable {
     private String father;
     private String grandfather;
     private String name;
+
+    public QuestionGroup() {
+        this.id = DataToolkit.getUniqueId();
+    }
+
+    public QuestionGroup(String id) {
+        this.id = id;
+    }
+
+    public QuestionGroup(String teacher, QuestionGroupType type, String father, String grandfather, String name) {
+        this.id = DataToolkit.getUniqueId();
+        this.teacher = teacher;
+        this.type = type;
+        this.father = father;
+        this.grandfather = grandfather;
+        this.name = name;
+    }
 
     public QuestionGroup(String id, String teacher, QuestionGroupType type, String father, String grandfather, String name) {
         this.id = id;
