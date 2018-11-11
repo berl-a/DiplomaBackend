@@ -49,7 +49,8 @@ public class QuizGroupService {
         dao.remove(id);
         return Const.OK_RESULT;
     }
-    
+
+
 //    public LinkedList<String> getQuizsInGroup(String groupId) {
 //        updateCached();
 //        Optional<QuizGroup> foundGroup = cachedQuizGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();

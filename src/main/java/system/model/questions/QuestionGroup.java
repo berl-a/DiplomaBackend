@@ -43,6 +43,15 @@ public class QuestionGroup implements Serializable, Idable {
         this.name = name;
     }
 
+    public QuestionGroup(QuestionGroup q) {
+        this.id = q.id;
+        this.teacher = q.teacher;
+        this.type = q.type;
+        this.father = q.father;
+        this.grandfather = q.grandfather;
+        this.name = q.name;
+    }
+
     public String getId() {
         return id;
     }

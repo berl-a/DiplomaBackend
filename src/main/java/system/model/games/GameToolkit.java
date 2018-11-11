@@ -26,7 +26,7 @@ public class GameToolkit {
 //        game.setQuiz(quizId);
 //
 //        Quiz quiz = quizService.get(quizId);
-//        game.setNumberOfQuestions(generateListOfQuestions(quiz).getQuestionIds().size());
+//        game.setNumber(generateListOfQuestions(quiz).getQuestionIds().size());
 //        game.setFullTime(quiz.getTime());
 //        return game;
 //    }
@@ -36,12 +36,12 @@ public class GameToolkit {
 //        LinkedList<QuizPart> quizParts =  quiz.getParts();
 //        for(QuizPart part : quizParts) {
 //            LinkedList<String> questionsInGroup = questionGroupService.getQuestionsInGroup(part.getCategory());
-//            if(part.getNumberOfQuestions() <= questionsInGroup.size()) {
+//            if(part.getNumber() <= questionsInGroup.size()) {
 //                questions.addAll(questionsInGroup);
 //            } else {
 //                LinkedList<String> questionsInGroupCopy = (LinkedList<String>) questionsInGroup.clone();
 //                Collections.shuffle(questionsInGroupCopy);
-//                questions.addAll(questionsInGroupCopy.subList(0, part.getNumberOfQuestions()));
+//                questions.addAll(questionsInGroupCopy.subList(0, part.getNumber()));
 //            }
 //        }
 //        return new ListOfQuestions(questions);

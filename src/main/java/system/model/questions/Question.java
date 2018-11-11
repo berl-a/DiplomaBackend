@@ -35,6 +35,7 @@ public class Question implements Serializable, Idable {
         this.answerTexts = q.answerTexts;
         this.answerImages = q.answerImages;
         this.correctAnswers = q.correctAnswers;
+        removeEmptyGroups();
     }
 
     public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
@@ -45,6 +46,7 @@ public class Question implements Serializable, Idable {
         this.answerTexts = answerTexts;
         this.answerImages = answerImages;
         this.correctAnswers = correctAnswers;
+        removeEmptyGroups();
     }
 
     public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
@@ -55,6 +57,7 @@ public class Question implements Serializable, Idable {
         this.answerTexts = answerTexts;
         this.answerImages = answerImages;
         this.correctAnswers = correctAnswers;
+        removeEmptyGroups();
     }
 
     public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
@@ -68,6 +71,7 @@ public class Question implements Serializable, Idable {
         this.category = category;
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
+        removeEmptyGroups();
     }
 
     public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
@@ -81,6 +85,7 @@ public class Question implements Serializable, Idable {
         this.category = category;
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
+        removeEmptyGroups();
     }
 
     public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
@@ -95,6 +100,7 @@ public class Question implements Serializable, Idable {
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
         this.teacher = teacher;
+        removeEmptyGroups();
     }
 
     public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
@@ -109,6 +115,14 @@ public class Question implements Serializable, Idable {
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
         this.teacher = teacher;
+
+        removeEmptyGroups();
+    }
+
+    public void removeEmptyGroups() {
+        if("".equals(category)) category = null;
+        if("".equals(subcategory)) subcategory = null;
+        if("".equals(subsubcategory)) subsubcategory = null;
     }
 
     public String changeId() {
@@ -179,6 +193,7 @@ public class Question implements Serializable, Idable {
 
     public void setCategory(String category) {
         this.category = category;
+        removeEmptyGroups();
     }
 
     public String getSubcategory() {
@@ -187,6 +202,7 @@ public class Question implements Serializable, Idable {
 
     public void setSubcategory(String subcategory) {
         this.subcategory = subcategory;
+        removeEmptyGroups();
     }
 
     public String getSubsubcategory() {
@@ -195,6 +211,7 @@ public class Question implements Serializable, Idable {
 
     public void setSubsubcategory(String subsubcategory) {
         this.subsubcategory = subsubcategory;
+        removeEmptyGroups();
     }
 
     public String getTeacher() {

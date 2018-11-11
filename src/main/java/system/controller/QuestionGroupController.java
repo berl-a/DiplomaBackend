@@ -3,10 +3,8 @@ package system.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import system.controller.simple_frontend_models.QuestionGroupWithNumberOfQuestions;
 import system.controller.simple_frontend_models.Response;
 import system.model.questions.QuestionGroup;
 import system.model.quizzes.Quiz;
@@ -24,9 +22,18 @@ public class QuestionGroupController {
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    Response getAll() {
+    Response getAll(@RequestParam("teacher") String teacherId) {
         Response resp;
-        List<QuestionGroup> allObjects = service.getAll();
+        List<QuestionGroup> allObjects = service.getAll(teacherId);
+        resp = new Response(Const.OBJECTS_KEY, allObjects);
+        return resp;
+    }
+
+    @RequestMapping(value="/getAllWithNumberOfQuestions", method = RequestMethod.GET)
+    public @ResponseBody
+    Response getAllWithNumberOfQuestions(@RequestParam("teacher") String teacherId) {
+        Response resp;
+        List<QuestionGroupWithNumberOfQuestions> allObjects = service.getAllWithNumberOfQuestions(teacherId);
         resp = new Response(Const.OBJECTS_KEY, allObjects);
         return resp;
     }
