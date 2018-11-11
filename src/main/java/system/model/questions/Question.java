@@ -111,6 +111,11 @@ public class Question implements Serializable, Idable {
         this.teacher = teacher;
     }
 
+    public String changeId() {
+        this.id = DataToolkit.getUniqueId();
+        return this.id;
+    }
+
     @Override
     public String getId() {
         return id;

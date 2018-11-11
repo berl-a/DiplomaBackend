@@ -3,6 +3,7 @@ package system.model.quizzes;
 import system.controller.tools.DataToolkit;
 import system.dao.Idable;
 
+import javax.xml.crypto.Data;
 import java.io.Serializable;
 import java.util.LinkedList;
 
@@ -70,6 +71,11 @@ public class Quiz implements Serializable, Idable {
         this.category = category;
         this.subcategory = subcategory;
         this.subsubcategory = subsubcategory;
+    }
+
+    public String changeId() {
+        this.id = DataToolkit.getUniqueId();
+        return this.id;
     }
 
     public LinkedList<QuizPart> getParts() {

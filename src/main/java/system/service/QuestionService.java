@@ -46,6 +46,17 @@ public class QuestionService {
         return result;
     }
 
+    public String copy(String id) {
+        updateCached();
+        String result;
+        Question existingQuestion = get(id);
+        Question copiedQuestion = new Question(existingQuestion);
+        copiedQuestion.changeId();
+        dao.add(copiedQuestion);
+        result = copiedQuestion.getId();
+        return result;
+    }
+
     public String edit(Question question) {
         updateCached();
         dao.remove(question.getId());

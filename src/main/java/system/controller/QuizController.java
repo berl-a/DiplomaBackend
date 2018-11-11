@@ -63,6 +63,21 @@ public class QuizController {
         return resp;
     }
 
+    @RequestMapping(value="/copy", method = RequestMethod.POST)
+    public @ResponseBody
+    Response add(@RequestBody String id) {
+        String idWithoutEquals = id.substring(0, id.length() - 1);
+        System.out.println("id without = is " + idWithoutEquals);
+        Response resp = new Response();
+        String result = service.copy(idWithoutEquals);
+        if(!result.equals(Const.NOK_RESULT)) {
+            resp = new Response(Const.NEW_ID_KEY, result);
+        } else {
+            resp = new Response(Const.ERROR_KEY, result);
+        }
+        return resp;
+    }
+
     @RequestMapping(value="/remove", method = RequestMethod.POST)
     public @ResponseBody
     Response remove(@RequestBody String id) {

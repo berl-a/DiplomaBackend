@@ -103,4 +103,15 @@ public class QuizService {
 
         return betterQuizs;
     }
+
+    public String copy(String id) {
+        updateCached();
+        String result;
+        Quiz existingQuiz = get(id);
+        Quiz copiedQuiz = new Quiz(existingQuiz);
+        copiedQuiz.changeId();
+        dao.add(copiedQuiz);
+        result = copiedQuiz.getId();
+        return result;
+    }
 }
