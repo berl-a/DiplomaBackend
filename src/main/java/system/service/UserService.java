@@ -16,11 +16,8 @@ public class UserService {
 
     public static final String USER_EXISTS_ERROR = "user_exists";
 
-//    @Autowired
-//    UserDao userDao;
     @Autowired
-UserDao userDao;
-
+    UserDao userDao;
 
     private LinkedList<User> cached = new LinkedList<>();
 

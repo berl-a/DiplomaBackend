@@ -1,4 +1,5 @@
 system\controller\UserController.class
+system\controller\simple_frontend_models\GameWithActualQuiz.class
 system\database\DatabaseEntry.class
 system\controller\Const.class
 system\dao\QuestionGroupDao.class
@@ -7,6 +8,7 @@ system\dao\QuestionDao.class
 system\model\quizzes\QuizSettings.class
 system\controller\simple_frontend_models\QuizPartWithCategoryNames.class
 system\database\FilterBehaviour.class
+system\dao\PlayerDao.class
 system\database\IntStringBlobDatabaseEntry.class
 system\model\users\UserType.class
 system\model\games\Player.class
@@ -16,6 +18,7 @@ system\controller\simple_frontend_models\Response.class
 system\dao\Dao.class
 system\database\DatabaseToolkit.class
 system\dao\Idable.class
+system\controller\GameController.class
 system\model\QuizGroupType.class
 system\service\UserService.class
 system\model\games\Game.class
@@ -27,6 +30,7 @@ system\controller\QuizGroupController.class
 system\dao\UserDao.class
 system\model\quizzes\QuizPart.class
 system\service\QuestionGroupService.class
+system\service\PlayerService.class
 system\controller\simple_frontend_models\QuestionGroupWithNumberOfQuestions.class
 system\controller\QuestionGroupController.class
 system\dao\QuizDao.class

@@ -65,7 +65,7 @@ public class QuizController {
 
     @RequestMapping(value="/copy", method = RequestMethod.POST)
     public @ResponseBody
-    Response add(@RequestBody String id) {
+    Response copy(@RequestBody String id) {
         String idWithoutEquals = id.substring(0, id.length() - 1);
         System.out.println("id without = is " + idWithoutEquals);
         Response resp = new Response();

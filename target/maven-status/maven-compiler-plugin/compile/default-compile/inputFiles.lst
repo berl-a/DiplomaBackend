@@ -18,6 +18,7 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\service\QuizPartService.jav
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\QuestionWithCategoryNames.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\users\UserType.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\service\UserService.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\controller\GameController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\users\User.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\dao\QuestionDao.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\database\IntStringBlobDatabaseEntry.java
@@ -46,8 +47,11 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\Game.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\tools\DataToolkit.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuestionController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\dao\Idable.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\GameWithActualQuiz.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\quizzes\QuizPart.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\dao\PlayerDao.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\QuizGroupType.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\service\QuestionService.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\service\PlayerService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuestionGroupController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\dao\Dao.java
