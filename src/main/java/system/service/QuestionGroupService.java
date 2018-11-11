@@ -70,7 +70,7 @@ public class QuestionGroupService {
     public String edit(QuestionGroup q) {
         updateCached();
         dao.remove(q.getId());
-        add(q);
+        dao.add(q);
         return Const.OK_RESULT;
     }
 
@@ -85,6 +85,15 @@ public class QuestionGroupService {
         if(questionGroup.getType() == QuestionGroupType.CAT) return getNumberOfQuestions(questionGroup.getId(), null, null);
         else if(questionGroup.getType() == QuestionGroupType.SUBCAT) return getNumberOfQuestions(questionGroup.getFather(), questionGroup.getId(), null);
         else return getNumberOfQuestions(questionGroup.getGrandfather(), questionGroup.getFather(), questionGroup.getId());
+    }
+
+    public String rename(String id, String newName) {
+        updateCached();
+        QuestionGroup group = get(id);
+        dao.remove(id);
+        group.setName(newName);
+        dao.add(group);
+        return Const.OK_RESULT;
     }
 
     public int getNumberOfQuestions(String cat, String subcat, String subsubcat) {

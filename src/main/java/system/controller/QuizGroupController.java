@@ -3,10 +3,7 @@ package system.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.Response;
 import system.model.quizzes.QuizGroup;
 import system.service.QuizGroupService;
@@ -41,30 +38,44 @@ public class QuizGroupController {
         }
         return resp;
     }
-//
-//    @RequestMapping(value="/remove", method = RequestMethod.POST)
-//    public @ResponseBody
-//    Response remove(@RequestBody String id) {
-//        Response resp = new Response();
-//        String result = service.remove(id);
-//        if(result.equals(Const.OK_RESULT)) {
-//            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
-//        } else {
-//            resp.put(Const.ERROR_KEY, result);
-//        }
-//        return resp;
-//    }
-//
-//    @RequestMapping(value="/edit", method = RequestMethod.POST)
-//    public @ResponseBody
-//    Response edit(@RequestBody Quiz quiz) {
-//        Response resp = new Response();
-//        String editResult = service.edit(quiz);
-//        if(editResult.equals(Const.OK_RESULT)) {
-//            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
-//        } else {
-//            resp.put(Const.ERROR_KEY, editResult);
-//        }
-//        return resp;
-//    }
+
+    @RequestMapping(value="/remove", method = RequestMethod.POST)
+    public @ResponseBody
+    Response remove(@RequestBody String id) {
+        id = id.substring(0, id.length() - 1);
+        Response resp = new Response();
+        String result = service.remove(id);
+        if(result.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
+        } else {
+            resp.put(Const.ERROR_KEY, result);
+        }
+        return resp;
+    }
+
+    @RequestMapping(value="/edit", method = RequestMethod.POST)
+    public @ResponseBody
+    Response edit(@RequestBody QuizGroup group) {
+        Response resp = new Response();
+        String editResult = service.edit(group);
+        if(editResult.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
+        } else {
+            resp.put(Const.ERROR_KEY, editResult);
+        }
+        return resp;
+    }
+
+    @RequestMapping(value="/rename", method = RequestMethod.POST)
+    public @ResponseBody
+    Response rename(@RequestParam("id") String id, @RequestParam("newName") String newName) {
+        Response resp = new Response();
+        String editResult = service.rename(id, newName);
+        if(editResult.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
+        } else {
+            resp.put(Const.ERROR_KEY, editResult);
+        }
+        return resp;
+    }
 }

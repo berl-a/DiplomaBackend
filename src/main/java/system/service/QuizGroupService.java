@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.dao.QuizGroupDao;
+import system.model.questions.QuestionGroup;
 import system.model.quizzes.QuizGroup;
 
 import java.util.LinkedList;
@@ -50,6 +51,15 @@ public class QuizGroupService {
         return Const.OK_RESULT;
     }
 
+
+    public String rename(String id, String newName) {
+        updateCached();
+        QuizGroup group = get(id);
+        dao.remove(id);
+        group.setName(newName);
+        dao.add(group);
+        return Const.OK_RESULT;
+    }
 
 //    public LinkedList<String> getQuizsInGroup(String groupId) {
 //        updateCached();
