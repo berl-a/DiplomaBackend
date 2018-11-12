@@ -67,7 +67,7 @@ public class QuizPartController {
     public @ResponseBody
     Response add(@RequestBody String id) {
         String idWithoutEquals = id.substring(0, id.length() - 1);
-        System.out.println("id without = is " + idWithoutEquals);
+//        System.out.println("id without = is " + idWithoutEquals);
         Response resp = new Response();
         String result = service.copy(idWithoutEquals);
         if(!result.equals(Const.NOK_RESULT)) {

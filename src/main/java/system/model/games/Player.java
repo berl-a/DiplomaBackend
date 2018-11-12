@@ -15,6 +15,11 @@ public class Player implements Idable, Serializable {
         this.id = DataToolkit.getUniqueId();
     }
 
+    public Player(String name) {
+        this.id = DataToolkit.getUniqueId();
+        this.name = name;
+    }
+
     public Player(String id, String name) {
         this.id = id;
         this.name = name;

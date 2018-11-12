@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.model.games.Game;
+import system.model.games.Player;
 import system.model.questions.Question;
 import system.model.quizzes.Quiz;
 
@@ -22,6 +23,8 @@ public class GameService {
     PlayerService playerService;
     @Autowired
     QuizService quizService;
+    @Autowired
+    QuestionService questionService;
 
     private LinkedList<Game> games = new LinkedList<>();
 
@@ -47,13 +50,11 @@ public class GameService {
     }
 
     public String remove(String id) {
-        System.out.println("Removing game with id " + id);
         games.removeIf(g -> id.equals(g.getId()));
         return Const.OK_RESULT;
     }
 
     public String removeByCode(String code) {
-        System.out.println("Removing game with code " + code);
         games.removeIf(g -> code.equals(g.getCode()));
         return Const.OK_RESULT;
     }
@@ -83,5 +84,24 @@ public class GameService {
             else resultCode = "ERROR_GENERATING_CODE";
         }
         return resultCode;
+    }
+
+    public String join(String code, String playerName) {
+        Player player = new Player(playerName);
+        playerService.addPlayer(player);
+        Game game = getByCode(code);
+        game.addPlayer(player.getId());
+        return player.getId();
+    }
+
+    public LinkedList<Question> getQuestionsForPlayer(String gameId, String playerId) {
+        return null;//todo add method
+    }
+
+    public void startGame(String gameId) {
+        games.stream().filter(g -> gameId.equals(g.getId())).forEach(g -> {
+//            System.out.println("Set time of game " + g.getId() + " to " + System.currentTimeMillis());
+            g.setStartTime(System.currentTimeMillis());
+        });
     }
 }

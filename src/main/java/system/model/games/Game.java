@@ -57,6 +57,10 @@ public class Game implements Idable, Serializable {
         this.quiz = quizId;
     }
 
+    public void addPlayer(String playerId) {
+        players.add(playerId);
+    }
+
     @Override
     public String getId() {
         return id;

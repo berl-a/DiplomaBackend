@@ -83,6 +83,10 @@ public class DataToolkit {
         return result;
     }
 
+    public static boolean areListsTheSame(LinkedList<String> list0, LinkedList<String> list1) {
+        return list0.size() == list1.size() && list0.stream().allMatch(list1::contains) && list1.stream().allMatch(list0::contains);
+    }
+
 
 //    public static Quiz fromString(String quizAsString) {
 //        JSONObject quizAsJson = new JSONObject(quizAsString);

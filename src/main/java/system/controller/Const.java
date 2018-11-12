@@ -12,4 +12,12 @@ public class Const {
     public static final String NOT_FOUND_RESULT = "not found";
 
     public static final String OBJECT_KEY = "object";
+    public static final String PLAYER_KEY = "player";
+    public static final String PLAYER_IDS_KEY = "player_ids";
+    public static final String PLAYER_NAMES_KEY = "player_names";
+    public static final String GAME_KEY = "game";
+
+    public static final String WRONG_TEACHER_ID = "wrong teacher id";
+    public static final String LONG_POLL_KEY = "longpoll";
+    public static final String REPEAT_LONG_POLL = "REPEAT_LONG_POLL";
 }
