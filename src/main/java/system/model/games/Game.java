@@ -17,6 +17,7 @@ public class Game implements Idable, Serializable {
 
     private LinkedList<String> players = new LinkedList<>();
     private LinkedList<ListOfQuestions> questionsForPlayers = new LinkedList<>();
+    private LinkedList<PlayerAnswers> playersAnswers = new LinkedList<>();
 
     private long fullTime;
     private int numberOfQuestions;
@@ -26,13 +27,14 @@ public class Game implements Idable, Serializable {
         this.id = DataToolkit.getUniqueId();
     }
 
-    public Game(String id, String quiz, String name, String code, LinkedList<String> players, LinkedList<ListOfQuestions> questionsForPlayers, long fullTime, int numberOfQuestions, long startTime, long oneQuestionTime) {
+    public Game(String id, String quiz, String name, String code, LinkedList<String> players, LinkedList<ListOfQuestions> questionsForPlayers, LinkedList<PlayerAnswers> playerAnswers, long fullTime, int numberOfQuestions, long startTime, long oneQuestionTime) {
         this.id = id;
         this.quiz = quiz;
         this.name = name;
         this.code = code;
         this.players = players;
         this.questionsForPlayers = questionsForPlayers;
+        this.playersAnswers = playerAnswers;
         this.fullTime = fullTime;
         this.numberOfQuestions = numberOfQuestions;
         this.startTime = startTime;
@@ -46,6 +48,7 @@ public class Game implements Idable, Serializable {
         this.code = g.code;
         this.players = g.players;
         this.questionsForPlayers = g.questionsForPlayers;
+        this.playersAnswers = g.playersAnswers;
         this.fullTime = g.fullTime;
         this.numberOfQuestions = g.numberOfQuestions;
         this.startTime = g.startTime;
@@ -108,6 +111,14 @@ public class Game implements Idable, Serializable {
 
     public void setQuestionsForPlayers(LinkedList<ListOfQuestions> questionsForPlayers) {
         this.questionsForPlayers = questionsForPlayers;
+    }
+
+    public LinkedList<PlayerAnswers> getPlayersAnswers() {
+        return playersAnswers;
+    }
+
+    public void setPlayersAnswers(LinkedList<PlayerAnswers> playersAnswers) {
+        this.playersAnswers = playersAnswers;
     }
 
     public long getFullTime() {

@@ -8,10 +8,13 @@ import system.model.games.Game;
 import system.model.games.Player;
 import system.model.questions.Question;
 import system.model.quizzes.Quiz;
+import system.model.quizzes.QuizPart;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 @Service
 public class GameService {
@@ -25,6 +28,8 @@ public class GameService {
     QuizService quizService;
     @Autowired
     QuestionService questionService;
+    @Autowired
+    QuestionGroupService questionGroupService;
 
     private LinkedList<Game> games = new LinkedList<>();
 
@@ -94,14 +99,32 @@ public class GameService {
         return player.getId();
     }
 
-    public LinkedList<Question> getQuestionsForPlayer(String gameId, String playerId) {
-        return null;//todo add method
+    public LinkedList<Question> getQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
+        LinkedList<QuizPart> quizParts = quizService.appendQuizParts(quizService.get(get(gameId).getQuiz())).getParts();
+        LinkedList<Question> questionsForPlayer = new LinkedList<>();
+        for(QuizPart part : quizParts) {
+            LinkedList<Question> questionsFromThisPart = questionGroupService.getQuestionsFromGroups(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());
+
+            Collections.shuffle(questionsFromThisPart);
+            questionsForPlayer.addAll(questionsFromThisPart.subList(0, part.getNumber()));
+        }
+        Collections.shuffle(questionsForPlayer);
+        questionsForPlayer = questionsForPlayer.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
+        return questionsForPlayer;
     }
 
     public void startGame(String gameId) {
         games.stream().filter(g -> gameId.equals(g.getId())).forEach(g -> {
-//            System.out.println("Set time of game " + g.getId() + " to " + System.currentTimeMillis());
-            g.setStartTime(System.currentTimeMillis());
+           g.setStartTime(System.currentTimeMillis());
         });
+    }
+
+    public boolean answerQuestion(String gameId, String playerId, String questionId, Integer answerIndex) {
+        Game foundGame = get(gameId);
+        int playerAnswersIndex = foundGame.getPlayers().indexOf(playerId);
+        foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answerIndex);
+        System.out.println("Answer to question is number \\|/");
+        System.out.println(get(gameId).getPlayersAnswers().get(playerAnswersIndex).getAnswers().get(questionId));
+        return questionService.get(questionId).getCorrectAnswers().get(answerIndex);
     }
 }

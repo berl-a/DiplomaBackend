@@ -66,7 +66,7 @@ public class QuestionService {
 
     public String remove(String id) {
         updateCached();
-        System.out.println("Removing question with id " + id);
+//        System.out.println("Removing question with id " + id);
         dao.remove(id);
         return Const.OK_RESULT;
     }
@@ -114,4 +114,41 @@ public class QuestionService {
 
         return betterQuestions;
     }
+
+//    public LinkedList<Question> getFromGroup(String category, String subcategory, String subsubcategory) {
+//        LinkedList<Question> filteredQuestions;
+//        if(subsubcategory == null) {
+//            if(subcategory == null) {
+//                if(category == null) {
+//                    filteredQuestions = getAll();
+//                } else {
+//                    filteredQuestions = getAll()
+//                            .stream()
+//                            .filter(q ->
+//                                    category.equals(q.getCategory())
+//                            )
+//                            .collect(Collectors.toCollection(LinkedList::new));
+//                }
+//            } else {
+//                filteredQuestions = getAll()
+//                        .stream()
+//                        .filter(q ->
+//                                category.equals(q.getCategory()) &&
+//                                        subcategory.equals(q.getSubcategory())
+//                        )
+//                        .collect(Collectors.toCollection(LinkedList::new));
+//            }
+//        } else {
+//            filteredQuestions = getAll()
+//                    .stream()
+//                    .filter(q ->
+//                            category.equals(q.getCategory()) &&
+//                                    subcategory.equals(q.getSubcategory()) &&
+//                                    subsubcategory.equals(q.getSubsubcategory())
+//                    )
+//                    .collect(Collectors.toCollection(LinkedList::new));
+//        }
+//        filteredQuestions.forEach(System.out::println);
+//        return filteredQuestions;
+//    }
 }

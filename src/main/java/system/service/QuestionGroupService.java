@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuestionGroupWithNumberOfQuestions;
-import system.controller.simple_frontend_models.QuestionWithCategoryNames;
 import system.dao.QuestionGroupDao;
 import system.model.questions.Question;
 import system.model.questions.QuestionGroup;
@@ -13,7 +12,6 @@ import system.model.questions.QuestionGroupType;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -80,8 +78,10 @@ public class QuestionGroupService {
         return Const.OK_RESULT;
     }
 
+
+
     public int getNumberOfQuestions(QuestionGroup questionGroup) {
-        System.out.println("Question group type is " + questionGroup.getType());
+//        System.out.println("Question group type is " + questionGroup.getType());
         if(questionGroup.getType() == QuestionGroupType.CAT) return getNumberOfQuestions(questionGroup.getId(), null, null);
         else if(questionGroup.getType() == QuestionGroupType.SUBCAT) return getNumberOfQuestions(questionGroup.getFather(), questionGroup.getId(), null);
         else return getNumberOfQuestions(questionGroup.getGrandfather(), questionGroup.getFather(), questionGroup.getId());
@@ -97,16 +97,22 @@ public class QuestionGroupService {
     }
 
     public int getNumberOfQuestions(String cat, String subcat, String subsubcat) {
+        return getQuestionsFromGroups(cat, subcat, subsubcat).size();
+    }
+
+    public LinkedList<Question> getQuestionsFromGroups(String cat, String subcat, String subsubcat) {
+        System.out.println("cat is " + cat + " " + subcat + " " + subsubcat);
+        LinkedList<Question> selectedQuestions = new LinkedList<>();
 
         LinkedList<Question> questions = questionService.getAll();
         boolean catNotNull = (cat != null);
         boolean subcatNotNull = (subcat != null);
         boolean subsubcatNotNull = (subsubcat != null);
-        System.out.println("Looking for questions with the same setup:");
-        System.out.println("Cat is " + cat + ", subcat is " + subcat + ", subsubcat is " + subsubcat);
-        return (int) questions.stream().filter(q -> {
+//        System.out.println("Looking for questions with the same setup:");
+//        System.out.println("Cat is " + cat + ", subcat is " + subcat + ", subsubcat is " + subsubcat);
+        selectedQuestions = questions.stream().filter(q -> {
             q.removeEmptyGroups();
-            System.out.println(q.getCategory() + " " + q.getSubsubcategory() + " " + q.getSubsubcategory());
+//            System.out.println(q.getCategory() + " " + q.getSubsubcategory() + " " + q.getSubsubcategory());
             if(catNotNull) {
                 if(subcatNotNull) {
                     if(subsubcatNotNull) {
@@ -120,14 +126,15 @@ public class QuestionGroupService {
             } else {
                 return q.getCategory() == null;
             }
-        }).count();
+        }).collect(Collectors.toCollection(LinkedList::new));
+        return selectedQuestions;
     }
 
 
 //    public LinkedList<String> getQuestionsInGroup(String groupId) {
 //        updateCached();
 //        Optional<QuestionGroup> foundGroup = cachedQuestionGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();
-//        return foundGroup.isPresent() ? foundGroup.get().getQuestions() : new LinkedList<>();
+//        return foundGroup.isPresent() ? foundGroup.get().getQuestionsFromGroups() : new LinkedList<>();
 //    }
 
 }

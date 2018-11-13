@@ -8,6 +8,7 @@ import system.dao.QuizDao;
 import system.model.QuizGroupType;
 import system.model.quizzes.Quiz;
 import system.model.quizzes.QuizGroup;
+import system.model.quizzes.QuizPart;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -21,6 +22,8 @@ public class QuizService {
     QuizDao dao;
     @Autowired
     QuizGroupService quizGroupService;
+    @Autowired
+    QuizPartService quizPartService;
 
     private LinkedList<Quiz> cachedQuizs = new LinkedList<>();
 
@@ -36,6 +39,12 @@ public class QuizService {
     public Quiz get(String quizId) {
         Optional<Quiz> foundQuiz = getAll().stream().filter(q -> quizId.equals(q.getId())).findAny();
         return foundQuiz.orElse(null);
+    }
+
+    public Quiz appendQuizParts(Quiz quiz) {
+        LinkedList<QuizPart> quizParts = new LinkedList<>(quizPartService.getAllFromQuiz(quiz.getId()));
+        quiz.setParts(quizParts);
+        return quiz;
     }
 
     public String add(Quiz quiz) {

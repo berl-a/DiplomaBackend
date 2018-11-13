@@ -1,5 +1,6 @@
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\UserController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\quizzes\QuizGroup.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\PlayerAnswers.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\quizzes\QuizSetting.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\users\IUser.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\QuizPartWithCategoryNames.java

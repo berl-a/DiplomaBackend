@@ -5,12 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
-import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
 import system.controller.tools.DataToolkit;
 import system.model.games.Game;
-import system.model.games.Player;
-import system.model.quizzes.Quiz;
 import system.service.GameService;
 import system.service.PlayerService;
 import system.service.QuizService;
@@ -66,7 +63,7 @@ public class GameController {
                 try {Thread.sleep(GAME_START_CHECK_DELAY);} catch (InterruptedException e) {e.printStackTrace();}
             }
             if(gameStarting) {
-                resp.put(Const.OBJECT_KEY, service.getQuestionsForPlayer(gameId, playerId));
+                resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
             } else {
                 resp.put(Const.LONG_POLL_KEY, Const.REPEAT_LONG_POLL);
             }
@@ -75,6 +72,8 @@ public class GameController {
         }
         return resp;
     }
+
+
 
     @RequestMapping(value="/waitForPlayerJoin", method = RequestMethod.GET)
     public @ResponseBody
@@ -89,7 +88,6 @@ public class GameController {
                 foundGame = service.get(gameId);
                 LinkedList<String> gamePlayers = foundGame.getPlayers();
                 differenceFound = !DataToolkit.areListsTheSame(gamePlayers, playersAlreadyJoined);
-
                 if(differenceFound) {
                     break;
                 }
@@ -100,6 +98,25 @@ public class GameController {
             } else {
                 resp.put(Const.LONG_POLL_KEY, Const.REPEAT_LONG_POLL);
             }
+        } else {
+            resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
+        }
+        return resp;
+    }
+
+    @RequestMapping(value="/answerQuestion", method = RequestMethod.POST)
+    public @ResponseBody
+    Response answerQuestion(
+            @RequestParam("gameId") String gameId,
+            @RequestParam("playerId") String playerId,
+            @RequestParam("questionId") String questionId,
+            @RequestParam("answerIndex") int answerIndex
+    ) {
+        Game foundGame = service.get(gameId);
+        Response resp = new Response();
+        if(foundGame != null) {
+            boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answerIndex);
+            resp.put(Const.RESULT_KEY, isAnswerCorrect);
         } else {
             resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
         }
@@ -181,7 +198,6 @@ public class GameController {
     public @ResponseBody
     Response remove(@RequestBody String id) {
         String idWithoutEquals = id.substring(0, id.length() - 1);
-//        System.out.println("id without = is " + idWithoutEquals);
         Response resp = new Response();
         String result = service.remove(idWithoutEquals);
         if(result.equals(Const.OK_RESULT)) {

@@ -68,7 +68,7 @@ public class QuestionGroup implements Serializable, Idable {
         this.teacher = teacher;
     }
 
-//    public LinkedList<String> getQuestions() {
+//    public LinkedList<String> getQuestionsFromGroups() {
 //        return questions;
 //    }
 //

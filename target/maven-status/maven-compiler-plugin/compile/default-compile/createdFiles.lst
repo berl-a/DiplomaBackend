@@ -31,6 +31,7 @@ system\dao\UserDao.class
 system\model\quizzes\QuizPart.class
 system\service\QuestionGroupService.class
 system\service\PlayerService.class
+system\model\games\PlayerAnswers.class
 system\controller\simple_frontend_models\QuestionGroupWithNumberOfQuestions.class
 system\controller\QuestionGroupController.class
 system\dao\QuizDao.class
