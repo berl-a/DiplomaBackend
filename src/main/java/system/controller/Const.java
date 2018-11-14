@@ -20,4 +20,9 @@ public class Const {
     public static final String WRONG_TEACHER_ID = "wrong teacher id";
     public static final String LONG_POLL_KEY = "longpoll";
     public static final String REPEAT_LONG_POLL = "REPEAT_LONG_POLL";
+    public static final String FULL_TIME_KEY = "full_time";
+    public static final String NAME_KEY = "name";
+    public static final String SERVER_TIME = "server_time";
+    public static final String START_TIME_KEY = "start_time";
+    public static final String TIME_LEFT_KEY = "time_left";
 }

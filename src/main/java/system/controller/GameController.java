@@ -48,14 +48,14 @@ public class GameController {
     @RequestMapping(value="/waitForGameStart", method = RequestMethod.GET)
     public @ResponseBody
     Response waitForGameStart(@RequestParam("gameId") String gameId, @RequestParam("playerId") String playerId) {
-        Game foundGame = service.get(gameId);
+        Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
             long waitStartTime = System.currentTimeMillis();
             long maxWaitTime = waitStartTime + MAX_WAITING_FOR_GAME_START_TIME;
             boolean gameStarting = false;
             while(System.currentTimeMillis() < maxWaitTime) {
-                foundGame = service.get(gameId);
+                foundGame = service.getWithQuiz(gameId);
                 if(foundGame.getStartTime() != 0 && foundGame.getStartTime() < System.currentTimeMillis()) {
                     gameStarting = true;
                     break;
@@ -64,6 +64,11 @@ public class GameController {
             }
             if(gameStarting) {
                 resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+//                resp.put(Const.START_TIME_KEY, foundGame.getStartTime());
+//                resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
+                resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
+                resp.put(Const.NAME_KEY, foundGame.getName());
+//                resp.put(Const.SERVER_TIME, System.currentTimeMillis());
             } else {
                 resp.put(Const.LONG_POLL_KEY, Const.REPEAT_LONG_POLL);
             }
@@ -74,18 +79,37 @@ public class GameController {
     }
 
 
+    @RequestMapping(value="/getGameInfo", method = RequestMethod.GET)
+    public @ResponseBody
+    Response getGameInfo(@RequestParam("gameId") String gameId, @RequestParam("playerId") String playerId) {
+        Game foundGame = service.getWithQuiz(gameId);
+        Response resp = new Response();
+        if(foundGame != null) {
+            foundGame = service.getWithQuiz(gameId);
+            System.out.println("Game started " + ((System.currentTimeMillis() - foundGame.getStartTime()) / 60_000) + " minutes ago");
+            resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+            resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
+//            resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
+            resp.put(Const.NAME_KEY, foundGame.getName());
+//            resp.put(Const.SERVER_TIME, System.currentTimeMillis());
+
+        } else {
+            resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
+        }
+        return resp;
+    }
 
     @RequestMapping(value="/waitForPlayerJoin", method = RequestMethod.GET)
     public @ResponseBody
     Response waitForPlayerJoin(@RequestParam("playersAlreadyJoined") LinkedList<String> playersAlreadyJoined, @RequestParam("gameId") String gameId, @RequestParam("teacherId") String teacherId) {
-        Game foundGame = service.get(gameId);
+        Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
             long waitStartTime = System.currentTimeMillis();
             long maxWaitTime = waitStartTime + MAX_WAITING_TIME_FOR_PLAYER_JOIN;
             boolean differenceFound = false;
             while(System.currentTimeMillis() < maxWaitTime) {
-                foundGame = service.get(gameId);
+                foundGame = service.getWithQuiz(gameId);
                 LinkedList<String> gamePlayers = foundGame.getPlayers();
                 differenceFound = !DataToolkit.areListsTheSame(gamePlayers, playersAlreadyJoined);
                 if(differenceFound) {
@@ -112,11 +136,14 @@ public class GameController {
             @RequestParam("questionId") String questionId,
             @RequestParam("answerIndex") int answerIndex
     ) {
-        Game foundGame = service.get(gameId);
+        Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
             boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answerIndex);
+            long fullTime = service.get(gameId).getFullTime();
+
             resp.put(Const.RESULT_KEY, isAnswerCorrect);
+            resp.put(Const.FULL_TIME_KEY, fullTime);
         } else {
             resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
         }
@@ -125,10 +152,16 @@ public class GameController {
 
     @RequestMapping(value="/startGame", method = RequestMethod.POST)
     public @ResponseBody
-    Response startGame(@RequestParam("gameId") String gameId, @RequestParam("teacherId") String teacherId) {
-        Game foundGame = service.get(gameId);
+    Response startGame(@RequestParam("gameId") String gameId, @RequestParam("teacherId") String teacherId, @RequestParam("time") int time, @RequestParam("gameName") String gameName) {
+
+        Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
+
         if(foundGame != null) {
+            foundGame.setName(gameName);
+            foundGame.setFullTime(time * 60_000);
+            service.set(gameId, foundGame);
+
             if (teacherId.equals(quizService.get(foundGame.getQuiz()).getTeacher())) {
                 service.startGame(gameId);
                 resp.put(Const.RESULT_KEY, Const.OK_RESULT);
@@ -143,12 +176,12 @@ public class GameController {
     }
 
 
-    @RequestMapping(value="/get", method = RequestMethod.GET)
+    @RequestMapping(value="/getWithQuiz", method = RequestMethod.GET)
     public @ResponseBody
     Response get(@RequestParam(value = "id") String id) {
 
         Response resp = new Response();
-        GameWithActualQuiz result = service.get(id);
+        GameWithActualQuiz result = service.getWithQuiz(id);
         if(result != null) {
             resp.put(Const.RESULT_KEY, result);
         } else {

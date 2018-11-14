@@ -101,7 +101,6 @@ public class QuestionGroupService {
     }
 
     public LinkedList<Question> getQuestionsFromGroups(String cat, String subcat, String subsubcat) {
-        System.out.println("cat is " + cat + " " + subcat + " " + subsubcat);
         LinkedList<Question> selectedQuestions = new LinkedList<>();
 
         LinkedList<Question> questions = questionService.getAll();
@@ -127,6 +126,7 @@ public class QuestionGroupService {
                 return q.getCategory() == null;
             }
         }).collect(Collectors.toCollection(LinkedList::new));
+//        System.out.println("Questions from group: " + selectedQuestions.size() + " of them");
         return selectedQuestions;
     }
 
@@ -134,7 +134,7 @@ public class QuestionGroupService {
 //    public LinkedList<String> getQuestionsInGroup(String groupId) {
 //        updateCached();
 //        Optional<QuestionGroup> foundGroup = cachedQuestionGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();
-//        return foundGroup.isPresent() ? foundGroup.get().getQuestionsFromGroups() : new LinkedList<>();
+//        return foundGroup.isPresent() ? foundGroup.getWithQuiz().getQuestionsFromGroups() : new LinkedList<>();
 //    }
 
 }

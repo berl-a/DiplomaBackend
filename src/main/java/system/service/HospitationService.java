@@ -26,7 +26,7 @@ public class HospitationService {
 //
 //    public HospitationPlan getRandomUnapprovedHospitationPlan() {
 //        LinkedList<HospitationPlan> hospPlans = DatabaseToolkit.getUnaprovedHospitationPlans();
-//        return hospPlans.get(new Random().nextInt(hospPlans.size()));
+//        return hospPlans.getWithQuiz(new Random().nextInt(hospPlans.size()));
 //    }
 //
 //

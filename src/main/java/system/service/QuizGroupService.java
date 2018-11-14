@@ -64,7 +64,7 @@ public class QuizGroupService {
 //    public LinkedList<String> getQuizsInGroup(String groupId) {
 //        updateCached();
 //        Optional<QuizGroup> foundGroup = cachedQuizGroups.stream().filter(gr -> groupId.equals(gr.getId())).findAny();
-//        return foundGroup.isPresent() ? foundGroup.get().getQuizs() : new LinkedList<>();
+//        return foundGroup.isPresent() ? foundGroup.getWithQuiz().getQuizs() : new LinkedList<>();
 //    }
 
 }

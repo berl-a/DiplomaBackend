@@ -47,7 +47,7 @@ public class DatabaseToolkit {
 
 	/**
 	 * Get data from app.app.database with connection to the app.app.database inside
-	 * @param tableName name of the SQL table you want to get data from
+	 * @param tableName name of the SQL table you want to getWithQuiz data from
 	 * @param fieldNames names of fields of the table
 	 * @return list of app.app.database entries from the table
 	 */
@@ -64,7 +64,7 @@ public class DatabaseToolkit {
 
 	/**
 	 * Get data from app.app.database without app.app.database connection
-	 * @param tableName name of the SQL table you want to get data from
+	 * @param tableName name of the SQL table you want to getWithQuiz data from
 	 * @param fieldNames names of fields of the table
 	 * @return list of app.app.database entries from the table
 	 */
@@ -125,7 +125,7 @@ public class DatabaseToolkit {
 
     /**
      * Get data from app.app.database with connection to the app.app.database inside
-     * @param tableName name of the SQL table you want to get data from
+     * @param tableName name of the SQL table you want to getWithQuiz data from
      * @param fieldNames names of fields of the table
      * @return list of app.app.database entries from the table
      */
@@ -144,7 +144,7 @@ public class DatabaseToolkit {
 
     /**
      * Get data from app.app.database without app.app.database connection
-     * @param tableName name of the SQL table you want to get data from
+     * @param tableName name of the SQL table you want to getWithQuiz data from
      * @param fieldNames names of fields of the table
      * @return list of app.app.database entries from the table
      */

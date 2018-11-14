@@ -64,7 +64,7 @@ public class QuizService {
 
     public String remove(String id) {
         updateCached();
-        System.out.println("Removing quiz with id " + id);
+//        System.out.println("Removing quiz with id " + id);
         dao.remove(id);
         return Const.OK_RESULT;
     }

@@ -33,6 +33,12 @@ public class GameService {
 
     private LinkedList<Game> games = new LinkedList<>();
 
+    public void set(String gameId, Game newGame) {
+        Game foundGame = get(gameId);
+        int gameIndex = games.indexOf(foundGame);
+        games.set(gameIndex, newGame);
+    }
+
     public LinkedList<Game> getAll() {
         return games;
     }
@@ -44,9 +50,14 @@ public class GameService {
         return getGameWithActualQuiz(game);
     }
 
-    public GameWithActualQuiz get(String gameId) {
+    public GameWithActualQuiz getWithQuiz(String gameId) {
         Optional<Game> foundGame = getAll().stream().filter(g -> gameId.equals(g.getId())).findAny();
         return getGameWithActualQuiz(foundGame.orElse(null));
+    }
+
+    public Game get(String gameId) {
+        Optional<Game> foundGame = getAll().stream().filter(g -> gameId.equals(g.getId())).findAny();
+        return foundGame.orElse(null);
     }
 
     public GameWithActualQuiz getByCode(String code) {
@@ -100,9 +111,15 @@ public class GameService {
     }
 
     public LinkedList<Question> getQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
-        LinkedList<QuizPart> quizParts = quizService.appendQuizParts(quizService.get(get(gameId).getQuiz())).getParts();
+        LinkedList<QuizPart> quizParts = quizService.appendQuizParts(quizService.get(getWithQuiz(gameId).getQuiz())).getParts();
         LinkedList<Question> questionsForPlayer = new LinkedList<>();
         for(QuizPart part : quizParts) {
+            if(part.getCategory() != null && part.getCategory().equals(""))
+                part.setCategory(null);
+            if(part.getSubcategory() != null && part.getSubcategory().equals(""))
+                part.setSubcategory(null);
+            if(part.getSubsubcategory() != null && part.getSubsubcategory().equals(""))
+                part.setSubsubcategory(null);
             LinkedList<Question> questionsFromThisPart = questionGroupService.getQuestionsFromGroups(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());
 
             Collections.shuffle(questionsFromThisPart);
@@ -120,11 +137,11 @@ public class GameService {
     }
 
     public boolean answerQuestion(String gameId, String playerId, String questionId, Integer answerIndex) {
-        Game foundGame = get(gameId);
+        Game foundGame = getWithQuiz(gameId);
         int playerAnswersIndex = foundGame.getPlayers().indexOf(playerId);
         foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answerIndex);
-        System.out.println("Answer to question is number \\|/");
-        System.out.println(get(gameId).getPlayersAnswers().get(playerAnswersIndex).getAnswers().get(questionId));
+//        System.out.println("Answer to question is number \\|/");
+//        System.out.println(getWithQuiz(gameId).getPlayersAnswers().get(playerAnswersIndex).getAnswers().get(questionId));
         return questionService.get(questionId).getCorrectAnswers().get(answerIndex);
     }
 }

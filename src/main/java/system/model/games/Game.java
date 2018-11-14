@@ -62,6 +62,7 @@ public class Game implements Idable, Serializable {
 
     public void addPlayer(String playerId) {
         players.add(playerId);
+        playersAnswers.add(new PlayerAnswers());
     }
 
     @Override

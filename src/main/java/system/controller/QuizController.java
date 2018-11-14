@@ -18,7 +18,7 @@ public class QuizController {
     @Autowired
     QuizService service;
 
-    @RequestMapping(value="/get", method = RequestMethod.GET)
+    @RequestMapping(value="/getWithQuiz", method = RequestMethod.GET)
     public @ResponseBody
     Response get(@RequestParam(value = "id") String id) {
 

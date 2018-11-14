@@ -18,7 +18,7 @@ public interface DatabaseEntry<V> extends Serializable {
 
     /**
      *
-     * @param fieldName name of field, value of which you want to get
+     * @param fieldName name of field, value of which you want to getWithQuiz
      * @return value of field with specified name
      */
     V getField(String fieldName);
