@@ -16,14 +16,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+            <state relative-caret-position="346">
+              <caret line="272" column="20" lean-forward="false" selection-start-line="272" selection-start-column="20" selection-end-line="272" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/users/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,7 +81,6 @@
       <find>quizId</find>
       <find>question</find>
       <find>Question</find>
-      <find>quiz</find>
       <find>Quiz</find>
       <find>cachedQuizs</find>
       <find>&lt;Quiz&gt;</find>
@@ -61,6 +90,10 @@
       <find>TIME_KEY</find>
       <find>answer</find>
       <find>&quot;cat</find>
+      <find>QuizGroup</find>
+      <find>group</find>
+      <find>quiz</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>4.0</replace>
@@ -77,6 +110,8 @@
       <replace>QuizPart</replace>
       <replace>cached</replace>
       <replace>&lt;QuizPart&gt;</replace>
+      <replace>Result</replace>
+      <replace>result</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -90,21 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/model/quizzes/QuizSettings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/service/QuestionsToolkit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/QuizDaoCompact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/QuestionDaoCompact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/QuestionGroupDaoCompact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/UserDaoCompact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/GameDaoCompact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/QuestionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/GameDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuestionWithCategoryNames.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/model/games/GameToolkit.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/database/DatabaseToolkit.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/model/questions/QuestionGroupType.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuizWithCategoryNames.java" />
@@ -122,7 +142,6 @@
         <option value="$PROJECT_DIR$/src/main/java/system/service/QuizPartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/model/questions/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/PlayerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/QuizController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/GameWithActualQuiz.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/QuizGroupService.java" />
@@ -133,14 +152,30 @@
         <option value="$PROJECT_DIR$/src/main/java/system/service/PlayerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/tools/DataToolkit.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/QuestionService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/model/games/PlayerAnswers.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/QuizPartController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/model/games/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/service/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/QuizService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/QuestionGroupService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/FUser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/games/PlayerAnswers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/games/Answer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/games/SingleChoiceAnswer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/games/MultipleChoiceAnswer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/games/FreeTextAnswer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/dao/ResultDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/ResultController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/ResultService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/GameArchiver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/database/Test.java" />
       </list>
     </option>
   </component>
@@ -175,8 +210,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="683" />
-    <option name="height" value="768" />
+    <option name="width" value="960" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -196,9 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,25 +272,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
@@ -327,6 +340,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,33 +355,33 @@
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="system.model.games" />
-      <recent name="system.service" />
-      <recent name="system.model" />
-      <recent name="system.model.questions" />
-      <recent name="system.dao" />
-    </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="system.controller.Const" />
+      <recent name="system.controller.UserController" />
       <recent name="system.controller.GameController" />
       <recent name="system.service.GameService" />
-      <recent name="system.controller.UserController" />
       <recent name="system.dao.UserDao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PWr\PO\HospProject\Etap3\Project\Backend\src\main\java\system" />
+      <recent name="D:\JAVA\NextGreatWorkspace\SpringMvcApp\src\main\webapp\WEB-INF\pages" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="system.model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="system.controller" />
-      <recent name="system.controller.simple_frontend_models" />
-      <recent name="system.dao" />
       <recent name="system.service" />
-      <recent name="system.model.quizzes" />
+      <recent name="system.dao" />
+      <recent name="system.model.games" />
+      <recent name="system.controller.simple_frontend_models" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PWr\PO\HospProject\Etap3\Project\Backend\src\main\java\system" />
-      <recent name="D:\JAVA\NextGreatWorkspace\SpringMvcApp\src\main\webapp\WEB-INF\pages" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="system.model.games" />
+      <recent name="system.service" />
+      <recent name="system.model" />
+      <recent name="system.model.questions" />
+      <recent name="system.dao" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -446,6 +462,25 @@
       <option name="PACKAGE_NAME" value="database" />
       <option name="MAIN_CLASS_NAME" value="database.TestDatabase" />
       <option name="METHOD_NAME" value="testUnapprovedHospitationsGottenFromDatabaseOkay" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Test.testHashCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMvcApp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="database" />
+      <option name="MAIN_CLASS_NAME" value="database.Test" />
+      <option name="METHOD_NAME" value="testHashCode" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -539,17 +574,19 @@
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Maven.SpringMvcJettyApp" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestDatabase" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TestDatabase.testGettingHospitationsFromDatabase" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.TestDatabase.testUnapprovedHospitationsGottenFromDatabaseOkay" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Test.testHashCode" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestDatabase.testUnapprovedHospitationsGottenFromDatabaseOkay" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestDatabase.testGettingHospitationsFromDatabase" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDatabase" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Test.testHashCode" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestDatabase.testUnapprovedHospitationsGottenFromDatabaseOkay" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestDatabase.testGettingHospitationsFromDatabase" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestDatabase" />
       </list>
     </recent_temporary>
   </component>
@@ -557,9 +594,6 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestDatabase_testGettingHospitationsFromDatabase - 2018.01.20 at 23h 04m 17s.xml">
-      <configuration name="TestDatabase.testGettingHospitationsFromDatabase" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestDatabase_testGettingHospitationsFromDatabase - 2018.01.20 at 23h 04m 49s.xml">
       <configuration name="TestDatabase.testGettingHospitationsFromDatabase" configurationId="JUnit" />
     </history-entry>
@@ -587,6 +621,9 @@
     <history-entry file="TestDatabase_testUnapprovedHospitationsGottenFromDatabaseOkay - 2018.01.21 at 03h 31m 12s.xml">
       <configuration name="TestDatabase.testUnapprovedHospitationsGottenFromDatabaseOkay" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Test_testHashCode - 2018.11.18 at 20h 52m 46s.xml">
+      <configuration name="Test.testHashCode" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -598,21 +635,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1384" height="786" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760474" sideWeight="0.49375" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.45572916" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31763417" sideWeight="0.40870488" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09427083" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1825525" sideWeight="0.5912951" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35135135" sideWeight="0.5912951" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13250366" sideWeight="0.4764045" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.47669172" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24231333" sideWeight="0.510453" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1078125" sideWeight="0.5233083" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263328" sideWeight="0.46822917" order="1" side_tool="false" content_ui="tabs" />
@@ -626,7 +664,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Connector for AWS Lambda" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.45572916" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="992" y="76" width="502" height="268" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -644,143 +681,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/HospitationController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/GameDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/GameToolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/questions/QuestionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/HospitationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/questions/QuestionGroupType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuizWithCategoryNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuestionGroupDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/database/DatabaseToolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuestionsToolkit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuizPartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuizDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuestionWithCategoryNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuizPartWithCategoryNames.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/questions/QuestionGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuestionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/quizzes/QuizSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/quizzes/QuizSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/model/quizzes/QuizPart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -802,26 +702,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/model/QuizGroupType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/PlayerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -839,25 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizGroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuizGroupDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -877,21 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/quizzes/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-624">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/GameWithActualQuiz.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -900,58 +755,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuestionGroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/PlayerAnswers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuizGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="44" column="22" lean-forward="true" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuestionGroupService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
           <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2772">
-          <caret line="146" column="28" lean-forward="false" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -966,16 +773,289 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuestionController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuizService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuestionGroupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-674">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="399">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="59" lean-forward="false" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/quizzes/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/PlayerAnswers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/MultipleChoiceAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#277#278#0" expanded="false" />
+            <element signature="e#327#328#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#689#690#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#793#794#0" expanded="false" />
+            <element signature="e#830#831#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#955#956#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/FreeTextAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#305#306#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
+            <element signature="e#374#375#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#517#518#0" expanded="false" />
+            <element signature="e#547#548#0" expanded="false" />
+            <element signature="e#594#595#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/ResultDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/QuizDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="146" column="28" lean-forward="false" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizGroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuizGroupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuestionsToolkit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#853#854#0" expanded="false" />
+            <element signature="e#885#886#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#2030#2031#0" expanded="false" />
+            <element signature="e#2055#2056#0" expanded="false" />
+            <element signature="e#2091#2092#0" expanded="false" />
+            <element signature="e#2119#2120#0" expanded="false" />
+            <element signature="e#2152#2153#0" expanded="false" />
+            <element signature="e#2183#2184#0" expanded="false" />
+            <element signature="e#2229#2230#0" expanded="false" />
+            <element signature="e#2269#2270#0" expanded="false" />
+            <element signature="e#2302#2303#0" expanded="false" />
+            <element signature="e#2333#2334#0" expanded="false" />
+            <element signature="e#2379#2380#0" expanded="false" />
+            <element signature="e#2419#2420#0" expanded="false" />
+            <element signature="e#2453#2454#0" expanded="false" />
+            <element signature="e#2483#2484#0" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="false" />
+            <element signature="e#2567#2568#0" expanded="false" />
+            <element signature="e#2613#2614#0" expanded="false" />
+            <element signature="e#2643#2644#0" expanded="false" />
+            <element signature="e#2701#2702#0" expanded="false" />
+            <element signature="e#2739#2740#0" expanded="false" />
+            <element signature="e#2789#2790#0" expanded="false" />
+            <element signature="e#2823#2824#0" expanded="false" />
+            <element signature="e#2889#2890#0" expanded="false" />
+            <element signature="e#2935#2936#0" expanded="false" />
+            <element signature="e#3002#3003#0" expanded="false" />
+            <element signature="e#3044#3045#0" expanded="false" />
+            <element signature="e#3257#3258#0" expanded="false" />
+            <element signature="e#3294#3295#0" expanded="false" />
+            <element signature="e#3373#3374#0" expanded="false" />
+            <element signature="e#3425#3426#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/ResultService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/PlayerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringMvcApp.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/com/sun/org/apache/xerces/internal/util/ErrorHandlerWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/SingleChoiceAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/GameArchiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/GameService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="154" column="5" lean-forward="true" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -988,32 +1068,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/FUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="147">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/GameService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/QuizService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-          <folding>
-            <element signature="e#1200#1201#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="307">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="69" column="62" lean-forward="true" selection-start-line="69" selection-start-column="62" selection-end-line="69" selection-end-column="62" />
+        <state relative-caret-position="346">
+          <caret line="272" column="20" lean-forward="false" selection-start-line="272" selection-start-column="20" selection-end-line="272" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="51" column="33" lean-forward="true" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/database/TestDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/database/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

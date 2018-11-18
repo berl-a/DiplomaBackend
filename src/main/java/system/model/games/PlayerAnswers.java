@@ -5,17 +5,17 @@ import java.util.HashMap;
 
 public class PlayerAnswers implements Serializable {
 
-    private HashMap<String, Integer> answers = new HashMap<>();
+    private HashMap<String, Answer> answers = new HashMap<>();
 
-    public void addAnswer(String questionId, Integer answerIndex) {
-        answers.put(questionId, answerIndex);
+    public void addAnswer(String questionId, Answer answer) {
+        answers.put(questionId, answer);
     }
 
-    public HashMap<String, Integer> getAnswers() {
+    public HashMap<String, Answer> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(HashMap<String, Integer> answers) {
+    public void setAnswers(HashMap<String, Answer> answers) {
         this.answers = answers;
     }
 }

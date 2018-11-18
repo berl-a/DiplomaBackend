@@ -1,6 +1,7 @@
 system\controller\UserController.class
 system\controller\simple_frontend_models\GameWithActualQuiz.class
 system\database\DatabaseEntry.class
+system\controller\ResultController.class
 system\controller\Const.class
 system\dao\QuestionGroupDao.class
 system\service\QuizGroupService.class
@@ -9,6 +10,7 @@ system\model\quizzes\QuizSettings.class
 system\controller\simple_frontend_models\QuizPartWithCategoryNames.class
 system\database\FilterBehaviour.class
 system\dao\PlayerDao.class
+system\model\games\FreeTextAnswer.class
 system\database\IntStringBlobDatabaseEntry.class
 system\model\users\UserType.class
 system\model\games\Player.class
@@ -23,6 +25,7 @@ system\model\QuizGroupType.class
 system\service\UserService.class
 system\model\games\Game.class
 system\model\users\User.class
+system\model\Result.class
 system\controller\simple_frontend_models\QuizWithCategoryNames.class
 system\service\QuestionService.class
 system\service\QuizService.class
@@ -32,15 +35,20 @@ system\model\quizzes\QuizPart.class
 system\service\QuestionGroupService.class
 system\service\PlayerService.class
 system\model\games\PlayerAnswers.class
+system\model\games\SingleChoiceAnswer.class
 system\controller\simple_frontend_models\QuestionGroupWithNumberOfQuestions.class
 system\controller\QuestionGroupController.class
+system\service\ResultService.class
 system\dao\QuizDao.class
+system\dao\ResultDao.class
 system\model\questions\QuestionGroup.class
 system\model\questions\QuestionGroupType.class
+system\model\games\Answer.class
 system\controller\tools\DataToolkit.class
 system\model\games\GameToolkit.class
 system\model\questions\Question.class
 system\database\StringDatabaseEntry.class
+system\model\games\MultipleChoiceAnswer.class
 system\model\quizzes\Quiz.class
 system\dao\QuizGroupDao.class
 system\controller\QuestionController.class
@@ -49,6 +57,7 @@ system\model\quizzes\QuizSetting.class
 system\service\HospitationService.class
 system\controller\QuizController.class
 system\dao\QuizPartDao.class
+system\service\GameArchiver.class
 system\controller\simple_frontend_models\FUser.class
 system\service\QuizPartService.class
 system\controller\simple_frontend_models\QuestionWithCategoryNames.class

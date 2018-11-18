@@ -7,7 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.controller.simple_frontend_models.Response;
 import system.controller.tools.DataToolkit;
+import system.model.games.Answer;
 import system.model.games.Game;
+import system.model.games.SingleChoiceAnswer;
+import system.model.questions.QuestionType;
 import system.service.GameService;
 import system.service.PlayerService;
 import system.service.QuizService;
@@ -37,7 +40,7 @@ public class GameController {
             String playerId = service.join(code, name);
             GameWithActualQuiz gameJoined = service.getByCode(code);
             resp = new Response();
-            resp.put(Const.PLAYER_KEY, playerService.getPlayer(playerId));
+            resp.put(Const.PLAYER_KEY, playerService.get(playerId));
             resp.put(Const.GAME_KEY, gameJoined);
         } else {
             resp = new Response(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
@@ -81,15 +84,16 @@ public class GameController {
 
     @RequestMapping(value="/getGameInfo", method = RequestMethod.GET)
     public @ResponseBody
-    Response getGameInfo(@RequestParam("gameId") String gameId, @RequestParam("playerId") String playerId) {
+    Response getGameInfo(@RequestParam("gameId") String gameId) {
         Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
-            foundGame = service.getWithQuiz(gameId);
             System.out.println("Game started " + ((System.currentTimeMillis() - foundGame.getStartTime()) / 60_000) + " minutes ago");
-            resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+//            resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+            resp.put(Const.START_TIME_KEY, foundGame.getStartTime());
+            resp.put(Const.SERVER_TIME, System.currentTimeMillis());
             resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
-//            resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
+            resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
             resp.put(Const.NAME_KEY, foundGame.getName());
 //            resp.put(Const.SERVER_TIME, System.currentTimeMillis());
 
@@ -134,16 +138,41 @@ public class GameController {
             @RequestParam("gameId") String gameId,
             @RequestParam("playerId") String playerId,
             @RequestParam("questionId") String questionId,
-            @RequestParam("answerIndex") int answerIndex
+            @RequestParam("questionType") QuestionType questionType,
+            @RequestParam("answerAsString") String answerAsString
     ) {
+
         Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
-            boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answerIndex);
+            Answer answer = null;
+            if(questionType == QuestionType.SINGLE_CHOICE)
+                answer = new SingleChoiceAnswer(Integer.valueOf(answerAsString));
+            boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answer);
+
             long fullTime = service.get(gameId).getFullTime();
 
             resp.put(Const.RESULT_KEY, isAnswerCorrect);
             resp.put(Const.FULL_TIME_KEY, fullTime);
+        } else {
+            resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
+        }
+        return resp;
+    }
+
+    @RequestMapping(value="/setFullTime", method = RequestMethod.POST)
+    public @ResponseBody
+    Response setFullTime(
+            @RequestParam("gameId") String gameId,
+            @RequestParam("fullTime") long fullTime
+    ) {
+        Game foundGame = service.getWithQuiz(gameId);
+        Response resp = new Response();
+        if(foundGame != null) {
+            foundGame.setFullTime(fullTime);
+            service.set(gameId, foundGame);
+//            System.out.println("TIME_LEFT is " + (foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis()));
+            resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
         } else {
             resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
         }
@@ -175,6 +204,23 @@ public class GameController {
         return resp;
     }
 
+
+    @RequestMapping(value="/endGame", method = RequestMethod.POST)
+    public @ResponseBody
+    Response endGame(
+            @RequestParam("gameId") String gameId
+    ) {
+        Game foundGame = service.getWithQuiz(gameId);
+        Response resp = new Response();
+        if(foundGame != null) {
+            foundGame.setFullTime(System.currentTimeMillis() - foundGame.getStartTime());
+            service.set(gameId, foundGame);
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
+        } else {
+            resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
+        }
+        return resp;
+    }
 
     @RequestMapping(value="/getWithQuiz", method = RequestMethod.GET)
     public @ResponseBody

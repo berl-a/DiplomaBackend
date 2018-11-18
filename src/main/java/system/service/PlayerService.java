@@ -6,7 +6,6 @@ import system.dao.PlayerDao;
 import system.model.games.Player;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -23,7 +22,7 @@ public class PlayerService {
         dao.getPlayers().add(p);
     }
 
-    public Player getPlayer(String id) {
+    public Player get(String id) {
         Optional<Player> foundPlayer = dao.getPlayers().stream().filter(p -> id.equals(p.getId())).findAny();
         return foundPlayer.orElse(null);
     }
@@ -33,6 +32,6 @@ public class PlayerService {
     }
 
     public LinkedList<Player> getPlayersForIds(LinkedList<String> players) {
-        return players.stream().map(this::getPlayer).collect(Collectors.toCollection(LinkedList::new));
+        return players.stream().map(this::get).collect(Collectors.toCollection(LinkedList::new));
     }
 }

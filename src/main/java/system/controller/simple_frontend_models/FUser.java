@@ -7,6 +7,9 @@ public class FUser {
     String login, hash;
     boolean isTeacher;
 
+    public FUser() {
+    }
+
     public String getLogin() {
         return login;
     }
@@ -31,7 +34,8 @@ public class FUser {
         isTeacher = teacher;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return getLogin() + " " + getHash() + " " + isTeacher;
+    }
 }

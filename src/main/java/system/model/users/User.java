@@ -8,6 +8,13 @@ public class User implements IUser, Idable{
     private String id, login, hash;
     private UserType type;
 
+    public User(User u) {
+        this.id = u.id;
+        this.login = u.login;
+        this.hash = u.hash;
+        this.type = u.type;
+    }
+
     public User(String id, String login, String hash, UserType type) {
         this.id = id;
         this.login = login;
@@ -16,10 +23,14 @@ public class User implements IUser, Idable{
     }
 
     public User(String login, String hash, UserType type) {
+        id = DataToolkit.getUniqueId();
         this.login = login;
         this.hash = hash;
         this.type = type;
-        id = DataToolkit.getUniqueId();
+    }
+
+    public void changeId() {
+        this.id = DataToolkit.getUniqueId();
     }
 
     @Override

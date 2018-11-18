@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
+import system.model.games.Answer;
 import system.model.games.Game;
 import system.model.games.Player;
 import system.model.questions.Question;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 public class GameService {
 
-    public static final int CODE_LENGTH = 4;
+    public static final int CODE_LENGTH = 1;
     public static final int NUMBER_OF_TRIES_TO_GENERATE_CODE = 100;
 
     @Autowired
@@ -131,17 +132,25 @@ public class GameService {
     }
 
     public void startGame(String gameId) {
-        games.stream().filter(g -> gameId.equals(g.getId())).forEach(g -> {
-           g.setStartTime(System.currentTimeMillis());
-        });
+        games.stream().filter(g -> gameId.equals(g.getId())).forEach(g -> g.setStartTime(System.currentTimeMillis()));
     }
 
-    public boolean answerQuestion(String gameId, String playerId, String questionId, Integer answerIndex) {
+    public boolean answerQuestion(String gameId, String playerId, String questionId, Answer answer) {
         Game foundGame = getWithQuiz(gameId);
         int playerAnswersIndex = foundGame.getPlayers().indexOf(playerId);
-        foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answerIndex);
+        foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answer);
 //        System.out.println("Answer to question is number \\|/");
 //        System.out.println(getWithQuiz(gameId).getPlayersAnswers().get(playerAnswersIndex).getAnswers().get(questionId));
-        return questionService.get(questionId).getCorrectAnswers().get(answerIndex);
+
+//        return questionService.get(questionId).getCorrectAnswers().get(answerIndex);
+        return false;//todo for default
+    }
+
+    public LinkedList<Game> getFinishedGames() {
+        return games.stream().filter(g -> g.getStartTime() != 0 && g.getFullTime() != 0 && g.getStartTime() + g.getFullTime() - System.currentTimeMillis() <= 0).collect(Collectors.toCollection(LinkedList::new));
+    }
+
+    public void removeFinishedGames() {
+        games.removeIf(g ->  g.getStartTime() != 0 && g.getFullTime() != 0 && g.getStartTime() + g.getFullTime() - System.currentTimeMillis() <= 0);
     }
 }
