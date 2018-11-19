@@ -7,7 +7,9 @@ import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.model.games.Answer;
 import system.model.games.Game;
 import system.model.games.Player;
+import system.model.games.SingleChoiceAnswer;
 import system.model.questions.Question;
+import system.model.questions.QuestionType;
 import system.model.quizzes.Quiz;
 import system.model.quizzes.QuizPart;
 
@@ -168,12 +170,19 @@ public class GameService {
     public boolean answerQuestion(String gameId, String playerId, String questionId, Answer answer) {
         Game foundGame = getWithQuiz(gameId);
         int playerAnswersIndex = foundGame.getPlayers().indexOf(playerId);
-        foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answer);
-//        System.out.println("Answer to question is number \\|/");
-//        System.out.println(getWithQuiz(gameId).getPlayersAnswers().get(playerAnswersIndex).getAnswers().get(questionId));
 
-//        return questionService.get(questionId).getCorrectAnswers().get(answerIndex);
-        return false;//todo for default
+        boolean isAnswerCorrect = false;
+        QuestionType questionType = questionService.get(questionId).getQuestionType();
+        if(questionType == QuestionType.SINGLE_CHOICE) {
+            isAnswerCorrect = questionService.get(questionId).getCorrectAnswers().get(((SingleChoiceAnswer)answer).getAnswerIndex());
+            ((SingleChoiceAnswer) answer).setCorrect(isAnswerCorrect ? 1.0 : 0.0);
+        } else {
+            return false;//todo implement other types of questions
+        }
+
+        foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answer);
+
+        return isAnswerCorrect;
     }
 
     public LinkedList<Game> getFinishedGames() {

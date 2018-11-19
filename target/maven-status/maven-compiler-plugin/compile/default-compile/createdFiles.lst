@@ -53,6 +53,7 @@ system\model\games\MultipleChoiceAnswer.class
 system\model\games\PlayerPoints.class
 system\model\quizzes\Quiz.class
 system\dao\QuizGroupDao.class
+system\model\games\AnswerType.class
 system\controller\QuestionController.class
 system\model\questions\QuestionType.class
 system\model\quizzes\QuizSetting.class

@@ -87,11 +87,14 @@ public class ResultService {
 
             LinkedList<Question> questions = questionService.getAll();
             LinkedList<ListOfRealQuestions> realQuestions = new LinkedList<>();
-            System.out.println("Number of questions before transform: " + g.getQuestionsForPlayers().size());
+//            System.out.println("Number of questions before transform: " + g.getQuestionsForPlayers().size());
             g.getQuestionsForPlayers().forEach(listOfQuestions -> {
                 LinkedList<Question> transformedIdsToQuestions = new LinkedList<>();
+//                System.out.println("Questions user answered:");
                 listOfQuestions.getQuestionIds().forEach(qid -> {
-                    transformedIdsToQuestions.add(questions.stream().filter(q -> qid.equals(q.getId())).findAny().orElse(null));
+//                    System.out.println("" + qid);
+//                    System.out.println("question with this id is " + questions.stream().filter(q -> qid.equals(q.getId())).findAny().get());
+                    transformedIdsToQuestions.add(questions.stream().filter(q -> qid.equals(q.getId())).findAny().get());
                 });
                 transformedIdsToQuestions.removeIf(Objects::isNull);
                 realQuestions.add(new ListOfRealQuestions(transformedIdsToQuestions));
@@ -103,15 +106,21 @@ public class ResultService {
                 LinkedList<Double> playerPoints = new LinkedList<>();
                 for(int questionIndex = 0; questionIndex < g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().size(); questionIndex ++) {
                     String questionId = g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().get(questionIndex);
-                    Double currentAnswerCorrect = playerAnswers.getAnswers().get(questionId).getCorrect();
-                    playerPoints.add(currentAnswerCorrect);
+                    System.out.println("Question is " + questionId);
+                    Answer currentAnswer = playerAnswers.getAnswers().get(questionId);
+                    System.out.println("Answer is " + currentAnswer);
+                    if(currentAnswer != null) {
+                        System.out.println("Is answer correct? " + playerAnswers.getAnswers().get(questionId).getCorrect());
+                        Double currentAnswerCorrect = playerAnswers.getAnswers().get(questionId).getCorrect();
+                        playerPoints.add(currentAnswerCorrect);
+                    }
                 }
                 playerPointsForPlayers.add(new PlayerPoints(playerPoints));
             }
             LinkedList<Double> playerPointsSums = new LinkedList<>();
-            playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().reduce(0.0, (acc, el) -> acc + el)));
+            playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().filter(Objects::nonNull).reduce(0.0, (acc, el) -> acc + el)));
 
-            System.out.println("Number of questions after transform: " + realQuestions.size());
+//            System.out.println("Number of questions after transform: " + realQuestions.size());
 
             Result r = new Result(
                     realQuiz,

@@ -164,10 +164,12 @@ public class GameController {
                 answer = new SingleChoiceAnswer(Integer.valueOf(answerAsString));
             boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answer);
 
-            long fullTime = service.get(gameId).getFullTime();
+            long startTime = foundGame.getStartTime();
+            long fullTime = foundGame.getFullTime();
 
             resp.put(Const.RESULT_KEY, isAnswerCorrect);
             resp.put(Const.FULL_TIME_KEY, fullTime);
+            resp.put(Const.TIME_LEFT_KEY, startTime + fullTime - System.currentTimeMillis());
         } else {
             resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
         }
