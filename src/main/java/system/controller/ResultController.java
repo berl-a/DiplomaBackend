@@ -39,6 +39,24 @@ public class ResultController {
         return resp;
     }
 
+    @RequestMapping(value="/grade", method = RequestMethod.POST)
+    public @ResponseBody
+    Response grade(
+            @RequestParam("resultId") String resultId,
+            @RequestParam("studentIndex") int studentIndex,
+            @RequestParam("questionId") String questionId,
+            @RequestParam("grade") Double grade
+    ) {
+        Response resp = new Response();
+        String gradeResult = service.grade(resultId, studentIndex, questionId, grade);
+        if(gradeResult.equals(Const.OK_RESULT)) {
+            resp.put(Const.RESULT_KEY, Const.OK_RESULT);
+        } else {
+            resp.put(Const.ERROR_KEY, gradeResult);
+        }
+        return resp;
+    }
+
     @RequestMapping(value="/remove", method = RequestMethod.POST)
     public @ResponseBody
     Response remove(@RequestParam("id") String id) {

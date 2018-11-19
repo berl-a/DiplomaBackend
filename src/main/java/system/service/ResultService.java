@@ -55,6 +55,51 @@ public class ResultService {
         return result.getId();
     }
 
+    private void set(String resultId, Result resultToChange) {
+        remove(resultId);
+        add(resultToChange);
+    }
+
+    public String grade(String resultId, int studentIndex, String questionId, Double grade) {
+        Result resultToChange = get(resultId);
+        Answer answerToChange = resultToChange.getPlayersAnswers().get(studentIndex).getAnswers().get(questionId);
+        answerToChange.setCorrect(grade);
+        resultToChange.getPlayersAnswers().get(studentIndex).getAnswers().put(questionId, answerToChange);
+        resultToChange = recalculatePoints(resultToChange);
+        set(resultId, resultToChange);
+        return Const.OK_RESULT;
+    }
+
+    private Result recalculatePoints(Result r) {
+        LinkedList<PlayerPoints> playerPointsForPlayers = new LinkedList<>();
+        for(int playerIndex = 0; playerIndex < r.getPlayersAnswers().size(); playerIndex ++) {
+            PlayerAnswers playerAnswers = r.getPlayersAnswers().get(playerIndex);
+
+            LinkedList<Double> playerPoints = new LinkedList<>();
+            for(int questionIndex = 0; questionIndex < r.getQuestionsForPlayers().get(playerIndex).getQuestions().size(); questionIndex ++) {
+                String questionId = r.getQuestionsForPlayers().get(playerIndex).getQuestions().get(questionIndex).getId();
+                Answer currentAnswer = playerAnswers.getAnswers().get(questionId);
+                if(currentAnswer != null) {
+                    Double currentAnswerCorrect = playerAnswers.getAnswers().get(questionId).getCorrect();
+                    if(currentAnswerCorrect != null)
+                        playerPoints.add(currentAnswerCorrect);
+                }
+            }
+            playerPointsForPlayers.add(new PlayerPoints(playerPoints));
+        }
+        LinkedList<Double> playerPointsSums = new LinkedList<>();
+        playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().filter(Objects::nonNull).reduce(0.0, (acc, el) -> {
+            if(el != FREE_TEXT_ANSWER_CORRECTNESS) {
+                return acc + el;
+            } else {
+                return acc;
+            }
+        })));
+        r.setPlayersPoints(playerPointsForPlayers);
+        r.setPlayersPointSums(playerPointsSums);
+        return r;
+    }
+
     public String edit(Result result) {
         updateCached();
         dao.remove(result.getId());
@@ -67,6 +112,7 @@ public class ResultService {
         dao.remove(id);
         return Const.OK_RESULT;
     }
+
     /*
         private String id;
         private Quiz realQuiz;
