@@ -19,9 +19,9 @@ public class ResultController {
 
     @RequestMapping(value="/getAll", method = RequestMethod.GET)
     public @ResponseBody
-    Response getAll() {
+    Response getAll(@RequestParam("teacherId") String teacherId) {
         Response resp;
-        List<Result> allObjects = service.getAll();
+        List<Result> allObjects = service.getAllByTeacher(teacherId);
         resp = new Response(Const.OBJECTS_KEY, allObjects);
         return resp;
     }
@@ -41,11 +41,11 @@ public class ResultController {
 
     @RequestMapping(value="/remove", method = RequestMethod.POST)
     public @ResponseBody
-    Response remove(@RequestBody String idWithoutLastSymbol) {
-        idWithoutLastSymbol = idWithoutLastSymbol.substring(0, idWithoutLastSymbol.length() - 1);
+    Response remove(@RequestParam("id") String id) {
+//        id = id.substring(0, id.length() - 1);
 
         Response resp = new Response();
-        String result = service.remove(idWithoutLastSymbol);
+        String result = service.remove(id);
         if(result.equals(Const.OK_RESULT)) {
             resp.put(Const.RESULT_KEY, Const.OK_RESULT);
         } else {

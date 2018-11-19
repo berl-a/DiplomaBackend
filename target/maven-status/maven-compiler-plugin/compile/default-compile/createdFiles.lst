@@ -9,6 +9,7 @@ system\dao\QuestionDao.class
 system\model\quizzes\QuizSettings.class
 system\controller\simple_frontend_models\QuizPartWithCategoryNames.class
 system\database\FilterBehaviour.class
+system\model\games\ListOfRealQuestions.class
 system\dao\PlayerDao.class
 system\model\games\FreeTextAnswer.class
 system\database\IntStringBlobDatabaseEntry.class
@@ -49,6 +50,7 @@ system\model\games\GameToolkit.class
 system\model\questions\Question.class
 system\database\StringDatabaseEntry.class
 system\model\games\MultipleChoiceAnswer.class
+system\model\games\PlayerPoints.class
 system\model\quizzes\Quiz.class
 system\dao\QuizGroupDao.class
 system\controller\QuestionController.class

@@ -26,7 +26,7 @@ public class GameToolkit {
 //        game.setQuiz(quizId);
 //
 //        Quiz quiz = quizService.getWithQuiz(quizId);
-//        game.setNumber(generateListOfQuestions(quiz).getQuestionIds().size());
+//        game.setNumber(generateListOfQuestions(quiz).getPoints().size());
 //        game.setFullTime(quiz.getTime());
 //        return game;
 //    }

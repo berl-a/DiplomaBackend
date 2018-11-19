@@ -9,7 +9,9 @@ import system.controller.simple_frontend_models.Response;
 import system.controller.tools.DataToolkit;
 import system.model.games.Answer;
 import system.model.games.Game;
+import system.model.games.ListOfQuestions;
 import system.model.games.SingleChoiceAnswer;
+import system.model.questions.Question;
 import system.model.questions.QuestionType;
 import system.service.GameService;
 import system.service.PlayerService;
@@ -66,7 +68,14 @@ public class GameController {
                 try {Thread.sleep(GAME_START_CHECK_DELAY);} catch (InterruptedException e) {e.printStackTrace();}
             }
             if(gameStarting) {
-                resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+                LinkedList<Question> questions = service.getRealQuestionsForPlayer(gameId, playerId);
+                int playerIndex = foundGame.getPlayers().indexOf(playerId);
+                LinkedList<ListOfQuestions> questionsForAllPlayers = foundGame.getQuestionsForPlayers();
+                questionsForAllPlayers.set(playerIndex, new ListOfQuestions(service.getQuestionsForPlayer(gameId, playerId)));
+                foundGame.setQuestionsForPlayers(foundGame.getQuestionsForPlayers());
+                service.set(gameId, foundGame);
+
+                resp.put(Const.OBJECT_KEY, service.getRealQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
 //                resp.put(Const.START_TIME_KEY, foundGame.getStartTime());
 //                resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
                 resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
@@ -88,8 +97,8 @@ public class GameController {
         Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
-            System.out.println("Game started " + ((System.currentTimeMillis() - foundGame.getStartTime()) / 60_000) + " minutes ago");
-//            resp.put(Const.OBJECT_KEY, service.getQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+//            System.out.println("Game started " + ((System.currentTimeMillis() - foundGame.getStartTime()) / 60_000) + " minutes ago");
+//            resp.put(Const.OBJECT_KEY, service.getRealQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
             resp.put(Const.START_TIME_KEY, foundGame.getStartTime());
             resp.put(Const.SERVER_TIME, System.currentTimeMillis());
             resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
@@ -114,9 +123,14 @@ public class GameController {
             boolean differenceFound = false;
             while(System.currentTimeMillis() < maxWaitTime) {
                 foundGame = service.getWithQuiz(gameId);
-                LinkedList<String> gamePlayers = foundGame.getPlayers();
-                differenceFound = !DataToolkit.areListsTheSame(gamePlayers, playersAlreadyJoined);
-                if(differenceFound) {
+                LinkedList<String> gamePlayers;
+                if(foundGame != null) {
+                    gamePlayers = foundGame.getPlayers();
+                    differenceFound = !DataToolkit.areListsTheSame(gamePlayers, playersAlreadyJoined);
+                    if (differenceFound) {
+                        break;
+                    }
+                } else {
                     break;
                 }
                 try {Thread.sleep(GAME_START_CHECK_DELAY);} catch (InterruptedException e) {e.printStackTrace();}

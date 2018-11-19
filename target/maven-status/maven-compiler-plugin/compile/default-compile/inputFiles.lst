@@ -44,6 +44,7 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\model\quizzes\Quiz.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\service\GameArchiver.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\dao\ResultDao.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\database\DatabaseToolkit.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\ListOfRealQuestions.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\questions\QuestionGroupType.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuizGroupController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\service\QuizService.java
@@ -65,3 +66,4 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\service\QuestionService.jav
 D:\Data\Diploma\Project\Backend\src\main\java\system\service\PlayerService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuestionGroupController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\dao\Dao.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\PlayerPoints.java

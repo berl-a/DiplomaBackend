@@ -5,15 +5,15 @@ import java.util.LinkedList;
 public class MultipleChoiceAnswer implements Answer {
 
     private LinkedList<Integer> answerIndexes;
-    private LinkedList<Boolean> answersCorrect;
+    private Double correct;
 
     public MultipleChoiceAnswer(LinkedList<Integer> answerIndexes) {
         this.answerIndexes = answerIndexes;
     }
 
-    public MultipleChoiceAnswer(LinkedList<Integer> answerIndexes, LinkedList<Boolean> answersCorrect) {
+    public MultipleChoiceAnswer(LinkedList<Integer> answerIndexes, Double correct) {
         this.answerIndexes = answerIndexes;
-        this.answersCorrect = answersCorrect;
+        this.correct = correct;
     }
 
     public LinkedList<Integer> getAnswerIndexes() {
@@ -24,11 +24,12 @@ public class MultipleChoiceAnswer implements Answer {
         this.answerIndexes = answerIndexes;
     }
 
-    public LinkedList<Boolean> getAnswersCorrect() {
-        return answersCorrect;
+    @Override
+    public Double getCorrect() {
+        return correct;
     }
 
-    public void setAnswersCorrect(LinkedList<Boolean> answersCorrect) {
-        this.answersCorrect = answersCorrect;
+    public void setCorrect(Double correct) {
+        this.correct = correct;
     }
 }

@@ -25,6 +25,6 @@ public class Const {
     public static final String SERVER_TIME = "server_time";
     public static final String START_TIME_KEY = "start_time";
     public static final String TIME_LEFT_KEY = "time_left";
-    public static final String TEACHER_ID_KEY = "teacherId";
+    public static final String TEACHER_ID_KEY = "id";
     public static final String TEACHER_TYPE_KEY = "type";
 }

@@ -111,7 +111,31 @@ public class GameService {
         return player.getId();
     }
 
-    public LinkedList<Question> getQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
+    public LinkedList<String> getQuestionsForPlayer(String gameId, String playerId) {
+        LinkedList<QuizPart> quizParts = quizService.appendQuizParts(quizService.get(getWithQuiz(gameId).getQuiz())).getParts();
+        LinkedList<String> questionsForPlayer = new LinkedList<>();
+        for(QuizPart part : quizParts) {
+            if(part.getCategory() != null && part.getCategory().equals(""))
+                part.setCategory(null);
+            if(part.getSubcategory() != null && part.getSubcategory().equals(""))
+                part.setSubcategory(null);
+            if(part.getSubsubcategory() != null && part.getSubsubcategory().equals(""))
+                part.setSubsubcategory(null);
+            LinkedList<String> questionIdsFromThisPart =
+                    questionGroupService
+                            .getQuestionsFromGroups(part.getCategory(), part.getSubcategory(), part.getSubsubcategory())
+                            .stream()
+                            .map(Question::getId)
+                            .collect(Collectors.toCollection(LinkedList::new));
+
+            Collections.shuffle(questionIdsFromThisPart);
+            questionsForPlayer.addAll(questionIdsFromThisPart.subList(0, part.getNumber()));
+        }
+        Collections.shuffle(questionsForPlayer);
+        return questionsForPlayer;
+    }
+
+    public LinkedList<Question> getRealQuestionsForPlayer(String gameId, String playerId) {
         LinkedList<QuizPart> quizParts = quizService.appendQuizParts(quizService.get(getWithQuiz(gameId).getQuiz())).getParts();
         LinkedList<Question> questionsForPlayer = new LinkedList<>();
         for(QuizPart part : quizParts) {
@@ -129,6 +153,12 @@ public class GameService {
         Collections.shuffle(questionsForPlayer);
         questionsForPlayer = questionsForPlayer.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
         return questionsForPlayer;
+    }
+
+    public LinkedList<Question> getRealQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
+        LinkedList<Question> questions = getRealQuestionsForPlayer(gameId, playerId);
+        questions = questions.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
+        return questions;
     }
 
     public void startGame(String gameId) {

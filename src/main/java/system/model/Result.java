@@ -2,10 +2,7 @@ package system.model;
 
 import system.controller.tools.DataToolkit;
 import system.dao.Idable;
-import system.model.games.Game;
-import system.model.games.ListOfQuestions;
-import system.model.games.Player;
-import system.model.games.PlayerAnswers;
+import system.model.games.*;
 import system.model.quizzes.Quiz;
 
 import java.io.Serializable;
@@ -20,8 +17,10 @@ public class Result implements Idable, Serializable {
 
     private LinkedList<String> players = new LinkedList<>();
     private LinkedList<Player> realPlayers = new LinkedList<>();
-    private LinkedList<ListOfQuestions> questionsForPlayers = new LinkedList<>();
+    private LinkedList<ListOfRealQuestions> questionsForPlayers = new LinkedList<>();
     private LinkedList<PlayerAnswers> playersAnswers = new LinkedList<>();
+    private LinkedList<PlayerPoints> playersPoints = new LinkedList<>();
+    private LinkedList<Double> playersPointSums = new LinkedList<>();
 
     public Result() {
         this.id = DataToolkit.getUniqueId();
@@ -31,7 +30,7 @@ public class Result implements Idable, Serializable {
         this.id = id;
     }
 
-    public Result(Quiz realQuiz, Game realGame, String teacher, LinkedList<String> players, LinkedList<Player> realPlayers, LinkedList<ListOfQuestions> questionsForPlayers, LinkedList<PlayerAnswers> playersAnswers) {
+    public Result(Quiz realQuiz, Game realGame, String teacher, LinkedList<String> players, LinkedList<Player> realPlayers, LinkedList<ListOfRealQuestions> questionsForPlayers, LinkedList<PlayerAnswers> playersAnswers, LinkedList<PlayerPoints> playersPoints, LinkedList<Double> playersPointSums) {
         this.id = DataToolkit.getUniqueId();
         this.realQuiz = realQuiz;
         this.realGame = realGame;
@@ -40,9 +39,11 @@ public class Result implements Idable, Serializable {
         this.realPlayers = realPlayers;
         this.questionsForPlayers = questionsForPlayers;
         this.playersAnswers = playersAnswers;
+        this.playersPoints = playersPoints;
+        this.playersPointSums = playersPointSums;
     }
 
-    public Result(String id, Quiz realQuiz, Game realGame, String teacher, LinkedList<String> players, LinkedList<Player> realPlayers, LinkedList<ListOfQuestions> questionsForPlayers, LinkedList<PlayerAnswers> playersAnswers) {
+    public Result(String id, Quiz realQuiz, Game realGame, String teacher, LinkedList<String> players, LinkedList<Player> realPlayers, LinkedList<ListOfRealQuestions> questionsForPlayers, LinkedList<PlayerAnswers> playersAnswers, LinkedList<PlayerPoints> playersPoints, LinkedList<Double> playersPointSums) {
         this.id = id;
         this.realQuiz = realQuiz;
         this.realGame = realGame;
@@ -51,6 +52,8 @@ public class Result implements Idable, Serializable {
         this.realPlayers = realPlayers;
         this.questionsForPlayers = questionsForPlayers;
         this.playersAnswers = playersAnswers;
+        this.playersPoints = playersPoints;
+        this.playersPointSums = playersPointSums;
     }
 
     @Override
@@ -102,11 +105,11 @@ public class Result implements Idable, Serializable {
         this.realPlayers = realPlayers;
     }
 
-    public LinkedList<ListOfQuestions> getQuestionsForPlayers() {
+    public LinkedList<ListOfRealQuestions> getQuestionsForPlayers() {
         return questionsForPlayers;
     }
 
-    public void setQuestionsForPlayers(LinkedList<ListOfQuestions> questionsForPlayers) {
+    public void setQuestionsForPlayers(LinkedList<ListOfRealQuestions> questionsForPlayers) {
         this.questionsForPlayers = questionsForPlayers;
     }
 
@@ -116,5 +119,21 @@ public class Result implements Idable, Serializable {
 
     public void setPlayersAnswers(LinkedList<PlayerAnswers> playersAnswers) {
         this.playersAnswers = playersAnswers;
+    }
+
+    public LinkedList<PlayerPoints> getPlayersPoints() {
+        return playersPoints;
+    }
+
+    public void setPlayersPoints(LinkedList<PlayerPoints> playersPoints) {
+        this.playersPoints = playersPoints;
+    }
+
+    public LinkedList<Double> getPlayersPointSums() {
+        return playersPointSums;
+    }
+
+    public void setPlayersPointSums(LinkedList<Double> playersPointSums) {
+        this.playersPointSums = playersPointSums;
     }
 }

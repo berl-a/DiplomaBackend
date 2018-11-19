@@ -3,13 +3,13 @@ package system.model.games;
 public class SingleChoiceAnswer implements Answer {
 
     private int answerIndex;
-    private boolean correct;
+    private Double correct;
 
     public SingleChoiceAnswer(int answerIndex) {
         this.answerIndex = answerIndex;
     }
 
-    public SingleChoiceAnswer(int answerIndex, boolean correct) {
+    public SingleChoiceAnswer(int answerIndex, Double correct) {
         this.answerIndex = answerIndex;
         this.correct = correct;
     }
@@ -22,11 +22,11 @@ public class SingleChoiceAnswer implements Answer {
         this.answerIndex = answerIndex;
     }
 
-    public boolean isCorrect() {
+    public Double getCorrect() {
         return correct;
     }
 
-    public void setCorrect(boolean correct) {
+    public void setCorrect(Double correct) {
         this.correct = correct;
     }
 }

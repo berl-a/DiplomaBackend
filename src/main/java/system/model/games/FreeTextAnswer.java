@@ -3,9 +3,9 @@ package system.model.games;
 public class FreeTextAnswer implements Answer {
 
     private String answer;
-    private boolean correct;
+    private Double correct;
 
-    public FreeTextAnswer(String answer, boolean correct) {
+    public FreeTextAnswer(String answer, Double correct) {
         this.answer = answer;
         this.correct = correct;
     }
@@ -22,11 +22,11 @@ public class FreeTextAnswer implements Answer {
         this.answer = answer;
     }
 
-    public boolean isCorrect() {
+    public Double getCorrect() {
         return correct;
     }
 
-    public void setCorrect(boolean correct) {
+    public void setCorrect(Double correct) {
         this.correct = correct;
     }
 }

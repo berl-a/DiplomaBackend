@@ -5,22 +5,27 @@ import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.dao.ResultDao;
 import system.model.Result;
-import system.model.games.Game;
-import system.model.games.Player;
+import system.model.games.*;
+import system.model.questions.Question;
 import system.model.quizzes.Quiz;
 
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ResultService {
-
     @Autowired
     ResultDao dao;
+
     @Autowired
     QuizService quizService;
     @Autowired
     PlayerService playerService;
+    @Autowired
+    QuestionService questionService;
 
     private LinkedList<Result> cachedResults = new LinkedList<>();
 
@@ -31,6 +36,10 @@ public class ResultService {
     public LinkedList<Result> getAll() {
         updateCached();
         return cachedResults;
+    }
+
+    public List<Result> getAllByTeacher(String teacherId) {
+        return getAll().stream().filter(r -> teacherId.equals(r.getTeacher())).collect(Collectors.toCollection(LinkedList::new));
     }
 
     public Result get(String resultId) {
@@ -56,7 +65,6 @@ public class ResultService {
         dao.remove(id);
         return Const.OK_RESULT;
     }
-
     /*
         private String id;
         private Quiz realQuiz;
@@ -68,6 +76,7 @@ public class ResultService {
         private LinkedList<ListOfQuestions> questionsForPlayers = new LinkedList<>();
         private LinkedList<PlayerAnswers> playersAnswers = new LinkedList<>();
      */
+
     public void archiveGames(LinkedList<Game> games) {
         LinkedList<Result> results = new LinkedList<>();
         games.forEach(g -> {
@@ -76,14 +85,44 @@ public class ResultService {
             LinkedList<Player> realPlayers = new LinkedList<>();
             players.forEach(p -> realPlayers.add(playerService.get(p)));
 
+            LinkedList<Question> questions = questionService.getAll();
+            LinkedList<ListOfRealQuestions> realQuestions = new LinkedList<>();
+            System.out.println("Number of questions before transform: " + g.getQuestionsForPlayers().size());
+            g.getQuestionsForPlayers().forEach(listOfQuestions -> {
+                LinkedList<Question> transformedIdsToQuestions = new LinkedList<>();
+                listOfQuestions.getQuestionIds().forEach(qid -> {
+                    transformedIdsToQuestions.add(questions.stream().filter(q -> qid.equals(q.getId())).findAny().orElse(null));
+                });
+                transformedIdsToQuestions.removeIf(Objects::isNull);
+                realQuestions.add(new ListOfRealQuestions(transformedIdsToQuestions));
+            });
+            LinkedList<PlayerPoints> playerPointsForPlayers = new LinkedList<>();
+            for(int playerIndex = 0; playerIndex < g.getPlayersAnswers().size(); playerIndex ++) {
+                PlayerAnswers playerAnswers = g.getPlayersAnswers().get(playerIndex);
+
+                LinkedList<Double> playerPoints = new LinkedList<>();
+                for(int questionIndex = 0; questionIndex < g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().size(); questionIndex ++) {
+                    String questionId = g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().get(questionIndex);
+                    Double currentAnswerCorrect = playerAnswers.getAnswers().get(questionId).getCorrect();
+                    playerPoints.add(currentAnswerCorrect);
+                }
+                playerPointsForPlayers.add(new PlayerPoints(playerPoints));
+            }
+            LinkedList<Double> playerPointsSums = new LinkedList<>();
+            playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().reduce(0.0, (acc, el) -> acc + el)));
+
+            System.out.println("Number of questions after transform: " + realQuestions.size());
+
             Result r = new Result(
                     realQuiz,
                     g,
                     realQuiz.getTeacher(),
                     g.getPlayers(),
                     realPlayers,
-                    g.getQuestionsForPlayers(),
-                    g.getPlayersAnswers()
+                    realQuestions,
+                    g.getPlayersAnswers(),
+                    playerPointsForPlayers,
+                    playerPointsSums
             );
 
             results.add(r);
