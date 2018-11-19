@@ -27,4 +27,6 @@ public class Const {
     public static final String TIME_LEFT_KEY = "time_left";
     public static final String TEACHER_ID_KEY = "id";
     public static final String TEACHER_TYPE_KEY = "type";
+
+    public static final double FREE_TEXT_ANSWER_CORRECTNESS = -0.12345;
 }

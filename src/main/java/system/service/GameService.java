@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
-import system.model.games.Answer;
-import system.model.games.Game;
-import system.model.games.Player;
-import system.model.games.SingleChoiceAnswer;
+import system.model.games.*;
 import system.model.questions.Question;
 import system.model.questions.QuestionType;
 import system.model.quizzes.Quiz;
@@ -18,6 +15,8 @@ import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
+
+import static system.controller.Const.FREE_TEXT_ANSWER_CORRECTNESS;
 
 @Service
 public class GameService {
@@ -125,7 +124,7 @@ public class GameService {
                 part.setSubsubcategory(null);
             LinkedList<String> questionIdsFromThisPart =
                     questionGroupService
-                            .getQuestionsFromGroups(part.getCategory(), part.getSubcategory(), part.getSubsubcategory())
+                            .getQuestionsFromGroupsFree(part.getCategory(), part.getSubcategory(), part.getSubsubcategory())
                             .stream()
                             .map(Question::getId)
                             .collect(Collectors.toCollection(LinkedList::new));
@@ -147,7 +146,7 @@ public class GameService {
                 part.setSubcategory(null);
             if(part.getSubsubcategory() != null && part.getSubsubcategory().equals(""))
                 part.setSubsubcategory(null);
-            LinkedList<Question> questionsFromThisPart = questionGroupService.getQuestionsFromGroups(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());
+            LinkedList<Question> questionsFromThisPart = questionGroupService.getQuestionsFromGroupsFree(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());
 
             Collections.shuffle(questionsFromThisPart);
             questionsForPlayer.addAll(questionsFromThisPart.subList(0, part.getNumber()));
@@ -157,11 +156,13 @@ public class GameService {
         return questionsForPlayer;
     }
 
-    public LinkedList<Question> getRealQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
-        LinkedList<Question> questions = getRealQuestionsForPlayer(gameId, playerId);
-        questions = questions.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
-        return questions;
-    }
+//    public LinkedList<Question> getRealQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
+//        LinkedList<Question> questions = getRealQuestionsForPlayer(gameId, playerId);
+//        questions = questions.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
+//        System.out.println("Questions for this player are:");
+//        questions.stream().map(Question::getId).forEach(System.out::println);
+//        return questions;
+//    }
 
     public void startGame(String gameId) {
         games.stream().filter(g -> gameId.equals(g.getId())).forEach(g -> g.setStartTime(System.currentTimeMillis()));
@@ -176,10 +177,12 @@ public class GameService {
         if(questionType == QuestionType.SINGLE_CHOICE) {
             isAnswerCorrect = questionService.get(questionId).getCorrectAnswers().get(((SingleChoiceAnswer)answer).getAnswerIndex());
             ((SingleChoiceAnswer) answer).setCorrect(isAnswerCorrect ? 1.0 : 0.0);
-        } else {
-            return false;//todo implement other types of questions
-        }
-
+        } else if(questionType == QuestionType.FREE_TEXT) {
+            isAnswerCorrect = false;
+            ((FreeTextAnswer) answer).setCorrect(FREE_TEXT_ANSWER_CORRECTNESS);
+        }//todo implement other types of questions
+        System.out.println("Answering in game service");
+        System.out.println("How correct? " + answer.getCorrect());
         foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answer);
 
         return isAnswerCorrect;

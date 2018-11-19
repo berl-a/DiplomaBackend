@@ -15,6 +15,8 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static system.controller.Const.FREE_TEXT_ANSWER_CORRECTNESS;
+
 @Service
 public class ResultService {
     @Autowired
@@ -106,19 +108,28 @@ public class ResultService {
                 LinkedList<Double> playerPoints = new LinkedList<>();
                 for(int questionIndex = 0; questionIndex < g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().size(); questionIndex ++) {
                     String questionId = g.getQuestionsForPlayers().get(playerIndex).getQuestionIds().get(questionIndex);
-                    System.out.println("Question is " + questionId);
+//                    System.out.println("Question is " + questionId);
                     Answer currentAnswer = playerAnswers.getAnswers().get(questionId);
-                    System.out.println("Answer is " + currentAnswer);
+//                    System.out.println("Answer is " + currentAnswer);
                     if(currentAnswer != null) {
-                        System.out.println("Is answer correct? " + playerAnswers.getAnswers().get(questionId).getCorrect());
+//                        System.out.println("Is answer correct? " + playerAnswers.getAnswers().get(questionId).getCorrect());
                         Double currentAnswerCorrect = playerAnswers.getAnswers().get(questionId).getCorrect();
-                        playerPoints.add(currentAnswerCorrect);
+                        if(currentAnswerCorrect != null)
+                            playerPoints.add(currentAnswerCorrect);
                     }
                 }
                 playerPointsForPlayers.add(new PlayerPoints(playerPoints));
             }
             LinkedList<Double> playerPointsSums = new LinkedList<>();
-            playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().filter(Objects::nonNull).reduce(0.0, (acc, el) -> acc + el)));
+            playerPointsForPlayers.forEach(points -> playerPointsSums.add(points.getPoints().stream().filter(Objects::nonNull).reduce(0.0, (acc, el) -> {
+                if(el != FREE_TEXT_ANSWER_CORRECTNESS) {
+                    System.out.println("Not equals");
+                    return acc + el;
+                } else {
+                    System.out.println("Equals super code, not adding");
+                    return acc;
+                }
+            })));
 
 //            System.out.println("Number of questions after transform: " + realQuestions.size());
 

@@ -97,7 +97,7 @@ public class QuestionGroupService {
     }
 
     public int getNumberOfQuestions(String cat, String subcat, String subsubcat) {
-        return getQuestionsFromGroups(cat, subcat, subsubcat).size();
+        return getQuestionsFromGroupsFree(cat, subcat, subsubcat).size();
     }
 
     public LinkedList<Question> getQuestionsFromGroups(String cat, String subcat, String subsubcat) {
@@ -130,6 +130,36 @@ public class QuestionGroupService {
         return selectedQuestions;
     }
 
+
+    public LinkedList<Question> getQuestionsFromGroupsFree(String cat, String subcat, String subsubcat) {
+        LinkedList<Question> selectedQuestions = new LinkedList<>();
+
+        LinkedList<Question> questions = questionService.getAll();
+        boolean catNotNull = (cat != null);
+        boolean subcatNotNull = (subcat != null);
+        boolean subsubcatNotNull = (subsubcat != null);
+//        System.out.println("Looking for questions with the same setup:");
+//        System.out.println("Cat is " + cat + ", subcat is " + subcat + ", subsubcat is " + subsubcat);
+        selectedQuestions = questions.stream().filter(q -> {
+            q.removeEmptyGroups();
+//            System.out.println(q.getCategory() + " " + q.getSubsubcategory() + " " + q.getSubsubcategory());
+            if(catNotNull) {
+                if(subcatNotNull) {
+                    if(subsubcatNotNull) {
+                        return cat.equals(q.getCategory()) && subcat.equals(q.getSubcategory()) && subsubcat.equals(q.getSubsubcategory());
+                    } else {
+                        return cat.equals(q.getCategory()) && subcat.equals(q.getSubcategory());
+                    }
+                } else {
+                    return cat.equals(q.getCategory());
+                }
+            } else {
+                return true;
+            }
+        }).collect(Collectors.toCollection(LinkedList::new));
+//        System.out.println("Questions from group: " + selectedQuestions.size() + " of them");
+        return selectedQuestions;
+    }
 
 //    public LinkedList<String> getQuestionsInGroup(String groupId) {
 //        updateCached();

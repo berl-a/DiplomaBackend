@@ -7,10 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.controller.simple_frontend_models.Response;
 import system.controller.tools.DataToolkit;
-import system.model.games.Answer;
-import system.model.games.Game;
-import system.model.games.ListOfQuestions;
-import system.model.games.SingleChoiceAnswer;
+import system.model.games.*;
 import system.model.questions.Question;
 import system.model.questions.QuestionType;
 import system.service.GameService;
@@ -19,6 +16,7 @@ import system.service.QuizService;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/games")
@@ -38,6 +36,7 @@ public class GameController {
     public @ResponseBody
     Response add(@RequestParam("code") String code, @RequestParam("name") String name) {
         Response resp;
+        code = code.toUpperCase();
         if(service.getByCode(code) != null) {
             String playerId = service.join(code, name);
             GameWithActualQuiz gameJoined = service.getByCode(code);
@@ -68,14 +67,21 @@ public class GameController {
                 try {Thread.sleep(GAME_START_CHECK_DELAY);} catch (InterruptedException e) {e.printStackTrace();}
             }
             if(gameStarting) {
-                LinkedList<Question> questions = service.getRealQuestionsForPlayer(gameId, playerId);
+                LinkedList<Question> realQuestionsForPlayer = service.getRealQuestionsForPlayer(gameId, playerId);
+                LinkedList<String> questionsForPlayer = realQuestionsForPlayer
+                        .stream()
+                        .map(Question::getId)
+                        .collect(Collectors.toCollection(LinkedList::new));
+
                 int playerIndex = foundGame.getPlayers().indexOf(playerId);
                 LinkedList<ListOfQuestions> questionsForAllPlayers = foundGame.getQuestionsForPlayers();
-                questionsForAllPlayers.set(playerIndex, new ListOfQuestions(service.getQuestionsForPlayer(gameId, playerId)));
+
+                questionsForAllPlayers.set(playerIndex, new ListOfQuestions(questionsForPlayer));
                 foundGame.setQuestionsForPlayers(foundGame.getQuestionsForPlayers());
                 service.set(gameId, foundGame);
 
-                resp.put(Const.OBJECT_KEY, service.getRealQuestionsWithoutCorrectAnswerForPlayer(gameId, playerId));
+                LinkedList<Question> questionsWithoutCorrectAnswers = realQuestionsForPlayer.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
+                resp.put(Const.OBJECT_KEY, questionsWithoutCorrectAnswers);
 //                resp.put(Const.START_TIME_KEY, foundGame.getStartTime());
 //                resp.put(Const.FULL_TIME_KEY, foundGame.getFullTime());
                 resp.put(Const.TIME_LEFT_KEY, foundGame.getStartTime() + foundGame.getFullTime() - System.currentTimeMillis());
@@ -155,14 +161,19 @@ public class GameController {
             @RequestParam("questionType") QuestionType questionType,
             @RequestParam("answerAsString") String answerAsString
     ) {
-
+        System.out.println("Answering question " + questionId);
         Game foundGame = service.getWithQuiz(gameId);
         Response resp = new Response();
         if(foundGame != null) {
             Answer answer = null;
             if(questionType == QuestionType.SINGLE_CHOICE)
                 answer = new SingleChoiceAnswer(Integer.valueOf(answerAsString));
+            else if(questionType == QuestionType.FREE_TEXT)
+                answer = new FreeTextAnswer(answerAsString);
+
+//            System.out.println("ANswering from controller");
             boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answer);
+//            System.out.println("ANswer is correct? " + isAnswerCorrect);
 
             long startTime = foundGame.getStartTime();
             long fullTime = foundGame.getFullTime();
