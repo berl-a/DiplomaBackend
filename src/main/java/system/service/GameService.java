@@ -157,7 +157,7 @@ public class GameService {
     }
 
 //    public LinkedList<Question> getRealQuestionsWithoutCorrectAnswerForPlayer(String gameId, String playerId) {
-//        LinkedList<Question> questions = getRealQuestionsForPlayer(gameId, playerId);
+//        LinkedList<Question> questions = generateRealQuestions(gameId, playerId);
 //        questions = questions.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
 //        System.out.println("Questions for this player are:");
 //        questions.stream().map(Question::getId).forEach(System.out::println);

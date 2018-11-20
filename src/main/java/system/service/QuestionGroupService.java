@@ -143,6 +143,7 @@ public class QuestionGroupService {
         selectedQuestions = questions.stream().filter(q -> {
             q.removeEmptyGroups();
 //            System.out.println(q.getCategory() + " " + q.getSubsubcategory() + " " + q.getSubsubcategory());
+
             if(catNotNull) {
                 if(subcatNotNull) {
                     if(subsubcatNotNull) {
@@ -157,7 +158,8 @@ public class QuestionGroupService {
                 return true;
             }
         }).collect(Collectors.toCollection(LinkedList::new));
-//        System.out.println("Questions from group: " + selectedQuestions.size() + " of them");
+
+        System.out.println("Questions from group: " + selectedQuestions.size() + " of them");
         return selectedQuestions;
     }
 

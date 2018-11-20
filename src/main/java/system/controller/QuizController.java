@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
+import system.model.questions.Question;
 import system.model.quizzes.Quiz;
 import system.service.QuizService;
 
@@ -46,6 +47,15 @@ public class QuizController {
     Response getAllWithCanNames(@RequestParam("teacher") String teacherId) {
         Response resp;
         List<QuizWithCategoryNames> allObjects = service.getAllWithCatNamesByTeacher(teacherId);
+        resp = new Response(Const.OBJECTS_KEY, allObjects);
+        return resp;
+    }
+
+    @RequestMapping(value="/getQuestionsFromQuiz", method = RequestMethod.GET)
+    public @ResponseBody
+    Response getQuestionsFromQuiz(@RequestParam("quizId") String quizId) {
+        Response resp;
+        List<Question> allObjects = service.generateRealQuestions(quizId);
         resp = new Response(Const.OBJECTS_KEY, allObjects);
         return resp;
     }

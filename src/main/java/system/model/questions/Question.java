@@ -2,9 +2,7 @@ package system.model.questions;
 
 import system.controller.tools.DataToolkit;
 import system.dao.Idable;
-import system.model.questions.QuestionType;
 
-import javax.sql.rowset.serial.SerialBlob;
 import java.io.Serializable;
 import java.util.LinkedList;
 
@@ -12,6 +10,7 @@ public class Question implements Serializable, Idable {
 
     private String id;
     private QuestionType questionType;
+    private String questionTitle;
     private String questionText, questionImage;
     private LinkedList<String> answerTexts;
     private LinkedList<String> answerImages;
@@ -30,6 +29,7 @@ public class Question implements Serializable, Idable {
     public Question(Question q) {
         this.id = q.id;
         this.questionType = q.questionType;
+        this.questionTitle = q.questionTitle;
         this.questionText = q.questionText;
         this.questionImage = q.questionImage;
         this.answerTexts = q.answerTexts;
@@ -38,9 +38,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
+    public Question(String id, QuestionType questionType, String questionTitle, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
         this.id = id;
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -49,9 +50,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
+    public Question(QuestionType questionType, String questionText, String questionTitle, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers) {
         this.id = DataToolkit.getUniqueId();
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -60,9 +62,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
+    public Question(String id, QuestionType questionType, String questionText, String questionTitle, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
         this.id = id;
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -74,9 +77,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
+    public Question(QuestionType questionType, String questionTitle, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory) {
         this.id = DataToolkit.getUniqueId();
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -88,9 +92,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(String id, QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
+    public Question(String id, QuestionType questionType, String questionTitle, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
         this.id = id;
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -103,9 +108,10 @@ public class Question implements Serializable, Idable {
         removeEmptyGroups();
     }
 
-    public Question(QuestionType questionType, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
+    public Question(QuestionType questionType, String questionTitle, String questionText, String questionImage, LinkedList<String> answerTexts, LinkedList<String> answerImages, LinkedList<Boolean> correctAnswers, String category, String subcategory, String subsubcategory, String teacher) {
         this.id = DataToolkit.getUniqueId();
         this.questionType = questionType;
+        this.questionTitle = questionTitle;
         this.questionText = questionText;
         this.questionImage = questionImage;
         this.answerTexts = answerTexts;
@@ -141,6 +147,14 @@ public class Question implements Serializable, Idable {
 
     public QuestionType getQuestionType() {
         return questionType;
+    }
+
+    public String getQuestionTitle() {
+        return questionTitle;
+    }
+
+    public void setQuestionTitle(String questionTitle) {
+        this.questionTitle = questionTitle;
     }
 
     public void setQuestionType(QuestionType questionType) {

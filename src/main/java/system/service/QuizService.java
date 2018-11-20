@@ -6,10 +6,12 @@ import system.controller.Const;
 import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.dao.QuizDao;
 import system.model.QuizGroupType;
+import system.model.questions.Question;
 import system.model.quizzes.Quiz;
 import system.model.quizzes.QuizGroup;
 import system.model.quizzes.QuizPart;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +26,8 @@ public class QuizService {
     QuizGroupService quizGroupService;
     @Autowired
     QuizPartService quizPartService;
+    @Autowired
+    QuestionGroupService questionGroupService;
 
     private LinkedList<Quiz> cachedQuizs = new LinkedList<>();
 
@@ -122,5 +126,26 @@ public class QuizService {
         dao.add(copiedQuiz);
         result = copiedQuiz.getId();
         return result;
+    }
+
+    public LinkedList<Question> generateRealQuestions(String quizId) {
+        LinkedList<QuizPart> quizParts = appendQuizParts(get(quizId)).getParts();
+        LinkedList<Question> questionsForPlayer = new LinkedList<>();
+        for(QuizPart part : quizParts) {
+            if(part.getCategory() != null && part.getCategory().equals(""))
+                part.setCategory(null);
+            if(part.getSubcategory() != null && part.getSubcategory().equals(""))
+                part.setSubcategory(null);
+            if(part.getSubsubcategory() != null && part.getSubsubcategory().equals(""))
+                part.setSubsubcategory(null);
+            LinkedList<Question> questionsFromThisPart = questionGroupService.getQuestionsFromGroupsFree(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());
+            System.out.println("Part: " + part.getName() + " " + part.getNumber());
+            System.out.println("but number of questions from this part: " + questionsFromThisPart.size());
+            Collections.shuffle(questionsFromThisPart);
+            questionsForPlayer.addAll(questionsFromThisPart.subList(0, part.getNumber()));
+        }
+        Collections.shuffle(questionsForPlayer);
+        questionsForPlayer = questionsForPlayer.stream().peek(q -> q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));
+        return questionsForPlayer;
     }
 }
