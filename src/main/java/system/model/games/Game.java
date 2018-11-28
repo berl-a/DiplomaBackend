@@ -1,9 +1,7 @@
 package system.model.games;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import system.controller.tools.DataToolkit;
-import system.dao.Idable;
-import system.service.GameService;
+import system.controller.dao.Idable;
 
 import java.io.Serializable;
 import java.util.LinkedList;

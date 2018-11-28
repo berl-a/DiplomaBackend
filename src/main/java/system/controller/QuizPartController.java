@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.QuizPartWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
 import system.model.quizzes.QuizPart;
-import system.service.QuizPartService;
+import system.controller.service.QuizPartService;
 
 import java.util.List;
 

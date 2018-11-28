@@ -9,8 +9,8 @@ import system.controller.simple_frontend_models.Response;
 import system.model.questions.Question;
 import system.model.questions.QuestionGroup;
 import system.model.quizzes.Quiz;
-import system.service.QuestionGroupService;
-import system.service.QuizService;
+import system.controller.service.QuestionGroupService;
+import system.controller.service.QuizService;
 
 import java.util.List;
 

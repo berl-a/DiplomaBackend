@@ -1,9 +1,8 @@
 package system.model.quizzes;
 
 import system.controller.tools.DataToolkit;
-import system.dao.Idable;
+import system.controller.dao.Idable;
 
-import javax.xml.crypto.Data;
 import java.io.Serializable;
 import java.util.LinkedList;
 

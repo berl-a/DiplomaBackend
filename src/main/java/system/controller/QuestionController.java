@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.QuestionWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
 import system.model.questions.Question;
-import system.service.QuestionService;
+import system.controller.service.QuestionService;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@ import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
 import system.model.questions.Question;
 import system.model.quizzes.Quiz;
-import system.service.QuizService;
+import system.controller.service.QuizService;
 
 import java.util.List;
 
@@ -20,6 +20,20 @@ public class QuizController {
     QuizService service;
 
     @RequestMapping(value="/getWithQuiz", method = RequestMethod.GET)
+    public @ResponseBody
+    Response getWithQuiz(@RequestParam(value = "id") String id) {
+
+        Response resp = new Response();
+        Quiz result = service.get(id);
+        if(result != null) {
+            resp.put(Const.RESULT_KEY, result);
+        } else {
+            resp.put(Const.ERROR_KEY, Const.NOT_FOUND_RESULT);
+        }
+        return resp;
+    }
+
+    @RequestMapping(value="/get", method = RequestMethod.GET)
     public @ResponseBody
     Response get(@RequestParam(value = "id") String id) {
 

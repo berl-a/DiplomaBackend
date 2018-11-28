@@ -10,9 +10,9 @@ import system.controller.tools.DataToolkit;
 import system.model.games.*;
 import system.model.questions.Question;
 import system.model.questions.QuestionType;
-import system.service.GameService;
-import system.service.PlayerService;
-import system.service.QuizService;
+import system.controller.service.GameService;
+import system.controller.service.PlayerService;
+import system.controller.service.QuizService;
 
 import java.util.LinkedList;
 import java.util.List;

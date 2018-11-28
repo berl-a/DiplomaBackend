@@ -8,7 +8,7 @@ import system.controller.simple_frontend_models.Response;
 import system.model.quizzes.Quiz;
 import system.model.users.User;
 import system.model.users.UserType;
-import system.service.UserService;
+import system.controller.service.UserService;
 
 import java.util.List;
 
@@ -23,13 +23,13 @@ public class UserController {
     public @ResponseBody
     Response verify(@RequestParam("login") String login, @RequestParam("hash") String hash) {
 
-//        System.out.println(">");
-//        System.out.println(login + " " + hash);
-//        System.out.println(">");
+        System.out.println(">");
+        System.out.println(login + " " + hash);
+        System.out.println(">");
         Response resp = new Response();
 
-//        System.out.println("__");
-//        service.getAll().forEach(u -> System.out.println(u.getLogin() + " " + u.getHash()));
+        System.out.println("__");
+        service.getAll().forEach(u -> System.out.println(u.getLogin() + " " + u.getHash()));
 
         if(service.get(login) != null) {
             resp.put(Const.RESULT_KEY, service.isPasswordCorrect(login, hash));

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.Response;
 import system.model.Result;
-import system.service.ResultService;
+import system.controller.service.ResultService;
 
 import java.util.List;
 

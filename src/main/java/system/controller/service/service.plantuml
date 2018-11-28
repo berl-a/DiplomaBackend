@@ -1,0 +1,242 @@
+@startuml
+
+title __SERVICE's Class Diagram__\n
+
+  package system.controller {
+    package system.controller.service {
+      class GameArchiver {
+          + archiveFinishedGames()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameService {
+          {static} + CODE_LENGTH : int
+          {static} + NUMBER_OF_TRIES_TO_GENERATE_CODE : int
+          - games : LinkedList<Game>
+          + set()
+          + getAll()
+          + addGameFromQuiz()
+          + getWithQuiz()
+          + get()
+          + getByCode()
+          + remove()
+          + removeByCode()
+          - getGameWithActualQuiz()
+          - generateGameCode()
+          + join()
+          + getQuestionsForPlayer()
+          + getRealQuestionsForPlayer()
+          + startGame()
+          + answerQuestion()
+          + getFinishedGames()
+          + removeFinishedGames()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class HospitationService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class PlayerService {
+          + getAll()
+          + addPlayer()
+          + get()
+          + removePlayer()
+          + getPlayersForIds()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService {
+          - cachedQuestionGroups : LinkedList<QuestionGroup>
+          + updateCached()
+          + getAll()
+          + getAllWithNumberOfQuestions()
+          + getAll()
+          + getAllWithNumberOfQuestions()
+          + get()
+          + add()
+          + edit()
+          + remove()
+          + getNumberOfQuestions()
+          + rename()
+          + getNumberOfQuestions()
+          + getQuestionsFromGroups()
+          + getQuestionsFromGroupsFree()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService {
+          - cachedQuestions : LinkedList<Question>
+          + updateCached()
+          + getAll()
+          + get()
+          + add()
+          + copy()
+          + edit()
+          + remove()
+          + getAllWithCatNames()
+          + getAllWithCatNamesByTeacher()
+          - appendCatNamesToQuestions()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionsToolkit {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService {
+          - cachedQuizGroups : LinkedList<QuizGroup>
+          + updateCached()
+          + getAll()
+          + get()
+          + add()
+          + edit()
+          + remove()
+          + rename()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizPartService {
+          - cached : LinkedList<QuizPart>
+          + updateCached()
+          + getAll()
+          + get()
+          + add()
+          + edit()
+          + remove()
+          + getAllFromQuiz()
+          + copy()
+          + getAllWithCatNamesFromQuiz()
+          - appendCatNamesToQuizParts()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizService {
+          - cachedQuizs : LinkedList<Quiz>
+          + updateCached()
+          + getAll()
+          + get()
+          + appendQuizParts()
+          + add()
+          + edit()
+          + remove()
+          + getAllWithCatNames()
+          + getAllWithCatNamesByTeacher()
+          - appendCatNamesToQuizzes()
+          + copy()
+          + generateRealQuestions()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class ResultService {
+          - cachedResults : LinkedList<Result>
+          + updateCached()
+          + getAll()
+          + getAllByTeacher()
+          + get()
+          + add()
+          - set()
+          + grade()
+          - recalculatePoints()
+          + edit()
+          + remove()
+          + archiveGames()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class UserService {
+          {static} + USER_EXISTS_ERROR : String
+          - cached : LinkedList<User>
+          + updateCached()
+          + getAll()
+          + get()
+          + get()
+          + getById()
+          + isPasswordCorrect()
+          + add()
+          - doesUserWithUsernameExist()
+          + edit()
+          + copy()
+          + remove()
+      }
+    }
+  }
+  
+
+  GameArchiver o-- GameService : gameService
+  GameArchiver o-- ResultService : resultService
+  GameService o-- PlayerService : playerService
+  GameService o-- QuizService : quizService
+  GameService o-- QuestionService : questionService
+  GameService o-- QuestionGroupService : questionGroupService
+  PlayerService o-- PlayerDao : dao
+  QuestionGroupService o-- QuestionGroupDao : dao
+  QuestionGroupService o-- QuestionService : questionService
+  QuestionService o-- QuestionDao : dao
+  QuestionService o-- QuestionGroupService : questionGroupService
+  QuizGroupService o-- QuizGroupDao : dao
+  QuizPartService o-- QuizPartDao : dao
+  QuizPartService o-- QuestionGroupService : questionGroupService
+  QuizService o-- QuizDao : dao
+  QuizService o-- QuizGroupService : quizGroupService
+  QuizService o-- QuizPartService : quizPartService
+  QuizService o-- QuestionGroupService : questionGroupService
+  ResultService o-- ResultDao : dao
+  ResultService o-- QuizService : quizService
+  ResultService o-- PlayerService : playerService
+  ResultService o-- QuestionService : questionService
+  UserService o-- UserDao : dao
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

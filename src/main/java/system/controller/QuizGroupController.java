@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.Response;
 import system.model.quizzes.QuizGroup;
-import system.service.QuizGroupService;
+import system.controller.service.QuizGroupService;
 
 import java.util.List;
 

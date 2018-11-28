@@ -1,12 +1,16 @@
 package system.model.users;
 
 import system.controller.tools.DataToolkit;
-import system.dao.Idable;
+import system.controller.dao.Idable;
 
 public class User implements IUser, Idable{
 
     private String id, login, hash;
     private UserType type;
+
+    public User() {
+        this.id = DataToolkit.getUniqueId();
+    }
 
     public User(User u) {
         this.id = u.id;

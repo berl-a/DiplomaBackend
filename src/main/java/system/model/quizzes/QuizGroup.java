@@ -1,11 +1,10 @@
 package system.model.quizzes;
 
 import system.controller.tools.DataToolkit;
-import system.dao.Idable;
+import system.controller.dao.Idable;
 import system.model.QuizGroupType;
 
 import java.io.Serializable;
-import java.util.LinkedList;
 
 public class QuizGroup implements Serializable, Idable {
 

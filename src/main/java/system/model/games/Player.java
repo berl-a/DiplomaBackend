@@ -1,9 +1,8 @@
 package system.model.games;
 
 import system.controller.tools.DataToolkit;
-import system.dao.Idable;
+import system.controller.dao.Idable;
 
-import javax.xml.crypto.Data;
 import java.io.Serializable;
 
 public class Player implements Idable, Serializable {

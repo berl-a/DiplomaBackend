@@ -4,9 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import system.model.quizzes.Quiz;
 import system.model.quizzes.QuizPart;
-import system.service.QuestionGroupService;
-import system.service.QuestionService;
-import system.service.QuizService;
+import system.controller.service.QuestionGroupService;
+import system.controller.service.QuestionService;
+import system.controller.service.QuizService;
 
 import java.util.Collections;
 import java.util.LinkedList;

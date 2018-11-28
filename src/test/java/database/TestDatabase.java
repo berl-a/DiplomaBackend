@@ -1,15 +1,9 @@
 package database;
 
-import org.jboss.logging.annotations.Pos;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import system.database.DatabaseToolkit;
-import system.database.StringDatabaseEntry;
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Set;
 import java.util.TreeSet;
 

@@ -1,0 +1,644 @@
+@startuml
+
+title __SPRINGMVCAPP's Class Diagram__\n
+
+  package system.model {
+    package system.model.games {
+      interface Answer {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      enum AnswerType {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class Const {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class Dao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.tools {
+      class DataToolkit {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        interface DatabaseEntry {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class DatabaseToolkit {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class FUser {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        enum FilterBehaviour {
+        }
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class FreeTextAnswer {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Game {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameArchiver {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class GameController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class GameToolkit {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class GameWithActualQuiz {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class HospitationService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.users {
+      interface IUser {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      interface Idable {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class IntStringBlobDatabaseEntry {
+        }
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfQuestions {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfRealQuestions {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class MultipleChoiceAnswer {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Player {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerAnswers {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class PlayerDao {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerPoints {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class PlayerService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class Question {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionDao {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class QuestionGroup {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionGroupController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionGroupDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      enum QuestionGroupType {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionGroupWithNumberOfQuestions {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      enum QuestionType {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionWithCategoryNames {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionsToolkit {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class Quiz {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class QuizController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizDao {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizGroup {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class QuizGroupController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizGroupDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    enum QuizGroupType {
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizPart {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class QuizPartController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizPartDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizPartService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuizPartWithCategoryNames {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      enum QuizSetting {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizSettings {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuizWithCategoryNames {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class Response {
+      }
+    }
+  }
+  
+
+  package system.model {
+    class Result {
+    }
+  }
+  
+
+  package system.controller {
+    class ResultController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class ResultDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class ResultService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class SingleChoiceAnswer {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class StringDatabaseEntry {
+        }
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.users {
+      class User {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class UserController {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class UserDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class UserService {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.users {
+      enum UserType {
+      }
+    }
+  }
+  
+
+  FreeTextAnswer -up-|> Answer
+  Game -up-|> Idable
+  Game -up-|> Serializable
+  GameArchiver o-- GameService : gameService
+  GameArchiver o-- ResultService : resultService
+  GameController o-- GameService : service
+  GameController o-- PlayerService : playerService
+  GameController o-- QuizService : quizService
+  GameService o-- PlayerService : playerService
+  GameService o-- QuizService : quizService
+  GameService o-- QuestionService : questionService
+  GameService o-- QuestionGroupService : questionGroupService
+  GameToolkit o-- QuizService : quizService
+  GameToolkit o-- QuestionService : questionService
+  GameToolkit o-- QuestionGroupService : questionGroupService
+  GameWithActualQuiz -up-|> Game
+  GameWithActualQuiz o-- Quiz : actualQuiz
+  IntStringBlobDatabaseEntry -up-|> DatabaseEntry
+  ListOfQuestions -up-|> Serializable
+  ListOfRealQuestions -up-|> Serializable
+  MultipleChoiceAnswer -up-|> Answer
+  Player -up-|> Idable
+  Player -up-|> Serializable
+  PlayerAnswers -up-|> Serializable
+  PlayerPoints -up-|> Serializable
+  PlayerService o-- PlayerDao : dao
+  Question -up-|> Serializable
+  Question -up-|> Idable
+  Question o-- QuestionType : questionType
+  QuestionController o-- QuestionService : service
+  QuestionDao -up-|> Dao
+  QuestionGroup -up-|> Serializable
+  QuestionGroup -up-|> Idable
+  QuestionGroup o-- QuestionGroupType : type
+  QuestionGroupController o-- QuestionGroupService : service
+  QuestionGroupDao -up-|> Dao
+  QuestionGroupService o-- QuestionGroupDao : dao
+  QuestionGroupService o-- QuestionService : questionService
+  QuestionGroupWithNumberOfQuestions -up-|> QuestionGroup
+  QuestionService o-- QuestionDao : dao
+  QuestionService o-- QuestionGroupService : questionGroupService
+  QuestionWithCategoryNames -up-|> Question
+  Quiz -up-|> Serializable
+  Quiz -up-|> Idable
+  QuizController o-- QuizService : service
+  QuizDao -up-|> Dao
+  QuizGroup -up-|> Serializable
+  QuizGroup -up-|> Idable
+  QuizGroup o-- QuizGroupType : type
+  QuizGroupController o-- QuizGroupService : service
+  QuizGroupDao -up-|> Dao
+  QuizGroupService o-- QuizGroupDao : dao
+  QuizPart -up-|> Serializable
+  QuizPart -up-|> Idable
+  QuizPartController o-- QuizPartService : service
+  QuizPartDao -up-|> Dao
+  QuizPartService o-- QuizPartDao : dao
+  QuizPartService o-- QuestionGroupService : questionGroupService
+  QuizPartWithCategoryNames -up-|> QuizPart
+  QuizService o-- QuizDao : dao
+  QuizService o-- QuizGroupService : quizGroupService
+  QuizService o-- QuizPartService : quizPartService
+  QuizService o-- QuestionGroupService : questionGroupService
+  QuizWithCategoryNames -up-|> Quiz
+  Result -up-|> Idable
+  Result -up-|> Serializable
+  Result o-- Quiz : realQuiz
+  Result o-- Game : realGame
+  ResultController o-- ResultService : service
+  ResultDao -up-|> Dao
+  ResultService o-- ResultDao : dao
+  ResultService o-- QuizService : quizService
+  ResultService o-- PlayerService : playerService
+  ResultService o-- QuestionService : questionService
+  SingleChoiceAnswer -up-|> Answer
+  StringDatabaseEntry -up-|> DatabaseEntry
+  User -up-|> IUser
+  User -up-|> Idable
+  User o-- UserType : type
+  UserController o-- UserService : service
+  UserDao -up-|> Dao
+  UserService o-- UserDao : dao
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
