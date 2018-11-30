@@ -18,7 +18,7 @@
                     <version>9.3.0.v20150612</version>
                     <configuration>
                         <httpConnector>
-                            <port>5000</port>
+                            <port>80</port>
                         </httpConnector>
                         <scanIntervalSeconds>10</scanIntervalSeconds>
                         <webApp>

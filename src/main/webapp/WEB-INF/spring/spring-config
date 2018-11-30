@@ -17,17 +17,20 @@
 
     <context:component-scan base-package="system"/>
 
-    <mvc:view-controller path="/" view-name="users_page"/>
+    <mvc:view-controller path="/" view-name="index"/>
 
     <mvc:cors>
         <mvc:mapping path="/**" />
     </mvc:cors>
 
+    <mvc:resources mapping = "/static/**" location = "/WEB-INF/static/" />
+
     <bean id="resolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/"/>
-        <property name="suffix" value=".jsp"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=""/>
     </bean>
 
     <task:annotation-driven/>
+
 
 </beans>

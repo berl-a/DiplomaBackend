@@ -1,0 +1,36 @@
+body {
+	background-image: url("../jpg/flower-back.jpg");
+}
+
+h1 {
+	color: #660033;
+}
+
+h3 {
+	color: #993366;
+}
+
+.go-button, .go-button:hover {
+	background-color: #ff99ff;
+}
+
+.teacher-sign-in-button, .teacher-sign-in-button:hover {
+	background-color: #cc99ff;
+}
+
+footer.footer, footer.footer div {
+	background-color: #660033!important;
+}
+
+footer {
+	margin-top: 100px;
+}
+
+h5 {
+	color: #800040;
+}
+
+.tinymodal-content {
+	background-image: url("../jpg/foxes-back.jpg")!important;
+	background-attachment: scroll; 
+}

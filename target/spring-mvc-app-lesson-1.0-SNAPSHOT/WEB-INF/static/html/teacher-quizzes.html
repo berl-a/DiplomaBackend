@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizzes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/editor.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/fa/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/jquery.tinymodal.css">
+    <link rel="stylesheet" href="css/vika_style.css">
+</head>
+<body class="bg-light">
+<div class="container-fluid">
+    <header class="row mb-2 bg-grey pt-1 pb-1">
+        <div class="col-12">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-right text-light ">Hello, <span class="logged-in-user-username"></span> <button class="btn btn-sm btn-primary logout-button">Log out</button></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row mt-2">
+        <div class="col-12">
+            <h3 class="text-center mb-3">Quizzes</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <table id="quizzes" class="table table-striped table-bordered" cellspacing="0" width="80%">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Subcategory</th>
+                            <th>Subsubcategory</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Subcategory</th>
+                            <th>Subsubcategory</th>
+                            <th></th>
+                        </tr>
+                        </tfoot>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="mt-3 mb-1 text-center current-input-form-purpose">
+                        Add new quiz
+                    </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <div class="container text-center add-form">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="container">
+                                    <label>Quiz name:
+                                        <input class="name" size="16">
+                                    </label>
+                                    <br>
+                                    <label>Quiz category:
+                                        <select class="quest-group quest-cat cat" name="cat">
+                                          <option class="unhiddable" value=""></option>
+                                        </select>
+                                    </label>
+                                    <br>
+                                    <label>Quiz subcategory
+                                        <select class="quest-group quest-subcat subcat" name="subcat">
+                                          <option class="unhiddable" value=""></option>
+                                        </select>
+                                    </label>
+                                    <br>
+                                    <label>Quiz subsubcategory
+                                        <select class="quest-group quest-subsubcat subsubcat" name="subsubcat">
+                                          <option class="unhiddable" value=""></option>
+                                        </select>
+                                    </label>
+                                    <br>
+                                    
+                                    <button class="clear btn btn-danger mb-2">Clear</button>
+                                    <button class="btn btn-primary mb-2 submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2 mb-1">
+        <div class="col-1"></div>
+        <div class="col-10 text-center">
+            <a href="#" class="btn btn-info back">Back</a>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+</div>
+
+
+<p class="invisible page-function">products</p>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.tinymodal.js"></script>
+
+<script src="js/dataTables.js"></script>
+<script src="js/teacher-quizzes.js"></script>
+
+</body>
+</html>

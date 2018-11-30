@@ -1,3 +1,4 @@
+system\controller\SiteController.class
 system\controller\dao\QuizDao.class
 system\controller\service\ResultService.class
 system\controller\dao\QuizPartDao.class

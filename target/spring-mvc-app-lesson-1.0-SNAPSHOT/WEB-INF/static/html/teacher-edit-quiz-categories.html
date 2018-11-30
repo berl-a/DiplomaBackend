@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz categories</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/teacher-style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/editor.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/fa/css/fontawesome-all.min.css">
+</head>
+<body class="bg-light">
+<div class="container-fluid">
+    <header class="row mb-2 bg-grey pt-1 pb-1">
+        <div class="col-12">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-8 text-right text-light ">Hello, <span class="logged-in-user-username"></span> <button class="btn btn-sm btn-primary logout-button">Log out</button></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="row mt-2">
+        <div class="col-12">
+            <h3 class="text-center mb-3">Edit quiz categories</h3>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 class="text-center">Category</h5>
+                            </div>
+                            <div class="col-4"><h5 class="text-center">Subcategory</h5></div>
+                            <div class="col-4"><h5 class="text-center">Subsubcategory</h5></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 cat-col col cat">
+                                <!-- <div class="item inactive">
+                                    <button class="btn bg-danger remove"><i class="fa fa-times fa-1x"></i></button>
+                                    <p></p>
+                                </div> -->
+                            </div>
+                            <div class="col-4 cat-col col subcat">
+                                
+                            </div>
+                            <div class="col-4 cat-col col subsubcat">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-8">
+                                <input class="d-inline cat"> 
+                                        </div>
+                                        <div class="col-4">
+                                <button class="d-inline btn btn-sm add cat">Add</button> </div>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-8">
+                                <input class="d-inline subcat"> 
+                                        </div>
+                                        <div class="col-4">
+                                <button class="d-inline btn btn-sm add subcat">Add</button> </div>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-8">
+                                <input class="d-inline subsubcat"> 
+                                        </div>
+                                        <div class="col-4">
+                                <button class="d-inline btn btn-sm add subsubcat">Add</button> </div>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="row">
+        <div class="col-11 ml-1">
+            
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-1"></div>
+        <div class="col-10 text-center">
+            <a class="btn btn-success admin-workspace-clients-back" href="teacher-workspace.html">Back</a>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+
+<p class="invisible page-function">quizCategories</p>
+
+<script src="js/jquery.js"></script>
+<script src="js/dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src=js/teacher-edit-quiz-categories.js></script>
+    
+
+</body>
+</html>
