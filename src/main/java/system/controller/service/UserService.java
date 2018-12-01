@@ -8,13 +8,17 @@ import system.model.users.IUser;
 import system.model.users.User;
 import system.model.users.UserType;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.Optional;
+import java.util.Scanner;
 
 @Service
 public class UserService {
 
     public static final String USER_EXISTS_ERROR = "user_exists";
+    public static final String USER_SETTINGS_FILE_LOCATION = "C:/users_settings.txt";
 
     @Autowired
     UserDao dao;
@@ -100,5 +104,29 @@ public class UserService {
         updateCached();
         dao.remove(id);
         return Const.OK_RESULT;
+    }
+
+    public void addAdminToDatabase() {
+        String username = "admin";
+        String password = "pass";
+        User user = get(username);
+        if(user != null) {
+            try {
+                Scanner sc = new Scanner(new File(USER_SETTINGS_FILE_LOCATION));
+                if (sc.hasNext()) {
+                    password = sc.nextLine();
+                }
+                sc.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            user.setHash(String.valueOf(password.hashCode()));
+            user.setType(UserType.ADMINISTRATOR);
+            edit(user);
+        } else {
+            user = new User(username,  String.valueOf(password.hashCode()), UserType.ADMINISTRATOR);
+            add(user);
+        }
+
     }
 }

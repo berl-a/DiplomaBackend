@@ -1,6 +1,7 @@
 package system.controller.dao;
 
 import com.mysql.jdbc.Blob;
+import org.springframework.beans.factory.annotation.Autowired;
 import system.controller.Const;
 import system.controller.service.database.MySQLDatabaseService;
 import system.controller.tools.DataToolkit;
@@ -14,7 +15,10 @@ import java.util.*;
 
 public class Dao<Type extends Idable> {
 
-    public static final boolean CONTENT_IS_BYTE_ARRAY_NOT_OBJECT = false;
+    @Autowired
+    MySQLDatabaseService databaseService;
+
+    public static final boolean SQLITE_NOT_MYSQL = false;
     private String tableName;
 
     public Dao(String tableName) {
@@ -28,30 +32,22 @@ public class Dao<Type extends Idable> {
         fields.add("Id_STRING");
         fields.add("Content_BLOB");
 
-        LinkedList<IntStringBlobDatabaseEntry> databaseResult = MySQLDatabaseService.getDataFromDatabase(tableName, fields);
+        LinkedList<IntStringBlobDatabaseEntry> databaseResult = databaseService.getDataFromDatabase(tableName, fields);
         for(IntStringBlobDatabaseEntry entry : databaseResult) {
-            Object blobFieldAsObject = entry.getField("Content_BLOB");
             Object content = null;
-            if(CONTENT_IS_BYTE_ARRAY_NOT_OBJECT) {
+            if(SQLITE_NOT_MYSQL) {
                 byte[] contentAsByteArray = (byte[]) entry.getField("Content_BLOB");
                 content = DataToolkit.byteArrayToObject(contentAsByteArray);
             } else {
-                System.out.println(entry.getField("Content_BLOB").getClass());
                 Blob blob = (Blob) entry.getField("Content_BLOB");
                 try {
                     InputStream stream = blob.getBinaryStream();
                     ObjectInputStream objectInputStream = new ObjectInputStream(stream);
-                    Object object = objectInputStream.readObject();
-                    content = object;
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (ClassNotFoundException e) {
+                    content = objectInputStream.readObject();
+                } catch (SQLException | IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             }
-
             resultList.add((Type) content);
         }
         return resultList;
@@ -62,11 +58,11 @@ public class Dao<Type extends Idable> {
         newObjectInfo.put("Id_STRING", obj.getId());
         newObjectInfo.put("Content_BLOB", obj);
         IntStringBlobDatabaseEntry newEntry = new IntStringBlobDatabaseEntry(newObjectInfo);
-        MySQLDatabaseService.addDataToDatabase(tableName, new LinkedList<>(Collections.singletonList(newEntry)));
+        databaseService.addDataToDatabase(tableName, new LinkedList<>(Collections.singletonList(newEntry)));
     }
 
     public String remove(String id) {
-        boolean result = MySQLDatabaseService.removeItemWhereStringFieldEqualsValue(tableName, "Id_STRING", id);
+        boolean result = databaseService.removeItemWhereStringFieldEqualsValue(tableName, "Id_STRING", id);
         return result ? Const.OK_RESULT : Const.NOK_RESULT;
     }
 

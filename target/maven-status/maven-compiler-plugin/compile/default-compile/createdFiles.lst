@@ -10,15 +10,15 @@ system\controller\ResultController.class
 system\controller\service\PlayerService.class
 system\controller\Const.class
 system\controller\service\QuestionService.class
+system\controller\service\database\MySQLDatabaseService.class
 system\model\quizzes\QuizSettings.class
 system\controller\service\HospitationService.class
 system\controller\service\QuizGroupService.class
 system\controller\simple_frontend_models\QuizPartWithCategoryNames.class
 system\model\games\ListOfRealQuestions.class
-system\controller\service\database\SqliteDatabaseToolkit.class
+system\controller\service\database\SqliteDatabaseService.class
 system\model\games\FreeTextAnswer.class
 system\controller\service\StartupService.class
-system\controller\service\database\MySqlDatabaseToolkit.class
 system\model\users\UserType.class
 system\model\games\Player.class
 system\model\users\IUser.class
@@ -46,6 +46,7 @@ system\controller\dao\QuizGroupDao.class
 system\model\questions\QuestionGroup.class
 system\model\questions\QuestionGroupType.class
 system\model\games\Answer.class
+system\controller\service\database\DatabaseService.class
 system\controller\tools\DataToolkit.class
 system\model\games\GameToolkit.class
 system\controller\dao\Dao.class

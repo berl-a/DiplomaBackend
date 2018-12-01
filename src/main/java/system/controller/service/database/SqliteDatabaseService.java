@@ -4,15 +4,17 @@ package system.controller.service.database;
 import org.springframework.stereotype.Service;
 import system.controller.tools.DataToolkit;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.*;
 
 @Service
-public class SqliteDatabaseService {
+public class SqliteDatabaseService implements DatabaseService {
 
-	public final int CONNECTION_TIMEOUT_MS = 20;
+    public static final String SETTINGS_FILE_LOCATION = "C:/settings.txt";
+    public final int CONNECTION_TIMEOUT_MS = 20;
 	private Connection connection;
 
 	private boolean hasConnected = false;
@@ -20,9 +22,15 @@ public class SqliteDatabaseService {
 
     String databaseAddress = "D:\\Data\\Diploma\\Project\\Database\\test.db";
 
+    @PostConstruct
+    public void init() {
+        getSettingsFromFile();
+        connect();
+    }
+
     public void getSettingsFromFile() {
         try {
-            Scanner sc = new Scanner(new File("C:/settings.txt"));
+            Scanner sc = new Scanner(new File(SETTINGS_FILE_LOCATION));
             if(sc.hasNext()) {
                 databaseAddress = sc.nextLine();
             }
@@ -250,123 +258,6 @@ public class SqliteDatabaseService {
     }
 
     /////////////////not adding blob
-
-
-
-//	public LinkedList<Hospitation> getUnaprovedHospitationsRaw() {
-//		LinkedList<StringDatabaseEntry> resultList = new LinkedList<>();
-//
-//		try {
-//			Statement stmt = connection.createStatement();
-//			ResultSet resultSet = stmt.executeQuery("SELECT * FROM " + "Hospitacje");
-//
-//			LinkedList<String> fieldNames = new LinkedList<>(Arrays.asList("ID", "Plan hospitacjiID", "Komisja hospitacyjnaID", "Wykonana", "Pelna", "FormaZajec"));
-//
-//			while (resultSet.next()) {
-//				HashMap<String, String> tempMap = new HashMap<>();
-//				for(String fieldName : fieldNames) {
-//					tempMap.put(fieldName, resultSet.getString(fieldName));
-//				}
-//				resultList.add(new StringDatabaseEntry(tempMap));
-//			}
-//
-//			return new LinkedList<>(resultList.stream().map(Hospitation::new).collect(Collectors.toList()));
-//
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-//	}
-
-
-//	public LinkedList<HospitationPlan> getUnaprovedHospitationPlans() {
-//		if(!hasConnected && !failedConnection) {
-//			this.connect();
-//			while(!hasConnected && !failedConnection)
-//				try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-//			return getUnaprovedHospitationPlansInside();
-//		} else {
-//			return getUnaprovedHospitationPlansInside();
-//		}
-//	}
-//	private LinkedList<HospitationPlan> getUnaprovedHospitationPlansInside() {
-//		LinkedList<StringDatabaseEntry> resultList = new LinkedList<>();
-//
-//		try {
-//			Statement stmt = connection.createStatement();
-//			ResultSet resultSet = stmt.executeQuery(GET_UNAPPROVED_HOSPITATION_PLANS_WITH_HOSPITATIONS_AND_TEACHERS);
-//
-//			LinkedList<String> fieldNames = new LinkedList<>(Arrays.asList(
-//					"ID",
-//					"NauczycielID",
-//					"Imie",
-//					"Nazwisko",
-//					"Profile",
-//					"Tytul",
-//					"Wydzial",
-//					"Hospitowany",
-//					"Przewodniczacy",
-//					"ProtokolyHospitacji",
-//					"Hospitacje",
-//					"HospID",
-//					"Komisja hospitacyjnaID",
-//					"Wykonana",
-//					"Pelna",
-//					"FormaZajec",
-//					"PlanHospID",
-//					"Zatwierdzony",
-//					"Wydzial",
-//					"Rok",
-//					"Semester",
-//
-//					"ZajeciaID",
-//					"NazwaPrzedmiotu",
-//					"FormaZajec",
-//					"Data",
-//					"Czas",
-//					"Profil"
-//			));
-//
-//			while (resultSet.next()) {
-//				HashMap<String, String> tempMap = new HashMap<>();
-//				for(String fieldName : fieldNames) {
-//					tempMap.put(fieldName, resultSet.getString(fieldName));
-//				}
-//				resultList.add(new StringDatabaseEntry(tempMap));
-//			}
-//
-//			return HospitationPlanService.getHospitationPlansFromDatabaseEntries(resultList);
-//
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-//	}
-//
-//
-//	public void approveHospitationPlan(int planId) {
-//		if(!hasConnected && !failedConnection) {
-//			this.connect();
-//			while(!hasConnected && !failedConnection)
-//				try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-//			approveHospitationPlanInternal(planId);
-//		} else {
-//			approveHospitationPlanInternal(planId);
-//		}
-//	}
-//
-//	private void approveHospitationPlanInternal(int planId) {
-//
-//		try {
-//			Statement stmt = connection.createStatement();
-//			stmt.executeUpdate("UPDATE `Plan hospitacji` SET Zatwierdzony = 1 WHERE PlanHospId = " + planId);
-//
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//	}
-
-
 
 
 	public boolean removeDataFromDatabase(String tableName, StringDatabaseEntry filter, FilterBehaviour filterBehaviour) {

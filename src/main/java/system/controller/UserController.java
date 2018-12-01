@@ -23,12 +23,12 @@ public class UserController {
     public @ResponseBody
     Response verify(@RequestParam("login") String login, @RequestParam("hash") String hash) {
 
-        System.out.println(">");
-        System.out.println(login + " " + hash);
-        System.out.println(">");
+//        System.out.println(">");
+//        System.out.println(login + " " + hash);
+//        System.out.println(">");
         Response resp = new Response();
 
-        System.out.println("__");
+//        System.out.println("__");
         service.getAll().forEach(u -> System.out.println(u.getLogin() + " " + u.getHash()));
 
         if(service.get(login) != null) {

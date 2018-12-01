@@ -5,6 +5,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.springframework.stereotype.Service;
 import system.controller.tools.DataToolkit;
 
+import javax.annotation.PostConstruct;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,8 +13,9 @@ import java.sql.*;
 import java.util.*;
 
 @Service
-public class MySQLDatabaseService {
+public class MySQLDatabaseService implements DatabaseService {
 
+    public static final String SETTTINGS_FILE_LOCATION = "C:/settings.txt";
     public final int CONNECTION_TIMEOUT_MS = 20;
     private Connection connection;
 
@@ -26,9 +28,15 @@ public class MySQLDatabaseService {
     String dbPassword = "pass";
     String dbServerName = "127.0.0.1";
 
+    @PostConstruct
+    public void init() {
+        getSettingsFromFile();
+        connect();
+    }
+
     public void getSettingsFromFile() {
         try {
-            Scanner sc = new Scanner(new File("C:/settings.txt"));
+            Scanner sc = new Scanner(new File(SETTTINGS_FILE_LOCATION));
             if(sc.hasNext()) {
                 dbPort = Integer.parseInt(sc.nextLine());
                 dbName = sc.nextLine();
@@ -287,41 +295,6 @@ public class MySQLDatabaseService {
 
     /////////////////not adding blob
 
-
-
-
-
-
-
-
-
-
-
-    public void approveHospitationPlan(int planId) {
-        if(!hasConnected && !failedConnection) {
-            this.connect();
-            while(!hasConnected && !failedConnection)
-                try{Thread.sleep(CONNECTION_TIMEOUT_MS);} catch (InterruptedException e) {e.printStackTrace();}
-            approveHospitationPlanInternal(planId);
-        } else {
-            approveHospitationPlanInternal(planId);
-        }
-    }
-
-    private void approveHospitationPlanInternal(int planId) {
-
-        try {
-            Statement stmt = connection.createStatement();
-            stmt.executeUpdate("UPDATE `Plan hospitacji` SET Zatwierdzony = 1 WHERE PlanHospId = " + planId);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
     public boolean removeDataFromDatabase(String tableName, StringDatabaseEntry filter, FilterBehaviour filterBehaviour) {
         if(!hasConnected && !failedConnection) {
             this.connect();
@@ -349,10 +322,10 @@ public class MySQLDatabaseService {
     }
 
     public boolean removeItemWhereStringFieldEqualsValue(String tableName, String fieldName, String fieldValue) {
-        return removeItemWhereFieldEqualsValue(tableName, fieldName, fieldValue);
+        return removeItemWhereFieldEqualsValueInternal(tableName, fieldName, fieldValue);
     }
-
-
+//
+//
     public boolean removeItemWhereFieldEqualsValue(String tableName, String fieldName, String fieldValue) {
         if(!hasConnected && !failedConnection) {
             this.connect();
@@ -363,7 +336,7 @@ public class MySQLDatabaseService {
             return removeItemWhereFieldEqualsValue(tableName, fieldName, fieldValue);
         }
     }
-
+//
     private boolean removeItemWhereFieldEqualsValueInternal(String tableName, String fieldName, String fieldValue) {
         try {
             Statement stmt = connection.createStatement();

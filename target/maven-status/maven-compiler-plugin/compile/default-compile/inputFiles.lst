@@ -14,6 +14,7 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\GameService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuizController.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\QuestionGroupWithNumberOfQuestions.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database\SqliteDatabaseService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\dao\PlayerDao.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\questions\QuestionGroup.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\StartupService.java
@@ -35,6 +36,7 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\Player.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\dao\QuizPartDao.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\QuestionsToolkit.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\dao\QuizDao.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database\DatabaseService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\quizzes\QuizSettings.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\QuestionService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\QuizService.java
@@ -53,7 +55,7 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\ListOfQuestions.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\Response.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\dao\QuizGroupDao.java
-D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database\MySqlDatabaseToolkit.java
+D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database\MySQLDatabaseService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\simple_frontend_models\FUser.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\Game.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\tools\DataToolkit.java
@@ -70,5 +72,4 @@ D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\PlayerSe
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\QuestionGroupService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\QuizGroupService.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\controller\QuestionGroupController.java
-D:\Data\Diploma\Project\Backend\src\main\java\system\controller\service\database\SqliteDatabaseToolkit.java
 D:\Data\Diploma\Project\Backend\src\main\java\system\model\games\PlayerPoints.java
