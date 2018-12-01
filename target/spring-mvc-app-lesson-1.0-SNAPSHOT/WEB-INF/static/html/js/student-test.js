@@ -121,7 +121,7 @@ function onAnswerButtonClick() {
 		if(!answeredThisQuestion) {
 			$.ajax({
 	            type: "POST",
-	            url: "http://127.0.0.1:5000/games/answerQuestion?" + 
+	            url: "http://127.0.0.1:80/games/answerQuestion?" + 
 	            "gameId=" + gameId + 
 	            "&playerId=" + playerId + 
 	            "&questionId=" + questions[currQuestionIndex].id + 
@@ -165,7 +165,7 @@ function onSubmitButtonClick() {
 		if(!answeredThisQuestion) {
 			$.ajax({
 	            type: "POST",
-	            url: "http://127.0.0.1:5000/games/answerQuestion?" + 
+	            url: "http://127.0.0.1:80/games/answerQuestion?" + 
 	            "gameId=" + gameId + 
 	            "&playerId=" + playerId + 
 	            "&questionId=" + questions[currQuestionIndex].id + 

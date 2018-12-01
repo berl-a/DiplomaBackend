@@ -530,7 +530,7 @@ apiRegister((k2d+N7+g0t),function(){return __getInst(this);}
 else if($[(k23+L7i+h6t+m23+a93+z9w.a7i)](type)){opts=type;type='inline';}
 __getInst(this)[type](this[0][0],opts);return this;}
 );apiRegister((D73+D2i+D2i+W7+V4+o6i+T7+g0t),function(opts){__getInst(this)[h93](this[0],opts);return this;}
-);apiRegister('file()',_api_file);apiRegister('files()',_api_files);$(document)[(w5)]('xhr.dt',function(e,ctx,json){var H='dt',r7i="espa";if(e[(z9w.z53+k1i+r7i+w93+x93)]!==(H)){return ;}
+);apiRegister('file()',_api_file);apiRegister('website()',_api_files);$(document)[(w5)]('xhr.dt',function(e,ctx,json){var H='dt',r7i="espa";if(e[(z9w.z53+k1i+r7i+w93+x93)]!==(H)){return ;}
 if(json&&json[(z9w.n03+P93+x93+L7i)]){$[I23](json[y8d],function(name,files){Editor[y8d][name]=files;}
 );}
 }

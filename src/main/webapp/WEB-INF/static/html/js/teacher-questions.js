@@ -41,7 +41,7 @@ $(document).ready(function() {
 function getFromBackend() {
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/questions/getAllWithCatNames?teacher=" + teacherId,
+        url: "http://127.0.0.1:80/questions/getAllWithCatNames?teacher=" + teacherId,
         success: function (stringData) {
         	var data = stringData.result.objects;
 
@@ -75,7 +75,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/questionGroups/getAll?teacher=" + teacherId,
+        url: "http://127.0.0.1:80/questionGroups/getAll?teacher=" + teacherId,
         success: function (stringData) {
             var data = stringData.result.objects;
 
@@ -303,7 +303,7 @@ function addToDatabase(qtitle, q, qi, qt, cid, scid, sscid, a, ai, ac) {
 
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/questions/add",
+        url: "http://127.0.0.1:80/questions/add",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -329,7 +329,7 @@ function addToDatabase(qtitle, q, qi, qt, cid, scid, sscid, a, ai, ac) {
 function editInDatabase(id, qtitle, q, qi, qt, cid, scid, sscid, a, ai, ac) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/questions/edit",
+        url: "http://127.0.0.1:80/questions/edit",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -355,7 +355,7 @@ function editInDatabase(id, qtitle, q, qi, qt, cid, scid, sscid, a, ai, ac) {
 function removeFromDatabase(id) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/questions/remove",
+        url: "http://127.0.0.1:80/questions/remove",
         data: id,
         success: function (stringData) {
             var data = stringData.result;
@@ -412,7 +412,7 @@ function onEditButtonClicked() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/questions/get?id=" + id,
+        url: "http://127.0.0.1:80/questions/get?id=" + id,
         contentType: "application/json",
         success: function (stringData) {
             // console.log(stringData.result.result);
@@ -484,7 +484,7 @@ function onViewButtonClicked() {
 function getQuestionFromBackend(questionId) {
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/questions/get?" + 
+        url: "http://127.0.0.1:80/questions/get?" + 
         "id=" + questionId,
         success: function (stringData) {
             console.log(stringData.result);

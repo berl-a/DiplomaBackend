@@ -22,7 +22,7 @@ public class TestDatabase {
         fields.add("Profile");
         fields.add("Tytul");
 
-//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getStringDataFromDatabase("Nauczyciel", fields);
+//        LinkedList<StringDatabaseEntry> result = SqliteDatabaseService.getStringDataFromDatabase("Nauczyciel", fields);
 //        for(StringDatabaseEntry e : result) {
 //            System.out.println("Entry is " + e.toString());
 //        }
@@ -41,7 +41,7 @@ public class TestDatabase {
         fields.add("Pelna");
         fields.add("FormaZajec");
 
-//        LinkedList<StringDatabaseEntry> result = DatabaseToolkit.getStringDataFromDatabase("Hospitacja", fields);
+//        LinkedList<StringDatabaseEntry> result = SqliteDatabaseService.getStringDataFromDatabase("Hospitacja", fields);
 //        for(StringDatabaseEntry e : result) {
 //            System.out.println("Entry is " + e.toString());
 //        }
@@ -51,7 +51,7 @@ public class TestDatabase {
 //    @Test
 //    @PostConstruct
 //    public void testUnapprovedHospitationsGottenFromDatabaseOkay() {
-//        DatabaseToolkit.getUnaprovedHospitationPlans();
+//        SqliteDatabaseService.getUnaprovedHospitationPlans();
 //    }
 
 }

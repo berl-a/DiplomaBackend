@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/products/get",
+        url: "http://127.0.0.1:80/products/get",
         success: function (stringData) {
             data = JSON.parse(stringData);
             for(var i = 0; i < data.length; i ++) {
@@ -99,7 +99,7 @@ function onAddProductButtonClicked () {
 function sendProductsTableToServer() {
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/products/set",
+        url: "http://127.0.0.1:80/products/set",
         data: {
             "newValues": JSON.stringify(table[0].rows().data())
         },
@@ -120,7 +120,7 @@ function sendProductsTableToServer() {
 function sendOrderToServer() {
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/orderItems/set",
+        url: "http://127.0.0.1:80/orderItems/set",
         data: {
             "newValues": JSON.stringify(table[1].rows().data()),
             "clientUsername": localStorage.getItem("name")

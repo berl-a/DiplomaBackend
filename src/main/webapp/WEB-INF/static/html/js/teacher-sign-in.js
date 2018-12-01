@@ -16,7 +16,7 @@ function onLoginButtonClicked() {
         type: "GET",
         contentType : "application/json",
         dataType : 'json',
-        url: "http://127.0.0.1:5000/users/verify?login=" + login + 
+        url: "http://127.0.0.1:80/users/verify?login=" + login + 
         "&hash=" + hash,
         success: function (stringData) {
             console.log(stringData);

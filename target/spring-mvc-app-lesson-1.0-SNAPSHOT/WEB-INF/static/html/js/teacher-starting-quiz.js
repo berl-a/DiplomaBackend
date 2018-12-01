@@ -25,7 +25,7 @@ var playersJoinedNames = [];
 function sendLongPoll() {
     $.ajax({
             type: "GET",
-            url: "http://127.0.0.1:5000/games/waitForPlayerJoin?" + 
+            url: "http://127.0.0.1:80/games/waitForPlayerJoin?" + 
             "gameId=" + game.id + 
             "&teacherId=" + game.actualQuiz.teacher + 
             "&playersAlreadyJoined=" + playersJoinedIds,
@@ -73,7 +73,7 @@ function onStartClicked() {
         localStorage.setItem("gameTimeInMinutes", time);
         $.ajax({
             type: "post",
-            url: "http://127.0.0.1:5000/games/startGame?" + 
+            url: "http://127.0.0.1:80/games/startGame?" + 
             "gameId=" + game.id + 
             "&teacherId=" + game.actualQuiz.teacher + 
             "&gameName=" + name + 
@@ -93,7 +93,7 @@ function onBackClicked() {
 function getFromBackend() {
 	$.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/games/addFromQuiz",
+        url: "http://127.0.0.1:80/games/addFromQuiz",
         dataType: 'json',
         contentType: 'application/json',
         data: quizId,

@@ -39,7 +39,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/users/getAll",
+        url: "http://127.0.0.1:80/users/getAll",
         success: function (stringData) {
         	var data = stringData.result.objects;
 
@@ -167,7 +167,7 @@ function onSubmitButtonClicked() {
 function addToDatabase(login, hash, type, row) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/users/add",
+        url: "http://127.0.0.1:80/users/add",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -185,7 +185,7 @@ function addToDatabase(login, hash, type, row) {
 function editInDatabase(id, login, hash, type, ssc) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/users/edit",
+        url: "http://127.0.0.1:80/users/edit",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -203,7 +203,7 @@ function editInDatabase(id, login, hash, type, ssc) {
 function copyToDatabase(id, row) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/users/copy",
+        url: "http://127.0.0.1:80/users/copy",
         data: id,
         success: function (stringData) {
             var newId = stringData.result.newId;
@@ -215,7 +215,7 @@ function copyToDatabase(id, row) {
 function removeFromDatabase(id) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/users/remove",
+        url: "http://127.0.0.1:80/users/remove",
         data: id,
         success: function (stringData) {
             var data = stringData.result;
@@ -253,7 +253,7 @@ function onEditButtonClicked() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/users/getById?id=" + id,
+        url: "http://127.0.0.1:80/users/getById?id=" + id,
         contentType: "application/json",
         success: function (stringData) {
             console.log(stringData.result);

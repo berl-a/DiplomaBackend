@@ -25,7 +25,7 @@ public class HospitationService {
 //    }
 //
 //    public HospitationPlan getRandomUnapprovedHospitationPlan() {
-//        LinkedList<HospitationPlan> hospPlans = DatabaseToolkit.getUnaprovedHospitationPlans();
+//        LinkedList<HospitationPlan> hospPlans = SqliteDatabaseService.getUnaprovedHospitationPlans();
 //        return hospPlans.getWithQuiz(new Random().nextInt(hospPlans.size()));
 //    }
 //

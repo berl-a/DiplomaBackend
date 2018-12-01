@@ -23,7 +23,7 @@ $(document).ready(function() {
 function reloadResultsToMemory() {
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/results/getAll?teacherId=" + teacherId,
+        url: "http://127.0.0.1:80/results/getAll?teacherId=" + teacherId,
         success: function (stringData) {
             var data = stringData.result.objects;
             localStorage.setItem("results", JSON.stringify(data));
@@ -120,7 +120,7 @@ function onRightButtonClicked() {
 function gradeAnswer(resultId, studentIndex, questionId, grade, row) {
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/results/grade?resultId=" + resultId + 
+        url: "http://127.0.0.1:80/results/grade?resultId=" + resultId + 
         "&studentIndex=" + studentIndex + 
         "&questionId=" + questionId + 
         "&grade=" + grade,

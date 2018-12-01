@@ -26,7 +26,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/quizGroups/getAll?teacher=" + teacherId,
+        url: "http://127.0.0.1:80/quizGroups/getAll?teacher=" + teacherId,
         success: function (stringData) {
             var data = stringData.result.objects;
 
@@ -145,7 +145,7 @@ function addToDatabase(type, name, father, grandfather, element) {
 	
 	$.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizGroups/add",
+        url: "http://127.0.0.1:80/quizGroups/add",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -166,7 +166,7 @@ function addToDatabase(type, name, father, grandfather, element) {
 function removeFromDatabase(id) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizGroups/remove",
+        url: "http://127.0.0.1:80/quizGroups/remove",
         data: id,
         success: function (stringData) {
             var data = stringData.result;
@@ -176,7 +176,7 @@ function removeFromDatabase(id) {
 function renameInDatabase(id, newName) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizGroups/rename?id=" + id + "&newName=" + newName,
+        url: "http://127.0.0.1:80/quizGroups/rename?id=" + id + "&newName=" + newName,
         
         success: function (stringData) {
             var data = stringData.result;

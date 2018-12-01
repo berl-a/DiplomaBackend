@@ -44,7 +44,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/quizzes/getAllWithCatNames?teacher=" + teacherId,
+        url: "http://127.0.0.1:80/quizzes/getAllWithCatNames?teacher=" + teacherId,
         success: function (stringData) {
         	var data = stringData.result.objects;
 
@@ -76,7 +76,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/quizGroups/getAll?teacher=" + teacherId,
+        url: "http://127.0.0.1:80/quizGroups/getAll?teacher=" + teacherId,
         success: function (stringData) {
             var data = stringData.result.objects;
 
@@ -270,7 +270,7 @@ function onSubmitButtonClicked() {
 function addToDatabase(n, c, sc, ssc, row) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizzes/add",
+        url: "http://127.0.0.1:80/quizzes/add",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -290,7 +290,7 @@ function addToDatabase(n, c, sc, ssc, row) {
 function editInDatabase(id, n, c, sc, ssc) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizzes/edit",
+        url: "http://127.0.0.1:80/quizzes/edit",
         dataType: 'json',
         contentType: 'application/json',
         data: JSON.stringify({
@@ -310,7 +310,7 @@ function editInDatabase(id, n, c, sc, ssc) {
 function copyToDatabase(id, row) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizzes/copy",
+        url: "http://127.0.0.1:80/quizzes/copy",
         data: id,
         success: function (stringData) {
             var newId = stringData.result.newId;
@@ -322,7 +322,7 @@ function copyToDatabase(id, row) {
 function removeFromDatabase(id) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/quizzes/remove",
+        url: "http://127.0.0.1:80/quizzes/remove",
         data: id,
         success: function (stringData) {
             var data = stringData.result;
@@ -363,7 +363,7 @@ function onEditButtonClicked() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/quizzes/get?id=" + id,
+        url: "http://127.0.0.1:80/quizzes/get?id=" + id,
         contentType: "application/json",
         success: function (stringData) {
             // console.log(stringData.result.result);
@@ -508,7 +508,7 @@ function onViewButtonClicked() {
 function getQuizQuestionsFromBackend(quizId) {
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/quizzes/getQuestionsFromQuiz?" + 
+        url: "http://127.0.0.1:80/quizzes/getQuestionsFromQuiz?" + 
         "quizId=" + quizId,
         success: function (stringData) {
             var questions = stringData.result.objects;

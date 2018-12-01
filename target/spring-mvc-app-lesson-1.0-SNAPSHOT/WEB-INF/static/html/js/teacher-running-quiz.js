@@ -54,7 +54,7 @@ $(document).ready(function(){
 function sendNewFullTimeToServer(newFullTime) {
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/games/setFullTime?" + 
+        url: "http://127.0.0.1:80/games/setFullTime?" + 
         "gameId=" + game.id + 
         "&fullTime=" + newFullTime,
         dataType: 'json',
@@ -70,7 +70,7 @@ function getStartTimeFromServer() {
     console.log(game);
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/games/getGameInfo?" + 
+        url: "http://127.0.0.1:80/games/getGameInfo?" + 
         "gameId=" + game.id,
         dataType: 'json',
         contentType: 'application/json',
@@ -127,7 +127,7 @@ function endGame() {
     // alert("Game ended");
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:5000/games/endGame?" + 
+        url: "http://127.0.0.1:80/games/endGame?" + 
         "gameId=" + game.id,
         dataType: 'json',
         contentType: 'application/json',

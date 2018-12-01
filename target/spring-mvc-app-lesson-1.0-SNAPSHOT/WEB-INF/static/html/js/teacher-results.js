@@ -34,7 +34,7 @@ function getFromBackend() {
 
     $.ajax({
         type: "GET",
-        url: "http://127.0.0.1:5000/results/getAll?teacherId=" + teacherId,
+        url: "http://127.0.0.1:80/results/getAll?teacherId=" + teacherId,
         success: function (stringData) {
         	var data = stringData.result.objects;
             
@@ -78,7 +78,7 @@ function logOut() {
 function removeFromDatabase(id) {
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:5000/results/remove?id=" + id,
+        url: "http://127.0.0.1:80/results/remove?id=" + id,
         success: function (stringData) {
             var data = stringData.result;
         }
