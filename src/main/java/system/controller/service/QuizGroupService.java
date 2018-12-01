@@ -14,6 +14,8 @@ public class QuizGroupService {
 
     @Autowired
     QuizGroupDao dao;
+    @Autowired
+    QuizService quizService;
 
     private LinkedList<QuizGroup> cachedQuizGroups = new LinkedList<>();
 
@@ -47,6 +49,7 @@ public class QuizGroupService {
     public String remove(String id) {
         updateCached();
         dao.remove(id);
+        quizService.removeQuizzesFromGroup(id);
         return Const.OK_RESULT;
     }
 

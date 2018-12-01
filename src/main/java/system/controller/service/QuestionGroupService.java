@@ -8,6 +8,7 @@ import system.controller.dao.QuestionGroupDao;
 import system.model.questions.Question;
 import system.model.questions.QuestionGroup;
 import system.model.questions.QuestionGroupType;
+import system.model.quizzes.Quiz;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -75,9 +76,9 @@ public class QuestionGroupService {
     public String remove(String id) {
         updateCached();
         dao.remove(id);
+        questionService.removeQuestionsFromGroup(id);
         return Const.OK_RESULT;
     }
-
 
 
     public int getNumberOfQuestions(QuestionGroup questionGroup) {

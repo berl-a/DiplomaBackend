@@ -8,6 +8,7 @@ import system.controller.dao.QuestionDao;
 import system.model.questions.Question;
 import system.model.questions.QuestionGroup;
 import system.model.questions.QuestionGroupType;
+import system.model.quizzes.Quiz;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -69,6 +70,19 @@ public class QuestionService {
 //        System.out.println("Removing question with id " + id);
         dao.remove(id);
         return Const.OK_RESULT;
+    }
+
+    public void removeQuestionsFromGroup(String questionGroupId) {
+        updateCached();
+        LinkedList<Question> questionsFromGroup = cachedQuestions
+                .stream()
+                .filter(q ->
+                        questionGroupId.equals(q.getCategory()) ||
+                                questionGroupId.equals(q.getSubcategory()) ||
+                                questionGroupId.equals(q.getSubsubcategory())
+                )
+                .collect(Collectors.toCollection(LinkedList::new));
+        questionsFromGroup.forEach(q -> remove(q.getId()));
     }
 
     public List<QuestionWithCategoryNames> getAllWithCatNames() {

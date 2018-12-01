@@ -29,15 +29,15 @@ public class QuizService {
     @Autowired
     QuestionGroupService questionGroupService;
 
-    private LinkedList<Quiz> cachedQuizs = new LinkedList<>();
+    private LinkedList<Quiz> cachedQuizzes = new LinkedList<>();
 
     public void updateCached() {
-        cachedQuizs = dao.getAll();
+        cachedQuizzes = dao.getAll();
     }
 
     public LinkedList<Quiz> getAll() {
         updateCached();
-        return cachedQuizs;
+        return cachedQuizzes;
     }
 
     public Quiz get(String quizId) {
@@ -73,15 +73,28 @@ public class QuizService {
         return Const.OK_RESULT;
     }
 
+    public void removeQuizzesFromGroup(String quizGroupId) {
+        updateCached();
+        LinkedList<Quiz> quizzesFromGroup = cachedQuizzes
+                .stream()
+                .filter(q ->
+                        quizGroupId.equals(q.getCategory()) ||
+                                quizGroupId.equals(q.getSubcategory()) ||
+                                quizGroupId.equals(q.getSubsubcategory())
+                )
+                .collect(Collectors.toCollection(LinkedList::new));
+        quizzesFromGroup.forEach(q -> remove(q.getId()));
+    }
+
     public List<QuizWithCategoryNames> getAllWithCatNames() {
         updateCached();
-        return appendCatNamesToQuizzes(cachedQuizs);
+        return appendCatNamesToQuizzes(cachedQuizzes);
     }
 
     public List<QuizWithCategoryNames> getAllWithCatNamesByTeacher(String teacherId) {
         updateCached();
         LinkedList<Quiz> quizzesByTeacher =
-                cachedQuizs
+                cachedQuizzes
                         .stream()
                         .filter(q -> teacherId.equals(q.getTeacher()))
                         .collect(Collectors.toCollection(LinkedList::new));
