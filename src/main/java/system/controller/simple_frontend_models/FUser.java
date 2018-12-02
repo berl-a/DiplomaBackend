@@ -1,7 +1,5 @@
 package system.controller.simple_frontend_models;
 
-import java.io.Serializable;
-
 public class FUser {
 
     String login, hash;

@@ -37,8 +37,7 @@ public class SqliteDatabaseService implements DatabaseService {
             sc.close();
             System.out.println("Settings read from file");
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            System.err.println("Settings file not found, settings read from app");
+            System.out.println("Database settings file not found, settings read from app");
         }
     }
 

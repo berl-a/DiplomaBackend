@@ -118,7 +118,8 @@ public class UserService {
                 }
                 sc.close();
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
+                System.out.println("User settings file not found");
             }
             user.setHash(String.valueOf(password.hashCode()));
             user.setType(UserType.ADMINISTRATOR);
