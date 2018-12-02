@@ -3,11 +3,8 @@ package system.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import system.controller.simple_frontend_models.FUser;
 import system.controller.simple_frontend_models.Response;
-import system.model.quizzes.Quiz;
 import system.model.users.User;
-import system.model.users.UserType;
 import system.controller.service.UserService;
 
 import java.util.List;

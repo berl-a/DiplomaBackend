@@ -29,4 +29,14 @@ public class Const {
     public static final String TEACHER_TYPE_KEY = "type";
 
     public static final double FREE_TEXT_ANSWER_CORRECTNESS = -0.12345;
+
+
+    public static final String JS_FILES_PATH = "/WEB-INF/static/html/js";
+    public static final String DEFAULT_SERVER_ADDRESS = "127.0.0.1:80";
+    public static final String REPLACEMENT_SERVER_ADDRESS = "127.0.0.1:80";
+
+    public static final String SETTINGS_FILE_LOCATION = "C:/settings.txt";
+
+    public static final String USER_EXISTS_ERROR = "user_exists";
+
 }

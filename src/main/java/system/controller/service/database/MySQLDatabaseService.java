@@ -12,10 +12,15 @@ import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.*;
 
+import static system.controller.Const.SETTINGS_FILE_LOCATION;
+
+/**
+ * Service for working with MySQL database
+ */
 @Service
 public class MySQLDatabaseService implements DatabaseService {
 
-    public static final String SETTTINGS_FILE_LOCATION = "C:/settings.txt";
+
     public final int CONNECTION_TIMEOUT_MS = 20;
     private Connection connection;
 
@@ -36,7 +41,7 @@ public class MySQLDatabaseService implements DatabaseService {
 
     public void getSettingsFromFile() {
         try {
-            Scanner sc = new Scanner(new File(SETTTINGS_FILE_LOCATION));
+            Scanner sc = new Scanner(new File(SETTINGS_FILE_LOCATION));
             if(sc.hasNext()) {
                 dbPort = Integer.parseInt(sc.nextLine());
                 dbName = sc.nextLine();
@@ -66,7 +71,9 @@ public class MySQLDatabaseService implements DatabaseService {
             hasConnected = true;
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
+            System.err.println("Database connection error");
+            System.err.println("Error code: " + e.getErrorCode() + "\nSQL state: " + e.getSQLState());
             failedConnection = true;
             return false;
         }

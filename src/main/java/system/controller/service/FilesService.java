@@ -3,7 +3,6 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -13,10 +12,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+import static system.controller.Const.*;
+
 @Service
 public class FilesService {
 
-    private static final String JS_FILES_PATH = "/WEB-INF/static/html/js";
 
     @Autowired
     ServletContext servletContext;
@@ -33,7 +33,7 @@ public class FilesService {
                         String content;
                         try {
                             content = new String(Files.readAllBytes(path), charset);
-                            content = content.replaceAll("127.0.0.1:81", "127.0.0.1:80");
+                            content = content.replaceAll(DEFAULT_SERVER_ADDRESS, REPLACEMENT_SERVER_ADDRESS);
                             Files.write(path, content.getBytes(charset));
                         } catch (IOException e) {
                             e.printStackTrace();

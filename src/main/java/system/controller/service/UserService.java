@@ -14,11 +14,11 @@ import java.util.LinkedList;
 import java.util.Optional;
 import java.util.Scanner;
 
+import static system.controller.Const.SETTINGS_FILE_LOCATION;
+import static system.controller.Const.USER_EXISTS_ERROR;
+
 @Service
 public class UserService {
-
-    public static final String USER_EXISTS_ERROR = "user_exists";
-    public static final String USER_SETTINGS_FILE_LOCATION = "C:/users_settings.txt";
 
     @Autowired
     UserDao dao;
@@ -112,10 +112,14 @@ public class UserService {
         User user = get(username);
         if(user != null) {
             try {
-                Scanner sc = new Scanner(new File(USER_SETTINGS_FILE_LOCATION));
-                if (sc.hasNext()) {
-                    password = sc.nextLine();
+                Scanner sc = new Scanner(new File(SETTINGS_FILE_LOCATION));
+                for(int i = 0; i < 5; i ++) {
+                    if(sc.hasNext())
+                        sc.nextLine();
                 }
+                if(sc.hasNext())
+                    password = sc.nextLine();
+
                 sc.close();
             } catch (FileNotFoundException e) {
 //                e.printStackTrace();

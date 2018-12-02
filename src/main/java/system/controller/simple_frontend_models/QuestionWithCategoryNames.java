@@ -2,6 +2,9 @@ package system.controller.simple_frontend_models;
 
 import system.model.questions.Question;
 
+/**
+ * Question with category, subcategory and subsubcategory names
+ */
 public class QuestionWithCategoryNames extends Question {
 
     private String categoryName, subcategoryName, subsubcategoryName;

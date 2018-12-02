@@ -3,6 +3,9 @@ package system.controller.simple_frontend_models;
 import system.model.games.Game;
 import system.model.quizzes.Quiz;
 
+/**
+ * Game with quiz attached
+ */
 public class GameWithActualQuiz extends Game {
 
     private Quiz actualQuiz;

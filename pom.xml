@@ -30,6 +30,7 @@
         </pluginManagement>
         <plugins>
             <plugin>
+                <version>3.5</version>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -111,6 +112,13 @@
             <version>2.3</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-master -->
+        <!--<dependency>-->
+            <!--<groupId>org.evosuite</groupId>-->
+            <!--<artifactId>evosuite-master</artifactId>-->
+            <!--<version>1.0.6</version>-->
+        <!--</dependency>-->
 
 
         <dependency>
