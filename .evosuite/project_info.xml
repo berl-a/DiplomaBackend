@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project>
-    <totalNumberOfTestableClasses>1</totalNumberOfTestableClasses>
+    <totalNumberOfTestableClasses>10</totalNumberOfTestableClasses>
     <cut>
-        <fullNameOfTargetClass>system.controller.service.QuizGroupService</fullNameOfTargetClass>
-        <fullNameOfTestSuite>system.controller.service.QuizGroupService_ESTest</fullNameOfTestSuite>
+        <fullNameOfTargetClass>system.controller.QuizGroupController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.QuizGroupController_ESTest</fullNameOfTestSuite>
         <generation>
             <id>0</id>
             <failed>false</failed>
             <modified>true</modified>
             <timeBudgetInSeconds>60</timeBudgetInSeconds>
             <memoryInMB>3000</memoryInMB>
-            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_16_38_55\logs\system.controller.service.QuizGroupService\std_err_CLIENT.log</std_err_CLIENT>
-            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_16_38_55\logs\system.controller.service.QuizGroupService\std_out_CLIENT.log</std_out_CLIENT>
-            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_16_38_55\logs\system.controller.service.QuizGroupService\std_err_MASTER.log</std_err_MASTER>
-            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_16_38_55\logs\system.controller.service.QuizGroupService\std_out_MASTER.log</std_out_MASTER>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizGroupController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizGroupController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizGroupController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizGroupController\std_out_MASTER.log</std_out_MASTER>
             <suite>
-                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_16_38_55\tests\system\controller\service\QuizGroupService_ESTest.java</fullPathOfTestSuite>
-                <numberOfTests>20</numberOfTests>
-                <totalNumberOfStatements>298</totalNumberOfStatements>
-                <totalEffortInSeconds>35</totalEffortInSeconds>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\QuizGroupController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>15</numberOfTests>
+                <totalNumberOfStatements>83</totalNumberOfStatements>
+                <totalEffortInSeconds>39</totalEffortInSeconds>
                 <coverage>
                     <criterion>LineCoverage</criterion>
-                    <coverageValue>0.92</coverageValue>
-                    <coverageBitString>1111111111111111111110011</coverageBitString>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111111111111111111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>BranchCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>1111111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>ExceptionCoverage</criterion>
@@ -36,70 +36,135 @@
                 </coverage>
                 <coverage>
                     <criterion>WeakMutationScore</criterion>
-                    <coverageValue>0.83</coverageValue>
-                    <coverageBitString>111110</coverageBitString>
+                    <coverageValue>0.9</coverageValue>
+                    <coverageBitString>111101111111111110111111101111111111011111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>OutputCoverage</criterion>
-                    <coverageValue>0.39</coverageValue>
-                    <coverageBitString>101010010011010000</coverageBitString>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>1010101010</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>MethodCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>MethodNoExceptionCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>CBranchCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>1111111111</coverageBitString>
                 </coverage>
             </suite>
         </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.UserController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.UserController_ESTest</fullNameOfTestSuite>
         <generation>
-            <id>1</id>
+            <id>0</id>
             <failed>false</failed>
             <modified>true</modified>
-            <timeBudgetInSeconds>120</timeBudgetInSeconds>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
             <memoryInMB>3000</memoryInMB>
-            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_02_15\logs\system.controller.service.QuizGroupService\std_err_CLIENT.log</std_err_CLIENT>
-            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_02_15\logs\system.controller.service.QuizGroupService\std_out_CLIENT.log</std_out_CLIENT>
-            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_02_15\logs\system.controller.service.QuizGroupService\std_err_MASTER.log</std_err_MASTER>
-            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_02_15\logs\system.controller.service.QuizGroupService\std_out_MASTER.log</std_out_MASTER>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.UserController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.UserController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.UserController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.UserController\std_out_MASTER.log</std_out_MASTER>
             <suite>
-                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_02_15\tests\system\controller\service\QuizGroupService_ESTest.java</fullPathOfTestSuite>
-                <numberOfTests>12</numberOfTests>
-                <totalNumberOfStatements>90</totalNumberOfStatements>
-                <totalEffortInSeconds>84</totalEffortInSeconds>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\UserController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>18</numberOfTests>
+                <totalNumberOfStatements>103</totalNumberOfStatements>
+                <totalEffortInSeconds>43</totalEffortInSeconds>
                 <coverage>
                     <criterion>LineCoverage</criterion>
-                    <coverageValue>0.92</coverageValue>
-                    <coverageBitString>1111111111111111111110011</coverageBitString>
+                    <coverageValue>0.98</coverageValue>
+                    <coverageBitString>1111111111111111101111111111111111111111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>0.94</coverageValue>
+                    <coverageBitString>1111111111111011</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>0.89</coverageValue>
+                    <coverageBitString>111111110</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.89</coverageValue>
+                    <coverageBitString>11111111111111111111111101111111011111010001111111111111110111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>1010101010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>0.94</coverageValue>
+                    <coverageBitString>1111111111110111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.QuizPartController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.QuizPartController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizPartController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizPartController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizPartController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizPartController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\QuizPartController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>17</numberOfTests>
+                <totalNumberOfStatements>95</totalNumberOfStatements>
+                <totalEffortInSeconds>44</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111111111111111111111111111111111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>BranchCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>1111111111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>ExceptionCoverage</criterion>
-                    <coverageValue>0.71</coverageValue>
-                    <coverageBitString>1011011</coverageBitString>
+                    <coverageValue>0.7</coverageValue>
+                    <coverageBitString>1111100011</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>WeakMutationScore</criterion>
-                    <coverageValue>0.83</coverageValue>
-                    <coverageBitString>111110</coverageBitString>
+                    <coverageValue>0.93</coverageValue>
+                    <coverageBitString>1111111110111111111111110111111111111111111110111111110111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>OutputCoverage</criterion>
-                    <coverageValue>0.39</coverageValue>
-                    <coverageBitString>111010000011010000</coverageBitString>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>10101010101010</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>MethodCoverage</criterion>
@@ -108,13 +173,440 @@
                 </coverage>
                 <coverage>
                     <criterion>MethodNoExceptionCoverage</criterion>
-                    <coverageValue>0.75</coverageValue>
-                    <coverageBitString>11101101</coverageBitString>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111</coverageBitString>
                 </coverage>
                 <coverage>
                     <criterion>CBranchCoverage</criterion>
                     <coverageValue>1.0</coverageValue>
-                    <coverageBitString>11111111</coverageBitString>
+                    <coverageBitString>1111111111111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.GameController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.GameController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.GameController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.GameController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.GameController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.GameController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\GameController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>25</numberOfTests>
+                <totalNumberOfStatements>561</totalNumberOfStatements>
+                <totalEffortInSeconds>50</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>0.68</coverageValue>
+                    <coverageBitString>111111111111111111111111111111111111111111111111111111111111111111111110111111111111111110001111100000000000000000000000000011111000000000000000011</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>0.54</coverageValue>
+                    <coverageBitString>11111000000000111000000000001111111111001111111110</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.59</coverageValue>
+                    <coverageBitString>111111111111111000000000000000000000000000000000000011111001111111111100000000000000000000000000000000000001111111111111111111111111111110110101100111111111001111111111111111111111111111111000000000111010111111111111111111111111111101000111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>10101010101010101010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>0.54</coverageValue>
+                    <coverageBitString>11110100000000110100000000001111111111001111111101</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.SiteController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.SiteController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.SiteController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.SiteController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.SiteController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.SiteController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\SiteController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>4</numberOfTests>
+                <totalNumberOfStatements>8</totalNumberOfStatements>
+                <totalEffortInSeconds>39</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString></coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.33</coverageValue>
+                    <coverageBitString>010010010010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.QuestionController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.QuestionController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\QuestionController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>15</numberOfTests>
+                <totalNumberOfStatements>90</totalNumberOfStatements>
+                <totalEffortInSeconds>43</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111111111111111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>0.88</coverageValue>
+                    <coverageBitString>11110111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.92</coverageValue>
+                    <coverageBitString>111111111011111111111111110111111110111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>101010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.Const</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.Const_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.Const\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.Const\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.Const\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.Const\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\Const_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>1</numberOfTests>
+                <totalNumberOfStatements>1</totalNumberOfStatements>
+                <totalEffortInSeconds>19</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString></coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString></coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString></coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.ResultController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.ResultController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.ResultController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.ResultController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.ResultController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.ResultController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\ResultController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>11</numberOfTests>
+                <totalNumberOfStatements>66</totalNumberOfStatements>
+                <totalEffortInSeconds>42</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111111111111111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.9</coverageValue>
+                    <coverageBitString>111101111111111110111111111011111110111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>1010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.QuestionGroupController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.QuestionGroupController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionGroupController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionGroupController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionGroupController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuestionGroupController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\QuestionGroupController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>14</numberOfTests>
+                <totalNumberOfStatements>82</totalNumberOfStatements>
+                <totalEffortInSeconds>47</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111111111111111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>0.86</coverageValue>
+                    <coverageBitString>1110111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.91</coverageValue>
+                    <coverageBitString>1111101111111111110111111101111111111011111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>101010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>11111111111</coverageBitString>
+                </coverage>
+            </suite>
+        </generation>
+    </cut>
+    <cut>
+        <fullNameOfTargetClass>system.controller.QuizController</fullNameOfTargetClass>
+        <fullNameOfTestSuite>system.controller.QuizController_ESTest</fullNameOfTestSuite>
+        <generation>
+            <id>0</id>
+            <failed>false</failed>
+            <modified>true</modified>
+            <timeBudgetInSeconds>60</timeBudgetInSeconds>
+            <memoryInMB>3000</memoryInMB>
+            <std_err_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizController\std_err_CLIENT.log</std_err_CLIENT>
+            <std_out_CLIENT>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizController\std_out_CLIENT.log</std_out_CLIENT>
+            <std_err_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizController\std_err_MASTER.log</std_err_MASTER>
+            <std_out_MASTER>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\logs\system.controller.QuizController\std_out_MASTER.log</std_out_MASTER>
+            <suite>
+                <fullPathOfTestSuite>D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_03_17_36_33\tests\system\controller\QuizController_ESTest.java</fullPathOfTestSuite>
+                <numberOfTests>24</numberOfTests>
+                <totalNumberOfStatements>145</totalNumberOfStatements>
+                <totalEffortInSeconds>44</totalEffortInSeconds>
+                <coverage>
+                    <criterion>LineCoverage</criterion>
+                    <coverageValue>0.98</coverageValue>
+                    <coverageBitString>1111011111111111111111111111111111111111111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>BranchCoverage</criterion>
+                    <coverageValue>0.94</coverageValue>
+                    <coverageBitString>1111111101111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>ExceptionCoverage</criterion>
+                    <coverageValue>0.91</coverageValue>
+                    <coverageBitString>11111011111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>WeakMutationScore</criterion>
+                    <coverageValue>0.91</coverageValue>
+                    <coverageBitString>11111111111101010111111111111110111111111111111111110111111110111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>OutputCoverage</criterion>
+                    <coverageValue>0.5</coverageValue>
+                    <coverageBitString>101010101010101010</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>MethodNoExceptionCoverage</criterion>
+                    <coverageValue>1.0</coverageValue>
+                    <coverageBitString>1111111111</coverageBitString>
+                </coverage>
+                <coverage>
+                    <criterion>CBranchCoverage</criterion>
+                    <coverageValue>0.94</coverageValue>
+                    <coverageBitString>1111111110111111</coverageBitString>
                 </coverage>
             </suite>
         </generation>
