@@ -113,13 +113,13 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-master -->
-        <!--<dependency>-->
-            <!--<groupId>org.evosuite</groupId>-->
-            <!--<artifactId>evosuite-master</artifactId>-->
-            <!--<version>1.0.6</version>-->
-        <!--</dependency>-->
-
+        <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite -->
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite</artifactId>
+            <version>1.0.5</version>
+            <type>pom</type>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
