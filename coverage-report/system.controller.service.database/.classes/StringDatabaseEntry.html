@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: StringDatabaseEntry</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">system.controller.service.database</a> ]
+</div>
+
+<h1>Coverage Summary for Class: StringDatabaseEntry (system.controller.service.database)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StringDatabaseEntry</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 16)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">StringDatabaseEntry$__CLR4_1_27v7vjp8v54ma</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">StringDatabaseEntry$__CLR4_1_27v7vjp8v54ma$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 18)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package system.controller.service.database;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.HashMap;
+<i>4</i>&nbsp;import java.util.HashSet;
+<i>5</i>&nbsp;import java.util.Set;
+<i>6</i>&nbsp;
+<b class="nc"><i>7</i>&nbsp;public class StringDatabaseEntry implements DatabaseEntry&lt;String&gt; {</b>
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;    private HashMap&lt;String, String&gt; content;
+<i>10</i>&nbsp;
+<b class="nc"><i>11</i>&nbsp;    StringDatabaseEntry(HashSet&lt;String&gt; fieldNames) {</b>
+<b class="nc"><i>12</i>&nbsp;        for(String s : fieldNames)</b>
+<b class="nc"><i>13</i>&nbsp;            content.put(s, null);</b>
+<b class="nc"><i>14</i>&nbsp;    }</b>
+<i>15</i>&nbsp;
+<b class="nc"><i>16</i>&nbsp;    public StringDatabaseEntry(HashMap&lt;String, String&gt; content) {</b>
+<b class="nc"><i>17</i>&nbsp;        this.content = content;</b>
+<b class="nc"><i>18</i>&nbsp;    }</b>
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    @Override
+<b class="nc"><i>21</i>&nbsp;    public Set&lt;String&gt; getFieldNames() {</b>
+<b class="nc"><i>22</i>&nbsp;        return content.keySet();</b>
+<i>23</i>&nbsp;    }
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    @Override
+<b class="nc"><i>26</i>&nbsp;    public HashMap&lt;String, String&gt; getFields() {</b>
+<b class="nc"><i>27</i>&nbsp;        return content;</b>
+<i>28</i>&nbsp;    }
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    @Override
+<b class="nc"><i>31</i>&nbsp;    public String getField(String fieldName) {</b>
+<b class="nc"><i>32</i>&nbsp;        return content.get(fieldName);</b>
+<i>33</i>&nbsp;    }
+<i>34</i>&nbsp;
+<i>35</i>&nbsp;    @Override
+<b class="nc"><i>36</i>&nbsp;    public String toString() {</b>
+<b class="nc"><i>37</i>&nbsp;        return &quot;StringDatabaseEntry{&quot; +</b>
+<i>38</i>&nbsp;                &quot;content=&quot; + content +
+<i>39</i>&nbsp;                &#39;}&#39;;
+<i>40</i>&nbsp;    }
+<i>41</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-12-03 23:33</div>
+</div>
+</body>
+</html>

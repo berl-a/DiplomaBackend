@@ -27,6 +27,11 @@ title __CONTROLLER's Class Diagram__\n
         {static} + TEACHER_ID_KEY : String
         {static} + TEACHER_TYPE_KEY : String
         {static} + FREE_TEXT_ANSWER_CORRECTNESS : double
+        {static} + JS_FILES_PATH : String
+        {static} + DEFAULT_SERVER_ADDRESS : String
+        {static} + REPLACEMENT_SERVER_ADDRESS : String
+        {static} + SETTINGS_FILE_LOCATION : String
+        {static} + USER_EXISTS_ERROR : String
     }
   }
   
@@ -79,6 +84,7 @@ title __CONTROLLER's Class Diagram__\n
 
   package system.controller {
     class QuizController {
+        + getWithQuiz()
         + get()
         + getAll()
         + getAllWithCanNames()
@@ -122,6 +128,17 @@ title __CONTROLLER's Class Diagram__\n
         + grade()
         + remove()
         + edit()
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController {
+        {static} - FILES_LOCATION : String
+        + getIndex()
+        + getFile()
+        + getResource()
+        + getFavicon()
     }
   }
   

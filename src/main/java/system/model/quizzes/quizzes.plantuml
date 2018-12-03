@@ -107,28 +107,6 @@ title __QUIZZES's Class Diagram__\n
   }
   
 
-  package system.model {
-    package system.model.quizzes {
-      enum QuizSetting {
-        QUIZ_TIME
-      }
-    }
-  }
-  
-
-  package system.model {
-    package system.model.quizzes {
-      class QuizSettings {
-          - quizSettings : HashMap<QuizSetting, Object>
-          + QuizSettings()
-          + QuizSettings()
-          + getQuizSettings()
-          + setQuizSettings()
-      }
-    }
-  }
-  
-
   Quiz -up-|> Serializable
   Quiz -up-|> Idable
   QuizGroup -up-|> Serializable

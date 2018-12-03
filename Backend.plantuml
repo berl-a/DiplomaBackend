@@ -10,16 +10,20 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
-  package system.model {
-    package system.model.games {
-      enum AnswerType {
-      }
+  package system.controller {
+    class Const {
     }
   }
   
 
   package system.controller {
-    class Const {
+    class Const_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class Const_ESTest_scaffolding {
     }
   }
   
@@ -33,8 +37,40 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.dao {
+      class Dao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class Dao_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.tools {
       class DataToolkit {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.tools {
+      class DataToolkit_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.tools {
+      class DataToolkit_ESTest_scaffolding {
       }
     }
   }
@@ -53,7 +89,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
   package system.controller {
     package system.controller.service {
       package system.controller.service.database {
-        class DatabaseToolkit {
+        interface DatabaseService {
         }
       }
     }
@@ -61,8 +97,24 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
-    package system.controller.simple_frontend_models {
-      class FUser {
+    package system.controller.service {
+      class FilesService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class FilesService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class FilesService_ESTest_scaffolding {
       }
     }
   }
@@ -88,6 +140,22 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.games {
+      class FreeTextAnswer_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class FreeTextAnswer_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
       class Game {
       }
     }
@@ -103,7 +171,35 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.service {
+      class GameArchiver_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameArchiver_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     class GameController {
+    }
+  }
+  
+
+  package system.controller {
+    class GameController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class GameController_ESTest_scaffolding {
     }
   }
   
@@ -116,9 +212,41 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.controller {
+    package system.controller.service {
+      class GameService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
   package system.model {
     package system.model.games {
       class GameToolkit {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class GameToolkit_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class GameToolkit_ESTest_scaffolding {
       }
     }
   }
@@ -133,8 +261,40 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.simple_frontend_models {
+      class GameWithActualQuiz_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class GameWithActualQuiz_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Game_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Game_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.service {
-      class HospitationService {
+      class HospitationService_ESTest_scaffolding {
       }
     }
   }
@@ -166,9 +326,45 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class IntStringBlobDatabaseEntry_ESTest {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class IntStringBlobDatabaseEntry_ESTest_scaffolding {
+        }
+      }
+    }
+  }
+  
+
   package system.model {
     package system.model.games {
       class ListOfQuestions {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfQuestions_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfQuestions_ESTest_scaffolding {
       }
     }
   }
@@ -184,7 +380,69 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.games {
+      class ListOfRealQuestions_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfRealQuestions_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
       class MultipleChoiceAnswer {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class MultipleChoiceAnswer_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class MultipleChoiceAnswer_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class MySQLDatabaseService {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class MySQLDatabaseService_ESTest {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class MySQLDatabaseService_ESTest_scaffolding {
+        }
       }
     }
   }
@@ -206,9 +464,41 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.model {
+    package system.model.games {
+      class PlayerAnswers_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerAnswers_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
   package system.controller {
     package system.controller.dao {
       class PlayerDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class PlayerDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class PlayerDao_ESTest_scaffolding {
       }
     }
   }
@@ -222,9 +512,57 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.model {
+    package system.model.games {
+      class PlayerPoints_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerPoints_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
   package system.controller {
     package system.controller.service {
       class PlayerService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class PlayerService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class PlayerService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Player_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Player_ESTest_scaffolding {
       }
     }
   }
@@ -245,8 +583,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class QuestionController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class QuestionDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionDao_ESTest_scaffolding {
       }
     }
   }
@@ -267,6 +633,18 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class QuestionGroupController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionGroupController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class QuestionGroupDao {
       }
@@ -275,8 +653,40 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.dao {
+      class QuestionGroupDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionGroupDao_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.service {
       class QuestionGroupService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService_ESTest_scaffolding {
       }
     }
   }
@@ -299,8 +709,56 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionGroupWithNumberOfQuestions_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionGroupWithNumberOfQuestions_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class QuestionGroup_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class QuestionGroup_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.service {
       class QuestionService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService_ESTest_scaffolding {
       }
     }
   }
@@ -323,8 +781,40 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionWithCategoryNames_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuestionWithCategoryNames_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class Question_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.questions {
+      class Question_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.service {
-      class QuestionsToolkit {
+      class QuestionsToolkit_ESTest_scaffolding {
       }
     }
   }
@@ -345,8 +835,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class QuizController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class QuizController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class QuizDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizDao_ESTest_scaffolding {
       }
     }
   }
@@ -367,8 +885,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class QuizGroupController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class QuizGroupController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class QuizGroupDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizGroupDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizGroupDao_ESTest_scaffolding {
       }
     }
   }
@@ -382,8 +928,40 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
   package system.model {
     enum QuizGroupType {
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizGroup_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizGroup_ESTest_scaffolding {
+      }
     }
   }
   
@@ -403,8 +981,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class QuizPartController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class QuizPartController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class QuizPartDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizPartDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizPartDao_ESTest_scaffolding {
       }
     }
   }
@@ -419,8 +1025,56 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    package system.controller.service {
+      class QuizPartService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizPartService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.simple_frontend_models {
       class QuizPartWithCategoryNames {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuizPartWithCategoryNames_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuizPartWithCategoryNames_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizPart_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class QuizPart_ESTest_scaffolding {
       }
     }
   }
@@ -434,9 +1088,17 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
-  package system.model {
-    package system.model.quizzes {
-      enum QuizSetting {
+  package system.controller {
+    package system.controller.service {
+      class QuizService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizService_ESTest_scaffolding {
       }
     }
   }
@@ -444,7 +1106,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.quizzes {
-      class QuizSettings {
+      class QuizSettings_ESTest_scaffolding {
       }
     }
   }
@@ -460,7 +1122,55 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.controller {
     package system.controller.simple_frontend_models {
+      class QuizWithCategoryNames_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class QuizWithCategoryNames_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class Quiz_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.quizzes {
+      class Quiz_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
       class Response {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class Response_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.simple_frontend_models {
+      class Response_ESTest_scaffolding {
       }
     }
   }
@@ -479,8 +1189,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class ResultController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class ResultController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class ResultDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class ResultDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class ResultDao_ESTest_scaffolding {
       }
     }
   }
@@ -494,9 +1232,95 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.controller {
+    package system.controller.service {
+      class ResultService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class ResultService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.model {
+    class Result_ESTest {
+    }
+  }
+  
+
+  package system.model {
+    class Result_ESTest_scaffolding {
+    }
+  }
+  
+
   package system.model {
     package system.model.games {
       class SingleChoiceAnswer {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class SingleChoiceAnswer_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class SingleChoiceAnswer_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController {
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class StartupService {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class StartupService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class StartupService_ESTest_scaffolding {
       }
     }
   }
@@ -506,6 +1330,26 @@ title __SPRINGMVCAPP's Class Diagram__\n
     package system.controller.service {
       package system.controller.service.database {
         class StringDatabaseEntry {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class StringDatabaseEntry_ESTest {
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
+        class StringDatabaseEntry_ESTest_scaffolding {
         }
       }
     }
@@ -527,8 +1371,36 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.controller {
+    class UserController_ESTest {
+    }
+  }
+  
+
+  package system.controller {
+    class UserController_ESTest_scaffolding {
+    }
+  }
+  
+
+  package system.controller {
     package system.controller.dao {
       class UserDao {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class UserDao_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class UserDao_ESTest_scaffolding {
       }
     }
   }
@@ -542,6 +1414,22 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.controller {
+    package system.controller.service {
+      class UserService_ESTest {
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class UserService_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
   package system.model {
     package system.model.users {
       enum UserType {
@@ -550,88 +1438,167 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
+  package system.model {
+    package system.model.users {
+      class User_ESTest {
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.users {
+      class User_ESTest_scaffolding {
+      }
+    }
+  }
+  
+
+  Const_ESTest -up-|> Const_ESTest_scaffolding
+  Dao o-- MySQLDatabaseService : databaseService
+  Dao_ESTest -up-|> Dao_ESTest_scaffolding
+  DataToolkit_ESTest -up-|> DataToolkit_ESTest_scaffolding
+  FilesService_ESTest -up-|> FilesService_ESTest_scaffolding
   FreeTextAnswer -up-|> Answer
+  FreeTextAnswer_ESTest -up-|> FreeTextAnswer_ESTest_scaffolding
   Game -up-|> Idable
   Game -up-|> Serializable
   GameArchiver o-- GameService : gameService
   GameArchiver o-- ResultService : resultService
+  GameArchiver_ESTest -up-|> GameArchiver_ESTest_scaffolding
   GameController o-- GameService : service
   GameController o-- PlayerService : playerService
   GameController o-- QuizService : quizService
+  GameController_ESTest -up-|> GameController_ESTest_scaffolding
   GameService o-- PlayerService : playerService
   GameService o-- QuizService : quizService
   GameService o-- QuestionService : questionService
   GameService o-- QuestionGroupService : questionGroupService
+  GameService_ESTest -up-|> GameService_ESTest_scaffolding
   GameToolkit o-- QuizService : quizService
   GameToolkit o-- QuestionService : questionService
   GameToolkit o-- QuestionGroupService : questionGroupService
+  GameToolkit_ESTest -up-|> GameToolkit_ESTest_scaffolding
   GameWithActualQuiz -up-|> Game
   GameWithActualQuiz o-- Quiz : actualQuiz
+  GameWithActualQuiz_ESTest -up-|> GameWithActualQuiz_ESTest_scaffolding
+  Game_ESTest -up-|> Game_ESTest_scaffolding
   IntStringBlobDatabaseEntry -up-|> DatabaseEntry
+  IntStringBlobDatabaseEntry_ESTest -up-|> IntStringBlobDatabaseEntry_ESTest_scaffolding
   ListOfQuestions -up-|> Serializable
+  ListOfQuestions_ESTest -up-|> ListOfQuestions_ESTest_scaffolding
   ListOfRealQuestions -up-|> Serializable
+  ListOfRealQuestions_ESTest -up-|> ListOfRealQuestions_ESTest_scaffolding
   MultipleChoiceAnswer -up-|> Answer
+  MultipleChoiceAnswer_ESTest -up-|> MultipleChoiceAnswer_ESTest_scaffolding
+  MySQLDatabaseService -up-|> DatabaseService
+  MySQLDatabaseService_ESTest -up-|> MySQLDatabaseService_ESTest_scaffolding
   Player -up-|> Idable
   Player -up-|> Serializable
   PlayerAnswers -up-|> Serializable
+  PlayerAnswers_ESTest -up-|> PlayerAnswers_ESTest_scaffolding
+  PlayerDao_ESTest -up-|> PlayerDao_ESTest_scaffolding
   PlayerPoints -up-|> Serializable
+  PlayerPoints_ESTest -up-|> PlayerPoints_ESTest_scaffolding
   PlayerService o-- PlayerDao : dao
+  PlayerService_ESTest -up-|> PlayerService_ESTest_scaffolding
+  Player_ESTest -up-|> Player_ESTest_scaffolding
   Question -up-|> Serializable
   Question -up-|> Idable
   Question o-- QuestionType : questionType
   QuestionController o-- QuestionService : service
+  QuestionController_ESTest -up-|> QuestionController_ESTest_scaffolding
   QuestionDao -up-|> Dao
+  QuestionDao_ESTest -up-|> QuestionDao_ESTest_scaffolding
   QuestionGroup -up-|> Serializable
   QuestionGroup -up-|> Idable
   QuestionGroup o-- QuestionGroupType : type
   QuestionGroupController o-- QuestionGroupService : service
+  QuestionGroupController_ESTest -up-|> QuestionGroupController_ESTest_scaffolding
   QuestionGroupDao -up-|> Dao
+  QuestionGroupDao_ESTest -up-|> QuestionGroupDao_ESTest_scaffolding
   QuestionGroupService o-- QuestionGroupDao : dao
   QuestionGroupService o-- QuestionService : questionService
+  QuestionGroupService_ESTest -up-|> QuestionGroupService_ESTest_scaffolding
   QuestionGroupWithNumberOfQuestions -up-|> QuestionGroup
+  QuestionGroupWithNumberOfQuestions_ESTest -up-|> QuestionGroupWithNumberOfQuestions_ESTest_scaffolding
+  QuestionGroup_ESTest -up-|> QuestionGroup_ESTest_scaffolding
   QuestionService o-- QuestionDao : dao
   QuestionService o-- QuestionGroupService : questionGroupService
+  QuestionService_ESTest -up-|> QuestionService_ESTest_scaffolding
   QuestionWithCategoryNames -up-|> Question
+  QuestionWithCategoryNames_ESTest -up-|> QuestionWithCategoryNames_ESTest_scaffolding
+  Question_ESTest -up-|> Question_ESTest_scaffolding
   Quiz -up-|> Serializable
   Quiz -up-|> Idable
   QuizController o-- QuizService : service
+  QuizController_ESTest -up-|> QuizController_ESTest_scaffolding
   QuizDao -up-|> Dao
+  QuizDao_ESTest -up-|> QuizDao_ESTest_scaffolding
   QuizGroup -up-|> Serializable
   QuizGroup -up-|> Idable
   QuizGroup o-- QuizGroupType : type
   QuizGroupController o-- QuizGroupService : service
+  QuizGroupController_ESTest -up-|> QuizGroupController_ESTest_scaffolding
   QuizGroupDao -up-|> Dao
+  QuizGroupDao_ESTest -up-|> QuizGroupDao_ESTest_scaffolding
   QuizGroupService o-- QuizGroupDao : dao
+  QuizGroupService o-- QuizService : quizService
+  QuizGroupService_ESTest -up-|> QuizGroupService_ESTest_scaffolding
+  QuizGroup_ESTest -up-|> QuizGroup_ESTest_scaffolding
   QuizPart -up-|> Serializable
   QuizPart -up-|> Idable
   QuizPartController o-- QuizPartService : service
+  QuizPartController_ESTest -up-|> QuizPartController_ESTest_scaffolding
   QuizPartDao -up-|> Dao
+  QuizPartDao_ESTest -up-|> QuizPartDao_ESTest_scaffolding
   QuizPartService o-- QuizPartDao : dao
   QuizPartService o-- QuestionGroupService : questionGroupService
+  QuizPartService_ESTest -up-|> QuizPartService_ESTest_scaffolding
   QuizPartWithCategoryNames -up-|> QuizPart
+  QuizPartWithCategoryNames_ESTest -up-|> QuizPartWithCategoryNames_ESTest_scaffolding
+  QuizPart_ESTest -up-|> QuizPart_ESTest_scaffolding
   QuizService o-- QuizDao : dao
   QuizService o-- QuizGroupService : quizGroupService
   QuizService o-- QuizPartService : quizPartService
   QuizService o-- QuestionGroupService : questionGroupService
+  QuizService_ESTest -up-|> QuizService_ESTest_scaffolding
   QuizWithCategoryNames -up-|> Quiz
+  QuizWithCategoryNames_ESTest -up-|> QuizWithCategoryNames_ESTest_scaffolding
+  Quiz_ESTest -up-|> Quiz_ESTest_scaffolding
+  Response_ESTest -up-|> Response_ESTest_scaffolding
   Result -up-|> Idable
   Result -up-|> Serializable
   Result o-- Quiz : realQuiz
   Result o-- Game : realGame
   ResultController o-- ResultService : service
+  ResultController_ESTest -up-|> ResultController_ESTest_scaffolding
   ResultDao -up-|> Dao
+  ResultDao_ESTest -up-|> ResultDao_ESTest_scaffolding
   ResultService o-- ResultDao : dao
   ResultService o-- QuizService : quizService
   ResultService o-- PlayerService : playerService
   ResultService o-- QuestionService : questionService
+  ResultService_ESTest -up-|> ResultService_ESTest_scaffolding
+  Result_ESTest -up-|> Result_ESTest_scaffolding
   SingleChoiceAnswer -up-|> Answer
+  SingleChoiceAnswer_ESTest -up-|> SingleChoiceAnswer_ESTest_scaffolding
+  SiteController_ESTest -up-|> SiteController_ESTest_scaffolding
+  StartupService o-- FilesService : filesService
+  StartupService o-- UserService : userService
+  StartupService_ESTest -up-|> StartupService_ESTest_scaffolding
   StringDatabaseEntry -up-|> DatabaseEntry
+  StringDatabaseEntry_ESTest -up-|> StringDatabaseEntry_ESTest_scaffolding
   User -up-|> IUser
   User -up-|> Idable
   User o-- UserType : type
   UserController o-- UserService : service
+  UserController_ESTest -up-|> UserController_ESTest_scaffolding
   UserDao -up-|> Dao
+  UserDao_ESTest -up-|> UserDao_ESTest_scaffolding
   UserService o-- UserDao : dao
+  UserService_ESTest -up-|> UserService_ESTest_scaffolding
+  User_ESTest -up-|> User_ESTest_scaffolding
 
 
 right footer

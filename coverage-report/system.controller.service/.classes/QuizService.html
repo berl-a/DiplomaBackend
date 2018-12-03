@@ -1,0 +1,292 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: QuizService</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">system.controller.service</a> ]
+</div>
+
+<h1>Coverage Summary for Class: QuizService (system.controller.service)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">QuizService</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 16)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 99)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">QuizService$__CLR4_1_21kj1kjjp8v565e</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+  </tr>
+  <tr>
+    <td class="name">QuizService$__CLR4_1_21kj1kjjp8v565e$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 18)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 101)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package system.controller.service;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+<i>4</i>&nbsp;import org.springframework.stereotype.Service;
+<i>5</i>&nbsp;import system.controller.Const;
+<i>6</i>&nbsp;import system.controller.simple_frontend_models.QuizWithCategoryNames;
+<i>7</i>&nbsp;import system.controller.dao.QuizDao;
+<i>8</i>&nbsp;import system.model.QuizGroupType;
+<i>9</i>&nbsp;import system.model.questions.Question;
+<i>10</i>&nbsp;import system.model.quizzes.Quiz;
+<i>11</i>&nbsp;import system.model.quizzes.QuizGroup;
+<i>12</i>&nbsp;import system.model.quizzes.QuizPart;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;import java.util.Collections;
+<i>15</i>&nbsp;import java.util.LinkedList;
+<i>16</i>&nbsp;import java.util.List;
+<i>17</i>&nbsp;import java.util.Optional;
+<i>18</i>&nbsp;import java.util.stream.Collectors;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;@Service
+<b class="nc"><i>21</i>&nbsp;public class QuizService {</b>
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;    @Autowired
+<i>24</i>&nbsp;    QuizDao dao;
+<i>25</i>&nbsp;    @Autowired
+<i>26</i>&nbsp;    QuizGroupService quizGroupService;
+<i>27</i>&nbsp;    @Autowired
+<i>28</i>&nbsp;    QuizPartService quizPartService;
+<i>29</i>&nbsp;    @Autowired
+<i>30</i>&nbsp;    QuestionGroupService questionGroupService;
+<i>31</i>&nbsp;
+<b class="nc"><i>32</i>&nbsp;    private LinkedList&lt;Quiz&gt; cachedQuizzes = new LinkedList&lt;&gt;();</b>
+<i>33</i>&nbsp;
+<b class="nc"><i>34</i>&nbsp;    public void updateCached() {</b>
+<b class="nc"><i>35</i>&nbsp;        cachedQuizzes = dao.getAll();</b>
+<b class="nc"><i>36</i>&nbsp;    }</b>
+<i>37</i>&nbsp;
+<b class="nc"><i>38</i>&nbsp;    public LinkedList&lt;Quiz&gt; getAll() {</b>
+<b class="nc"><i>39</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>40</i>&nbsp;        return cachedQuizzes;</b>
+<i>41</i>&nbsp;    }
+<i>42</i>&nbsp;
+<b class="nc"><i>43</i>&nbsp;    public Quiz get(String quizId) {</b>
+<b class="nc"><i>44</i>&nbsp;        Optional&lt;Quiz&gt; foundQuiz = getAll().stream().filter(q -&gt; quizId.equals(q.getId())).findAny();</b>
+<b class="nc"><i>45</i>&nbsp;        return foundQuiz.orElse(null);</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<b class="nc"><i>48</i>&nbsp;    public Quiz appendQuizParts(Quiz quiz) {</b>
+<b class="nc"><i>49</i>&nbsp;        LinkedList&lt;QuizPart&gt; quizParts = new LinkedList&lt;&gt;(quizPartService.getAllFromQuiz(quiz.getId()));</b>
+<b class="nc"><i>50</i>&nbsp;        quiz.setParts(quizParts);</b>
+<b class="nc"><i>51</i>&nbsp;        return quiz;</b>
+<i>52</i>&nbsp;    }
+<i>53</i>&nbsp;
+<b class="nc"><i>54</i>&nbsp;    public String add(Quiz quiz) {</b>
+<b class="nc"><i>55</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>56</i>&nbsp;        String result;</b>
+<b class="nc"><i>57</i>&nbsp;        dao.add(quiz);</b>
+<b class="nc"><i>58</i>&nbsp;        result = quiz.getId();</b>
+<b class="nc"><i>59</i>&nbsp;        return result;</b>
+<i>60</i>&nbsp;    }
+<i>61</i>&nbsp;
+<b class="nc"><i>62</i>&nbsp;    public String edit(Quiz quiz) {</b>
+<b class="nc"><i>63</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>64</i>&nbsp;        dao.remove(quiz.getId());</b>
+<b class="nc"><i>65</i>&nbsp;        add(quiz);</b>
+<b class="nc"><i>66</i>&nbsp;        return Const.OK_RESULT;</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<b class="nc"><i>69</i>&nbsp;    public String remove(String id) {</b>
+<b class="nc"><i>70</i>&nbsp;        updateCached();</b>
+<i>71</i>&nbsp;//        System.out.println(&quot;Removing quiz with id &quot; + id);
+<b class="nc"><i>72</i>&nbsp;        dao.remove(id);</b>
+<b class="nc"><i>73</i>&nbsp;        return Const.OK_RESULT;</b>
+<i>74</i>&nbsp;    }
+<i>75</i>&nbsp;
+<b class="nc"><i>76</i>&nbsp;    public void removeQuizzesFromGroup(String quizGroupId) {</b>
+<b class="nc"><i>77</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>78</i>&nbsp;        LinkedList&lt;Quiz&gt; quizzesFromGroup = cachedQuizzes</b>
+<b class="nc"><i>79</i>&nbsp;                .stream()</b>
+<b class="nc"><i>80</i>&nbsp;                .filter(q -&gt;</b>
+<b class="nc"><i>81</i>&nbsp;                        quizGroupId.equals(q.getCategory()) ||</b>
+<b class="nc"><i>82</i>&nbsp;                                quizGroupId.equals(q.getSubcategory()) ||</b>
+<b class="nc"><i>83</i>&nbsp;                                quizGroupId.equals(q.getSubsubcategory())</b>
+<i>84</i>&nbsp;                )
+<b class="nc"><i>85</i>&nbsp;                .collect(Collectors.toCollection(LinkedList::new));</b>
+<b class="nc"><i>86</i>&nbsp;        quizzesFromGroup.forEach(q -&gt; remove(q.getId()));</b>
+<b class="nc"><i>87</i>&nbsp;    }</b>
+<i>88</i>&nbsp;
+<b class="nc"><i>89</i>&nbsp;    public List&lt;QuizWithCategoryNames&gt; getAllWithCatNames() {</b>
+<b class="nc"><i>90</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>91</i>&nbsp;        return appendCatNamesToQuizzes(cachedQuizzes);</b>
+<i>92</i>&nbsp;    }
+<i>93</i>&nbsp;
+<b class="nc"><i>94</i>&nbsp;    public List&lt;QuizWithCategoryNames&gt; getAllWithCatNamesByTeacher(String teacherId) {</b>
+<b class="nc"><i>95</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>96</i>&nbsp;        LinkedList&lt;Quiz&gt; quizzesByTeacher =</b>
+<i>97</i>&nbsp;                cachedQuizzes
+<b class="nc"><i>98</i>&nbsp;                        .stream()</b>
+<b class="nc"><i>99</i>&nbsp;                        .filter(q -&gt; teacherId.equals(q.getTeacher()))</b>
+<b class="nc"><i>100</i>&nbsp;                        .collect(Collectors.toCollection(LinkedList::new));</b>
+<b class="nc"><i>101</i>&nbsp;        return appendCatNamesToQuizzes(quizzesByTeacher);</b>
+<i>102</i>&nbsp;    }
+<i>103</i>&nbsp;
+<b class="nc"><i>104</i>&nbsp;    private List&lt;QuizWithCategoryNames&gt; appendCatNamesToQuizzes(List&lt;Quiz&gt; quizs) {</b>
+<b class="nc"><i>105</i>&nbsp;        List&lt;QuizWithCategoryNames&gt; betterQuizs = new LinkedList&lt;&gt;();</b>
+<i>106</i>&nbsp;
+<b class="nc"><i>107</i>&nbsp;        LinkedList&lt;QuizGroup&gt; allGroups = quizGroupService.getAll();</b>
+<b class="nc"><i>108</i>&nbsp;        LinkedList&lt;QuizGroup&gt;</b>
+<b class="nc"><i>109</i>&nbsp;                cats = new LinkedList&lt;&gt;(),</b>
+<b class="nc"><i>110</i>&nbsp;                subcats = new LinkedList&lt;&gt;(),</b>
+<b class="nc"><i>111</i>&nbsp;                subsubcats = new LinkedList&lt;&gt;();</b>
+<b class="nc"><i>112</i>&nbsp;        allGroups.forEach(g -&gt; {</b>
+<b class="nc"><i>113</i>&nbsp;            if(g.getType() == QuizGroupType.CAT) {</b>
+<b class="nc"><i>114</i>&nbsp;                cats.add(g);</b>
+<b class="nc"><i>115</i>&nbsp;            } else if(g.getType() == QuizGroupType.SUBCAT) {</b>
+<b class="nc"><i>116</i>&nbsp;                subcats.add(g);</b>
+<b class="nc"><i>117</i>&nbsp;            } else if(g.getType() == QuizGroupType.SUBSUBCAT) {</b>
+<b class="nc"><i>118</i>&nbsp;                subsubcats.add(g);</b>
+<i>119</i>&nbsp;            }
+<b class="nc"><i>120</i>&nbsp;        });</b>
+<i>121</i>&nbsp;
+<b class="nc"><i>122</i>&nbsp;        for(Quiz q : quizs) {</b>
+<b class="nc"><i>123</i>&nbsp;            QuizGroup cat = cats.stream().filter(c -&gt; c.getId().equals(q.getCategory())).findAny().orElse(null);</b>
+<b class="nc"><i>124</i>&nbsp;            QuizGroup subcat = subcats.stream().filter(c -&gt; c.getId().equals(q.getSubcategory())).findAny().orElse(null);</b>
+<b class="nc"><i>125</i>&nbsp;            QuizGroup subsubcat = subsubcats.stream().filter(c -&gt; c.getId().equals(q.getSubsubcategory())).findAny().orElse(null);</b>
+<i>126</i>&nbsp;            //todo replace  == null ? &quot;&quot;  with default groups
+<b class="nc"><i>127</i>&nbsp;            betterQuizs.add(new QuizWithCategoryNames(q, cat == null ? &quot;&quot; : cat.getName(), subcat == null ? &quot;&quot; : subcat.getName(), subsubcat == null ? &quot;&quot; : subsubcat.getName()));</b>
+<i>128</i>&nbsp;        }
+<i>129</i>&nbsp;
+<b class="nc"><i>130</i>&nbsp;        return betterQuizs;</b>
+<i>131</i>&nbsp;    }
+<i>132</i>&nbsp;
+<b class="nc"><i>133</i>&nbsp;    public String copy(String id) {</b>
+<b class="nc"><i>134</i>&nbsp;        updateCached();</b>
+<b class="nc"><i>135</i>&nbsp;        String result;</b>
+<b class="nc"><i>136</i>&nbsp;        Quiz existingQuiz = get(id);</b>
+<b class="nc"><i>137</i>&nbsp;        Quiz copiedQuiz = new Quiz(existingQuiz);</b>
+<b class="nc"><i>138</i>&nbsp;        copiedQuiz.changeId();</b>
+<b class="nc"><i>139</i>&nbsp;        dao.add(copiedQuiz);</b>
+<b class="nc"><i>140</i>&nbsp;        result = copiedQuiz.getId();</b>
+<b class="nc"><i>141</i>&nbsp;        return result;</b>
+<i>142</i>&nbsp;    }
+<i>143</i>&nbsp;
+<b class="nc"><i>144</i>&nbsp;    public LinkedList&lt;Question&gt; generateRealQuestions(String quizId) {</b>
+<b class="nc"><i>145</i>&nbsp;        LinkedList&lt;QuizPart&gt; quizParts = appendQuizParts(get(quizId)).getParts();</b>
+<b class="nc"><i>146</i>&nbsp;        LinkedList&lt;Question&gt; questionsForPlayer = new LinkedList&lt;&gt;();</b>
+<b class="nc"><i>147</i>&nbsp;        for(QuizPart part : quizParts) {</b>
+<b class="nc"><i>148</i>&nbsp;            if(part.getCategory() != null &amp;&amp; part.getCategory().equals(&quot;&quot;))</b>
+<b class="nc"><i>149</i>&nbsp;                part.setCategory(null);</b>
+<b class="nc"><i>150</i>&nbsp;            if(part.getSubcategory() != null &amp;&amp; part.getSubcategory().equals(&quot;&quot;))</b>
+<b class="nc"><i>151</i>&nbsp;                part.setSubcategory(null);</b>
+<b class="nc"><i>152</i>&nbsp;            if(part.getSubsubcategory() != null &amp;&amp; part.getSubsubcategory().equals(&quot;&quot;))</b>
+<b class="nc"><i>153</i>&nbsp;                part.setSubsubcategory(null);</b>
+<b class="nc"><i>154</i>&nbsp;            LinkedList&lt;Question&gt; questionsFromThisPart = questionGroupService.getQuestionsFromGroupsFree(part.getCategory(), part.getSubcategory(), part.getSubsubcategory());</b>
+<b class="nc"><i>155</i>&nbsp;            System.out.println(&quot;Part: &quot; + part.getName() + &quot; &quot; + part.getNumber());</b>
+<b class="nc"><i>156</i>&nbsp;            System.out.println(&quot;but number of questions from this part: &quot; + questionsFromThisPart.size());</b>
+<b class="nc"><i>157</i>&nbsp;            Collections.shuffle(questionsFromThisPart);</b>
+<b class="nc"><i>158</i>&nbsp;            questionsForPlayer.addAll(questionsFromThisPart.subList(0, part.getNumber()));</b>
+<i>159</i>&nbsp;        }
+<b class="nc"><i>160</i>&nbsp;        Collections.shuffle(questionsForPlayer);</b>
+<b class="nc"><i>161</i>&nbsp;        questionsForPlayer = questionsForPlayer.stream().peek(q -&gt; q.setCorrectAnswers(null)).collect(Collectors.toCollection(LinkedList::new));</b>
+<b class="nc"><i>162</i>&nbsp;        return questionsForPlayer;</b>
+<i>163</i>&nbsp;    }
+<i>164</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-12-03 23:33</div>
+</div>
+</body>
+</html>

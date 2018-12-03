@@ -1,0 +1,93 @@
+* Starting client
+* Connecting to master process on port 3872
+* Analyzing classpath: 
+  - D:/Data/Diploma/Project/Backend/target/classes
+  - C:\Users\admin\.IntelliJIdea2017.3\config\plugins\clover-idea-4.1.2.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\deploy.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\cldrdata.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\dnsns.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jaccess.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jfxrt.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\localedata.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\nashorn.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunec.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\zipfs.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\javaws.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfxswt.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\management-agent.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\plugin.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar
+  - D:\Data\Diploma\Project\Backend\target\test-classes
+  - D:\Data\Diploma\Project\Backend\target\classes
+  - C:\Users\admin\.m2\repository\org\springframework\spring-core\5.1.3.RELEASE\spring-core-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-jcl\5.1.3.RELEASE\spring-jcl-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-context\5.1.3.RELEASE\spring-context-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-aop\5.1.3.RELEASE\spring-aop-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-beans\5.1.3.RELEASE\spring-beans-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-expression\5.1.3.RELEASE\spring-expression-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-web\5.1.3.RELEASE\spring-web-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-webmvc\5.1.3.RELEASE\spring-webmvc-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\hibernate-core\4.3.6.Final\hibernate-core-4.3.6.Final.jar
+  - C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+  - C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar
+  - C:\Users\admin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar
+  - C:\Users\admin\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar
+  - C:\Users\admin\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar
+  - C:\Users\admin\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar
+  - C:\Users\admin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar
+  - C:\Users\admin\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar
+  - C:\Users\admin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.0\jackson-core-2.9.0.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.6.Final\hibernate-entitymanager-4.3.6.Final.jar
+  - C:\Users\admin\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar
+  - C:\Users\admin\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar
+  - C:\Users\admin\.m2\repository\org\xerial\sqlite-jdbc\3.8.11.2\sqlite-jdbc-3.8.11.2.jar
+  - C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar
+  - C:\Users\admin\.m2\repository\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar
+  - C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0-M1\junit-jupiter-api-5.1.0-M1.jar
+  - C:\Users\admin\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar
+  - C:\Users\admin\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0-M1\junit-platform-commons-1.1.0-M1.jar
+  - C:\Users\admin\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar
+  - C:\Users\admin\.m2\repository\org\json\json\20160810\json-20160810.jar
+  - C:\Users\admin\.m2\repository\junit\junit\4.10\junit-4.10.jar
+  - C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar
+[MASTER] 00:15:49.921 [pool-2-thread-1] WARN  CheapPurityAnalyzer - io.netty.handler.codec.http.HttpMethod was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 00:15:49.926 [pool-2-thread-1] WARN  InheritanceTree - Class not in inheritance graph: io.netty.handler.codec.http.HttpMethod
+[MASTER] 00:15:49.928 [pool-2-thread-1] WARN  CheapPurityAnalyzer - reactor.netty.http.server.HttpServerRequest was not found in the inheritance tree. Using DEFAULT value for cheap-purity analysis
+[MASTER] 00:15:49.929 [pool-2-thread-1] WARN  InheritanceTree - Class not in inheritance graph: reactor.netty.http.server.HttpServerRequest
+[MASTER] 00:15:49.934 [pool-2-thread-1] WARN  InheritanceTree - Class not in inheritance graph: javax.persistence.MapKeyColumn
+* Finished analyzing classpath
+* Generating tests for class system.controller.dao.Dao
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 00:15:50.273 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: D:\Data\Diploma\Project\Backend\.evosuite\evosuite-seeds\system.controller.dao.Dao.seed
+* Loaded 0 tests from D:\Data\Diploma\Project\Backend\.evosuite\evosuite-seeds\system.controller.dao.Dao.seed
+* Total number of test goals: 
+  - Line 40
+  - Branch 20
+  - Exception 0
+  - MutationFactory 181
+  - Output 10
+  - Method 8
+  - MethodNoException 8
+  - CBranchFitnessFactory 20
+* Using seed 1543878935894
+* Starting evolution

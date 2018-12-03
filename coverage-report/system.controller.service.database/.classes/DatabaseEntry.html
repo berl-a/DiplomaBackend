@@ -1,0 +1,72 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DatabaseEntry</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">system.controller.service.database</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DatabaseEntry (system.controller.service.database)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">DatabaseEntry</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package system.controller.service.database;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.io.Serializable;
+<i>4</i>&nbsp;import java.util.HashMap;
+<i>5</i>&nbsp;import java.util.Set;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;public interface DatabaseEntry&lt;V&gt; extends Serializable {
+<i>8</i>&nbsp;    /**
+<i>9</i>&nbsp;     * @return List of names of fields
+<i>10</i>&nbsp;     */
+<i>11</i>&nbsp;    Set&lt;String&gt; getFieldNames();
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;    /**
+<i>14</i>&nbsp;     * Get values of all the fields
+<i>15</i>&nbsp;     * @return map of field names and their values
+<i>16</i>&nbsp;     */
+<i>17</i>&nbsp;    HashMap&lt;String, V&gt; getFields();
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    /**
+<i>20</i>&nbsp;     *
+<i>21</i>&nbsp;     * @param fieldName name of field, value of which you want to getWithQuiz
+<i>22</i>&nbsp;     * @return value of field with specified name
+<i>23</i>&nbsp;     */
+<i>24</i>&nbsp;    V getField(String fieldName);
+<i>25</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-12-03 23:33</div>
+</div>
+</body>
+</html>

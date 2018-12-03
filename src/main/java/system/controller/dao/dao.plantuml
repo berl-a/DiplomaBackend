@@ -5,6 +5,7 @@ title __DAO's Class Diagram__\n
   package system.controller {
     package system.controller.dao {
       class Dao {
+          {static} + SQLITE_NOT_MYSQL : boolean
           - tableName : String
           + Dao()
           + getAll()
@@ -103,6 +104,7 @@ title __DAO's Class Diagram__\n
   }
   
 
+  Dao o-- MySQLDatabaseService : databaseService
   QuestionDao -up-|> Dao
   QuestionGroupDao -up-|> Dao
   QuizDao -up-|> Dao

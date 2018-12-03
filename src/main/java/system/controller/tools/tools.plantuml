@@ -6,7 +6,6 @@ title __TOOLS's Class Diagram__\n
     package system.controller.tools {
       class DataToolkit {
           {static} + getUniqueId()
-          {static} + getAllStringsInsideIdPTags()
           {static} + convertToJsonObject()
           {static} + convertToJsonArray()
           {static} + objectToByteArray()

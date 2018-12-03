@@ -66,8 +66,6 @@ public class Dao<Type extends Idable> {
         return result ? Const.OK_RESULT : Const.NOK_RESULT;
     }
 
-
-
     public String getTableName() {
         return tableName;
     }

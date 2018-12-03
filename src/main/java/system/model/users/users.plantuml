@@ -23,6 +23,7 @@ title __USERS's Class Diagram__\n
           + User()
           + User()
           + User()
+          + User()
           + changeId()
           + getId()
           + setId()

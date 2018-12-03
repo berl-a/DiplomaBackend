@@ -14,14 +14,6 @@ title __GAMES's Class Diagram__\n
 
   package system.model {
     package system.model.games {
-      enum AnswerType {
-      }
-    }
-  }
-  
-
-  package system.model {
-    package system.model.games {
       class FreeTextAnswer {
           - answer : String
           - correct : Double

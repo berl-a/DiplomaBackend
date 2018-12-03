@@ -18,32 +18,16 @@ title __DATABASE's Class Diagram__\n
   package system.controller {
     package system.controller.service {
       package system.controller.service.database {
-        class DatabaseToolkit {
-            {static} + CONNECTION_TIMEOUT_MS : int
-            {static} + GET_UNAPPROVED_HOSPITATION_PLANS_WITH_HOSPITATIONS_AND_TEACHERS : String
-            {static} - connection : Connection
-            {static} - hasConnected : boolean
-            {static} - failedConnection : boolean
-            {static} ~ databaseAddress : String
-            {static} + getSettingsFromFile()
-            {static} + connect()
-            {static} + getStringDataFromDatabase()
-            {static} - getStringDataFromDatabaseInternal()
-            {static} + addStringDataToDatabase()
-            {static} - addStringDataToDatabaseInternal()
-            {static} + getDataFromDatabase()
-            {static} - waitForConnection()
-            {static} - getDataFromDatabaseInternal()
-            {static} + addDataToDatabase()
-            {static} - addDataToDatabaseInternal()
-            {static} + getFieldValuesInDbFormat()
-            {static} + removeDataFromDatabase()
-            {static} - removeDataFromDatabaseInternal()
-            {static} + removeItemWhereStringFieldEqualsValue()
-            {static} - removeItemWhereStringFieldEqualsValueInternal()
-            {static} + getDeleteFilter()
-            {static} + getStringFieldValuesInDbFormat()
-            {static} + getFieldNamesInDBFormat()
+        interface DatabaseService {
+            {abstract} + init()
+            {abstract} + getSettingsFromFile()
+            {abstract} + connect()
+            {abstract} + getDataFromDatabase()
+            {abstract} + addDataToDatabase()
+            {abstract} + getFieldValuesInDbFormat()
+            {abstract} + removeItemWhereStringFieldEqualsValue()
+            {abstract} + getStringFieldValuesInDbFormat()
+            {abstract} + getFieldNamesInDBFormat()
         }
       }
     }
@@ -81,6 +65,45 @@ title __DATABASE's Class Diagram__\n
   package system.controller {
     package system.controller.service {
       package system.controller.service.database {
+        class MySQLDatabaseService {
+            + CONNECTION_TIMEOUT_MS : int
+            - connection : Connection
+            - hasConnected : boolean
+            - failedConnection : boolean
+            ~ dbPort : int
+            ~ dbName : String
+            ~ dbUser : String
+            ~ dbPassword : String
+            ~ dbServerName : String
+            + init()
+            + getSettingsFromFile()
+            + connect()
+            + getStringDataFromDatabase()
+            - getStringDataFromDatabaseInternal()
+            + addStringDataToDatabase()
+            - addStringDataToDatabaseInternal()
+            + getDataFromDatabase()
+            - getDataFromDatabaseInternal()
+            + addDataToDatabase()
+            - addDataToDatabaseInternal()
+            + getFieldValuesInDbFormat()
+            + removeDataFromDatabase()
+            - removeDataFromDatabaseInternal()
+            + removeItemWhereStringFieldEqualsValue()
+            + removeItemWhereFieldEqualsValue()
+            - removeItemWhereFieldEqualsValueInternal()
+            + getDeleteFilter()
+            + getStringFieldValuesInDbFormat()
+            + getFieldNamesInDBFormat()
+        }
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      package system.controller.service.database {
         class StringDatabaseEntry {
             - content : HashMap<String, String>
             ~ StringDatabaseEntry()
@@ -96,6 +119,7 @@ title __DATABASE's Class Diagram__\n
   
 
   IntStringBlobDatabaseEntry -up-|> DatabaseEntry
+  MySQLDatabaseService -up-|> DatabaseService
   StringDatabaseEntry -up-|> DatabaseEntry
 
 

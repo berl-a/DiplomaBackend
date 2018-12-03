@@ -4,25 +4,6 @@ title __SIMPLE_FRONTEND_MODELS's Class Diagram__\n
 
   package system.controller {
     package system.controller.simple_frontend_models {
-      class FUser {
-          ~ login : String
-          ~ hash : String
-          ~ isTeacher : boolean
-          + FUser()
-          + getLogin()
-          + setLogin()
-          + getHash()
-          + setHash()
-          + isTeacher()
-          + setTeacher()
-          + toString()
-      }
-    }
-  }
-  
-
-  package system.controller {
-    package system.controller.simple_frontend_models {
       class GameWithActualQuiz {
           + GameWithActualQuiz()
           + getActualQuiz()

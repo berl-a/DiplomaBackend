@@ -1,0 +1,67 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: DatabaseService</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">system.controller.service.database</a> ]
+</div>
+
+<h1>Coverage Summary for Class: DatabaseService (system.controller.service.database)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+</tr>
+<tr>
+  <td class="name">DatabaseService</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package system.controller.service.database;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.LinkedList;
+<i>4</i>&nbsp;import java.util.Set;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;/**
+<i>7</i>&nbsp; * Interface for working with databases
+<i>8</i>&nbsp; */
+<i>9</i>&nbsp;public interface DatabaseService {
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    void init();
+<i>12</i>&nbsp;    void getSettingsFromFile();
+<i>13</i>&nbsp;    boolean connect();
+<i>14</i>&nbsp;    LinkedList&lt;IntStringBlobDatabaseEntry&gt; getDataFromDatabase(String tableName, Set&lt;String&gt; fieldNames);
+<i>15</i>&nbsp;    boolean addDataToDatabase(String tableName, LinkedList&lt;IntStringBlobDatabaseEntry&gt; databaseEntries);
+<i>16</i>&nbsp;    String getFieldValuesInDbFormat(LinkedList&lt;IntStringBlobDatabaseEntry&gt; databaseEntries, LinkedList&lt;String&gt; fieldNamesList);
+<i>17</i>&nbsp;    boolean removeItemWhereStringFieldEqualsValue(String tableName, String fieldName, String fieldValue);
+<i>18</i>&nbsp;    String getStringFieldValuesInDbFormat(LinkedList&lt;StringDatabaseEntry&gt; databaseEntries, LinkedList&lt;String&gt; fieldNamesList);
+<i>19</i>&nbsp;    String getFieldNamesInDBFormat(LinkedList&lt;String&gt; fieldNames);
+<i>20</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-12-03 23:33</div>
+</div>
+</body>
+</html>

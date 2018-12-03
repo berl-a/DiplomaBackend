@@ -4,6 +4,16 @@ title __SERVICE's Class Diagram__\n
 
   package system.controller {
     package system.controller.service {
+      class FilesService {
+          ~ servletContext : ServletContext
+          + replaceServerLocationInJsFiles()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
       class GameArchiver {
           + archiveFinishedGames()
       }
@@ -34,14 +44,6 @@ title __SERVICE's Class Diagram__\n
           + answerQuestion()
           + getFinishedGames()
           + removeFinishedGames()
-      }
-    }
-  }
-  
-
-  package system.controller {
-    package system.controller.service {
-      class HospitationService {
       }
     }
   }
@@ -94,17 +96,10 @@ title __SERVICE's Class Diagram__\n
           + copy()
           + edit()
           + remove()
+          + removeQuestionsFromGroup()
           + getAllWithCatNames()
           + getAllWithCatNamesByTeacher()
           - appendCatNamesToQuestions()
-      }
-    }
-  }
-  
-
-  package system.controller {
-    package system.controller.service {
-      class QuestionsToolkit {
       }
     }
   }
@@ -148,7 +143,7 @@ title __SERVICE's Class Diagram__\n
   package system.controller {
     package system.controller.service {
       class QuizService {
-          - cachedQuizs : LinkedList<Quiz>
+          - cachedQuizzes : LinkedList<Quiz>
           + updateCached()
           + getAll()
           + get()
@@ -156,6 +151,7 @@ title __SERVICE's Class Diagram__\n
           + add()
           + edit()
           + remove()
+          + removeQuizzesFromGroup()
           + getAllWithCatNames()
           + getAllWithCatNamesByTeacher()
           - appendCatNamesToQuizzes()
@@ -188,8 +184,16 @@ title __SERVICE's Class Diagram__\n
 
   package system.controller {
     package system.controller.service {
+      class StartupService {
+          + postConstruct()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
       class UserService {
-          {static} + USER_EXISTS_ERROR : String
           - cached : LinkedList<User>
           + updateCached()
           + getAll()
@@ -202,6 +206,7 @@ title __SERVICE's Class Diagram__\n
           + edit()
           + copy()
           + remove()
+          + addAdminToDatabase()
       }
     }
   }
@@ -219,6 +224,7 @@ title __SERVICE's Class Diagram__\n
   QuestionService o-- QuestionDao : dao
   QuestionService o-- QuestionGroupService : questionGroupService
   QuizGroupService o-- QuizGroupDao : dao
+  QuizGroupService o-- QuizService : quizService
   QuizPartService o-- QuizPartDao : dao
   QuizPartService o-- QuestionGroupService : questionGroupService
   QuizService o-- QuizDao : dao
@@ -229,6 +235,8 @@ title __SERVICE's Class Diagram__\n
   ResultService o-- QuizService : quizService
   ResultService o-- PlayerService : playerService
   ResultService o-- QuestionService : questionService
+  StartupService o-- FilesService : filesService
+  StartupService o-- UserService : userService
   UserService o-- UserDao : dao
 
 
