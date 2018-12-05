@@ -13,8 +13,8 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.Dao;
-import system.controller.dao.QuizDao;
+import system.model.dao.Dao;
+import system.model.dao.QuizDao;
 import system.controller.service.database.MySQLDatabaseService;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
@@ -33,10 +33,10 @@ public class QuizDao_ESTest extends QuizDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.controller.dao.QuizDao quizDao0 = new system.controller.dao.QuizDao();
+      QuizDao quizDao0 = new QuizDao();
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       Injector.inject(quizDao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(quizDao0, (Class<?>) system.controller.dao.QuizDao.class);
+      Injector.validateBean(quizDao0, (Class<?>) QuizDao.class);
       assertFalse(Dao.SQLITE_NOT_MYSQL);
   }
 }

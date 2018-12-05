@@ -4,11 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuestionWithCategoryNames;
-import system.controller.dao.QuestionDao;
+import system.model.dao.QuestionDao;
 import system.model.questions.Question;
 import system.model.questions.QuestionGroup;
 import system.model.questions.QuestionGroupType;
-import system.model.quizzes.Quiz;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -95,7 +94,7 @@ public class QuestionService {
         LinkedList<Question> questionsByTeacher =
                 cachedQuestions
                         .stream()
-                        .filter(q -> teacherId.equals(q.getTeacher()))
+                        .filter(q -> q != null && teacherId.equals(q.getTeacher()))
                         .collect(Collectors.toCollection(LinkedList::new));
         return appendCatNamesToQuestions(questionsByTeacher);
     }
@@ -109,12 +108,14 @@ public class QuestionService {
                 subcats = new LinkedList<>(),
                 subsubcats = new LinkedList<>();
         allGroups.forEach(g -> {
-            if(g.getType() == QuestionGroupType.CAT) {
-                cats.add(g);
-            } else if(g.getType() == QuestionGroupType.SUBCAT) {
-                subcats.add(g);
-            } else if(g.getType() == QuestionGroupType.SUBSUBCAT) {
-                subsubcats.add(g);
+            if(g != null) {
+                if (g.getType() == QuestionGroupType.CAT) {
+                    cats.add(g);
+                } else if (g.getType() == QuestionGroupType.SUBCAT) {
+                    subcats.add(g);
+                } else if (g.getType() == QuestionGroupType.SUBSUBCAT) {
+                    subsubcats.add(g);
+                }
             }
         });
 

@@ -11,8 +11,6 @@ import static org.evosuite.runtime.EvoAssertions.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.questions.QuestionGroup;
-import system.model.questions.QuestionGroupType;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
@@ -32,7 +30,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.CAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup(" $4ih5p,Df", questionGroupType0, " $4ih5p,Df", " $4ih5p,Df", "#C");
+      QuestionGroup questionGroup0 = new QuestionGroup(" $4ih5p,Df", questionGroupType0, " $4ih5p,Df", " $4ih5p,Df", "#C");
       String string0 = questionGroup0.getTeacher();
       assertEquals(" $4ih5p,Df", string0);
   }
@@ -40,7 +38,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
+      QuestionGroup questionGroup0 = new QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
       String string0 = questionGroup0.getTeacher();
       assertEquals("", string0);
   }
@@ -48,14 +46,14 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test04()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBSUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("/*?*c>OZW", questionGroupType0, "", "mB'~d(", ".m_dfOtPT0<]");
+      QuestionGroup questionGroup0 = new QuestionGroup("/*?*c>OZW", questionGroupType0, "", "mB'~d(", ".m_dfOtPT0<]");
       String string0 = questionGroup0.getName();
       assertEquals(".m_dfOtPT0<]", string0);
   }
 
   @Test(timeout = 4000)
   public void test05()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup();
+      QuestionGroup questionGroup0 = new QuestionGroup();
       questionGroup0.setName("");
       String string0 = questionGroup0.getName();
       assertEquals("", string0);
@@ -64,7 +62,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test06()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.CAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup((String) null, "NaEY", questionGroupType0, "NaEY", "NaEY", "NaEY");
+      QuestionGroup questionGroup0 = new QuestionGroup((String) null, "NaEY", questionGroupType0, "NaEY", "NaEY", "NaEY");
       String string0 = questionGroup0.getId();
       assertNull(string0);
   }
@@ -72,7 +70,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test07()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
+      QuestionGroup questionGroup0 = new QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
       String string0 = questionGroup0.getId();
       assertEquals("", string0);
   }
@@ -80,7 +78,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
+      QuestionGroup questionGroup0 = new QuestionGroup("", "", questionGroupType0, "CAT", "", "7X-c8^g2#S7");
       String string0 = questionGroup0.getGrandfather();
       assertEquals("", string0);
   }
@@ -88,16 +86,16 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("Cv3]}ZFB8y.HYL", "", questionGroupType0, "", "", "T&2%9GBR[9NYR9^8b");
+      QuestionGroup questionGroup0 = new QuestionGroup("Cv3]}ZFB8y.HYL", "", questionGroupType0, "", "", "T&2%9GBR[9NYR9^8b");
       String string0 = questionGroup0.getFather();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = null;
+      QuestionGroup questionGroup0 = null;
       try {
-        questionGroup0 = new system.model.questions.QuestionGroup((system.model.questions.QuestionGroup) null);
+        questionGroup0 = new QuestionGroup((QuestionGroup) null);
         fail("Expecting exception: NullPointerException");
       
       } catch(NullPointerException e) {
@@ -110,26 +108,26 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test11()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       String string0 = questionGroup0.getId();
       assertEquals("\"(B]V-T*G$f4hK'I", string0);
   }
 
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       questionGroup0.getType();
   }
 
   @Test(timeout = 4000)
   public void test13()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("+@&bfS;|gY6ub<Nr4");
+      QuestionGroup questionGroup0 = new QuestionGroup("+@&bfS;|gY6ub<Nr4");
       questionGroup0.setGrandfather("+@&bfS;|gY6ub<Nr4");
   }
 
   @Test(timeout = 4000)
   public void test14()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       String string0 = questionGroup0.getTeacher();
       assertNull(string0);
   }
@@ -137,27 +135,27 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test15()  throws Throwable  {
       QuestionGroupType questionGroupType0 = QuestionGroupType.SUBSUBCAT;
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("/*?*c>OZW", questionGroupType0, "", "mB'~d(", ".m_dfOtPT0<]");
+      QuestionGroup questionGroup0 = new QuestionGroup("/*?*c>OZW", questionGroupType0, "", "mB'~d(", ".m_dfOtPT0<]");
       String string0 = questionGroup0.getGrandfather();
       assertEquals("mB'~d(", string0);
   }
 
   @Test(timeout = 4000)
   public void test16()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       questionGroup0.setId("");
   }
 
   @Test(timeout = 4000)
   public void test17()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       String string0 = questionGroup0.getGrandfather();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test18()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup();
+      QuestionGroup questionGroup0 = new QuestionGroup();
       questionGroup0.setFather("lUOj$F;*s8");
       String string0 = questionGroup0.getFather();
       assertEquals("lUOj$F;*s8", string0);
@@ -165,7 +163,7 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test19()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       QuestionGroupType questionGroupType0 = QuestionGroupType.CAT;
       questionGroup0.setType(questionGroupType0);
       QuestionGroupType questionGroupType1 = questionGroup0.getType();
@@ -174,28 +172,28 @@ public class QuestionGroup_ESTest extends QuestionGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test20()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       questionGroup0.setTeacher((String) null);
   }
 
   @Test(timeout = 4000)
   public void test21()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       String string0 = questionGroup0.getName();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test22()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
       String string0 = questionGroup0.getFather();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test23()  throws Throwable  {
-      system.model.questions.QuestionGroup questionGroup0 = new system.model.questions.QuestionGroup("\"(B]V-T*G$f4hK'I");
-      system.model.questions.QuestionGroup questionGroup1 = new system.model.questions.QuestionGroup(questionGroup0);
+      QuestionGroup questionGroup0 = new QuestionGroup("\"(B]V-T*G$f4hK'I");
+      QuestionGroup questionGroup1 = new QuestionGroup(questionGroup0);
       assertFalse(questionGroup1.equals((Object)questionGroup0));
   }
 }

@@ -11,7 +11,6 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
 import system.model.QuizGroupType;
-import system.model.quizzes.QuizGroup;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
@@ -29,14 +28,14 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       quizGroup0.getType();
   }
 
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       String string0 = quizGroup0.getTeacher();
       assertEquals("A3", string0);
   }
@@ -44,7 +43,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test04()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "", quizGroupType0);
+      QuizGroup quizGroup0 = new QuizGroup("Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "", quizGroupType0);
       String string0 = quizGroup0.getName();
       assertEquals("", string0);
   }
@@ -52,7 +51,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test05()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       quizGroup0.setId((String) null);
       String string0 = quizGroup0.getId();
       assertNull(string0);
@@ -60,7 +59,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test06()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       String string0 = quizGroup0.getGrandfather();
       assertNull(string0);
   }
@@ -68,7 +67,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test07()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "", quizGroupType0);
+      QuizGroup quizGroup0 = new QuizGroup("Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "Sad][>hl-KF*", "aH0w%Uk%i0tpvET{'", "", quizGroupType0);
       quizGroup0.setGrandfather("");
       String string0 = quizGroup0.getGrandfather();
       assertEquals("", string0);
@@ -77,7 +76,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       String string0 = quizGroup0.getFather();
       assertEquals("", string0);
   }
@@ -85,14 +84,14 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       quizGroup0.setTeacher("system.model.QuizGroupType");
   }
 
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       String string0 = quizGroup0.getGrandfather();
       assertEquals("A3", string0);
   }
@@ -100,7 +99,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test11()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       QuizGroupType quizGroupType1 = quizGroup0.getType();
       assertSame(quizGroupType1, quizGroupType0);
   }
@@ -108,7 +107,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       quizGroup0.setId("");
       String string0 = quizGroup0.getId();
       assertEquals("", string0);
@@ -117,7 +116,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test13()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       quizGroup0.setName("lW\"9?X$R!XfU}>d|");
       String string0 = quizGroup0.getName();
       assertEquals("lW\"9?X$R!XfU}>d|", string0);
@@ -126,7 +125,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test14()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.CAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("A3", quizGroupType0, "", "A3", "");
+      QuizGroup quizGroup0 = new QuizGroup("A3", quizGroupType0, "", "A3", "");
       quizGroup0.setFather("lW\"9?X$R!XfU}>d|");
       String string0 = quizGroup0.getFather();
       assertEquals("lW\"9?X$R!XfU}>d|", string0);
@@ -134,7 +133,7 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test15()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       String string0 = quizGroup0.getTeacher();
       assertNull(string0);
   }
@@ -142,35 +141,35 @@ public class QuizGroup_ESTest extends QuizGroup_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test16()  throws Throwable  {
       QuizGroupType quizGroupType0 = QuizGroupType.SUBSUBCAT;
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup("km#K&'", "", quizGroupType0, "", "km#K&'", "km#K&'");
+      QuizGroup quizGroup0 = new QuizGroup("km#K&'", "", quizGroupType0, "", "km#K&'", "km#K&'");
       String string0 = quizGroup0.getTeacher();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test17()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       String string0 = quizGroup0.getFather();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test18()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       String string0 = quizGroup0.getId();
       assertEquals("00000000-0100-4000-8200-000003000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test19()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       String string0 = quizGroup0.getName();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test20()  throws Throwable  {
-      system.model.quizzes.QuizGroup quizGroup0 = new system.model.quizzes.QuizGroup();
+      QuizGroup quizGroup0 = new QuizGroup();
       QuizGroupType quizGroupType0 = QuizGroupType.SUBSUBCAT;
       quizGroup0.setType(quizGroupType0);
   }

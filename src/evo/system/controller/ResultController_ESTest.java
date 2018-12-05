@@ -11,8 +11,7 @@ import static org.evosuite.runtime.EvoAssertions.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.controller.ResultController;
-import system.controller.dao.ResultDao;
+import system.model.dao.ResultDao;
 import system.controller.service.ResultService;
 import system.model.Result;
 

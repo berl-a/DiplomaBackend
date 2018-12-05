@@ -16,9 +16,8 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.QuizController;
-import system.controller.dao.Dao;
-import system.controller.dao.QuizDao;
+import system.model.dao.Dao;
+import system.model.dao.QuizDao;
 import system.controller.service.QuizService;
 import system.controller.service.database.IntStringBlobDatabaseEntry;
 import system.controller.service.database.MySQLDatabaseService;
@@ -198,7 +197,7 @@ public class QuizController_ESTest extends QuizController_ESTest_scaffolding {
   public void test12()  throws Throwable  {
       system.controller.QuizController quizController0 = new system.controller.QuizController();
       QuizService quizService0 = mock(QuizService.class, new ViolatedAssumptionAnswer());
-      doReturn("ok").when(quizService0).edit(any(system.model.quizzes.Quiz.class));
+      doReturn("ok").when(quizService0).edit(any(Quiz.class));
       Injector.inject(quizController0, (Class<?>) system.controller.QuizController.class, "service", (Object) quizService0);
       Injector.validateBean(quizController0, (Class<?>) system.controller.QuizController.class);
       Quiz quiz0 = new Quiz("not found", "QuizGroups", "hyHU,}3rAm,qW&= ", "hyHU,}3rAm,qW&= ", "not found");
@@ -210,7 +209,7 @@ public class QuizController_ESTest extends QuizController_ESTest_scaffolding {
   public void test13()  throws Throwable  {
       system.controller.QuizController quizController0 = new system.controller.QuizController();
       QuizService quizService0 = mock(QuizService.class, new ViolatedAssumptionAnswer());
-      doReturn("nok").when(quizService0).edit(any(system.model.quizzes.Quiz.class));
+      doReturn("nok").when(quizService0).edit(any(Quiz.class));
       Injector.inject(quizController0, (Class<?>) system.controller.QuizController.class, "service", (Object) quizService0);
       Injector.validateBean(quizController0, (Class<?>) system.controller.QuizController.class);
       Quiz quiz0 = new Quiz("-<zmP]EY9GG+eQn1)", "ok", "hyHU,}3rAm,qW&= ", "hyHU,}3rAm,qW&= ", "-<zmP]EY9GG+eQn1)");
@@ -266,7 +265,7 @@ public class QuizController_ESTest extends QuizController_ESTest_scaffolding {
   public void test18()  throws Throwable  {
       system.controller.QuizController quizController0 = new system.controller.QuizController();
       QuizService quizService0 = mock(QuizService.class, new ViolatedAssumptionAnswer());
-      doReturn("").when(quizService0).add(any(system.model.quizzes.Quiz.class));
+      doReturn("").when(quizService0).add(any(Quiz.class));
       Injector.inject(quizController0, (Class<?>) system.controller.QuizController.class, "service", (Object) quizService0);
       Injector.validateBean(quizController0, (Class<?>) system.controller.QuizController.class);
       Quiz quiz0 = new Quiz("not found", "QuizGroups", "hyHU,n}3rAm,qW&= ", "hyHU,n}3rAm,qW&= ", "not found");
@@ -278,7 +277,7 @@ public class QuizController_ESTest extends QuizController_ESTest_scaffolding {
   public void test19()  throws Throwable  {
       system.controller.QuizController quizController0 = new system.controller.QuizController();
       QuizService quizService0 = mock(QuizService.class, new ViolatedAssumptionAnswer());
-      doReturn("nok").when(quizService0).add(any(system.model.quizzes.Quiz.class));
+      doReturn("nok").when(quizService0).add(any(Quiz.class));
       Injector.inject(quizController0, (Class<?>) system.controller.QuizController.class, "service", (Object) quizService0);
       Injector.validateBean(quizController0, (Class<?>) system.controller.QuizController.class);
       Quiz quiz0 = new Quiz("-<zmP]EY9GG+eQn1)", "ok", "hyHU,}3rAm,qW&= ", "hyHU,}3rAm,qW&= ", "-<zmP]EY9GG+eQn1)");

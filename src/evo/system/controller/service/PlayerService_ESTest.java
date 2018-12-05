@@ -15,8 +15,7 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.PlayerDao;
-import system.controller.service.PlayerService;
+import system.model.dao.PlayerDao;
 import system.model.games.Player;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 

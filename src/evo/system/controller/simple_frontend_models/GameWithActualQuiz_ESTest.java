@@ -13,7 +13,6 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
-import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.model.games.Game;
 import system.model.quizzes.Quiz;
 

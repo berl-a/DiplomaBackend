@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.FreeTextAnswer;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
@@ -29,7 +28,7 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer((String) null);
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer((String) null);
       Double double0 = new Double(0.0);
       freeTextAnswer0.setCorrect(double0);
       Double double1 = freeTextAnswer0.getCorrect();
@@ -38,7 +37,7 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer("q2p8<?");
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer("q2p8<?");
       Double double0 = new Double(1391.56929);
       freeTextAnswer0.setCorrect(double0);
       Double double1 = freeTextAnswer0.getCorrect();
@@ -47,7 +46,7 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer("");
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer("");
       Double double0 = new Double((-1.0));
       freeTextAnswer0.setCorrect(double0);
       Double double1 = freeTextAnswer0.getCorrect();
@@ -56,7 +55,7 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer("q2p8<?");
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer("q2p8<?");
       freeTextAnswer0.setAnswer((String) null);
       String string0 = freeTextAnswer0.getAnswer();
       assertNull(string0);
@@ -64,7 +63,7 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer("");
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer("");
       String string0 = freeTextAnswer0.getAnswer();
       assertEquals("", string0);
   }
@@ -72,21 +71,21 @@ public class FreeTextAnswer_ESTest extends FreeTextAnswer_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
       Double double0 = new Double((-95.58973166341829));
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer(">", double0);
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer(">", double0);
       freeTextAnswer0.setAnswer(">");
   }
 
   @Test(timeout = 4000)
   public void test8()  throws Throwable  {
       Double double0 = new Double((-95.58973166341829));
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer(">", double0);
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer(">", double0);
       String string0 = freeTextAnswer0.getAnswer();
       assertEquals(">", string0);
   }
 
   @Test(timeout = 4000)
   public void test9()  throws Throwable  {
-      system.model.games.FreeTextAnswer freeTextAnswer0 = new system.model.games.FreeTextAnswer("|T");
+      FreeTextAnswer freeTextAnswer0 = new FreeTextAnswer("|T");
       Double double0 = freeTextAnswer0.getCorrect();
       assertNull(double0);
   }

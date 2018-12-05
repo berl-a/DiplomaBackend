@@ -2,7 +2,7 @@ package system.controller.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import system.controller.dao.PlayerDao;
+import system.model.dao.PlayerDao;
 import system.model.games.Player;
 
 import java.util.LinkedList;

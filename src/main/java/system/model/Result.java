@@ -1,7 +1,7 @@
 package system.model;
 
 import system.controller.tools.DataToolkit;
-import system.controller.dao.Idable;
+import system.model.dao.Idable;
 import system.model.games.*;
 import system.model.quizzes.Quiz;
 

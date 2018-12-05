@@ -1,7 +1,7 @@
 package system.model.quizzes;
 
 import system.controller.tools.DataToolkit;
-import system.controller.dao.Idable;
+import system.model.dao.Idable;
 import system.model.QuizGroupType;
 
 import java.io.Serializable;

@@ -11,7 +11,6 @@ import java.util.LinkedList;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.MultipleChoiceAnswer;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class MultipleChoiceAnswer_ESTest extends MultipleChoiceAnswer_ESTest_scaffolding {
@@ -30,14 +29,14 @@ public class MultipleChoiceAnswer_ESTest extends MultipleChoiceAnswer_ESTest_sca
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       Double double0 = new Double(0.0);
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
       Double double1 = multipleChoiceAnswer0.getCorrect();
       assertEquals(0.0, (double)double1, 0.01);
   }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null);
       Double double0 = new Double((-1203));
       multipleChoiceAnswer0.setCorrect(double0);
       Double double1 = multipleChoiceAnswer0.getCorrect();
@@ -47,7 +46,7 @@ public class MultipleChoiceAnswer_ESTest extends MultipleChoiceAnswer_ESTest_sca
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
       Double double0 = new Double(1198.58874905);
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
       Double double1 = multipleChoiceAnswer0.getCorrect();
       assertEquals(1198.58874905, (double)double1, 0.01);
   }
@@ -55,14 +54,14 @@ public class MultipleChoiceAnswer_ESTest extends MultipleChoiceAnswer_ESTest_sca
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
       Double double0 = new Double((-1.87));
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
       LinkedList<Integer> linkedList0 = multipleChoiceAnswer0.getAnswerIndexes();
       assertNull(linkedList0);
   }
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null);
       Double double0 = multipleChoiceAnswer0.getCorrect();
       assertNull(double0);
   }
@@ -70,7 +69,7 @@ public class MultipleChoiceAnswer_ESTest extends MultipleChoiceAnswer_ESTest_sca
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
       Double double0 = new Double((-1.87));
-      system.model.games.MultipleChoiceAnswer multipleChoiceAnswer0 = new system.model.games.MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
+      MultipleChoiceAnswer multipleChoiceAnswer0 = new MultipleChoiceAnswer((LinkedList<Integer>) null, double0);
       multipleChoiceAnswer0.setAnswerIndexes((LinkedList<Integer>) null);
   }
 }

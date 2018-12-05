@@ -7,9 +7,7 @@ public class Response {
 
     private Map<String, Object> result = new HashMap<>();
 
-    public Response() {
-
-    }
+    public Response() {}
 
     public Response(String key, Object value) {
         result.put(key, value);

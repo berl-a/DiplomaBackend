@@ -347,8 +347,9 @@ public class MySQLDatabaseService implements DatabaseService {
         try {
             Statement stmt = connection.createStatement();
 
-            stmt.executeUpdate("DELETE FROM " + tableName + " WHERE " + "'" + fieldName + "'='" + fieldValue + "'" + ";");
-
+            System.out.println("Query is");
+            System.out.println("DELETE FROM " + tableName + " WHERE " + "" + fieldName + "='" + fieldValue + "'" + ";");
+            stmt.executeUpdate("DELETE FROM " + tableName + " WHERE " + "" + fieldName + "='" + fieldValue + "'" + ";");
             return true;
         } catch (SQLException e) {
             e.printStackTrace();

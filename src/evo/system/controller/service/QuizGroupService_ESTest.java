@@ -15,9 +15,7 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.QuizGroupDao;
-import system.controller.service.QuizGroupService;
-import system.controller.service.QuizService;
+import system.model.dao.QuizGroupDao;
 import system.model.quizzes.QuizGroup;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 

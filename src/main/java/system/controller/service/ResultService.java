@@ -3,7 +3,7 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
-import system.controller.dao.ResultDao;
+import system.model.dao.ResultDao;
 import system.model.Result;
 import system.model.games.*;
 import system.model.questions.Question;
@@ -41,11 +41,11 @@ public class ResultService {
     }
 
     public List<Result> getAllByTeacher(String teacherId) {
-        return getAll().stream().filter(r -> teacherId.equals(r.getTeacher())).collect(Collectors.toCollection(LinkedList::new));
+        return getAll().stream().filter(r -> r != null && teacherId.equals(r.getTeacher())).collect(Collectors.toCollection(LinkedList::new));
     }
 
     public Result get(String resultId) {
-        Optional<Result> foundResult = getAll().stream().filter(q -> resultId.equals(q.getId())).findAny();
+        Optional<Result> foundResult = getAll().stream().filter(q -> q != null && resultId.equals(q.getId())).findAny();
         return foundResult.orElse(null);
     }
 

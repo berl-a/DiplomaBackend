@@ -4,8 +4,7 @@ $(document).ready(function() {
     $('.logged-in-user-username').text(localStorage.getItem("name"));
     $('.logout-button').on('click', logOut);
     type = localStorage.getItem("type");
-    // updateWorkspaceAccordingToUserType();
-    // todo uncomment on production
+    updateWorkspaceAccordingToUserType();
 });
 
 function updateWorkspaceAccordingToUserType() {

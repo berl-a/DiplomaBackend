@@ -12,8 +12,8 @@ import java.util.LinkedList;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.controller.dao.PlayerDao;
 import system.model.games.Player;
+import system.model.dao.PlayerDao;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
@@ -31,7 +31,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.setPlayers((LinkedList<Player>) null);
       LinkedList<Player> linkedList0 = playerDao0.getPlayers();
       assertNull(linkedList0);
@@ -39,7 +39,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.addPlayer((Player) null);
       LinkedList<Player> linkedList0 = playerDao0.getPlayers();
       assertEquals(1, linkedList0.size());
@@ -47,7 +47,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.addPlayer((Player) null);
       // Undeclared exception!
       try { 
@@ -64,7 +64,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.setPlayers((LinkedList<Player>) null);
       // Undeclared exception!
       try { 
@@ -81,7 +81,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.addPlayer((Player) null);
       // Undeclared exception!
       try { 
@@ -98,13 +98,13 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       playerDao0.removePlayer("k-");
   }
 
   @Test(timeout = 4000)
   public void test8()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       LinkedList<Player> linkedList0 = playerDao0.getPlayers();
       playerDao0.setPlayers(linkedList0);
       assertEquals(0, linkedList0.size());
@@ -112,7 +112,7 @@ public class PlayerDao_ESTest extends PlayerDao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test9()  throws Throwable  {
-      system.controller.dao.PlayerDao playerDao0 = new system.controller.dao.PlayerDao();
+      PlayerDao playerDao0 = new PlayerDao();
       Player player0 = playerDao0.getPlayer("(]V6slmcc&p)3GY");
       assertNull(player0);
   }

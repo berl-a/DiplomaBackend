@@ -3,7 +3,7 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
-import system.controller.dao.QuizGroupDao;
+import system.model.dao.QuizGroupDao;
 import system.model.quizzes.QuizGroup;
 
 import java.util.LinkedList;

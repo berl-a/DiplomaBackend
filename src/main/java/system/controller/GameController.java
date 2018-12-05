@@ -14,6 +14,7 @@ import system.controller.service.GameService;
 import system.controller.service.PlayerService;
 import system.controller.service.QuizService;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -170,8 +171,13 @@ public class GameController {
                 answer = new SingleChoiceAnswer(Integer.valueOf(answerAsString));
             else if(questionType == QuestionType.FREE_TEXT)
                 answer = new FreeTextAnswer(answerAsString);
-
-//            System.out.println("ANswering from controller");
+            else if(questionType == QuestionType.MULTIPLE_CHOICE)
+                answer = new MultipleChoiceAnswer(
+                        Arrays
+                                .stream(answerAsString.split(","))
+                                .map(Integer::parseInt)
+                                .collect(Collectors.toCollection(LinkedList::new))
+                );
             boolean isAnswerCorrect = service.answerQuestion(gameId, playerId, questionId, answer);
 //            System.out.println("ANswer is correct? " + isAnswerCorrect);
 

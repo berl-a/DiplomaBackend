@@ -15,11 +15,7 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.ResultDao;
-import system.controller.service.PlayerService;
-import system.controller.service.QuestionService;
-import system.controller.service.QuizService;
-import system.controller.service.ResultService;
+import system.model.dao.ResultDao;
 import system.model.Result;
 import system.model.games.Game;
 

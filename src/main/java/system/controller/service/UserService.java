@@ -3,7 +3,7 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
-import system.controller.dao.UserDao;
+import system.model.dao.UserDao;
 import system.model.users.IUser;
 import system.model.users.User;
 import system.model.users.UserType;
@@ -35,10 +35,12 @@ public class UserService {
     }
 
     public User get(String username) {
+        if(username == null) return null;
+
         LinkedList<User> users = getAll();
         Optional<User> foundUser = Optional.empty();
         if(users != null && users.size() != 0)
-            foundUser = users.stream().filter(u -> username.equals(u.getLogin())).findAny();
+            foundUser = users.stream().filter(u -> u != null && username.equals(u.getLogin())).findAny();
         return foundUser.orElse(null);
     }
 
@@ -48,14 +50,14 @@ public class UserService {
         if(type != null)
            foundUser = users.stream().filter(u -> u.getType() == type && username.equals(u.getLogin())).findAny();
         else
-            foundUser = users.stream().filter(u -> username.equals(u.getLogin())).findAny();
+            foundUser = users.stream().filter(u -> u != null && username.equals(u.getLogin())).findAny();
         return foundUser.orElse(null);
     }
 
     public User getById(String id) {
         LinkedList<User> users = getAll();
         Optional<User> foundUser;
-            foundUser = users.stream().filter(u -> id.equals(u.getId())).findAny();
+            foundUser = users.stream().filter(u -> u != null && id.equals(u.getId())).findAny();
         return foundUser.orElse(null);
     }
 

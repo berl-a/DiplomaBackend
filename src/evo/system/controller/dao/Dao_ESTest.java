@@ -15,7 +15,7 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.Dao;
+import system.model.dao.Dao;
 import system.controller.service.database.MySQLDatabaseService;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
 import system.controller.simple_frontend_models.QuestionGroupWithNumberOfQuestions;
@@ -34,14 +34,14 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
-      system.controller.dao.Dao<QuizWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizWithCategoryNames>("Id_STRING");
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao1 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("Id_STRING");
+      Dao<QuizWithCategoryNames> dao0 = new Dao<QuizWithCategoryNames>("Id_STRING");
+      Dao<QuizPartWithCategoryNames> dao1 = new Dao<QuizPartWithCategoryNames>("Id_STRING");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
-      Injector.inject(dao1, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao1, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao1, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao1, (Class<?>) Dao.class);
       MySQLDatabaseService mySQLDatabaseService1 = dao1.databaseService;
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService1);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService1);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       dao0.setTableName((String) null);
       String string0 = dao0.getTableName();
       assertNull(string0);
@@ -49,17 +49,17 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("");
+      Dao<QuizPartWithCategoryNames> dao0 = new Dao<QuizPartWithCategoryNames>("");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       String string0 = dao0.getTableName();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("Um");
+      Dao<QuizPartWithCategoryNames> dao0 = new Dao<QuizPartWithCategoryNames>("Um");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       // Undeclared exception!
       try { 
@@ -76,10 +76,10 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("");
+      Dao<QuizPartWithCategoryNames> dao0 = new Dao<QuizPartWithCategoryNames>("");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       MySQLDatabaseService mySQLDatabaseService1 = dao0.databaseService;
       dao0.databaseService = mySQLDatabaseService1;
       dao0.databaseService = null;
@@ -98,10 +98,10 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("system.controller.simple_frontend_models.GameWithActualQuiz");
+      Dao<QuizPartWithCategoryNames> dao0 = new Dao<QuizPartWithCategoryNames>("system.controller.simple_frontend_models.GameWithActualQuiz");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       // Undeclared exception!
       try { 
         dao0.add((QuizPartWithCategoryNames) null);
@@ -117,15 +117,15 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao0 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("728B24bOh");
+      Dao<QuizPartWithCategoryNames> dao0 = new Dao<QuizPartWithCategoryNames>("728B24bOh");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       doReturn(true).when(mySQLDatabaseService0).removeItemWhereStringFieldEqualsValue(anyString() , anyString() , anyString());
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
-      system.controller.dao.Dao<QuestionGroupWithNumberOfQuestions> dao1 = new system.controller.dao.Dao<QuestionGroupWithNumberOfQuestions>("728B24bOh");
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
+      Dao<QuestionGroupWithNumberOfQuestions> dao1 = new Dao<QuestionGroupWithNumberOfQuestions>("728B24bOh");
       MySQLDatabaseService mySQLDatabaseService1 = dao0.databaseService;
-      Injector.inject(dao1, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService1);
-      Injector.validateBean(dao1, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao1, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService1);
+      Injector.validateBean(dao1, (Class<?>) Dao.class);
       String string0 = dao1.remove("728B24bOh");
       assertEquals("ok", string0);
   }
@@ -133,15 +133,15 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
       String string0 = "Um";
-      system.controller.dao.Dao<GameWithActualQuiz> dao0 = new system.controller.dao.Dao<GameWithActualQuiz>("Um");
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao1 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("Um");
+      Dao<GameWithActualQuiz> dao0 = new Dao<GameWithActualQuiz>("Um");
+      Dao<QuizPartWithCategoryNames> dao1 = new Dao<QuizPartWithCategoryNames>("Um");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       doReturn(false).when(mySQLDatabaseService0).removeItemWhereStringFieldEqualsValue(anyString() , anyString() , anyString());
-      Injector.inject(dao1, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao1, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao1, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao1, (Class<?>) Dao.class);
       MySQLDatabaseService mySQLDatabaseService1 = dao1.databaseService;
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService1);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService1);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       String string1 = dao0.remove(string0);
       assertEquals("nok", string1);
   }
@@ -150,15 +150,15 @@ public class Dao_ESTest extends Dao_ESTest_scaffolding {
   public void test8()  throws Throwable  {
       Dao.__CLR4_1_21jh1jhjp8v560p dao___CLR4_1_21jh1jhjp8v560p0 = new Dao.__CLR4_1_21jh1jhjp8v560p();
       String string0 = "Um";
-      system.controller.dao.Dao<GameWithActualQuiz> dao0 = new system.controller.dao.Dao<GameWithActualQuiz>("Um");
-      system.controller.dao.Dao<QuizPartWithCategoryNames> dao1 = new system.controller.dao.Dao<QuizPartWithCategoryNames>("Um");
+      Dao<GameWithActualQuiz> dao0 = new Dao<GameWithActualQuiz>("Um");
+      Dao<QuizPartWithCategoryNames> dao1 = new Dao<QuizPartWithCategoryNames>("Um");
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       doReturn((LinkedList) null).when(mySQLDatabaseService0).getDataFromDatabase(anyString() , anySet());
-      Injector.inject(dao1, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(dao1, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao1, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
+      Injector.validateBean(dao1, (Class<?>) Dao.class);
       MySQLDatabaseService mySQLDatabaseService1 = dao1.databaseService;
-      Injector.inject(dao0, (Class<?>) system.controller.dao.Dao.class, "databaseService", (Object) mySQLDatabaseService1);
-      Injector.validateBean(dao0, (Class<?>) system.controller.dao.Dao.class);
+      Injector.inject(dao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService1);
+      Injector.validateBean(dao0, (Class<?>) Dao.class);
       // Undeclared exception!
       try { 
         dao0.getAll();

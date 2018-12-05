@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.Player;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class Player_ESTest extends Player_ESTest_scaffolding {
@@ -24,14 +23,14 @@ public class Player_ESTest extends Player_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player();
+      Player player0 = new Player();
       String string0 = player0.getName();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player();
+      Player player0 = new Player();
       player0.setName("CG1~MJ^^KY]i");
       String string0 = player0.getName();
       assertEquals("CG1~MJ^^KY]i", string0);
@@ -39,7 +38,7 @@ public class Player_ESTest extends Player_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player("");
+      Player player0 = new Player("");
       player0.setId((String) null);
       String string0 = player0.getId();
       assertNull(string0);
@@ -47,27 +46,27 @@ public class Player_ESTest extends Player_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player("", "");
+      Player player0 = new Player("", "");
       player0.setName("");
   }
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player();
+      Player player0 = new Player();
       String string0 = player0.getId();
       assertEquals("00000000-0100-4000-8200-000003000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player("", "");
+      Player player0 = new Player("", "");
       String string0 = player0.getId();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
-      system.model.games.Player player0 = new system.model.games.Player("", "");
+      Player player0 = new Player("", "");
       String string0 = player0.getName();
       assertEquals("", string0);
   }

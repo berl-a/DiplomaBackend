@@ -21,7 +21,7 @@ import static system.controller.Const.FREE_TEXT_ANSWER_CORRECTNESS;
 @Service
 public class GameService {
 
-    public static final int CODE_LENGTH = 1;
+    public static final int CODE_LENGTH = 4;
     public static final int NUMBER_OF_TRIES_TO_GENERATE_CODE = 100;
 
     @Autowired
@@ -176,11 +176,23 @@ public class GameService {
         QuestionType questionType = questionService.get(questionId).getQuestionType();
         if(questionType == QuestionType.SINGLE_CHOICE) {
             isAnswerCorrect = questionService.get(questionId).getCorrectAnswers().get(((SingleChoiceAnswer)answer).getAnswerIndex());
-            ((SingleChoiceAnswer) answer).setCorrect(isAnswerCorrect ? 1.0 : 0.0);
+            answer.setCorrect(isAnswerCorrect ? 1.0 : 0.0);
         } else if(questionType == QuestionType.FREE_TEXT) {
             isAnswerCorrect = false;
-            ((FreeTextAnswer) answer).setCorrect(FREE_TEXT_ANSWER_CORRECTNESS);
-        }//todo implement other types of questions
+            answer.setCorrect(FREE_TEXT_ANSWER_CORRECTNESS);
+        } else if(questionType == QuestionType.MULTIPLE_CHOICE) {
+            LinkedList<Boolean> correctAnswers = questionService.get(questionId).getCorrectAnswers();
+            LinkedList<Integer> playerAnswers = ((MultipleChoiceAnswer) answer).getAnswerIndexes();
+            int numberOfCorrectAnswers = (int) correctAnswers.stream().filter(val -> val).count();
+            int numberOfPlayerAnswers = playerAnswers.size();
+            double howCorrect;
+            howCorrect = (double)numberOfPlayerAnswers / (double) numberOfCorrectAnswers;
+            for(int playerAnswerIndex : playerAnswers)
+                if(!correctAnswers.get(playerAnswerIndex))
+                    howCorrect = 0.0;
+
+            answer.setCorrect(howCorrect);
+        }
         System.out.println("Answering in game service");
         System.out.println("How correct? " + answer.getCorrect());
         foundGame.getPlayersAnswers().get(playerAnswersIndex).addAnswer(questionId, answer);

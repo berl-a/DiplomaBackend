@@ -1,0 +1,388 @@
+@startuml
+
+title __SERVICE's Class Diagram__\n
+
+  package system.controller {
+    package system.controller.service {
+      class FilesService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} # executor : ExecutorService
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameArchiver_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class GameService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class PlayerService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+          + test14()
+          + test15()
+          + test16()
+          + test17()
+          + test18()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionGroupService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+          + test14()
+          + test15()
+          + test16()
+          + test17()
+          + test18()
+          + test19()
+          + test20()
+          + test21()
+          + test22()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuestionService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizGroupService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizPartService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizService_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+          + test14()
+          + test15()
+          + test16()
+          + test17()
+          + test18()
+          + test19()
+          + test20()
+          + test21()
+          + test22()
+          + test23()
+          + test24()
+          + test25()
+          + test26()
+          + test27()
+          + test28()
+          + test29()
+          + test30()
+          + test31()
+          + test32()
+          + test33()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class QuizService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class ResultService_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+          + test14()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class ResultService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class StartupService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.service {
+      class UserService_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

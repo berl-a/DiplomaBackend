@@ -23,9 +23,9 @@ tfoot input {
     background: url("../jpg/food-background.jpg");
 }
 
-.bg-playstation {
+/*.bg-playstation {
     background: url("https://www.toptal.com/designers/subtlepatterns/patterns/playstation-pattern.png");
-}
+}*/
 
 .bg-light-blue {
     background: rgba(10, 10, 240, .03);

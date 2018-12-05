@@ -13,7 +13,6 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
-import system.model.Result;
 import system.model.games.Game;
 import system.model.games.ListOfRealQuestions;
 import system.model.games.Player;
@@ -36,7 +35,7 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       result0.setTeacher("system.model.quizzes.Quiz");
       result0.getTeacher();
   }
@@ -45,14 +44,14 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   public void test03()  throws Throwable  {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList4 = result0.getPlayersPoints();
       LinkedList<Double> linkedList5 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result(quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
+      Result result1 = new Result(quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
       result1.getTeacher();
   }
 
@@ -60,20 +59,20 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   public void test04()  throws Throwable  {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(quiz0).toString();
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList4 = result0.getPlayersPoints();
       LinkedList<Double> linkedList5 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result("eT,E]g>b5X?$Gx:ek", quiz0, (Game) null, "eT,E]g>b5X?$Gx:ek", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
+      Result result1 = new Result("eT,E]g>b5X?$Gx:ek", quiz0, (Game) null, "eT,E]g>b5X?$Gx:ek", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
       result1.getRealQuiz();
   }
 
   @Test(timeout = 4000)
   public void test05()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       result0.setRealPlayers((LinkedList<Player>) null);
       result0.getRealPlayers();
   }
@@ -83,14 +82,14 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(game0).toString();
-      system.model.Result result0 = new system.model.Result("system.model.Result");
+      Result result0 = new Result("system.model.Result");
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList4 = result0.getPlayersPoints();
       LinkedList<Double> linkedList5 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result(quiz0, game0, ",E0\"(hd^X@i(}", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
+      Result result1 = new Result(quiz0, game0, ",E0\"(hd^X@i(}", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
       Game game1 = result1.getRealGame();
       assertSame(game1, game0);
   }
@@ -99,19 +98,19 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   public void test07()  throws Throwable  {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<Player> linkedList0 = result0.getRealPlayers();
       LinkedList<PlayerAnswers> linkedList1 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList2 = result0.getPlayersPoints();
       LinkedList<Double> linkedList3 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result("SK0kjm1*-", quiz0, game0, "SK0kjm1*-", (LinkedList<String>) null, linkedList0, (LinkedList<ListOfRealQuestions>) null, linkedList1, linkedList2, linkedList3);
+      Result result1 = new Result("SK0kjm1*-", quiz0, game0, "SK0kjm1*-", (LinkedList<String>) null, linkedList0, (LinkedList<ListOfRealQuestions>) null, linkedList1, linkedList2, linkedList3);
       LinkedList<ListOfRealQuestions> linkedList4 = result1.getQuestionsForPlayers();
       assertNull(linkedList4);
   }
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
       LinkedList<String> linkedList0 = result0.getPlayers();
@@ -119,20 +118,20 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<Double> linkedList4 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result(quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, (LinkedList<PlayerPoints>) null, linkedList4);
+      Result result1 = new Result(quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, (LinkedList<PlayerPoints>) null, linkedList4);
       LinkedList<PlayerPoints> linkedList5 = result1.getPlayersPoints();
       assertNull(linkedList5);
   }
 
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result("u4<f$~59hGTZ:}XJHX");
+      Result result0 = new Result("u4<f$~59hGTZ:}XJHX");
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList4 = result0.getPlayersPoints();
-      system.model.Result result1 = new system.model.Result((Quiz) null, (Game) null, "u4<f$~59hGTZ:}XJHX", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, (LinkedList<Double>) null);
+      Result result1 = new Result((Quiz) null, (Game) null, "u4<f$~59hGTZ:}XJHX", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, (LinkedList<Double>) null);
       LinkedList<Double> linkedList5 = result1.getPlayersPointSums();
       assertNull(linkedList5);
   }
@@ -140,13 +139,13 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerPoints> linkedList3 = result0.getPlayersPoints();
       LinkedList<Double> linkedList4 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result("system.model.quizzes.Quiz", quiz0, (Game) null, "[m)\"{n|`/;`_NQ'", linkedList0, linkedList1, linkedList2, (LinkedList<PlayerAnswers>) null, linkedList3, linkedList4);
+      Result result1 = new Result("system.model.quizzes.Quiz", quiz0, (Game) null, "[m)\"{n|`/;`_NQ'", linkedList0, linkedList1, linkedList2, (LinkedList<PlayerAnswers>) null, linkedList3, linkedList4);
       LinkedList<PlayerAnswers> linkedList5 = result1.getPlayersAnswers();
       assertNull(linkedList5);
   }
@@ -155,19 +154,19 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   public void test11()  throws Throwable  {
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       LinkedList<Player> linkedList0 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList1 = result0.getQuestionsForPlayers();
       LinkedList<PlayerPoints> linkedList2 = result0.getPlayersPoints();
       LinkedList<Double> linkedList3 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result(quiz0, game0, "A\"=*>M/\"J11xH", (LinkedList<String>) null, linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, linkedList2, linkedList3);
+      Result result1 = new Result(quiz0, game0, "A\"=*>M/\"J11xH", (LinkedList<String>) null, linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, linkedList2, linkedList3);
       LinkedList<String> linkedList4 = result1.getPlayers();
       assertNull(linkedList4);
   }
 
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result("");
+      Result result0 = new Result("");
       result0.setId((String) null);
       String string0 = result0.getId();
       assertNull(string0);
@@ -177,42 +176,42 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
   public void test13()  throws Throwable  {
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
-      system.model.Result result0 = new system.model.Result((String) null);
+      Result result0 = new Result((String) null);
       LinkedList<String> linkedList0 = result0.getPlayers();
       LinkedList<Player> linkedList1 = result0.getRealPlayers();
       LinkedList<ListOfRealQuestions> linkedList2 = result0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList3 = result0.getPlayersAnswers();
       LinkedList<PlayerPoints> linkedList4 = result0.getPlayersPoints();
       LinkedList<Double> linkedList5 = result0.getPlayersPointSums();
-      system.model.Result result1 = new system.model.Result("", quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
+      Result result1 = new Result("", quiz0, game0, "", linkedList0, linkedList1, linkedList2, linkedList3, linkedList4, linkedList5);
       String string0 = result1.getId();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test14()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       Quiz quiz0 = result0.getRealQuiz();
       assertNull(quiz0);
   }
 
   @Test(timeout = 4000)
   public void test15()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       String string0 = result0.getId();
       assertEquals("00000000-0100-4000-8200-000003000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test16()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       Game game0 = mock(Game.class, new ViolatedAssumptionAnswer());
       result0.setRealGame(game0);
   }
 
   @Test(timeout = 4000)
   public void test17()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<PlayerPoints> linkedList0 = result0.getPlayersPoints();
       result0.setPlayersPoints(linkedList0);
       assertEquals(0, linkedList0.size());
@@ -220,7 +219,7 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test18()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<String> linkedList0 = result0.getPlayers();
       result0.setPlayers(linkedList0);
       assertEquals(0, linkedList0.size());
@@ -228,14 +227,14 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test19()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       String string0 = result0.getTeacher();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test20()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<PlayerAnswers> linkedList0 = result0.getPlayersAnswers();
       result0.setPlayersAnswers(linkedList0);
       assertEquals(0, linkedList0.size());
@@ -243,27 +242,27 @@ public class Result_ESTest extends Result_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test21()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       result0.setQuestionsForPlayers((LinkedList<ListOfRealQuestions>) null);
   }
 
   @Test(timeout = 4000)
   public void test22()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       Game game0 = result0.getRealGame();
       assertNull(game0);
   }
 
   @Test(timeout = 4000)
   public void test23()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       Quiz quiz0 = mock(Quiz.class, new ViolatedAssumptionAnswer());
       result0.setRealQuiz(quiz0);
   }
 
   @Test(timeout = 4000)
   public void test24()  throws Throwable  {
-      system.model.Result result0 = new system.model.Result();
+      Result result0 = new Result();
       LinkedList<Double> linkedList0 = result0.getPlayersPointSums();
       result0.setPlayersPointSums(linkedList0);
       assertEquals(0, linkedList0.size());

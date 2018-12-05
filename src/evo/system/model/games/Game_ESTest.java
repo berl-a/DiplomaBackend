@@ -12,9 +12,6 @@ import java.util.LinkedList;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.Game;
-import system.model.games.ListOfQuestions;
-import system.model.games.PlayerAnswers;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class Game_ESTest extends Game_ESTest_scaffolding {
@@ -31,84 +28,84 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       LinkedList<String> linkedList1 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList2 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
+      Game game1 = new Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
       game1.getStartTime();
   }
 
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("");
+      Game game0 = new Game("");
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList2 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList0, linkedList1, linkedList2, (-1L), 690, (-963L), 0L);
+      Game game1 = new Game("", "", "", "", linkedList0, linkedList1, linkedList2, (-1L), 690, (-963L), 0L);
       game1.getStartTime();
   }
 
   @Test(timeout = 4000)
   public void test04()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList2 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
+      Game game1 = new Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
       game1.getQuiz();
   }
 
   @Test(timeout = 4000)
   public void test05()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       LinkedList<String> linkedList1 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList2 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
+      Game game1 = new Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
       game1.getQuiz();
   }
 
   @Test(timeout = 4000)
   public void test06()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game((String) null);
+      Game game0 = new Game((String) null);
       game0.setQuestionsForPlayers((LinkedList<ListOfQuestions>) null);
       game0.getQuestionsForPlayers();
   }
 
   @Test(timeout = 4000)
   public void test07()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       game0.addPlayer((String) null);
       game0.getQuestionsForPlayers();
   }
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("!B7?ny:,kRls9", "e'TthuH*8xjv@9Y", "e'TthuH*8xjv@9Y", "'Yeu+]-=e[aX3e", linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, (-1L), (-1123), (-1123), 0L);
+      Game game1 = new Game("!B7?ny:,kRls9", "e'TthuH*8xjv@9Y", "e'TthuH*8xjv@9Y", "'Yeu+]-=e[aX3e", linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, (-1L), (-1123), (-1123), 0L);
       game1.getPlayersAnswers();
   }
 
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.setPlayers((LinkedList<String>) null);
       game0.getPlayers();
   }
 
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.addPlayer("");
       game0.getPlayers();
   }
 
   @Test(timeout = 4000)
   public void test11()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.setOneQuestionTime(1756L);
       long long0 = game0.getOneQuestionTime();
       assertEquals(1756L, long0);
@@ -116,7 +113,7 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("`['wPy-N");
+      Game game0 = new Game("`['wPy-N");
       game0.setOneQuestionTime((-1L));
       long long0 = game0.getOneQuestionTime();
       assertEquals((-1L), long0);
@@ -124,39 +121,39 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test13()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       LinkedList<String> linkedList1 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList2 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
+      Game game1 = new Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
       int int0 = game1.getNumberOfQuestions();
       assertEquals(1507, int0);
   }
 
   @Test(timeout = 4000)
   public void test14()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList2 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
+      Game game1 = new Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
       int int0 = game1.getNumberOfQuestions();
       assertEquals((-1473), int0);
   }
 
   @Test(timeout = 4000)
   public void test15()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game((String) null);
+      Game game0 = new Game((String) null);
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<PlayerAnswers> linkedList1 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game((String) null, "&pjhyD{f1", "&pjhyD{f1", "-", linkedList0, (LinkedList<ListOfQuestions>) null, linkedList1, 0L, 497, 497, 1800L);
+      Game game1 = new Game((String) null, "&pjhyD{f1", "&pjhyD{f1", "-", linkedList0, (LinkedList<ListOfQuestions>) null, linkedList1, 0L, 497, 497, 1800L);
       String string0 = game1.getName();
       assertEquals("&pjhyD{f1", string0);
   }
 
   @Test(timeout = 4000)
   public void test16()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("wuJiVtiA7O=Oc<+}-8");
+      Game game0 = new Game("wuJiVtiA7O=Oc<+}-8");
       game0.setName("");
       String string0 = game0.getName();
       assertEquals("", string0);
@@ -164,7 +161,7 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test17()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game((String) null);
+      Game game0 = new Game((String) null);
       game0.setId((String) null);
       String string0 = game0.getId();
       assertNull(string0);
@@ -172,18 +169,18 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test18()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       LinkedList<String> linkedList1 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList2 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
+      Game game1 = new Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
       String string0 = game1.getId();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test19()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.setFullTime(1752L);
       long long0 = game0.getFullTime();
       assertEquals(1752L, long0);
@@ -191,42 +188,42 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test20()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("");
+      Game game0 = new Game("");
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList2 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList0, linkedList1, linkedList2, (-1L), 690, (-963L), 0L);
+      Game game1 = new Game("", "", "", "", linkedList0, linkedList1, linkedList2, (-1L), 690, (-963L), 0L);
       long long0 = game1.getFullTime();
       assertEquals((-1L), long0);
   }
 
   @Test(timeout = 4000)
   public void test21()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
       LinkedList<PlayerAnswers> linkedList2 = game0.getPlayersAnswers();
-      system.model.games.Game game1 = new system.model.games.Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
+      Game game1 = new Game("0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", "0?Elvio8=BlhX|S[S#", linkedList0, linkedList1, linkedList2, 0L, (-1473), 823L, (-1L));
       String string0 = game1.getCode();
       assertEquals("0?Elvio8=BlhX|S[S#", string0);
   }
 
   @Test(timeout = 4000)
   public void test22()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       LinkedList<String> linkedList1 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList2 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
+      Game game1 = new Game("", "", "", "", linkedList1, linkedList2, linkedList0, 0L, 1507, 631L, 1507);
       String string0 = game1.getCode();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test23()  throws Throwable  {
-      system.model.games.Game game0 = null;
+      Game game0 = null;
       try {
-        game0 = new system.model.games.Game((system.model.games.Game) null);
+        game0 = new Game((Game) null);
         fail("Expecting exception: NullPointerException");
       
       } catch(NullPointerException e) {
@@ -239,63 +236,63 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test24()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       long long0 = game0.getFullTime();
       assertEquals(0L, long0);
   }
 
   @Test(timeout = 4000)
   public void test25()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
-      system.model.games.Game game1 = new system.model.games.Game(game0);
+      Game game0 = new Game("U");
+      Game game1 = new Game(game0);
       assertFalse(game1.equals((Object)game0));
   }
 
   @Test(timeout = 4000)
   public void test26()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       String string0 = game0.getName();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test27()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.setCode("00000000-0100-4000-8200-000003000000");
   }
 
   @Test(timeout = 4000)
   public void test28()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       game0.setStartTime(0L);
   }
 
   @Test(timeout = 4000)
   public void test29()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       String string0 = game0.getId();
       assertEquals("00000000-0100-4000-8200-000003000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test30()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       int int0 = game0.getNumberOfQuestions();
       assertEquals(0, int0);
   }
 
   @Test(timeout = 4000)
   public void test31()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       game0.setQuiz("U");
   }
 
   @Test(timeout = 4000)
   public void test32()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("system.model.games.Game");
+      Game game0 = new Game("system.model.games.Game");
       LinkedList<String> linkedList0 = game0.getPlayers();
       LinkedList<ListOfQuestions> linkedList1 = game0.getQuestionsForPlayers();
-      system.model.games.Game game1 = new system.model.games.Game("", "", "system.model.games.ListOfQuestions", "", linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, 0L, 834, 0L, 3341L);
+      Game game1 = new Game("", "", "system.model.games.ListOfQuestions", "", linkedList0, linkedList1, (LinkedList<PlayerAnswers>) null, 0L, 834, 0L, 3341L);
       // Undeclared exception!
       try { 
         game1.addPlayer("&eZ)n%)ZtI6v}::<9l");
@@ -311,14 +308,14 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test33()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       long long0 = game0.getStartTime();
       assertEquals(0L, long0);
   }
 
   @Test(timeout = 4000)
   public void test34()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       game0.setPlayersAnswers(linkedList0);
       assertEquals(0, linkedList0.size());
@@ -326,7 +323,7 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test35()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       game0.addPlayer((String) null);
       LinkedList<PlayerAnswers> linkedList0 = game0.getPlayersAnswers();
       assertEquals(1, linkedList0.size());
@@ -334,28 +331,28 @@ public class Game_ESTest extends Game_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test36()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       long long0 = game0.getOneQuestionTime();
       assertEquals(0L, long0);
   }
 
   @Test(timeout = 4000)
   public void test37()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       String string0 = game0.getCode();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test38()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game();
+      Game game0 = new Game();
       String string0 = game0.getQuiz();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test39()  throws Throwable  {
-      system.model.games.Game game0 = new system.model.games.Game("U");
+      Game game0 = new Game("U");
       game0.setNumberOfQuestions(679);
   }
 }

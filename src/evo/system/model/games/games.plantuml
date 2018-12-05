@@ -1,0 +1,373 @@
+@startuml
+
+title __GAMES's Class Diagram__\n
+
+  package system.model {
+    package system.model.games {
+      class FreeTextAnswer_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+          + test8()
+          + test9()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class FreeTextAnswer_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class GameToolkit_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Game_ESTest {
+          + test00()
+          + test01()
+          + test02()
+          + test03()
+          + test04()
+          + test05()
+          + test06()
+          + test07()
+          + test08()
+          + test09()
+          + test10()
+          + test11()
+          + test12()
+          + test13()
+          + test14()
+          + test15()
+          + test16()
+          + test17()
+          + test18()
+          + test19()
+          + test20()
+          + test21()
+          + test22()
+          + test23()
+          + test24()
+          + test25()
+          + test26()
+          + test27()
+          + test28()
+          + test29()
+          + test30()
+          + test31()
+          + test32()
+          + test33()
+          + test34()
+          + test35()
+          + test36()
+          + test37()
+          + test38()
+          + test39()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Game_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfQuestions_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfQuestions_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfRealQuestions_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class ListOfRealQuestions_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class MultipleChoiceAnswer_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class MultipleChoiceAnswer_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerAnswers_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerAnswers_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerPoints_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class PlayerPoints_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Player_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class Player_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class SingleChoiceAnswer_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+          + test8()
+      }
+    }
+  }
+  
+
+  package system.model {
+    package system.model.games {
+      class SingleChoiceAnswer_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  FreeTextAnswer_ESTest -up-|> FreeTextAnswer_ESTest_scaffolding
+  Game_ESTest -up-|> Game_ESTest_scaffolding
+  ListOfQuestions_ESTest -up-|> ListOfQuestions_ESTest_scaffolding
+  ListOfRealQuestions_ESTest -up-|> ListOfRealQuestions_ESTest_scaffolding
+  MultipleChoiceAnswer_ESTest -up-|> MultipleChoiceAnswer_ESTest_scaffolding
+  PlayerAnswers_ESTest -up-|> PlayerAnswers_ESTest_scaffolding
+  PlayerPoints_ESTest -up-|> PlayerPoints_ESTest_scaffolding
+  Player_ESTest -up-|> Player_ESTest_scaffolding
+  SingleChoiceAnswer_ESTest -up-|> SingleChoiceAnswer_ESTest_scaffolding
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

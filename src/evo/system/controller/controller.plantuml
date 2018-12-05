@@ -1,0 +1,315 @@
+@startuml
+
+title __CONTROLLER's Class Diagram__\n
+
+  package system.controller {
+    class Const_ESTest {
+        + test0()
+    }
+  }
+  
+
+  package system.controller {
+    class Const_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionController_ESTest {
+        + test00()
+        + test01()
+        + test02()
+        + test03()
+        + test04()
+        + test05()
+        + test06()
+        + test07()
+        + test08()
+        + test09()
+        + test10()
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - initMocksToAvoidTimeoutsInTheTests()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionGroupController_ESTest {
+        + test0()
+        + test1()
+        + test2()
+        + test3()
+        + test4()
+        + test5()
+        + test6()
+        + test7()
+    }
+  }
+  
+
+  package system.controller {
+    class QuestionGroupController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - initMocksToAvoidTimeoutsInTheTests()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizController_ESTest {
+        + test00()
+        + test01()
+        + test02()
+        + test03()
+        + test04()
+        + test05()
+        + test06()
+        + test07()
+        + test08()
+        + test09()
+        + test10()
+        + test11()
+        + test12()
+        + test13()
+        + test14()
+        + test15()
+        + test16()
+        + test17()
+        + test18()
+        + test19()
+        + test20()
+        + test21()
+        + test22()
+        + test23()
+        + test24()
+        + test25()
+        + test26()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - initMocksToAvoidTimeoutsInTheTests()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizGroupController_ESTest {
+        + test0()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizGroupController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizPartController_ESTest {
+        + test0()
+        + test1()
+        + test2()
+        + test3()
+        + test4()
+        + test5()
+        + test6()
+        + test7()
+        + test8()
+    }
+  }
+  
+
+  package system.controller {
+    class QuizPartController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - initMocksToAvoidTimeoutsInTheTests()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class ResultController_ESTest {
+        + test0()
+        + test1()
+        + test2()
+        + test3()
+        + test4()
+        + test5()
+        + test6()
+        + test7()
+    }
+  }
+  
+
+  package system.controller {
+    class ResultController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController_ESTest {
+        + test0()
+        + test1()
+        + test2()
+        + test3()
+        + test4()
+        + test5()
+    }
+  }
+  
+
+  package system.controller {
+    class SiteController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  package system.controller {
+    class UserController_ESTest {
+        + test00()
+        + test01()
+        + test02()
+        + test03()
+        + test04()
+        + test05()
+        + test06()
+        + test07()
+        + test08()
+        + test09()
+        + test10()
+        + test11()
+        + test12()
+        + test13()
+        + test14()
+        + test15()
+        + test16()
+        + test17()
+    }
+  }
+  
+
+  package system.controller {
+    class UserController_ESTest_scaffolding {
+        + nfr : NonFunctionalRequirementRule
+        {static} - defaultProperties : Properties
+        - threadStopper : ThreadStopper
+        {static} + initEvoSuiteFramework()
+        {static} + clearEvoSuiteFramework()
+        + initTestCase()
+        + doneWithTestCase()
+        {static} + setSystemProperties()
+        {static} - initializeClasses()
+        {static} - initMocksToAvoidTimeoutsInTheTests()
+        {static} - resetClasses()
+    }
+  }
+  
+
+  Const_ESTest -up-|> Const_ESTest_scaffolding
+  QuestionController_ESTest -up-|> QuestionController_ESTest_scaffolding
+  QuestionGroupController_ESTest -up-|> QuestionGroupController_ESTest_scaffolding
+  QuizController_ESTest -up-|> QuizController_ESTest_scaffolding
+  QuizGroupController_ESTest -up-|> QuizGroupController_ESTest_scaffolding
+  QuizPartController_ESTest -up-|> QuizPartController_ESTest_scaffolding
+  ResultController_ESTest -up-|> ResultController_ESTest_scaffolding
+  SiteController_ESTest -up-|> SiteController_ESTest_scaffolding
+  UserController_ESTest -up-|> UserController_ESTest_scaffolding
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

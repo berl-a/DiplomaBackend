@@ -58,7 +58,7 @@ function populatePageWithQuestion(index) {
 	// console.log(question);
 	console.log("question is");
 	console.log(question);
-	if(typeof question == "undefined") {
+	if(typeof question === "undefined") {
 		return;
 	}
 
@@ -150,41 +150,53 @@ function onAnswerButtonClick() {
 	            }
 		    });
 		}
-	} else if(currQuestionType == "MULTIPLE_CHOICE") {
+	} else if(currQuestionType === "MULTIPLE_CHOICE") {
 		var answer = $this.attr("class")[$this.attr("class").indexOf("answer-") + 7];
-		console.log("answer #" + answer);
+		// console.log("answer #" + answer);
 		$this.toggleClass("selected");
 	}
 }
 
 function onSubmitButtonClick() {
 	var $this = $(this);
+	var answerAsString;
 	if (currQuestionType === "FREE_TEXT") {
 		var answer = $('textarea.answer-text').val();
 		console.log("answer is " + answer);
-		if(!answeredThisQuestion) {
-			$.ajax({
-	            type: "POST",
-	            url: "http://127.0.0.1:80/games/answerQuestion?" + 
-	            "gameId=" + gameId + 
-	            "&playerId=" + playerId + 
-	            "&questionId=" + questions[currQuestionIndex].id + 
-	            "&questionType=" + currQuestionType+
-	            "&answerAsString=" + answer,
-	            dataType: 'json',
-	            contentType: 'application/json',
-	            success: function (stringData) {
-	                // console.log(stringData);
-	                timeLeft = stringData.result.time_left;
-	                refreshEndGameTimeout();
-
-	                answeredThisQuestion = true;
-	            	setTimeout(nextQuestion, 500);
-	            }
-		    });
-		}
+		answerAsString = answer;
+		
 	} else if(currQuestionType === "MULTIPLE_CHOICE") {
-		var selectedAnswers = 
+		var answerIndexes = [];
+		$('.answer').each(function(el) {
+			if($(this).attr("class").indexOf("selected") !== -1) {
+				answerIndexes.push($(this).attr("class")[$(this).attr("class").indexOf("answer-") + 7]);
+			}
+		})
+		console.log("answer indexes are " + answerIndexes);
+		console.log("and joined: " + answerIndexes.join());
+		answerAsString = answerIndexes.join();
+	}
+	console.log("answer as string is " + answerAsString);
+	if(!answeredThisQuestion) {
+		$.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:80/games/answerQuestion?" + 
+            "gameId=" + gameId + 
+            "&playerId=" + playerId + 
+            "&questionId=" + questions[currQuestionIndex].id + 
+            "&questionType=" + currQuestionType+
+            "&answerAsString=" + answerAsString,
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (stringData) {
+                // console.log(stringData);
+                timeLeft = stringData.result.time_left;
+                refreshEndGameTimeout();
+
+                answeredThisQuestion = true;
+            	setTimeout(nextQuestion, 500);
+            }
+	    });
 	}
 }
 

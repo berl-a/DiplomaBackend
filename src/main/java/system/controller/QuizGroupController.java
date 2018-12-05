@@ -42,6 +42,7 @@ public class QuizGroupController {
     @RequestMapping(value="/remove", method = RequestMethod.POST)
     public @ResponseBody
     Response remove(@RequestBody String id) {
+        System.out.println("Removing quizgroup with id " + id);
         id = id.substring(0, id.length() - 1);
         Response resp = new Response();
         String result = service.remove(id);

@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.SingleChoiceAnswer;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffolding {
@@ -29,7 +28,7 @@ public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffol
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       Double double0 = new Double(0);
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer(0, double0);
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer(0, double0);
       Double double1 = new Double((-2831.06));
       singleChoiceAnswer0.setCorrect(double1);
       Double double2 = singleChoiceAnswer0.getCorrect();
@@ -38,7 +37,7 @@ public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer(1951, (Double) null);
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer(1951, (Double) null);
       Double double0 = new Double(0.0);
       singleChoiceAnswer0.setCorrect(double0);
       Double double1 = singleChoiceAnswer0.getCorrect();
@@ -47,7 +46,7 @@ public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer(0);
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer(0);
       Double double0 = new Double(619.6129447);
       singleChoiceAnswer0.setCorrect(double0);
       Double double1 = singleChoiceAnswer0.getCorrect();
@@ -56,14 +55,14 @@ public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer(0);
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer(0);
       int int0 = singleChoiceAnswer0.getAnswerIndex();
       assertEquals(0, int0);
   }
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer(0);
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer(0);
       singleChoiceAnswer0.setAnswerIndex(1668);
       int int0 = singleChoiceAnswer0.getAnswerIndex();
       assertEquals(1668, int0);
@@ -71,14 +70,14 @@ public class SingleChoiceAnswer_ESTest extends SingleChoiceAnswer_ESTest_scaffol
 
   @Test(timeout = 4000)
   public void test7()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer((-436));
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer((-436));
       Double double0 = singleChoiceAnswer0.getCorrect();
       assertNull(double0);
   }
 
   @Test(timeout = 4000)
   public void test8()  throws Throwable  {
-      system.model.games.SingleChoiceAnswer singleChoiceAnswer0 = new system.model.games.SingleChoiceAnswer((-436));
+      SingleChoiceAnswer singleChoiceAnswer0 = new SingleChoiceAnswer((-436));
       int int0 = singleChoiceAnswer0.getAnswerIndex();
       assertEquals((-436), int0);
   }

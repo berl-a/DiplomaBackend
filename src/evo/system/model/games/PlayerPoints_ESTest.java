@@ -11,7 +11,6 @@ import java.util.LinkedList;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.PlayerPoints;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class PlayerPoints_ESTest extends PlayerPoints_ESTest_scaffolding {
@@ -29,18 +28,18 @@ public class PlayerPoints_ESTest extends PlayerPoints_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.model.games.PlayerPoints playerPoints0 = new system.model.games.PlayerPoints((LinkedList<Double>) null);
+      PlayerPoints playerPoints0 = new PlayerPoints((LinkedList<Double>) null);
   }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.PlayerPoints playerPoints0 = new system.model.games.PlayerPoints();
+      PlayerPoints playerPoints0 = new PlayerPoints();
       playerPoints0.setPoints((LinkedList<Double>) null);
   }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.PlayerPoints playerPoints0 = new system.model.games.PlayerPoints();
+      PlayerPoints playerPoints0 = new PlayerPoints();
       LinkedList<Double> linkedList0 = playerPoints0.getPoints();
       assertNull(linkedList0);
   }

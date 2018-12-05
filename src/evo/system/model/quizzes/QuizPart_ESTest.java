@@ -11,7 +11,6 @@ import static org.evosuite.runtime.EvoAssertions.*;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.quizzes.QuizPart;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
@@ -30,21 +29,21 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test02()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
+      QuizPart quizPart0 = new QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
       String string0 = quizPart0.getSubsubcategory();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test03()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
+      QuizPart quizPart0 = new QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
       String string0 = quizPart0.getSubcategory();
       assertEquals("'3A1I)<PiBCYU>", string0);
   }
 
   @Test(timeout = 4000)
   public void test04()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
+      QuizPart quizPart0 = new QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
       String string0 = quizPart0.getSubcategory();
       assertNotNull(string0);
       assertEquals("", string0);
@@ -52,56 +51,56 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test05()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.getQuiz();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test06()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("UcN03G#0JoHO^U!ric8", "UcN03G#0JoHO^U!ric8", "", (-534), (-534), "", "O-wNm-mZ{%c", "UcN03G#0JoHO^U!ric8");
+      QuizPart quizPart0 = new QuizPart("UcN03G#0JoHO^U!ric8", "UcN03G#0JoHO^U!ric8", "", (-534), (-534), "", "O-wNm-mZ{%c", "UcN03G#0JoHO^U!ric8");
       String string0 = quizPart0.getQuiz();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test07()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
+      QuizPart quizPart0 = new QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
       int int0 = quizPart0.getOrder();
       assertEquals(1, int0);
   }
 
   @Test(timeout = 4000)
   public void test08()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       int int0 = quizPart0.getNumber();
       assertEquals(0, int0);
   }
 
   @Test(timeout = 4000)
   public void test09()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
+      QuizPart quizPart0 = new QuizPart("$}:0W([;uWWAXc\";'-U", (String) null, 1, 1, "Hc<V", "", "Hc<V");
       int int0 = quizPart0.getNumber();
       assertEquals(1, int0);
   }
 
   @Test(timeout = 4000)
   public void test10()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.getName();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test11()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("l^&g@", "g!lH8", (-2922), (-1782), "g!lH8", "l^&g@", "l^&g@");
+      QuizPart quizPart0 = new QuizPart("l^&g@", "g!lH8", (-2922), (-1782), "g!lH8", "l^&g@", "l^&g@");
       String string0 = quizPart0.getName();
       assertEquals("l^&g@", string0);
   }
 
   @Test(timeout = 4000)
   public void test12()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
+      QuizPart quizPart0 = new QuizPart("'3A1I)<PiBCYU>", "", "", (-503), 0, "", "'3A1I)<PiBCYU>", "");
       quizPart0.setId((String) null);
       String string0 = quizPart0.getId();
       assertNull(string0);
@@ -109,7 +108,7 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test13()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setId("");
       String string0 = quizPart0.getId();
       assertEquals("", string0);
@@ -117,23 +116,23 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test14()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("system.model.quizzes.QuizPart", "system.model.quizzes.QuizPart", "UU)", 0, 0, "UU)", "system.model.quizzes.QuizPart", "system.model.quizzes.QuizPart");
+      QuizPart quizPart0 = new QuizPart("system.model.quizzes.QuizPart", "system.model.quizzes.QuizPart", "UU)", 0, 0, "UU)", "system.model.quizzes.QuizPart", "system.model.quizzes.QuizPart");
       String string0 = quizPart0.getCategory();
       assertEquals("UU)", string0);
   }
 
   @Test(timeout = 4000)
   public void test15()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("F+S&4", "", "", 0, 0, "", "", "");
+      QuizPart quizPart0 = new QuizPart("F+S&4", "", "", 0, 0, "", "", "");
       String string0 = quizPart0.getCategory();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test16()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = null;
+      QuizPart quizPart0 = null;
       try {
-        quizPart0 = new system.model.quizzes.QuizPart((system.model.quizzes.QuizPart) null);
+        quizPart0 = new QuizPart((QuizPart) null);
         fail("Expecting exception: NullPointerException");
       
       } catch(NullPointerException e) {
@@ -146,40 +145,40 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test17()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
-      system.model.quizzes.QuizPart quizPart1 = new system.model.quizzes.QuizPart(quizPart0);
+      QuizPart quizPart0 = new QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
+      QuizPart quizPart1 = new QuizPart(quizPart0);
       assertFalse(quizPart1.equals((Object)quizPart0));
   }
 
   @Test(timeout = 4000)
   public void test18()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setCategory((String) null);
   }
 
   @Test(timeout = 4000)
   public void test19()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.getSubcategory();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test20()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setQuiz("shZ~LcZe");
   }
 
   @Test(timeout = 4000)
   public void test21()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.getSubsubcategory();
       assertNull(string0);
   }
 
   @Test(timeout = 4000)
   public void test22()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setOrder((-3910));
       int int0 = quizPart0.getOrder();
       assertEquals((-3910), int0);
@@ -187,27 +186,27 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test23()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("", "", (-143), (-143), "", "", "");
+      QuizPart quizPart0 = new QuizPart("", "", (-143), (-143), "", "", "");
       int int0 = quizPart0.getNumber();
       assertEquals((-143), int0);
   }
 
   @Test(timeout = 4000)
   public void test24()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
+      QuizPart quizPart0 = new QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
       quizPart0.setName("%9>t+~Q9j2)+LuF:/u6");
   }
 
   @Test(timeout = 4000)
   public void test25()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       int int0 = quizPart0.getOrder();
       assertEquals(0, int0);
   }
 
   @Test(timeout = 4000)
   public void test26()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setSubsubcategory("04000000-0500-4000-8600-000007000000");
       String string0 = quizPart0.getSubsubcategory();
       assertEquals("04000000-0500-4000-8600-000007000000", string0);
@@ -215,47 +214,47 @@ public class QuizPart_ESTest extends QuizPart_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test27()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
+      QuizPart quizPart0 = new QuizPart("%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", (-2216), (-2216), "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6", "%9>t+~Q9j2)+LuF:/u6");
       String string0 = quizPart0.getQuiz();
       assertEquals("%9>t+~Q9j2)+LuF:/u6", string0);
   }
 
   @Test(timeout = 4000)
   public void test28()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("", "", (-143), (-143), "", "", "");
+      QuizPart quizPart0 = new QuizPart("", "", (-143), (-143), "", "", "");
       String string0 = quizPart0.getName();
       assertEquals("", string0);
   }
 
   @Test(timeout = 4000)
   public void test29()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.changeId();
       assertEquals("04000000-0500-4000-8600-000007000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test30()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setSubcategory((String) null);
   }
 
   @Test(timeout = 4000)
   public void test31()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       quizPart0.setNumber((-3910));
   }
 
   @Test(timeout = 4000)
   public void test32()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart("", "", (-143), (-143), "", "", "");
+      QuizPart quizPart0 = new QuizPart("", "", (-143), (-143), "", "", "");
       String string0 = quizPart0.getId();
       assertEquals("00000000-0100-4000-8200-000003000000", string0);
   }
 
   @Test(timeout = 4000)
   public void test33()  throws Throwable  {
-      system.model.quizzes.QuizPart quizPart0 = new system.model.quizzes.QuizPart();
+      QuizPart quizPart0 = new QuizPart();
       String string0 = quizPart0.getCategory();
       assertNull(string0);
   }

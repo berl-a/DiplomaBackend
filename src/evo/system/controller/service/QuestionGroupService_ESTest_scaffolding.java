@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.evosuite.runtime.sandbox.Sandbox;
-import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
 
 import static org.evosuite.shaded.org.mockito.Mockito.*;
 @EvoSuiteClassExclude
@@ -106,7 +105,7 @@ public class QuestionGroupService_ESTest_scaffolding {
     );
   } 
   private static void initMocksToAvoidTimeoutsInTheTests() throws ClassNotFoundException { 
-    mock(Class.forName("system.controller.dao.QuestionGroupDao", false, QuestionGroupService_ESTest_scaffolding.class.getClassLoader()));
+    mock(Class.forName("system.model.dao.QuestionGroupDao", false, QuestionGroupService_ESTest_scaffolding.class.getClassLoader()));
     mock(Class.forName("system.controller.service.QuestionService", false, QuestionGroupService_ESTest_scaffolding.class.getClassLoader()));
     mock(Class.forName("system.controller.simple_frontend_models.QuestionGroupWithNumberOfQuestions", false, QuestionGroupService_ESTest_scaffolding.class.getClassLoader()));
     mock(Class.forName("system.model.questions.QuestionGroup", false, QuestionGroupService_ESTest_scaffolding.class.getClassLoader()));

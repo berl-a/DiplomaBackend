@@ -11,7 +11,6 @@ import java.util.LinkedList;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.junit.runner.RunWith;
-import system.model.games.ListOfRealQuestions;
 import system.model.questions.Question;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
@@ -31,19 +30,19 @@ public class ListOfRealQuestions_ESTest extends ListOfRealQuestions_ESTest_scaff
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.model.games.ListOfRealQuestions listOfRealQuestions0 = new system.model.games.ListOfRealQuestions();
+      ListOfRealQuestions listOfRealQuestions0 = new ListOfRealQuestions();
       LinkedList<Question> linkedList0 = listOfRealQuestions0.getQuestions();
       assertNull(linkedList0);
   }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.ListOfRealQuestions listOfRealQuestions0 = new system.model.games.ListOfRealQuestions();
+      ListOfRealQuestions listOfRealQuestions0 = new ListOfRealQuestions();
       listOfRealQuestions0.setQuestions((LinkedList<Question>) null);
   }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.ListOfRealQuestions listOfRealQuestions0 = new system.model.games.ListOfRealQuestions((LinkedList<Question>) null);
+      ListOfRealQuestions listOfRealQuestions0 = new ListOfRealQuestions((LinkedList<Question>) null);
   }
 }

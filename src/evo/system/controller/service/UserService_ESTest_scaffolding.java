@@ -12,7 +12,6 @@ import org.junit.Before;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.evosuite.runtime.sandbox.Sandbox;
-import org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
 
 import static org.evosuite.shaded.org.mockito.Mockito.*;
 @EvoSuiteClassExclude
@@ -121,7 +120,7 @@ public class UserService_ESTest_scaffolding {
     );
   } 
   private static void initMocksToAvoidTimeoutsInTheTests() throws ClassNotFoundException { 
-    mock(Class.forName("system.controller.dao.UserDao", false, UserService_ESTest_scaffolding.class.getClassLoader()));
+    mock(Class.forName("system.model.dao.UserDao", false, UserService_ESTest_scaffolding.class.getClassLoader()));
     mock(Class.forName("system.controller.service.database.MySQLDatabaseService", false, UserService_ESTest_scaffolding.class.getClassLoader()));
   }
 

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuizWithCategoryNames;
-import system.controller.dao.QuizDao;
+import system.model.dao.QuizDao;
 import system.model.QuizGroupType;
 import system.model.questions.Question;
 import system.model.quizzes.Quiz;
@@ -68,7 +68,7 @@ public class QuizService {
 
     public String remove(String id) {
         updateCached();
-//        System.out.println("Removing quiz with id " + id);
+        System.out.println("Removing quiz with id " + id);
         dao.remove(id);
         return Const.OK_RESULT;
     }
@@ -77,10 +77,11 @@ public class QuizService {
         updateCached();
         LinkedList<Quiz> quizzesFromGroup = cachedQuizzes
                 .stream()
-                .filter(q ->
-                        quizGroupId.equals(q.getCategory()) ||
+                .filter(q -> q != null &&
+                        (quizGroupId.equals(q.getCategory()) ||
                                 quizGroupId.equals(q.getSubcategory()) ||
                                 quizGroupId.equals(q.getSubsubcategory())
+                        )
                 )
                 .collect(Collectors.toCollection(LinkedList::new));
         quizzesFromGroup.forEach(q -> remove(q.getId()));

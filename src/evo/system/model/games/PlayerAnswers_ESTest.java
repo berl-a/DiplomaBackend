@@ -14,9 +14,6 @@ import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.junit.runner.RunWith;
-import system.model.games.Answer;
-import system.model.games.MultipleChoiceAnswer;
-import system.model.games.PlayerAnswers;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class PlayerAnswers_ESTest extends PlayerAnswers_ESTest_scaffolding {
@@ -35,7 +32,7 @@ public class PlayerAnswers_ESTest extends PlayerAnswers_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.model.games.PlayerAnswers playerAnswers0 = new system.model.games.PlayerAnswers();
+      PlayerAnswers playerAnswers0 = new PlayerAnswers();
       playerAnswers0.setAnswers((HashMap<String, Answer>) null);
       HashMap<String, Answer> hashMap0 = playerAnswers0.getAnswers();
       assertNull(hashMap0);
@@ -43,7 +40,7 @@ public class PlayerAnswers_ESTest extends PlayerAnswers_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {
-      system.model.games.PlayerAnswers playerAnswers0 = new system.model.games.PlayerAnswers();
+      PlayerAnswers playerAnswers0 = new PlayerAnswers();
       Answer answer0 = mock(Answer.class, new ViolatedAssumptionAnswer());
       doReturn("1sy.yl{@Wmq").when(answer0).toString();
       playerAnswers0.addAnswer("1sy.yl{@Wmq", answer0);
@@ -53,7 +50,7 @@ public class PlayerAnswers_ESTest extends PlayerAnswers_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {
-      system.model.games.PlayerAnswers playerAnswers0 = new system.model.games.PlayerAnswers();
+      PlayerAnswers playerAnswers0 = new PlayerAnswers();
       playerAnswers0.setAnswers((HashMap<String, Answer>) null);
       Answer answer0 = mock(Answer.class, new ViolatedAssumptionAnswer());
       // Undeclared exception!
@@ -71,7 +68,7 @@ public class PlayerAnswers_ESTest extends PlayerAnswers_ESTest_scaffolding {
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
-      system.model.games.PlayerAnswers playerAnswers0 = new system.model.games.PlayerAnswers();
+      PlayerAnswers playerAnswers0 = new PlayerAnswers();
       HashMap<String, Answer> hashMap0 = playerAnswers0.getAnswers();
       playerAnswers0.setAnswers(hashMap0);
       assertEquals(0, hashMap0.size());

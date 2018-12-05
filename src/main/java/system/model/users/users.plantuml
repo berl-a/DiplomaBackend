@@ -3,46 +3,52 @@
 title __USERS's Class Diagram__\n
 
   package system.model {
-    package system.model.users {
-      interface IUser {
-          {abstract} + getId()
-          {abstract} + getLogin()
-          {abstract} + getHash()
-          {abstract} + getType()
+    package system.model.classes {
+      package system.model.classes.users {
+        interface IUser {
+            {abstract} + getId()
+            {abstract} + getLogin()
+            {abstract} + getHash()
+            {abstract} + getType()
+        }
       }
     }
   }
   
 
   package system.model {
-    package system.model.users {
-      class User {
-          - id : String
-          - login : String
-          - hash : String
-          + User()
-          + User()
-          + User()
-          + User()
-          + changeId()
-          + getId()
-          + setId()
-          + getLogin()
-          + setLogin()
-          + getHash()
-          + setHash()
-          + getType()
-          + setType()
+    package system.model.classes {
+      package system.model.classes.users {
+        class User {
+            - id : String
+            - login : String
+            - hash : String
+            + User()
+            + User()
+            + User()
+            + User()
+            + changeId()
+            + getId()
+            + setId()
+            + getLogin()
+            + setLogin()
+            + getHash()
+            + setHash()
+            + getType()
+            + setType()
+        }
       }
     }
   }
   
 
   package system.model {
-    package system.model.users {
-      enum UserType {
-        TEACHER
-        ADMINISTRATOR
+    package system.model.classes {
+      package system.model.classes.users {
+        enum UserType {
+          TEACHER
+          ADMINISTRATOR
+        }
       }
     }
   }

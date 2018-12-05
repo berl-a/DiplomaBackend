@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuizPartWithCategoryNames;
-import system.controller.dao.QuizPartDao;
+import system.model.dao.QuizPartDao;
 import system.model.questions.QuestionGroup;
 import system.model.questions.QuestionGroupType;
 import system.model.quizzes.QuizPart;
@@ -65,7 +65,7 @@ public class QuizPartService {
         LinkedList<QuizPart> quizPartsFromQuiz =
                 cached
                         .stream()
-                        .filter(q -> quizId.equals(q.getQuiz()))
+                        .filter(q -> q != null && quizId.equals(q.getQuiz()))
                         .collect(Collectors.toCollection(LinkedList::new));
         return quizPartsFromQuiz;
     }
@@ -87,7 +87,7 @@ public class QuizPartService {
         LinkedList<QuizPart> quizzesByTeacher =
                 cached
                         .stream()
-                        .filter(q -> quizId.equals(q.getQuiz()))
+                        .filter(q -> q != null && quizId.equals(q.getQuiz()))
                         .collect(Collectors.toCollection(LinkedList::new));
         return appendCatNamesToQuizParts(quizzesByTeacher);
     }

@@ -1,7 +1,7 @@
 package system.model.users;
 
 import system.controller.tools.DataToolkit;
-import system.controller.dao.Idable;
+import system.model.dao.Idable;
 
 public class User implements IUser, Idable{
 

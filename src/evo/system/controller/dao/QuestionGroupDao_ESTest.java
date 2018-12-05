@@ -13,10 +13,10 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 import org.evosuite.runtime.javaee.injection.Injector;
 import org.junit.runner.RunWith;
-import system.controller.dao.Dao;
-import system.controller.dao.QuestionGroupDao;
 import system.controller.service.database.MySQLDatabaseService;
 import system.model.questions.QuestionGroup;
+import system.model.dao.Dao;
+import system.model.dao.QuestionGroupDao;
 
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
 public class QuestionGroupDao_ESTest extends QuestionGroupDao_ESTest_scaffolding {
@@ -35,10 +35,10 @@ public class QuestionGroupDao_ESTest extends QuestionGroupDao_ESTest_scaffolding
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
-      system.controller.dao.QuestionGroupDao questionGroupDao0 = new system.controller.dao.QuestionGroupDao();
+      QuestionGroupDao questionGroupDao0 = new QuestionGroupDao();
       MySQLDatabaseService mySQLDatabaseService0 = mock(MySQLDatabaseService.class, new ViolatedAssumptionAnswer());
       Injector.inject(questionGroupDao0, (Class<?>) Dao.class, "databaseService", (Object) mySQLDatabaseService0);
-      Injector.validateBean(questionGroupDao0, (Class<?>) system.controller.dao.QuestionGroupDao.class);
+      Injector.validateBean(questionGroupDao0, (Class<?>) QuestionGroupDao.class);
       assertFalse(Dao.SQLITE_NOT_MYSQL);
   }
 }

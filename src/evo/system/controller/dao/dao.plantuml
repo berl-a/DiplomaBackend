@@ -1,0 +1,304 @@
+@startuml
+
+title __DAO's Class Diagram__\n
+
+  package system.controller {
+    package system.controller.dao {
+      class Dao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+          + test8()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class Dao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class PlayerDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+          + test3()
+          + test4()
+          + test5()
+          + test6()
+          + test7()
+          + test8()
+          + test9()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class PlayerDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionGroupDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuestionGroupDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizGroupDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizGroupDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizPartDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class QuizPartDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class ResultDao_ESTest {
+          + test0()
+          + test1()
+          + test2()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class ResultDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class UserDao_ESTest {
+          + test0()
+          + test1()
+      }
+    }
+  }
+  
+
+  package system.controller {
+    package system.controller.dao {
+      class UserDao_ESTest_scaffolding {
+          + nfr : NonFunctionalRequirementRule
+          {static} - defaultProperties : Properties
+          - threadStopper : ThreadStopper
+          {static} + initEvoSuiteFramework()
+          {static} + clearEvoSuiteFramework()
+          + initTestCase()
+          + doneWithTestCase()
+          {static} + setSystemProperties()
+          {static} - initializeClasses()
+          {static} - initMocksToAvoidTimeoutsInTheTests()
+          {static} - resetClasses()
+      }
+    }
+  }
+  
+
+  Dao_ESTest -up-|> Dao_ESTest_scaffolding
+  PlayerDao_ESTest -up-|> PlayerDao_ESTest_scaffolding
+  QuestionDao_ESTest -up-|> QuestionDao_ESTest_scaffolding
+  QuestionGroupDao_ESTest -up-|> QuestionGroupDao_ESTest_scaffolding
+  QuizDao_ESTest -up-|> QuizDao_ESTest_scaffolding
+  QuizGroupDao_ESTest -up-|> QuizGroupDao_ESTest_scaffolding
+  QuizPartDao_ESTest -up-|> QuizPartDao_ESTest_scaffolding
+  ResultDao_ESTest -up-|> ResultDao_ESTest_scaffolding
+  UserDao_ESTest -up-|> UserDao_ESTest_scaffolding
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
