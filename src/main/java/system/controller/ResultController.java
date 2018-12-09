@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.Response;
-import system.model.Result;
+import system.model.classes.Result;
 import system.controller.service.ResultService;
 
 import java.util.List;

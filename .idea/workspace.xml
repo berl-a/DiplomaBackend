@@ -72,16 +72,12 @@
     <SUITE FILE_PATH="coverage/springmvcapplesson$system_model_in_SpringMvcApp.coverage" NAME="system.model in SpringMvcApp Coverage Results" MODIFIED="1543865087123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>system.model.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/springmvcapplesson$service_in_SpringMvcApp.coverage" NAME="service in SpringMvcApp Coverage Results" MODIFIED="1543854409325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/springmvcapplesson$evo_in_SpringMvcApp.coverage" NAME="evo in SpringMvcApp Coverage Results" MODIFIED="1543876025064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/springmvcapplesson$User_ESTest__1_.coverage" NAME="User_ESTest (1) Coverage Results" MODIFIED="1544196919641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>system.model.classes.users.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/springmvcapplesson$controller_in_SpringMvcApp.coverage" NAME="controller in SpringMvcApp Coverage Results" MODIFIED="1543875894680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/springmvcapplesson$D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp.coverage" NAME="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp Coverage Results" MODIFIED="1543922997016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
-    <SUITE FILE_PATH="coverage/springmvcapplesson$DataToolkit_ESTest.coverage" NAME="DataToolkit_ESTest Coverage Results" MODIFIED="1543851147392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>system.controller.tools.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/springmvcapplesson$Question_ESTest.coverage" NAME="Question_ESTest Coverage Results" MODIFIED="1543923606586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>system.model.questions.*</FILTER>
-    </SUITE>
+    <SUITE FILE_PATH="coverage/springmvcapplesson$D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp.coverage" NAME="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp Coverage Results" MODIFIED="1544197198352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/springmvcapplesson$Dao_ESTest.coverage" NAME="Dao_ESTest Coverage Results" MODIFIED="1543854482269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>system.controller.dao.*</FILTER>
     </SUITE>
@@ -89,6 +85,13 @@
       <FILTER>system.controller.service.database.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/springmvcapplesson$system_in_SpringMvcApp.coverage" NAME="system in SpringMvcApp Coverage Results" MODIFIED="1543869667820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/springmvcapplesson$service_in_SpringMvcApp.coverage" NAME="service in SpringMvcApp Coverage Results" MODIFIED="1543854409325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/springmvcapplesson$DataToolkit_ESTest.coverage" NAME="DataToolkit_ESTest Coverage Results" MODIFIED="1543851147392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>system.controller.tools.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/springmvcapplesson$Question_ESTest.coverage" NAME="Question_ESTest Coverage Results" MODIFIED="1543923606586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>system.model.questions.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/springmvcapplesson$FilesService_ESTest.coverage" NAME="FilesService_ESTest Coverage Results" MODIFIED="1543875210637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>system.controller.service.*</FILTER>
     </SUITE>
@@ -105,18 +108,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="QuestionGroup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringMvcApp.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringMvcApp.iml">
+      <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1029">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher-quiz-parts.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-quiz-parts.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -125,34 +148,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-config" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config">
+      <file leaf-file-name="teacher-results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/GameService.java">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="180" column="36" lean-forward="false" selection-start-line="180" selection-start-column="36" selection-end-line="180" selection-end-column="36" />
+            <state relative-caret-position="147">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
+      <file leaf-file-name="teacher-result-parts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-result-parts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="180" column="55" lean-forward="false" selection-start-line="180" selection-start-column="55" selection-end-line="180" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher-result-part-parts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-result-part-parts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher-result-parts.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-result-parts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher-result-part-parts.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-result-part-parts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-291">
+              <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +222,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>list</find>
       <find>is</find>
       <find>waitForGa</find>
       <find>TIME_KEY</find>
@@ -201,6 +251,7 @@
       <find>end</find>
       <find>ui-icons</find>
       <find>icons</find>
+      <find>CT * FROM</find>
     </findStrings>
     <replaceStrings>
       <replace>4.0</replace>
@@ -233,18 +284,20 @@
       <projects_view />
     </option>
   </component>
+  <component name="GroovyConsoleState">
+    <option name="list">
+      <list>
+        <Entry>
+          <option name="url" value="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy" />
+          <option name="moduleName" value="SpringMvcApp" />
+          <option name="title" value="SpringMvcApp (Bundled Groovy 2.4.12)" />
+        </Entry>
+      </list>
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/QuizController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/QuizPartController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/system/WebAppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/files/SiteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/website/SiteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/StartupController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/SiteController.java" />
@@ -259,7 +312,6 @@
         <option value="$PROJECT_DIR$/src/main/java/test/system/controller/service/FilesServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/FUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/Const.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/GameWithActualQuiz.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/QuestionWithCategoryNames.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/database/DatabaseService.java" />
@@ -271,22 +323,32 @@
         <option value="$PROJECT_DIR$/src/main/java/system/controller/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/FilesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/model/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-workspace.html" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/QuizService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/QuizGroupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/QuestionService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-workspace-script.js" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/QuizPartService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/student-test.js" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/ResultService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/student-test.html" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/Response.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/database/MySQLDatabaseService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/css/jquery-ui.css" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/Const.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/GameService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/ResultService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/SingleChoiceAnswer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/QuizPart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/QuestionType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/UserType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/database/MySQLDatabaseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js" />
+        <option value="$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/student-test.js" />
       </list>
     </option>
   </component>
@@ -320,9 +382,11 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="width" value="1187" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1911" />
+    <option name="y" value="303" />
+    <option name="width" value="960" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -367,6 +431,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -414,19 +479,7 @@
               <item name="Backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
@@ -434,26 +487,56 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springmvcapplesson" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/coverage-report" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/system" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="cores_evosuite_param" value="1" />
-    <property name="time_evosuite_param" value="7" />
+    <property name="time_evosuite_param" value="1" />
     <property name="memory_evosuite_param" value="3000" />
     <property name="target_folder_evosuite_param" value="src/evo" />
     <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_161" />
@@ -476,9 +559,9 @@
       <recent name="system.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\Diploma\Project\Backend\src\main\java\system\model\classes" />
       <recent name="D:\Data\Diploma\Project\Backend\src\main\java\system\model" />
       <recent name="D:\Data\Diploma\Project\Backend\src\main\java\system\model\dao" />
-      <recent name="D:\Data\Diploma\Project\Backend\src\main\java\system\model\classes" />
       <recent name="D:\Data\Diploma\Project\Backend\src\main\webapp\WEB-INF\static" />
       <recent name="D:\Data\Diploma\Project\Backend\src\main\webapp\files" />
     </key>
@@ -570,18 +653,18 @@
         <option name="reorder" value="FAILFAST" />
       </RunnerSettings>
     </configuration>
-    <configuration name="FilesService_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Question_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="system.controller.service.*" />
+          <option name="PATTERN" value="system.model.questions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="SpringMvcApp" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="system.controller.service" />
-      <option name="MAIN_CLASS_NAME" value="system.controller.service.FilesService_ESTest" />
+      <option name="PACKAGE_NAME" value="system.model.questions" />
+      <option name="MAIN_CLASS_NAME" value="system.model.questions.Question_ESTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -595,18 +678,43 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="Question_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="User_ESTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="system.model.questions.*" />
+          <option name="PATTERN" value="system.model.classes.users.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="SpringMvcApp" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="system.model.questions" />
-      <option name="MAIN_CLASS_NAME" value="system.model.questions.Question_ESTest" />
+      <option name="PACKAGE_NAME" value="system.model.classes.users" />
+      <option name="MAIN_CLASS_NAME" value="system.model.classes.users.User_ESTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="User_ESTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="system.model.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SpringMvcApp" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="system.model.users" />
+      <option name="MAIN_CLASS_NAME" value="system.model.users.User_ESTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -638,27 +746,6 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
-      <patterns />
-    </configuration>
-    <configuration name="controller in SpringMvcApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="SpringMvcApp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="directory" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <dir value="$PROJECT_DIR$/src/evo/system/controller" />
       <patterns />
     </configuration>
     <configuration name="system.controller.service in SpringMvcApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -775,19 +862,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.SpringMvcJettyApp" />
       <item index="1" class="java.lang.String" itemvalue="Maven.Just build" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.controller in SpringMvcApp" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FilesService_ESTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.system.controller.service in SpringMvcApp" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.Question_ESTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.system.controller.service in SpringMvcApp" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Question_ESTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.User_ESTest" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.User_ESTest (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.system.controller.service in SpringMvcApp" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Question_ESTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.controller in SpringMvcApp" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.FilesService_ESTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.User_ESTest (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.User_ESTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.system.controller.service in SpringMvcApp" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Question_ESTest" />
       </list>
     </recent_temporary>
   </component>
@@ -795,20 +882,20 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TestHistory">
-    <history-entry file="D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp - 2018.12.03 at 23h 59m 41s.xml">
-      <configuration name="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp - 2018.12.04 at 00h 03m 44s.xml">
-      <configuration name="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp - 2018.12.04 at 00h 11m 44s.xml">
-      <configuration name="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp - 2018.12.04 at 12h 34m 29s.xml">
+    <history-entry file="D__Data_Diploma_Project_Backend_src_evo_in_SpringMvcApp - 2018.12.07 at 16h 43m 38s.xml">
       <configuration name="D:\Data\Diploma\Project\Backend\src\evo in SpringMvcApp" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Question_ESTest - 2018.12.04 at 12h 40m 11s.xml">
       <configuration name="Question_ESTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="User_ESTest_(1) - 2018.12.07 at 15h 44m 34s.xml">
+      <configuration name="User_ESTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="User_ESTest_(1) - 2018.12.07 at 15h 44m 48s.xml">
+      <configuration name="User_ESTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="User_ESTest_(1) - 2018.12.07 at 16h 35m 24s.xml">
+      <configuration name="User_ESTest (1)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="evo_in_SpringMvcApp - 2018.12.03 at 23h 31m 56s.xml">
       <configuration name="evo in SpringMvcApp" configurationId="JUnit" />
@@ -836,23 +923,24 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1187" height="1080" extended-state="0" />
+    <frame x="1911" y="303" width="1384" height="786" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28854167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28828058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760474" sideWeight="0.49375" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31675676" sideWeight="0.37083334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09427083" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33186328" sideWeight="0.62916666" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17455138" sideWeight="0.62916666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23695466" sideWeight="0.4704" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23352855" sideWeight="0.4704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1078125" sideWeight="0.5233083" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="EvoSuite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3425775" sideWeight="0.6640625" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="EvoSuite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2954796" sideWeight="0.6640625" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -866,10 +954,10 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Connector for AWS Lambda" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cloverage" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25405404" sideWeight="0.5087848" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25358325" sideWeight="0.5087848" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="992" y="76" width="502" height="268" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2569546" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44161358" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32463294" sideWeight="0.46822917" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -921,258 +1009,254 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/AnswerType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuestionsToolkit.java" />
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/QuestionsToolkit_ESTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/GameArchiver_ESTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/FilesService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/quizzes.plantuml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/FilesService_ESTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/users/users.plantuml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Answer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="-9">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/FilesService_ESTest_scaffolding.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/FreeTextAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="-9">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/system/controller/service/FilesServiceTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/QuestionService_ESTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="272" column="60" lean-forward="false" selection-start-line="272" selection-start-column="60" selection-end-line="272" selection-end-column="60" />
+        <state relative-caret-position="-9">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/database/StringDatabaseEntry_ESTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/ListOfQuestions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="51" column="8" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="-9">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/ListOfRealQuestions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="-9">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/QuizGroupDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/MultipleChoiceAnswer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="-9">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/PlayerDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="-9">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/GameToolkit.java" />
-    <entry file="file://$PROJECT_DIR$/src/evo/system/model/games/GameToolkit_ESTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/evo/system/model/questions/Question_ESTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/database/StringDatabaseEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/PlayerAnswers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="-9">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/controller.plantuml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/PlayerPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/SingleChoiceAnswer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/QuizGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/QuizPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionGroupType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/groovy/groovy_console.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/Result.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/users/UserType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="42">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/classes.plantuml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-workspace.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuizService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="65" column="62" lean-forward="false" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuizGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-workspace-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="25" column="708" lean-forward="false" selection-start-line="25" selection-start-column="708" selection-end-line="25" selection-end-column="708" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuizPartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="64" column="48" lean-forward="false" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/student-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="191" column="22" lean-forward="false" selection-start-line="191" selection-start-column="19" selection-end-line="191" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/student-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuestionGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="145" column="0" lean-forward="true" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizPartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/ResultService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="418">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/simple_frontend_models/Response.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/dao.plantuml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuestionGroupController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/controller.plantuml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="408">
+          <caret line="43" column="15" lean-forward="false" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/ListOfRealQuestions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/PlayerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/database/IntStringBlobDatabaseEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/database/MySQLDatabaseService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1420">
-          <caret line="283" column="23" lean-forward="false" selection-start-line="283" selection-start-column="23" selection-end-line="283" selection-end-column="23" />
+        <state relative-caret-position="5124">
+          <caret line="255" column="66" lean-forward="false" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
           <folding>
-            <marker date="1544040394214" expanded="true" signature="5430:5496" ph="INSERT INTO missingValue... " />
-            <marker date="1544040394214" expanded="true" signature="9801:9923" ph="INSERT INTO missingValue... " />
-            <marker date="1544040394214" expanded="true" signature="13239:13274" ph="DELETE FROM missingValue... " />
-            <marker date="1544040394214" expanded="true" signature="14586:14665" ph="DELETE FROM missingValue... " />
+            <marker date="1544154283357" expanded="true" signature="5435:5501" ph="INSERT INTO missingValue... " />
+            <marker date="1544154283357" expanded="true" signature="9842:9964" ph="INSERT INTO missingValue... " />
+            <marker date="1544154283357" expanded="true" signature="13304:13339" ph="DELETE FROM missingValue... " />
+            <marker date="1544154283357" expanded="true" signature="14651:14730" ph="DELETE FROM missingValue... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/tools/DataToolkit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2478">
-          <caret line="127" column="29" lean-forward="false" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+        <state relative-caret-position="819">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringMvcApp.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/PlayerService_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="69" column="12" lean-forward="false" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/evo/system/model/users/User_ESTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/service/FilesService_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="129" column="23" lean-forward="false" selection-start-line="129" selection-start-column="23" selection-end-line="129" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/dao/Dao_ESTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/evo/system/controller/tools/DataToolkit_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/evo/system/model/classes/users/User_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="120" column="23" lean-forward="true" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-teachers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1180,98 +1264,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/css/jquery-ui.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuestionGroupService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="1075" column="27" lean-forward="false" selection-start-line="1075" selection-start-column="27" selection-end-line="1075" selection-end-column="27" />
+        <state relative-caret-position="355">
+          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/SiteController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-quiz-parts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/games/MultipleChoiceAnswer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding>
-            <element signature="e#257#258#0" expanded="false" />
-            <element signature="e#307#308#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="180" column="55" lean-forward="false" selection-start-line="180" selection-start-column="55" selection-end-line="180" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1029">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/student-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-result-parts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-result-part-parts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/QuizGroupController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-result-parts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ResultController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-result-part-parts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/questions/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="195" column="31" lean-forward="false" selection-start-line="195" selection-start-column="31" selection-end-line="195" selection-end-column="31" />
-          <folding>
-            <element signature="e#7117#7118#0" expanded="false" />
-            <element signature="e#7154#7155#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/GameService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="180" column="36" lean-forward="false" selection-start-line="180" selection-start-column="36" selection-end-line="180" selection-end-column="36" />
+        <state relative-caret-position="-291">
+          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
         </state>
       </provider>

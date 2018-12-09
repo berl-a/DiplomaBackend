@@ -1,0 +1,132 @@
+* Starting client
+* Connecting to master process on port 5673
+* Analyzing classpath: 
+  - D:/Data/Diploma/Project/Backend/target/classes
+  - C:\Users\admin\.IntelliJIdea2017.3\config\plugins\clover-idea-4.1.2.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\charsets.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\deploy.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\access-bridge-64.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\cldrdata.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\dnsns.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jaccess.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\jfxrt.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\localedata.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\nashorn.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunec.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunjce_provider.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunmscapi.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\sunpkcs11.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\ext\zipfs.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\javaws.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jce.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfr.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jfxswt.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\jsse.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\management-agent.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\plugin.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\resources.jar
+  - C:\Program Files\Java\jdk1.8.0_161\jre\lib\rt.jar
+  - D:\Data\Diploma\Project\Backend\target\test-classes
+  - D:\Data\Diploma\Project\Backend\target\classes
+  - C:\Users\admin\.m2\repository\org\springframework\spring-core\5.1.3.RELEASE\spring-core-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-jcl\5.1.3.RELEASE\spring-jcl-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-context\5.1.3.RELEASE\spring-context-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-aop\5.1.3.RELEASE\spring-aop-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-beans\5.1.3.RELEASE\spring-beans-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-expression\5.1.3.RELEASE\spring-expression-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-web\5.1.3.RELEASE\spring-web-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\springframework\spring-webmvc\5.1.3.RELEASE\spring-webmvc-5.1.3.RELEASE.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\hibernate-core\4.3.6.Final\hibernate-core-4.3.6.Final.jar
+  - C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+  - C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging-annotations\1.2.0.Beta1\jboss-logging-annotations-1.2.0.Beta1.jar
+  - C:\Users\admin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.0.0.Final\jboss-transaction-api_1.2_spec-1.0.0.Final.jar
+  - C:\Users\admin\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar
+  - C:\Users\admin\.m2\repository\xml-apis\xml-apis\1.0.b2\xml-apis-1.0.b2.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.5.Final\hibernate-commons-annotations-4.0.5.Final.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.1-api\1.0.0.Final\hibernate-jpa-2.1-api-1.0.0.Final.jar
+  - C:\Users\admin\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar
+  - C:\Users\admin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar
+  - C:\Users\admin\.m2\repository\org\jboss\jandex\1.1.0.Final\jandex-1.1.0.Final.jar
+  - C:\Users\admin\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.0\jackson-core-2.9.0.jar
+  - C:\Users\admin\.m2\repository\org\hibernate\hibernate-entitymanager\4.3.6.Final\hibernate-entitymanager-4.3.6.Final.jar
+  - C:\Users\admin\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar
+  - C:\Users\admin\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar
+  - C:\Users\admin\.m2\repository\org\xerial\sqlite-jdbc\3.8.11.2\sqlite-jdbc-3.8.11.2.jar
+  - C:\Users\admin\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar
+  - C:\Users\admin\.m2\repository\javax\servlet\servlet-api\2.3\servlet-api-2.3.jar
+  - C:\Users\admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0-M1\junit-jupiter-api-5.1.0-M1.jar
+  - C:\Users\admin\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar
+  - C:\Users\admin\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0-M1\junit-platform-commons-1.1.0-M1.jar
+  - C:\Users\admin\.m2\repository\com\google\code\gson\gson\2.8.2\gson-2.8.2.jar
+  - C:\Users\admin\.m2\repository\org\json\json\20160810\json-20160810.jar
+  - C:\Users\admin\.m2\repository\junit\junit\4.10\junit-4.10.jar
+  - C:\Users\admin\.m2\repository\org\hamcrest\hamcrest-core\1.1\hamcrest-core-1.1.jar
+* Finished analyzing classpath
+* Generating tests for class system.controller.simple_frontend_models.QuizPartWithCategoryNames
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 16:18:54.114 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: D:\Data\Diploma\Project\Backend\.evosuite\evosuite-seeds\system.controller.simple_frontend_models.QuizPartWithCategoryNames.seed
+* Loaded 0 tests from D:\Data\Diploma\Project\Backend\.evosuite\evosuite-seeds\system.controller.simple_frontend_models.QuizPartWithCategoryNames.seed
+* Total number of test goals: 
+  - Line 26
+  - Branch 10
+  - Exception 0
+  - MutationFactory 0
+  - Output 9
+  - Method 10
+  - MethodNoException 10
+  - CBranchFitnessFactory 10
+* Using seed 1544195918772
+* Starting evolution
+[MASTER] 16:18:54.227 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 10 seconds more than allowed.
+* Search finished after 3s and 0 generations, 5335 statements, best individual has fitness: 0.3333333333333333
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 26
+* Number of covered goals: 26
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100% (no goals)
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100%
+* Total number of goals: 9
+* Number of covered goals: 9
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 10
+* Number of covered goals: 10
+* Generated 13 tests with total length 28
+* Resulting test suite's coverage: 100% (average coverage for all fitness functions)
+* Generating assertions
+[MASTER] 16:19:04.440 [pool-2-thread-1] WARN  SimpleMutationAssertionGenerator - Assertion minimization is taking too long (0.6968% of time used, but only 6/13 tests minimized), falling back to using all assertions
+* Resulting test suite's mutation score: 63%
+* Compiling and checking tests
+* Writing JUnit test case 'QuizPartWithCategoryNames_ESTest' to D:\Data\Diploma\Project\Backend\.evosuite\tmp_2018_12_07_15_47_26\tests
+* Done!
+

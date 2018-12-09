@@ -1,7 +1,7 @@
 package system.model.dao;
 
 import org.springframework.stereotype.Repository;
-import system.model.questions.Question;
+import system.model.classes.questions.Question;
 
 @Repository
 public class QuestionDao extends Dao<Question> {

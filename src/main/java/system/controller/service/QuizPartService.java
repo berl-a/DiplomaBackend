@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuizPartWithCategoryNames;
 import system.model.dao.QuizPartDao;
-import system.model.questions.QuestionGroup;
-import system.model.questions.QuestionGroupType;
-import system.model.quizzes.QuizPart;
+import system.model.classes.questions.QuestionGroup;
+import system.model.classes.questions.QuestionGroupType;
+import system.model.classes.quizzes.QuizPart;
 
 
 import java.util.LinkedList;

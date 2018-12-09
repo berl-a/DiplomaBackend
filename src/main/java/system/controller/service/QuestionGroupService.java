@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuestionGroupWithNumberOfQuestions;
 import system.model.dao.QuestionGroupDao;
-import system.model.questions.Question;
-import system.model.questions.QuestionGroup;
-import system.model.questions.QuestionGroupType;
+import system.model.classes.questions.Question;
+import system.model.classes.questions.QuestionGroup;
+import system.model.classes.questions.QuestionGroupType;
 
 import java.util.LinkedList;
 import java.util.List;

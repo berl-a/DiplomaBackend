@@ -1,7 +1,7 @@
 package system.model.dao;
 
 import org.springframework.stereotype.Repository;
-import system.model.Result;
+import system.model.classes.Result;
 
 @Repository
 public class ResultDao extends Dao<Result> {

@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.controller.simple_frontend_models.Response;
-import system.model.questions.Question;
-import system.model.quizzes.Quiz;
+import system.model.classes.questions.Question;
+import system.model.classes.quizzes.Quiz;
 import system.controller.service.QuizService;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package system.controller.simple_frontend_models;
 
-import system.model.games.Game;
-import system.model.quizzes.Quiz;
+import system.model.classes.games.Game;
+import system.model.classes.quizzes.Quiz;
 
 /**
  * Game with quiz attached

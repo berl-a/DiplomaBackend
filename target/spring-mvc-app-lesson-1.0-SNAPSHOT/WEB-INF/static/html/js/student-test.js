@@ -64,7 +64,7 @@ function populatePageWithQuestion(index) {
 
 	$('.question-number').text((currQuestionIndex + 1) + "/" + questions.length);
 	$('.question-text').text(question.questionText);
-	$('.questionImage').attr('src', question.questionImage);
+	$('.question-image').attr('src', question.questionImage);
 
 	currQuestionType = question.questionType;
 	$('.container.answers').html(answerButtons[currQuestionType]);

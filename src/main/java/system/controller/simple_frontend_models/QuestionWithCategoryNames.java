@@ -1,6 +1,6 @@
 package system.controller.simple_frontend_models;
 
-import system.model.questions.Question;
+import system.model.classes.questions.Question;
 
 /**
  * Question with category, subcategory and subsubcategory names

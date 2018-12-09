@@ -3,7 +3,7 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import system.model.games.Game;
+import system.model.classes.games.Game;
 
 import java.util.LinkedList;
 

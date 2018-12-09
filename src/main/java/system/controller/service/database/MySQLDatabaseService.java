@@ -109,7 +109,7 @@ public class MySQLDatabaseService implements DatabaseService {
 
         try {
             Statement stmt = connection.createStatement();
-            ResultSet resultSet = stmt.executeQuery("SELECT * FROM " + tableName);
+            ResultSet resultSet = stmt.executeQuery("SELECT * FROM test." + tableName);
 
             while (resultSet.next()) {
                 HashMap<String, String> tempMap = new HashMap<>();
@@ -235,16 +235,16 @@ public class MySQLDatabaseService implements DatabaseService {
                 }
             }
 
-//            LinkedList<Integer> indexesOfFieldValues = new LinkedList<>();
-//            for(int i = 0; i < fieldNames.size(); i ++) {
-//                fieldNames.forEach(System.out::println);
-//                if(fieldNames.contains("_BLOB")) {
-//                    indexesOfFieldValues.add(i);
-//                    System.out.println("Adding blob index " + i);
-//                }
-//            }
+    //            LinkedList<Integer> indexesOfFieldValues = new LinkedList<>();
+    //            for(int i = 0; i < fieldNames.size(); i ++) {
+    //                fieldNames.forEach(System.out::println);
+    //                if(fieldNames.contains("_BLOB")) {
+    //                    indexesOfFieldValues.add(i);
+    //                    System.out.println("Adding blob index " + i);
+    //                }
+    //            }
 
-//            PreparedStatement statement = connection.prepareStatement("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
+    //            PreparedStatement statement = connection.prepareStatement("INSERT INTO " + tableName + " " + fieldNamesInDBFormat + " VALUES " + valuesInDbFormat + ";");
             PreparedStatement statement = connection.prepareStatement(
                     "INSERT INTO " + tableName +
                             " " + fieldNamesInDBFormat +
@@ -261,12 +261,12 @@ public class MySQLDatabaseService implements DatabaseService {
                 }
             }
             statement.executeUpdate();
-//
-//            for(int i = 0; i < indexesOfFieldValues.size(); i ++) {
-//                statement.setBlob(i + 1, new ByteArrayInputStream(DataToolkit.objectToByteArray(databaseEntries.get(indexesOfFieldValues.get(i)))));
-//                System.out.println("Adding blob");
-//            }
-//            statement.executeUpdate();
+    //
+    //            for(int i = 0; i < indexesOfFieldValues.size(); i ++) {
+    //                statement.setBlob(i + 1, new ByteArrayInputStream(DataToolkit.objectToByteArray(databaseEntries.get(indexesOfFieldValues.get(i)))));
+    //                System.out.println("Adding blob");
+    //            }
+    //            statement.executeUpdate();
 
             return true;
         } catch (SQLException e) {

@@ -3,11 +3,11 @@ package system.controller.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
+import system.model.classes.games.*;
 import system.model.dao.ResultDao;
-import system.model.Result;
-import system.model.games.*;
-import system.model.questions.Question;
-import system.model.quizzes.Quiz;
+import system.model.classes.Result;
+import system.model.classes.questions.Question;
+import system.model.classes.quizzes.Quiz;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -4,9 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.model.dao.UserDao;
-import system.model.users.IUser;
-import system.model.users.User;
-import system.model.users.UserType;
+import system.model.classes.users.User;
+import system.model.classes.users.UserType;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -62,7 +61,7 @@ public class UserService {
     }
 
     public boolean isPasswordCorrect(String username, String passwordHash) {
-        IUser foundUser = get(username);
+        User foundUser = get(username);
         return foundUser != null && foundUser.getHash().equals(passwordHash);
     }
 

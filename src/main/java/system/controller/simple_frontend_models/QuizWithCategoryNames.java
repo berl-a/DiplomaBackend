@@ -1,6 +1,6 @@
 package system.controller.simple_frontend_models;
 
-import system.model.quizzes.Quiz;
+import system.model.classes.quizzes.Quiz;
 
 public class QuizWithCategoryNames extends Quiz {
 

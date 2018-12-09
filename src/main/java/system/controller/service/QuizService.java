@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.QuizWithCategoryNames;
 import system.model.dao.QuizDao;
-import system.model.QuizGroupType;
-import system.model.questions.Question;
-import system.model.quizzes.Quiz;
-import system.model.quizzes.QuizGroup;
-import system.model.quizzes.QuizPart;
+import system.model.classes.QuizGroupType;
+import system.model.classes.questions.Question;
+import system.model.classes.quizzes.Quiz;
+import system.model.classes.quizzes.QuizGroup;
+import system.model.classes.quizzes.QuizPart;
 
 import java.util.Collections;
 import java.util.LinkedList;

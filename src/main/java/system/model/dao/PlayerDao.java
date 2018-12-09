@@ -1,7 +1,7 @@
 package system.model.dao;
 
 import org.springframework.stereotype.Repository;
-import system.model.games.Player;
+import system.model.classes.games.Player;
 
 import java.util.LinkedList;
 import java.util.Optional;

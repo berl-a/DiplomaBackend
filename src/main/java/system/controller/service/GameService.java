@@ -4,11 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import system.controller.Const;
 import system.controller.simple_frontend_models.GameWithActualQuiz;
-import system.model.games.*;
-import system.model.questions.Question;
-import system.model.questions.QuestionType;
-import system.model.quizzes.Quiz;
-import system.model.quizzes.QuizPart;
+import system.model.classes.games.*;
+import system.model.classes.questions.Question;
+import system.model.classes.questions.QuestionType;
+import system.model.classes.quizzes.Quiz;
+import system.model.classes.quizzes.QuizPart;
 
 import java.util.Collections;
 import java.util.LinkedList;

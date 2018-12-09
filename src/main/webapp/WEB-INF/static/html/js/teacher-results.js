@@ -30,6 +30,27 @@ $(document).ready(function() {
 
 });
 
+function formatDate(date) {
+    var monthNames = [
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
+    ];
+
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+
+    var year = date.getFullYear();
+
+    return day + '.' + (monthIndex + 1) + '.' + year + ' ' + hour + '.' + minute;
+}
+
+console.log(formatDate(new Date()));
+
 function getFromBackend() {
 
     $.ajax({
@@ -45,10 +66,11 @@ function getFromBackend() {
             for(var i = 0; i < data.length; i ++) {
             	var item = data[i];
                 // console.log(data[i]);
+                var date = formatDate(new Date(item.realGame.startTime));
                 var newRow = table[0].row.add([
-                    item.realGame.startTime,
-                    item.realQuiz.name != undefined ? item.realQuiz.name : "",
-                    item.realGame.name != undefined ? item.realGame.name : "",
+                    date.toString(),
+                    item.realQuiz.name !== undefined ? item.realQuiz.name : "",
+                    item.realGame.name !== undefined ? item.realGame.name : "",
                     BUTTONS
                 ]).draw().nodes().to$();
                 newRow.attr("data-id", data[i]["id"]);

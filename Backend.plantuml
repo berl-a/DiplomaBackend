@@ -2,16 +2,6 @@
 
 title __SPRINGMVCAPP's Class Diagram__\n
 
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        interface Answer {
-        }
-      }
-    }
-  }
-  
-
   package system.controller {
     class Const {
     }
@@ -133,16 +123,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class FreeTextAnswer {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.games {
       class FreeTextAnswer_ESTest {
       }
@@ -160,9 +140,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.games {
-        class Game {
-        }
+      class Game {
       }
     }
   }
@@ -271,16 +249,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      package system.model.classes.users {
-        interface IUser {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.dao {
       interface Idable {
       }
@@ -319,16 +287,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class ListOfQuestions {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.games {
       class ListOfQuestions_ESTest {
       }
@@ -345,16 +303,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class ListOfRealQuestions {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.games {
       class ListOfRealQuestions_ESTest {
       }
@@ -365,16 +313,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   package system.model {
     package system.model.games {
       class ListOfRealQuestions_ESTest_scaffolding {
-      }
-    }
-  }
-  
-
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class MultipleChoiceAnswer {
-        }
       }
     }
   }
@@ -428,19 +366,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.games {
-        class Player {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class PlayerAnswers {
-        }
+      class Player {
       }
     }
   }
@@ -481,16 +407,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   package system.controller {
     package system.controller.dao {
       class PlayerDao_ESTest_scaffolding {
-      }
-    }
-  }
-  
-
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class PlayerPoints {
-        }
       }
     }
   }
@@ -554,9 +470,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.questions {
-        class Question {
-        }
+      class Question {
       }
     }
   }
@@ -606,9 +520,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.questions {
-        class QuestionGroup {
-        }
+      class QuestionGroup {
       }
     }
   }
@@ -680,16 +592,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.questions {
-        enum QuestionGroupType {
-        }
-      }
-    }
-  }
-  
-
   package system.controller {
     package system.controller.simple_frontend_models {
       class QuestionGroupWithNumberOfQuestions {
@@ -754,16 +656,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   }
   
 
-  package system.model {
-    package system.model.classes {
-      package system.model.classes.questions {
-        enum QuestionType {
-        }
-      }
-    }
-  }
-  
-
   package system.controller {
     package system.controller.simple_frontend_models {
       class QuestionWithCategoryNames {
@@ -798,9 +690,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.quizzes {
-        class Quiz {
-        }
+      class Quiz {
       }
     }
   }
@@ -850,9 +740,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.quizzes {
-        class QuizGroup {
-        }
+      class QuizGroup {
       }
     }
   }
@@ -925,14 +813,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      enum QuizGroupType {
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.quizzes {
       class QuizGroup_ESTest {
       }
@@ -950,9 +830,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.quizzes {
-        class QuizPart {
-        }
+      class QuizPart {
       }
     }
   }
@@ -1239,16 +1117,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   
 
   package system.model {
-    package system.model.classes {
-      package system.model.classes.games {
-        class SingleChoiceAnswer {
-        }
-      }
-    }
-  }
-  
-
-  package system.model {
     package system.model.games {
       class SingleChoiceAnswer_ESTest {
       }
@@ -1338,9 +1206,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.users {
-        class User {
-        }
+      class User {
       }
     }
   }
@@ -1414,9 +1280,7 @@ title __SPRINGMVCAPP's Class Diagram__\n
 
   package system.model {
     package system.model.classes {
-      package system.model.classes.users {
-        enum UserType {
-        }
+      enum UserType {
       }
     }
   }
@@ -1443,7 +1307,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   Dao_ESTest -up-|> Dao_ESTest_scaffolding
   DataToolkit_ESTest -up-|> DataToolkit_ESTest_scaffolding
   FilesService_ESTest -up-|> FilesService_ESTest_scaffolding
-  FreeTextAnswer -up-|> Answer
   FreeTextAnswer_ESTest -up-|> FreeTextAnswer_ESTest_scaffolding
   Game -up-|> Idable
   Game -up-|> Serializable
@@ -1464,34 +1327,27 @@ title __SPRINGMVCAPP's Class Diagram__\n
   Game_ESTest -up-|> Game_ESTest_scaffolding
   IntStringBlobDatabaseEntry -up-|> DatabaseEntry
   IntStringBlobDatabaseEntry_ESTest -up-|> IntStringBlobDatabaseEntry_ESTest_scaffolding
-  ListOfQuestions -up-|> Serializable
   ListOfQuestions_ESTest -up-|> ListOfQuestions_ESTest_scaffolding
-  ListOfRealQuestions -up-|> Serializable
   ListOfRealQuestions_ESTest -up-|> ListOfRealQuestions_ESTest_scaffolding
-  MultipleChoiceAnswer -up-|> Answer
   MultipleChoiceAnswer_ESTest -up-|> MultipleChoiceAnswer_ESTest_scaffolding
   MySQLDatabaseService -up-|> DatabaseService
   MySQLDatabaseService_ESTest -up-|> MySQLDatabaseService_ESTest_scaffolding
   Player -up-|> Idable
   Player -up-|> Serializable
-  PlayerAnswers -up-|> Serializable
   PlayerAnswers_ESTest -up-|> PlayerAnswers_ESTest_scaffolding
   PlayerDao_ESTest -up-|> PlayerDao_ESTest_scaffolding
-  PlayerPoints -up-|> Serializable
   PlayerPoints_ESTest -up-|> PlayerPoints_ESTest_scaffolding
   PlayerService o-- PlayerDao : dao
   PlayerService_ESTest -up-|> PlayerService_ESTest_scaffolding
   Player_ESTest -up-|> Player_ESTest_scaffolding
   Question -up-|> Serializable
   Question -up-|> Idable
-  Question o-- QuestionType : questionType
   QuestionController o-- QuestionService : service
   QuestionController_ESTest -up-|> QuestionController_ESTest_scaffolding
   QuestionDao -up-|> Dao
   QuestionDao_ESTest -up-|> QuestionDao_ESTest_scaffolding
   QuestionGroup -up-|> Serializable
   QuestionGroup -up-|> Idable
-  QuestionGroup o-- QuestionGroupType : type
   QuestionGroupController o-- QuestionGroupService : service
   QuestionGroupController_ESTest -up-|> QuestionGroupController_ESTest_scaffolding
   QuestionGroupDao -up-|> Dao
@@ -1515,7 +1371,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   QuizDao_ESTest -up-|> QuizDao_ESTest_scaffolding
   QuizGroup -up-|> Serializable
   QuizGroup -up-|> Idable
-  QuizGroup o-- QuizGroupType : type
   QuizGroupController o-- QuizGroupService : service
   QuizGroupController_ESTest -up-|> QuizGroupController_ESTest_scaffolding
   QuizGroupDao -up-|> Dao
@@ -1559,7 +1414,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   ResultService o-- QuestionService : questionService
   ResultService_ESTest -up-|> ResultService_ESTest_scaffolding
   Result_ESTest -up-|> Result_ESTest_scaffolding
-  SingleChoiceAnswer -up-|> Answer
   SingleChoiceAnswer_ESTest -up-|> SingleChoiceAnswer_ESTest_scaffolding
   SiteController_ESTest -up-|> SiteController_ESTest_scaffolding
   StartupService o-- FilesService : filesService
@@ -1567,7 +1421,6 @@ title __SPRINGMVCAPP's Class Diagram__\n
   StartupService_ESTest -up-|> StartupService_ESTest_scaffolding
   StringDatabaseEntry -up-|> DatabaseEntry
   StringDatabaseEntry_ESTest -up-|> StringDatabaseEntry_ESTest_scaffolding
-  User -up-|> IUser
   User -up-|> Idable
   User o-- UserType : type
   UserController o-- UserService : service

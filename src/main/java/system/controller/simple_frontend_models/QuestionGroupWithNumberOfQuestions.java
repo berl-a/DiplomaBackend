@@ -1,6 +1,6 @@
 package system.controller.simple_frontend_models;
 
-import system.model.questions.QuestionGroup;
+import system.model.classes.questions.QuestionGroup;
 
 public class QuestionGroupWithNumberOfQuestions extends QuestionGroup {
 
