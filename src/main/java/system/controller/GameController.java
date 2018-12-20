@@ -39,7 +39,9 @@ public class GameController {
         Response resp;
         code = code.toUpperCase();
         if(service.getByCode(code) != null) {
-            String playerId = service.join(code, name);
+            String[] joinResult = service.join(code, name);
+            String playerId = joinResult[0];
+//            String newPlayerName = joinResult[1];
             GameWithActualQuiz gameJoined = service.getByCode(code);
             resp = new Response();
             resp.put(Const.PLAYER_KEY, playerService.get(playerId));

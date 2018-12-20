@@ -21,8 +21,8 @@ function onGoClicked() {
 	        "&name=" + name,
 	        success: function (stringData) {
 	            var data = stringData.result;
-	            if(typeof data.error != "undefined") {
-	            	if(data.error == "not found") {
+	            if(typeof data.error !== "undefined") {
+	            	if(data.error === "not found") {
 	            		alert("Quiz not found, enter the correct join code");
 	            	}
 	            } else {
@@ -30,7 +30,12 @@ function onGoClicked() {
 	            	var game = data.game;
 
 	            	var playerId = player.id;
+	            	var playerName = player.name
 	            	var gameId = game.id;
+
+	            	if(playerName !== name) {
+	            	    alert("Your player name is " + playerName);
+                    }
 
 	            	localStorage.setItem("playerId", playerId);
 	            	localStorage.setItem("gameId", gameId);

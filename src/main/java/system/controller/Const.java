@@ -39,4 +39,5 @@ public class Const {
 
     public static final String USER_EXISTS_ERROR = "user_exists";
 
+    public static final String NEW_PLAYER_USERNAME_KEY = "new_player_username";
 }

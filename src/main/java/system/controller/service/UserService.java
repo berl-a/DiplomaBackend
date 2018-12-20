@@ -60,9 +60,9 @@ public class UserService {
         return foundUser.orElse(null);
     }
 
-    public boolean isPasswordCorrect(String username, String passwordHash) {
-        User foundUser = get(username);
-        return foundUser != null && foundUser.getHash().equals(passwordHash);
+    public boolean isPasswordCorrect(String login, String hash) {
+        User foundUser = get(login);
+        return foundUser != null && foundUser.getHash().equals(hash);
     }
 
     public String add(User user) {

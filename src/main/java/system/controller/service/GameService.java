@@ -104,12 +104,15 @@ public class GameService {
         return resultCode;
     }
 
-    public String join(String code, String playerName) {
+    public String[] join(String code, String playerName) {
         Player player = new Player(playerName);
-        playerService.addPlayer(player);
         Game game = getByCode(code);
+
+        player.setName(playerService.getNewPlayerNameForGame(game.getId(), playerName));
+
+        playerService.addPlayer(player);
         game.addPlayer(player.getId());
-        return player.getId();
+        return new String[]{player.getId(), player.getName()};
     }
 
     public LinkedList<String> getQuestionsForPlayer(String gameId, String playerId) {

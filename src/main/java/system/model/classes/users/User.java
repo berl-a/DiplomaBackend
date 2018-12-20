@@ -5,7 +5,7 @@ import system.model.dao.Idable;
 
 import java.io.Serializable;
 
-public class User implements Idable, Serializable{
+public class User implements Idable, Serializable {
 
     private String id, login, hash;
     private UserType type;
