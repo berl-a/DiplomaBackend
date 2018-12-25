@@ -65,16 +65,16 @@ function getFromBackend() {
 
             for(var i = 0; i < data.length; i ++) {
             	var item = data[i];
-                // console.log(data[i]);
+                console.log(data[i]);
                 var date = formatDate(new Date(item.realGame.startTime));
                 var newRow = table[0].row.add([
                     date.toString(),
                     item.realQuiz.name !== undefined ? item.realQuiz.name : "",
                     item.realGame.name !== undefined ? item.realGame.name : "",
+                    item.realGame.code !== undefined ? item.realGame.code : "",
                     BUTTONS
                 ]).draw().nodes().to$();
                 newRow.attr("data-id", data[i]["id"]);
-
 
                 newRow.find("button.remove").on('click', onRemoveButtonClicked);
                 newRow.find("button.edit-content").on('click', onEditContentButtonClicked);
