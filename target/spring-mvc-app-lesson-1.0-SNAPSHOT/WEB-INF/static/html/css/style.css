@@ -1,0 +1,138 @@
+table#questions tr td:nth-of-type(3) {
+    text-align: left;
+}
+table#questions tr td:nth-of-type(4) {
+    text-align: center;
+}
+
+table#orders tr td:nth-of-type(4) {
+    text-align: right;
+}
+
+table#products tr td:nth-of-type(2), td:nth-of-type(3) {
+    text-align: right;
+}
+
+tfoot input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.bg-food {
+    background: url("../jpg/food-background.jpg");
+}
+
+/*.bg-playstation {
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/playstation-pattern.png");
+}*/
+
+.bg-light-blue {
+    background: rgba(10, 10, 240, .03);
+}
+
+.bg-grey {
+    background: #555;
+}
+
+table#products tr td:last-of-type {
+    text-align: center;
+}
+
+table .btn {
+    color: white;
+    font-weight: 800;
+    padding: 2px 6px 2px 6px;
+}
+
+table .btn.btn-sm {
+    padding: 0px 3px 0px 3px;
+    font-weight: 100;
+}
+
+input {
+    width: 130px;
+}
+
+span.grade {
+    font-size: 1.3em;
+}
+
+.w-30 {
+    width: 30% !important;
+}
+
+label {
+	display: inline;
+}
+input {
+	display: inline;
+}
+.quiz-join-code {
+	font-size: 1.5em;
+	font-weight: 500;
+	color: orange;
+}
+textarea.students-joined {
+	height: 150px;
+	width: 200px;
+	line-height: .8em;
+	vertical-align: middle;
+}
+.bg-lightish {
+    background: #ccc;
+}
+.rounded {
+    border-radius: 5px;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.nice-border {
+    border: 1px solid rgba(40, 40, 40, .7);
+    background: rgba(100, 100, 100, .2);
+    border-radius: 5px;
+}
+
+table img {
+    max-height: 50px;
+}
+
+.hidden:not(.unhiddable) {
+    display: none;
+}
+
+div.cat-col .item:not(.active) {
+    background: #fffdb5;
+}
+
+.bigger {
+    font-size: 1.3em;
+}
+
+.correct {
+    background: green!important;
+}
+
+.incorrect {
+    background: red!important;
+}
+
+a {
+    cursor: pointer;
+}
+
+.answers textarea.answer-text {
+    width: 100%;
+}
+.tinymodal-overlay {
+    z-index: 10;
+}
+.answer-multiple:not(.selected) {
+    background-color: #a1b1ff!important;
+}
+
+.submit-answer.multiple-choice, .submit-answer.multiple-choice:hover {
+    background: #27cc21;
+}

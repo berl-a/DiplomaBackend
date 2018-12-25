@@ -37,6 +37,10 @@ public class ResultService {
 
     public LinkedList<Result> getAll() {
         updateCached();
+        cachedResults.forEach(r -> {
+            System.out.print(r.getRealGame().getName() + " ");
+            System.out.println(r.getRealGame().getCode());
+        });
         return cachedResults;
     }
 
@@ -46,6 +50,8 @@ public class ResultService {
 
     public Result get(String resultId) {
         Optional<Result> foundResult = getAll().stream().filter(q -> q != null && resultId.equals(q.getId())).findAny();
+        System.out.println(foundResult.get().getRealGame().getName());
+        System.out.println(foundResult.get().getRealGame().getCode());
         return foundResult.orElse(null);
     }
 
@@ -188,4 +194,24 @@ public class ResultService {
         Optional<Result> foundResult = getAll().stream().filter(r -> quizCode.equals(r.getRealGame().getCode())).findAny();
         return foundResult.orElse(null);
     }
-}//todo change quiz code generation for them to be unique across the system
+
+    public Double getPointsForQuizByPlayer(String quizCode, String playerName) {
+        Result res = getByQuizCode(quizCode);
+        if(res != null) {
+            int studentIndex = res
+                    .getRealPlayers()
+                    .stream()
+                    .map(Player::getName)
+                    .collect(Collectors.toCollection(LinkedList::new))
+                    .indexOf(playerName);
+            if(studentIndex != -1) {
+                int numberOfQuestions = res.getQuestionsForPlayers().getFirst().getQuestions().size();
+                double playerPoints = res.getPlayersPointSums().get(studentIndex);
+                double studentPercentResult = playerPoints / (double) numberOfQuestions;
+
+                return studentPercentResult;
+            }
+        }
+        return Const.DEFAULT_POINTS_FOR_PLAYER;
+    }
+}

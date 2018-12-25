@@ -28,10 +28,10 @@ public class ResultController {
 
     @RequestMapping(value="/get", method = RequestMethod.GET)
     public @ResponseBody
-    Response get(@RequestParam("quizCode") String quizCode, @RequestParam("playerName") String playerName) {
+    Response get(@RequestParam("code") String quizCode, @RequestParam("name") String playerName) {
         Response resp;
-        Result foundResult = service.getByQuizCode(quizCode);
-        resp = new Response(Const.OBJECTS_KEY, allObjects);
+        Double playerPercentageResult = service.getPointsForQuizByPlayer(quizCode, playerName);
+        resp = new Response(Const.OBJECT_KEY, playerPercentageResult);
         return resp;
     }
 

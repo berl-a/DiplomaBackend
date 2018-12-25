@@ -40,4 +40,5 @@ public class Const {
     public static final String USER_EXISTS_ERROR = "user_exists";
 
     public static final String NEW_PLAYER_USERNAME_KEY = "new_player_username";
+    public static final double DEFAULT_POINTS_FOR_PLAYER = -1.0;
 }
