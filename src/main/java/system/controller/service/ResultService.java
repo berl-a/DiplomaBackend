@@ -113,18 +113,6 @@ public class ResultService {
         return Const.OK_RESULT;
     }
 
-    /*
-        private String id;
-        private Quiz realQuiz;
-        private Game realGame;
-        private String teacher;
-
-        private LinkedList<String> players = new LinkedList<>();
-        private LinkedList<Player> realPlayers = new LinkedList<>();
-        private LinkedList<ListOfQuestions> questionsForPlayers = new LinkedList<>();
-        private LinkedList<PlayerAnswers> playersAnswers = new LinkedList<>();
-     */
-
     public void archiveGames(LinkedList<Game> games) {
         LinkedList<Result> results = new LinkedList<>();
         games.forEach(g -> {
@@ -142,7 +130,7 @@ public class ResultService {
                 listOfQuestions.getQuestionIds().forEach(qid -> {
 //                    System.out.println("" + qid);
 //                    System.out.println("question with this id is " + questions.stream().filter(q -> qid.equals(q.getId())).findAny().get());
-                    transformedIdsToQuestions.add(questions.stream().filter(q -> qid.equals(q.getId())).findAny().get());
+                    transformedIdsToQuestions.add(questions.stream().filter(q -> qid.equals(q.getId())).findAny().orElse(null));
                 });
                 transformedIdsToQuestions.removeIf(Objects::isNull);
                 realQuestions.add(new ListOfRealQuestions(transformedIdsToQuestions));
@@ -195,4 +183,9 @@ public class ResultService {
         });
         results.forEach(this::add);
     }
-}
+
+    public Result getByQuizCode(String quizCode) {
+        Optional<Result> foundResult = getAll().stream().filter(r -> quizCode.equals(r.getRealGame().getCode())).findAny();
+        return foundResult.orElse(null);
+    }
+}//todo change quiz code generation for them to be unique across the system

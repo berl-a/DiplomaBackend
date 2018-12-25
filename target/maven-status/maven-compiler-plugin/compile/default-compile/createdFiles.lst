@@ -9,7 +9,6 @@ system\model\dao\UserDao.class
 system\controller\service\UserService.class
 system\controller\simple_frontend_models\GameWithActualQuiz.class
 system\model\dao\QuestionDao.class
-system\controller\ResultController.class
 system\controller\service\PlayerService.class
 system\controller\Const.class
 system\controller\service\QuestionService.class
@@ -22,7 +21,6 @@ system\model\classes\quizzes\Quiz.class
 system\model\classes\games\Game.class
 system\model\dao\PlayerDao.class
 system\model\classes\quizzes\QuizPart.class
-system\controller\service\StartupService.class
 system\model\dao\QuizPartDao.class
 system\model\classes\QuizGroupType.class
 system\controller\simple_frontend_models\Response.class
@@ -56,7 +54,6 @@ system\controller\service\QuizService.class
 system\controller\QuizController.class
 system\controller\service\database\DatabaseEntry.class
 system\model\classes\Result.class
-system\controller\service\FilesService.class
 system\controller\service\database\IntStringBlobDatabaseEntry.class
 system\controller\service\GameArchiver.class
 system\model\classes\games\MultipleChoiceAnswer.class

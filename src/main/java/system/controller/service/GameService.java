@@ -32,6 +32,8 @@ public class GameService {
     QuestionService questionService;
     @Autowired
     QuestionGroupService questionGroupService;
+    @Autowired
+    ResultService resultService;
 
     private LinkedList<Game> games = new LinkedList<>();
 
@@ -91,14 +93,18 @@ public class GameService {
         for(int tries = 0; tries < NUMBER_OF_TRIES_TO_GENERATE_CODE; tries ++) {
             final String alphabet = "ABCDEFHIKLMNPQSTXYZ";
             final int alphabetLength = alphabet.length();
-            Random r = new Random();
+            Random rand = new Random();
             StringBuilder builder = new StringBuilder();
             for (int i = 0; i < CODE_LENGTH; i++) {
-                builder.append(alphabet.charAt(r.nextInt(alphabetLength)));
+                builder.append(alphabet.charAt(rand.nextInt(alphabetLength)));
             }
             resultCode = builder.toString();
             String tempResultCode = resultCode;
-            if (games.stream().noneMatch(g -> tempResultCode.equals(g.getCode()))) break;
+            if (
+                    games.stream().noneMatch(g -> tempResultCode.equals(g.getCode())) &&
+                            resultService.getAll().stream().noneMatch(r -> tempResultCode.equals(r.getRealGame().getCode()))
+            )
+                break;
             else resultCode = "ERROR_GENERATING_CODE";
         }
         return resultCode;

@@ -26,6 +26,15 @@ public class ResultController {
         return resp;
     }
 
+    @RequestMapping(value="/get", method = RequestMethod.GET)
+    public @ResponseBody
+    Response get(@RequestParam("quizCode") String quizCode, @RequestParam("playerName") String playerName) {
+        Response resp;
+        Result foundResult = service.getByQuizCode(quizCode);
+        resp = new Response(Const.OBJECTS_KEY, allObjects);
+        return resp;
+    }
+
     @RequestMapping(value="/add", method = RequestMethod.POST)
     public @ResponseBody
     Response add(@RequestBody Result result) {
