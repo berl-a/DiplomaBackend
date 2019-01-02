@@ -53,9 +53,9 @@ function getFromBackend() {
                 // console.log(data[i]);
                 var newRow = table[0].row.add([
                     item["name"],
-                    item["categoryName"] != undefined ? item["categoryName"] : "",
-                    item["subcategoryName"] != undefined ? item["subcategoryName"] : "",
-                    item["subsubcategoryName"] != undefined ? item["subsubcategoryName"] : "",
+                    item["categoryName"] !== undefined ? item["categoryName"] : "",
+                    item["subcategoryName"] !== undefined ? item["subcategoryName"] : "",
+                    item["subsubcategoryName"] !== undefined ? item["subsubcategoryName"] : "",
                     BUTTONS
                 ]).draw().nodes().to$();
                 newRow.attr("data-id", data[i]["id"]);
@@ -189,9 +189,9 @@ function onSubmitButtonClicked() {
 
             var newRow = table[0].row.add([
                 name,
-                cat != "" ? cat : "",
-                subcat != "" ? subcat : "",
-                subsubcat != "" ? subsubcat : "",
+                cat !== "" ? cat : "",
+                subcat !== "" ? subcat : "",
+                subsubcat !== "" ? subsubcat : "",
                 BUTTONS
             ]).draw().nodes().to$();
 
@@ -231,9 +231,9 @@ function onSubmitButtonClicked() {
 
                 var row = table[0].row(selectedRowInTable).data([
                     name,
-                    cat != "" ? cat : "",
-                    subcat != "" ? subcat : "",
-                    subsubcat != "" ? subsubcat : "",
+                    cat !== "" ? cat : "",
+                    subcat !== "" ? subcat : "",
+                    subsubcat !== "" ? subsubcat : "",
                     BUTTONS
                 ]).draw().nodes().to$();
 

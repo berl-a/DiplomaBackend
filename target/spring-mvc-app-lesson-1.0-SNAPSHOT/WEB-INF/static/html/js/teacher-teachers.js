@@ -83,20 +83,25 @@ function onSubmitButtonClicked() {
     var login = $('.login').val();
     var pass = $('.password').val();
 
-    console.log("Hello");
     console.log(type + " " + login + " " + pass)
 
     var hash = hashCode(pass);
 
-    if(pass == "***") {
+    if(pass === "***") {
         hash = $('.password').attr("data-hash");
     }
 
     if(formAdding) {
 
-        if(login === "") {
-            alert("Enter teacher login");
-        } else {
+        var isLoginUnique = (table[0].columns(0).data().eq(0).indexOf(login) === -1);
+
+        if(login === "" || pass === "") {
+            alert("Enter teacher login and password");
+        } else if(!isLoginUnique) {
+
+            alert("User with chosen login already exists, please enter a different login");
+
+        } else if(isLoginUnique) {
 
             var newRow = table[0].row.add([
                 login,
