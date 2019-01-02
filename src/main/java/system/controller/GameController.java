@@ -14,6 +14,7 @@ import system.controller.service.GameService;
 import system.controller.service.PlayerService;
 import system.controller.service.QuizService;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,7 +36,8 @@ public class GameController {
 
     @RequestMapping(value="/join", method = RequestMethod.POST)
     public @ResponseBody
-    Response add(@RequestParam("code") String code, @RequestParam("name") String name) {
+    Response add(@RequestParam("code") String code, @RequestParam("name") String name, HttpServletRequest request) {
+        System.out.println("Student's ip address is " + request.getRemoteAddr());
         Response resp;
         code = code.toUpperCase();
         if(service.getByCode(code) != null) {

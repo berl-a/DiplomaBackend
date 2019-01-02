@@ -53,9 +53,10 @@ function getFromBackend() {
                 // console.log(data[i]);
                 var newRow = table[0].row.add([
                     item["name"],
-                    item["categoryName"] != undefined ? item["categoryName"] : "",
-                    item["subcategoryName"] != undefined ? item["subcategoryName"] : "",
-                    item["subsubcategoryName"] != undefined ? item["subsubcategoryName"] : "",
+                    item["categoryName"] !== undefined ? item["categoryName"] : "",
+                    item["subcategoryName"] !== undefined ? item["subcategoryName"] : "",
+                    item["subsubcategoryName"] !== undefined ? item["subsubcategoryName"] : "",
+                    item["ips"] !== undefined ? item["ips"] : "",
                     BUTTONS
                 ]).draw().nodes().to$();
                 newRow.attr("data-id", data[i]["id"]);
@@ -164,6 +165,7 @@ function onSubmitButtonClicked() {
 
     var currentInputFormPurpose = $('.current-input-form-purpose').text();
     var name = $('input.name').val();
+    var ips = $('input.ips').val();
 
     var cat, catId, subcat, subcatId, subsubcat, subsubcatId;
 
@@ -189,9 +191,10 @@ function onSubmitButtonClicked() {
 
             var newRow = table[0].row.add([
                 name,
-                cat != "" ? cat : "",
-                subcat != "" ? subcat : "",
-                subsubcat != "" ? subsubcat : "",
+                cat !== "" ? cat : "",
+                subcat !== "" ? subcat : "",
+                subsubcat !== "" ? subsubcat : "",
+                ips !== "" ? ips : "",
                 BUTTONS
             ]).draw().nodes().to$();
 
@@ -200,6 +203,7 @@ function onSubmitButtonClicked() {
                 catId, 
                 subcatId, 
                 subsubcatId,
+                ips,
                 newRow
             );
 
@@ -231,9 +235,10 @@ function onSubmitButtonClicked() {
 
                 var row = table[0].row(selectedRowInTable).data([
                     name,
-                    cat != "" ? cat : "",
-                    subcat != "" ? subcat : "",
-                    subsubcat != "" ? subsubcat : "",
+                    cat !== "" ? cat : "",
+                    subcat !== "" ? subcat : "",
+                    subsubcat !== "" ? subsubcat : "",
+                    ips !== "" ? ips : "",
                     BUTTONS
                 ]).draw().nodes().to$();
 
@@ -243,7 +248,8 @@ function onSubmitButtonClicked() {
                     name, 
                     catId, 
                     subcatId, 
-                    subsubcatId
+                    subsubcatId,
+                    ips
                 );
 
                 //CHANGED FROM SELECTED ROW TO ROW
@@ -267,7 +273,7 @@ function onSubmitButtonClicked() {
     }
 }
 
-function addToDatabase(n, c, sc, ssc, row) {
+function addToDatabase(n, c, sc, ssc, ips, row) {
     $.ajax({
         type: "post",
         url: "http://127.0.0.1:80/quizzes/add",
@@ -278,6 +284,7 @@ function addToDatabase(n, c, sc, ssc, row) {
             "category": c,
             "subcategory": sc,
             "subsubcategory": ssc,
+            "ips": ips,
             "teacher": teacherId
         }),
         success: function (stringData) {
@@ -287,7 +294,7 @@ function addToDatabase(n, c, sc, ssc, row) {
     });
 }
 
-function editInDatabase(id, n, c, sc, ssc) {
+function editInDatabase(id, n, c, sc, ssc, ips) {
     $.ajax({
         type: "post",
         url: "http://127.0.0.1:80/quizzes/edit",
@@ -299,6 +306,7 @@ function editInDatabase(id, n, c, sc, ssc) {
             "category": c,
             "subcategory": sc,
             "subsubcategory": ssc,
+            "ips": ips,
             "teacher": teacherId
         }),
         success: function (stringData) {
@@ -337,6 +345,7 @@ function clearFields() {
     $('.current-input-form-purpose').text("Add new quiz");
 
     $('input.name').val("");
+    $('input.ips').val("");
 
     $('select.quest-group.cat').val("");
     $('select.quest-group.subcat').val("");
@@ -370,6 +379,7 @@ function onEditButtonClicked() {
             var item = stringData.result.result;
 
             var name = item.name;
+            var ips = item.ips;
             var cat = item.category;
             var subcat = item.subcategory;
             var subsubcat = item.subsubcategory;
@@ -385,6 +395,7 @@ function onEditButtonClicked() {
             }, 100);
 
             $('input.name').val(name);
+            $('input.ips').val(ips);
 
             $('select.quest-group').trigger('change');
         }

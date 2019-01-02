@@ -108,33 +108,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="teacher-starting-quiz.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/users/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-              <folding>
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="QuizService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuizService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
+            <state relative-caret-position="714">
               <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding />
             </state>
@@ -144,7 +121,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="1575">
               <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
               <folding />
             </state>
@@ -154,18 +131,48 @@
       <file leaf-file-name="teacher-results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="735">
               <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="teacher-results.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teacher-results.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+            <state relative-caret-position="1323">
+              <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teacher-quizzes.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-quizzes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="98" column="40" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -184,18 +191,8 @@
       <file leaf-file-name="ResultService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/ResultService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="3654">
               <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ResultController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -291,9 +288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/database/MySqlDatabaseToolkit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/database/DatabaseToolkit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/service/StartupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/QuizGroupService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/dao/QuizDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/QuestionGroupService.java" />
@@ -331,10 +325,8 @@
         <option value="$PROJECT_DIR$/src/main/java/system/model/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/student-test.js" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html" />
         <option value="$PROJECT_DIR$/src/main/java/system/model/classes/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/PlayerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/service/GameService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/controller/ResultController.java" />
@@ -342,6 +334,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/index.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-edit-quiz.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-quizzes.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-quizzes.js" />
       </list>
     </option>
   </component>
@@ -375,7 +372,7 @@
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-508" />
     <option name="y" value="-9" />
     <option name="width" value="1932" />
@@ -424,6 +421,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -567,8 +566,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -967,7 +964,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28828058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -976,20 +973,20 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31675676" sideWeight="0.37083334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09427083" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2854054" sideWeight="0.62916666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2854054" sideWeight="0.62916666" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14479166" sideWeight="0.4704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.4704" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1078125" sideWeight="0.5233083" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="EvoSuite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2954796" sideWeight="0.6640625" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5794948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.215625" sideWeight="0.5296" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5794948" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1053,34 +1050,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/QuizGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/quizzes/QuizPart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionGroupType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/questions/QuestionType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1284,7 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="25" column="58" lean-forward="false" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,14 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="987">
           <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1307,15 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1323,15 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="102" column="16" lean-forward="true" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,32 +1281,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
           <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ResultController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="546">
           <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/users/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="0">
           <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/PlayerPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-starting-quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-edit-quiz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-quizzes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/QuizService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
+        <state relative-caret-position="714">
           <caret line="51" column="5" lean-forward="false" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding />
         </state>
@@ -1372,8 +1336,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="1575">
           <caret line="75" column="28" lean-forward="false" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1323">
+          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/model/classes/games/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="39" column="74" lean-forward="false" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -1388,24 +1384,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/service/ResultService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="3654">
           <caret line="191" column="0" lean-forward="false" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-results.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/teacher-quizzes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/html/js/teacher-results.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        <state relative-caret-position="348">
+          <caret line="98" column="40" lean-forward="true" selection-start-line="98" selection-start-column="40" selection-end-line="98" selection-end-column="40" />
           <folding />
         </state>
       </provider>
